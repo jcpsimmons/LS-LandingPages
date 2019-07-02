@@ -1,0 +1,619 @@
+<!-- <style>
+    .fourth_container a {
+      display: block;
+    }
+  
+    .fourth_of_july_layer_1,
+    .fourth_of_july_layer_2 {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+  
+    .fourth_left_box {
+      flex-direction: column;
+      margin-right: 1.5rem;
+      width: 360px;
+      height: 200px;
+      object-fit: contain;
+    }
+  
+    .fourth_left_box a {
+      display: block;
+    }
+  
+    .layer_1_top_box {
+      margin-bottom: 1.5rem;
+    }
+  
+    /* .layer_1_bottom_box {
+    } */
+  
+    .layer_2_left_box {
+      margin-right: 1.5rem;
+    }
+  
+    .fourth_of_july_left_box a {
+      flex-basis: 100%;
+    }
+  
+    .shop_link {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 1.8rem;
+      text-decoration: none !important;
+      font-weight: 600;
+    }
+  
+    a.disable {
+    pointer-events: none;
+    cursor: default;
+  }
+  
+    .shop_link span {
+      color: #ea533c;
+    }
+  
+    /***** Modal *****/
+  
+    .fourth_container .modal-backdrop.in {
+      filter: alpha(opacity=7);
+      opacity: 0.7;
+    }
+  
+    .fourth_container .modal-content {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  
+    .fourth_container .modal-body {
+      padding: 0 25px 25px 25px;
+    }
+  
+    .fourth_container .modal-header {
+      padding: 25px 25px 15px 25px;
+      text-align: right;
+    }
+  
+    .fourth_container .modal-header,
+    .fourth_container .modal-footer {
+      border: 0;
+    }
+  
+    .fourth_container .modal-header .close {
+      float: none;
+      margin: 0;
+      font-size: 3.6rem;
+      color: #fff;
+      font-weight: 300;
+      text-shadow: none;
+      opacity: 1;
+      margin-right: 0 !important;
+      margin-top: -1rem !important;
+    }
+  
+    .fourth_container .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 4rem !important;
+    }
+  
+    .play-btn {
+      text-align: center;
+    }
+  
+    #fRelief-video {
+      border: 0.5rem solid #fff;
+    }
+  
+    .fourth_container .modal .modal-dialog {
+      width: 85rem;
+    }
+  
+    #step1_modal {
+      position: relative;
+      display: block;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 767px) {
+      .fourth_of_july_layer_2 {
+          margin-top: -.7rem;
+      }
+  
+      .shop_link {
+        font-weight: normal;
+        line-height: 1.7;
+        letter-spacing: normal;
+        text-align: center;
+        color: #333333;
+      }
+      .layer_2_left_box {
+        margin-right: 0;
+      }
+  
+      .fourth_container {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+  
+      .fourth_container .modal .modal-dialog {
+        width: 40rem;
+      }
+  
+      .fourth_left_box {
+        height: 0px;
+        visibility: hidden;
+      }
+  
+      .fourth_container .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 2rem !important;
+        margin-right: 8px !important;
+        margin-top: 2rem !important;
+      }
+    }
+  </style> -->
+<style>
+    .top-row{
+        margin-top: 3rem
+    }
+    .space-below {
+        margin-bottom: 1.5rem
+    }
+    .btn {
+        width: 90%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+    }
+    .video-thumb {
+        width: 40rem
+    }
+    .btn-success {
+        background-color: #5e7b1e;
+        margin-top: 1.6rem
+    }
+    .btn-success:hover {
+      background-color: #8ebb2d;
+    }
+    .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+      background-color: rgb(65, 87, 20);
+    }
+    .btn-primary {
+        background-color: #333333;
+        margin-top: 2.76rem
+    }
+    .btn-primary:hover {
+        background-color: #5e5e5e;
+        margin-top: 2.76rem
+    }
+    .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+        background-color: #272727;
+        margin-top: 2.76rem
+    }
+    .summer-header-text {
+        margin-top: 3.1 rem;
+        font-size: 5rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.87;
+        letter-spacing: normal;
+        text-align: center;
+        color: #5e7b1e;
+    }
+    [class*='col-sm-'] {
+        text-align: center;
+    }
+    .outdoor-lounge-div{
+        padding-right: .4rem;
+    }
+    .outdoor-dining-div {
+        padding-left: .4rem;
+    }
+    .hero-div {
+        padding-right: .45rem;
+    }
+    .hero-r-div {
+        padding-left: .45rem;
+    }
+    /* .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    } */
+    /* .ENHANCE {
+        transform: scale(1.05);
+        transform-origin: top center;
+    } */
+    .fa-chevrons {
+      font-size: 1.25rem;
+      padding-left: .25rem
+    }
+    .hidden-sm {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+        .btn-primary {
+          background-color: #333333;
+          margin-top: .75rem
+      }
+        .summer-header-text {
+          font-size: 3rem;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.87;
+          letter-spacing: normal;
+          text-align: center;
+          color: #5e7b1e;
+          padding-bottom: 5rem;
+      }
+        .hidden-sm {
+          display: contents;
+        }
+        .video-thumb {
+          width: 100%
+        }
+        .hero-r-div {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: 0;
+          margin-left: 0
+        }
+        .btn {
+          width: 75%;
+          font-size: 1.4rem;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #ffffff;
+        }
+        .fa-chevrons {
+          font-size: 1.1rem;
+          padding-left: .25rem
+        }
+        .outdoor-lounge-div{
+          padding-right: 0;
+          padding-left: 0;
+          margin: 0 0 0 0;
+          width: 100%;
+        }
+        .outdoor-dining-div {
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 0 0 0;
+            width: 100%;
+        }
+        .btn-success {
+          margin-bottom: 1.6rem;
+      }
+        .page-content  {
+
+      }
+        .mobile-header {
+          padding-top: 1.1rem;
+          margin-bottom: 1rem;
+        }
+    }
+</style>
+<section class="summertime-upper-container container-fluid ENHANCE">
+        <div class="row top-row">
+            <div class="col-sm-8 hero-div">
+                <h1 class='summer-header-text hidden-sm'>Summertime Hosting</h1>
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-hero.jpg" alt="" class="img-responsive hidden-xs space-below">
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-food-series.jpg" alt="" class="img-responsive hidden-xs space-below">
+            </div>
+        <div class="col-xs-12 hidden-sm" id="step1_modal"
+        data-toggle="modal"
+        data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/IIP_GqS8tqs">
+          <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-mobile-hero.jpg" alt="" class="img-responsive space-below video-thumb mobile-header">
+        </div>    
+        <div class="col-sm-4 hero-r-div">
+            <div id="step1_modal"
+            data-toggle="modal"
+            data-target="#modal-video_01"
+            data-theVideo="https://www.youtube.com/embed/IIP_GqS8tqs">
+              <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-video-section.jpg" alt="" class="img-responsive space-below video-thumb hidden-xs">
+            </div>
+            <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-mobile-hero.jpg" alt="" class="img-responsive space-below video-thumb hidden-sm">
+            <h1 class='summer-header-text hidden-xs'>Summertime Hosting</h1>
+            <button class="btn btn-primary">View Our Outdoor Catalog <span class="fa fa-chevron-right fa-chevrons"></i></button>
+            <button class="btn btn-success">15 Outdoor Party Ideas & Essentials <span class="fa fa-chevron-right fa-chevrons"></i></button>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-6 outdoor-lounge-div hidden-xs">
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-sofa.jpg" alt="" class="img-responsive space-below ">
+            </div>
+            <div class="col-sm-6 outdoor-dining-div hidden-xs">
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-dining.jpg" alt="" class="img-responsive space-below ">
+            </div>
+            <div class="col-sm-12 outdoor-lounge-div hidden-sm">
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-mobile-sofa.jpg" alt="" class="img-responsive space-below ">
+            </div>
+            <div class="col-sm-12 outdoor-dining-div hidden-sm">
+                <img src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0708-summertime-hosting-mobile-dining.jpg" alt="" class="img-responsive space-below ">
+            </div>
+        </div>
+
+        <div
+        class="modal fade"
+        id="modal-video_01"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-video-label"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-video">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    id="fRelief-video"
+                    class="embed-responsive-item"
+                    width="1170"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    src=""
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>
+<script>
+  window.addEventListener(
+    "load",
+    function() {
+      if (window.jQuery) {
+        var trigger = $("#step1_modal");
+        trigger.click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-theVideo"),
+            videoSRCauto =
+              videoSRC +
+              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+          $("#modal-video_01").on("hidden.bs.modal", function(e) {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      }
+    },
+    false
+  );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- OLD ------------------------------------- -->
+  <!-- <section class="fourth_container">
+    <div class="fourth_of_july_hero">
+      <a href="/pdp-neah-sofa-244463?query=244463">
+        <img
+          class="img-responsive center-block hidden-xs"
+          src="/globalassets/images/lp/2019/06/0627_4thOfJulyHero.jpg"
+          alt="4th of July Event. Sofa $350."
+        />
+        <img
+          class="img-responsive center-block visible-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_hero_mobile.jpg"
+          alt="4th of July Event. Sofa $350."
+        />
+      </a>
+      <a class="shop_link disable" href="#"
+        >Save big on designs for every room to make a splash this Fourth of July – and host in style all summer long!</a
+      >
+    </div>
+    <div class="fourth_of_july_layer_1">
+      <div class="fourth_left_box">
+        <a class="layer_1_top_box" href="/pdp-westwood-coffee-table-244149">
+          <img
+            class="img-responsive hidden-xs"
+            src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_screen-shot-2018-08-08-at-3-07-12-pm.jpg"
+            alt="$195 Coffee Table"
+          />
+        </a>
+        <a class="layer_1_bottom_box disable" href="#">
+          <img
+            class="img-responsive hidden-xs"
+            src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_applePie.jpg"
+            alt="4th of July Event. Apple pie on table."
+          />
+        </a>
+      </div>
+      <a class="layer_1_right_box" href="/pdp-ashford-ii-7-piece-dining-set-251023">
+        <img
+          class="img-responsive hidden-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_jacoby-denim.jpg"
+          alt="4th of July Event. 7pc. Dining Set $495"
+        />
+      </a>
+    </div>
+    <div class="fourth_of_july_layer_2">
+      <a
+        class="layer_2_left_box"
+        href="/pdp-kit-jaxon-grey-queen-panel-bed-241184"
+      >
+        <img
+          class="img-responsive center-block hidden-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_queen-bed.jpg"
+          alt="4th of July Event. Queen Bed $495"
+        />
+      </a>
+      <div
+        class=""
+        id="step1_modal"
+        data-toggle="modal"
+        data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/IIP_GqS8tqs"
+      >
+        <img
+          class="img-responsive hidden-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_sleeper.jpg"
+          alt="4th of July Event. Video player"
+        />
+        <img
+          class="img-responsive visible-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_sleeper_mobile.jpg"
+          alt="4th of July Event. Video player"
+        />
+      </div>
+    </div>
+    <div class="fourth_mattress">
+      <a href="/departments/mattresses/promotions">
+        <img
+          class="img-responsive center-block hidden-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_group.jpg"
+          alt="fourth Day Event. Revive Event"
+        />
+        <img
+          class="img-responsive center-block visible-xs"
+          src="/globalassets/images/lp/2019/07/0714_4thOfJuly_2019_LP_group_mobile.jpg"
+          alt="4th of July Event. Revive Event"
+        />
+        <p class="sr-only">
+          Save on adjustable sets! up to $700 off select tempur-pedic, $800 off
+          select stearns & Foster and $500 off the Revive remembrance hybrid. Shop
+          Now &rsaquo;
+        </p>
+      </a>
+    </div>
+  
+    <a style="margin-top:4rem;" class="financing" href="/company/financing">
+      <img
+        class="img-responsive center-block hidden-xs"
+        alt="financing-banner36-desktop"
+        src="/globalassets/images/lp/2019/05/0513_36months_financing_banner.jpg"
+      />
+      <img
+        class="img-responsive center-block visible-xs-block"
+        alt="financing-banner-mobile36"
+        src="/globalassets/images/lp/2019/05/0513_36months_financing_mobile_banner.jpg"
+      />
+      <span class="sr-only"
+        >Want it? Finance it! Special financing for 36 months on purchases of
+        $3000+. Get info</span
+      >
+    </a>
+    <div
+      class="modal fade"
+      id="modal-video_01"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modal-video-label"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  id="fRelief-video"
+                  class="embed-responsive-item"
+                  width="1170"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  src=""
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener(
+      "load",
+      function() {
+        if (window.jQuery) {
+          var trigger = $("#step1_modal");
+          trigger.click(function() {
+            var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-theVideo"),
+              videoSRCauto =
+                videoSRC +
+                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+            $(theModal + " iframe").attr("src", videoSRCauto);
+            $(theModal + " button.close").click(function() {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+            $("#modal-video_01").on("hidden.bs.modal", function(e) {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+          });
+        }
+      },
+      false
+    );
+  </script>
+   -->
