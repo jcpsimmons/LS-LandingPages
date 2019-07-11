@@ -1,0 +1,227 @@
+<style>
+  .RK4Q .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .RK4Q .top-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 1.5rem;
+    align-items: center;
+  }
+  .RK4Q .beautyrestDiv {
+    flex-basis: 20%;
+  }
+  .RK4Q .kingForQueenDiv {
+    flex-basis: 65%;
+  }
+  .RK4Q .videoModal {
+    flex-basis: 55%;
+  }
+  .RK4Q .sleepTracker {
+    flex-basis: 45%;
+  }
+  .RK4Q .blueText {
+    font-size: 3.6rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #008094;
+    margin-top: 0;
+  }
+  .RK4Q .ctaButton {
+    width: 20rem;
+    height: auto;
+    padding-top: .8rem
+  }
+  .RK4Q .ctaButton:hover {
+    filter: brightness(0.9)
+  }
+  .RK4Q .beautyrestImg {
+    width: 25rem;
+    height: auto;
+  }
+  .RK4Q p {
+    font-size: 2rem;
+    line-height: 1.55;
+  }
+  /* MODAL */
+  .RK4Q .modal-backdrop.in {
+      filter: alpha(opacity=7);
+      opacity: 0.7;
+  }
+
+  .RK4Q .modal-content {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
+
+  .RK4Q .modal-body {
+      padding: 0 25px 25px 25px;
+  }
+
+  .RK4Q .modal-header {
+      padding: 25px 25px 15px 25px;
+      text-align: right;
+  }
+
+  .RK4Q .modal-header,
+  .RK4Q .modal-footer {
+      border: 0;
+  }
+
+  .RK4Q .modal-header .close {
+      float: none;
+      margin: 0;
+      font-size: 3.6rem;
+      color: #fff;
+      font-weight: 300;
+      text-shadow: none;
+      opacity: 1;
+      margin-right: 0 !important;
+      margin-top: -1rem !important;
+  }
+
+  .RK4Q .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 4rem !important;
+  }
+
+  .play-btn {
+      text-align: center;
+  }
+
+  #same_day_delivery_video {
+      border: 0.5rem solid #fff;
+  }
+
+  .RK4Q .modal .modal-dialog {
+      width: 95vw;
+  }
+  /* END MODAL */
+
+  @media (max-width: 767px) {
+    .RK4Q .container, .RK4Q .top-container {
+      flex-direction: column;
+    }
+    .RK4Q .blueText {
+      padding-top: 2rem;
+      text-align: center;
+    }
+    .RK4Q .kingForQueenDiv {
+      text-align: center;
+    }
+    .RK4Q .beautyrestImg {
+      width: 12.5rem;
+      height: auto;
+      padding-top: 2rem;
+    }
+    .RK4Q .top-container {
+      flex-direction: column-reverse;
+    }
+  }
+</style>
+
+<div class="RK4Q">
+  <div class="top-container">
+    <div class="beautyrestDiv">
+      <img
+        class="img-responsive beautyrestImg"
+        src="/globalassets/images/lp/2019/07/0715_kingforqueenevent_logo.png"
+        alt=""
+      /> 
+    </div>
+    <div class="kingForQueenDiv">
+      <h1 class="blueText">King for Queen Event</h1>
+      <p>
+        Utilizing advanced memory foams and 1000 Series Pocketed Coil
+        technology, the Beautyrest Hybrid offers a comfortable and supportive
+        sleep experience. All three comfort levels are available in the Twin XL,
+        Full, Queen, Eastern King, Cal King, and split King sizes.
+      </p>
+        <a href="#">
+          <img
+            class="ctaButton"
+            src="/globalassets/images/lp/2019/07/0715_kingForQueenEvent_cta.png"
+            alt=""
+          />
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="videoModal">
+      <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/l1X1vOKjmFg">
+        <img
+          class="img-responsive video-thumb"
+          src="/globalassets/images/lp/2019/07/0715_kingForQueenEvent_video_v2.jpg"
+          alt="King for a Queen Event Video"
+        />
+      </div>
+    </div>
+    <div class="sleepTracker">
+      <img
+        class="img-responsive"
+        src="/globalassets/images/lp/2019/07/0715_kingForQueenEvent_sleep-tracker_v2.png"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-video">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe id="same_day_delivery_video" class="embed-responsive-item" width="1170"
+                              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                              src="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+    window.addEventListener(
+        "load",
+        function () {
+            if (window.jQuery) {
+                var trigger = $("#mobile_modal");
+                trigger.click(function () {
+                    var theModal = $(this).data("target"),
+                        videoSRC = $(this).attr("data-theVideo"),
+                        videoSRCauto =
+                        videoSRC +
+                        "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                    $(theModal + " iframe").attr("src", videoSRCauto);
+                    $(theModal + " button.close").click(function () {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                    $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                });
+            }
+        },
+        false
+    );
+</script>
