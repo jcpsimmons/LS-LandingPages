@@ -41,10 +41,30 @@
   .RK4Q .ctaButton {
     width: 20rem;
     height: auto;
-    padding-top: .8rem
+    padding-top: 0.8rem;
+  }
+  .RK4Q .sn-button {
+    background-color: #008094;
+    color: white;
+    border-radius: 10px;
+    height: 4rem;
+    width: 20rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .RK4Q .sn-button p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  .RK4Q .sn-button:hover {
+    background-color: #006a7a;
+  }
+  .RK4Q .kingForQueenDiv a:hover {
+    text-decoration: none;
   }
   .RK4Q .ctaButton:hover {
-    filter: brightness(0.9)
+    filter: brightness(0.9);
   }
   .RK4Q .beautyrestImg {
     width: 25rem;
@@ -56,64 +76,65 @@
   }
   /* MODAL */
   .RK4Q .modal-backdrop.in {
-      filter: alpha(opacity=7);
-      opacity: 0.7;
+    filter: alpha(opacity=7);
+    opacity: 0.7;
   }
 
   .RK4Q .modal-content {
-      background: none;
-      border: 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      box-shadow: none;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .RK4Q .modal-body {
-      padding: 0 25px 25px 25px;
+    padding: 0 25px 25px 25px;
   }
 
   .RK4Q .modal-header {
-      padding: 25px 25px 15px 25px;
-      text-align: right;
+    padding: 25px 25px 15px 25px;
+    text-align: right;
   }
 
   .RK4Q .modal-header,
   .RK4Q .modal-footer {
-      border: 0;
+    border: 0;
   }
 
   .RK4Q .modal-header .close {
-      float: none;
-      margin: 0;
-      font-size: 3.6rem;
-      color: #fff;
-      font-weight: 300;
-      text-shadow: none;
-      opacity: 1;
-      margin-right: 0 !important;
-      margin-top: -1rem !important;
+    float: none;
+    margin: 0;
+    font-size: 3.6rem;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
   }
 
   .RK4Q .modal .modal-dialog .modal-content .close {
-      color: #fff !important;
-      font-size: 4rem !important;
+    color: #fff !important;
+    font-size: 4rem !important;
   }
 
   .play-btn {
-      text-align: center;
+    text-align: center;
   }
 
   #same_day_delivery_video {
-      border: 0.5rem solid #fff;
+    border: 0.5rem solid #fff;
   }
 
   .RK4Q .modal .modal-dialog {
-      width: 95vw;
+    width: 95vw;
   }
   /* END MODAL */
 
   @media (max-width: 767px) {
-    .RK4Q .container, .RK4Q .top-container {
+    .RK4Q .container,
+    .RK4Q .top-container {
       flex-direction: column;
     }
     .RK4Q .blueText {
@@ -122,6 +143,9 @@
     }
     .RK4Q .kingForQueenDiv {
       text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
     .RK4Q .beautyrestImg {
       width: 12.5rem;
@@ -141,7 +165,7 @@
         class="img-responsive beautyrestImg"
         src="/globalassets/images/lp/2019/07/0715_kingforqueenevent_logo.png"
         alt="Beautyrest Logo"
-      /> 
+      />
     </div>
     <div class="kingForQueenDiv">
       <h1 class="blueText">King for Queen Event</h1>
@@ -151,19 +175,21 @@
         sleep experience. All three comfort levels are available in the Twin XL,
         Full, Queen, Eastern King, Cal King, and split King sizes.
       </p>
-        <a href="https://www.livingspaces.com/departments/mattresses/brand/beautyrest/sleeptracker-monitor">
-          <img
-            class="ctaButton"
-            src="/globalassets/images/lp/2019/07/0715_kingForQueenEvent_cta.png"
-            alt="Shop Now"
-          />
+      <a
+        href="https://www.livingspaces.com/departments/mattresses/brand/beautyrest/sleeptracker-monitor"
+      >
+        <div class="sn-button"><p>SHOP NOW &rsaquo;</p></div>
       </a>
     </div>
   </div>
   <div class="container">
     <div class="videoModal">
-      <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01"
-        data-theVideo="https://www.youtube.com/embed/l1X1vOKjmFg">
+      <div
+        id="mobile_modal"
+        data-toggle="modal"
+        data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/mdkb5ihh9hw"
+      >
         <img
           class="img-responsive video-thumb"
           src="/globalassets/images/lp/2019/07/0715_kingForQueenEvent_video_v2.jpg"
@@ -179,49 +205,67 @@
       />
     </div>
   </div>
-  <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <div class="modal-video">
-                      <div class="embed-responsive embed-responsive-16by9">
-                          <iframe id="same_day_delivery_video" class="embed-responsive-item" width="1170"
-                              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                              src="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                      </div>
-                  </div>
-              </div>
+  <div
+    class="modal fade"
+    id="modal-video_01"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="same_day_delivery_video"
+                class="embed-responsive-item"
+                width="1170"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>
 <script>
-    window.addEventListener(
-        "load",
-        function () {
-            if (window.jQuery) {
-                var trigger = $("#mobile_modal");
-                trigger.click(function () {
-                    var theModal = $(this).data("target"),
-                        videoSRC = $(this).attr("data-theVideo"),
-                        videoSRCauto =
-                        videoSRC +
-                        "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
-                    $(theModal + " iframe").attr("src", videoSRCauto);
-                    $(theModal + " button.close").click(function () {
-                        $(theModal + " iframe").attr("src", videoSRC);
-                    });
-                    $("#modal-video_01").on("hidden.bs.modal", function (e) {
-                        $(theModal + " iframe").attr("src", videoSRC);
-                    });
-                });
-            }
-        },
-        false
-    );
+  window.addEventListener(
+    "load",
+    function() {
+      if (window.jQuery) {
+        var trigger = $("#mobile_modal");
+        trigger.click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-theVideo"),
+            videoSRCauto =
+              videoSRC +
+              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+          $("#modal-video_01").on("hidden.bs.modal", function(e) {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      }
+    },
+    false
+  );
 </script>
