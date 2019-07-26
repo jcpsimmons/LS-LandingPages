@@ -60,7 +60,76 @@
     color: #2e5179;
     margin-top: 0.5rem;
   }
+  .kfc .lower-text:hover {
+    color: #153860;
+  }
+  .kfc a:hover {
+    text-decoration: none;
+  }
+
+  /* MODAL */
+  .kfc .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .kfc .modal-content {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .kfc .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .kfc .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .kfc .modal-header,
+  .kfc .modal-footer {
+    border: 0;
+  }
+
+  .kfc .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 3.6rem;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+
+  .kfc .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+
+  .play-btn {
+    text-align: center;
+  }
+
+  #same_day_delivery_video {
+    border: 0.5rem solid #fff;
+  }
+
+  .kfc .modal .modal-dialog {
+    width: 95vw;
+  }
+  /* END MODAL */
+
   @media (max-width: 767px) {
+    .page-content div.container:first-of-type {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .kfc .container-top,
     .kfc .container-bottom {
       flex-direction: column;
@@ -77,36 +146,113 @@
           Your kids are growing up, and their furniture + decor can too.
         </p>
       </div>
-      <img
-        class="img-responsive hidden-xs"
-        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-hero-2.jpg"
-        alt=""
-      />
+      <a href="/departments/kids/furniture/kids-beds?features=with+Storage">
+        <img
+          class="img-responsive hidden-xs"
+          src="/globalassets/images/lp/2019/07/0729-kids-teens-hero-2.jpg"
+          alt="Kids + Teens Your kids are growing up, and their furniture + decor can too."
+        />
+      </a>
     </div>
     <div class="upper-r-cell">
-      <img
-        class="img-responsive"
-        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-hero-1.jpg"
-        alt=""
-      />
+      <a href="/search?term=Taylor+Beds&query=Taylor+Beds">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2019/07/0729-kids-teens-hero-1.jpg"
+          alt="Kids and Teens furniture and decor."
+        />
+      </a>
     </div>
   </div>
   <div class="container-bottom">
-    <div class="lower-l-cell">
-      <img
-        class="img-responsive"
-        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-commercial.jpg"
-        alt=""
-      />
-      <h2 class="lower-text">Watch Highlights &rsaquo;</h2>
+    <div class="videoModal lower-l-cell">
+      <div
+        id="mobile_modal"
+        data-toggle="modal"
+        data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/tx4LOefMbpk"
+      >
+        <img
+          class="img-responsive video-thumb"
+          src="/globalassets/images/lp/2019/07/0729-kids-teens-commercial.jpg"
+          alt="Watch highlights"
+        />
+        <h2 class="lower-text">Watch Highlights &rsaquo;</h2>
+      </div>
     </div>
     <div class="lower-r-cell">
-      <img
-        class="img-responsive"
-        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-beds-under-300.jpg"
-        alt=""
-      />
-      <h2 class="lower-text">Beds Under $300 &rsaquo;</h2>
+      <a href="/departments/kids/furniture/kids-beds?sale_price=%5b*+TO+300%5d">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2019/07/0729-kids-teens-beds-under-300.jpg"
+          alt="Beds under $300"
+        />
+        <h2 class="lower-text">Beds Under $300 &rsaquo;</h2>
+      </a>
     </div>
   </div>
+
+  <div
+    class="modal fade"
+    id="modal-video_01"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="same_day_delivery_video"
+                class="embed-responsive-item"
+                width="1170"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener(
+      "load",
+      function() {
+        if (window.jQuery) {
+          var trigger = $("#mobile_modal");
+          trigger.click(function() {
+            var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-theVideo"),
+              videoSRCauto =
+                videoSRC +
+                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+            $(theModal + " iframe").attr("src", videoSRCauto);
+            $(theModal + " button.close").click(function() {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+            $("#modal-video_01").on("hidden.bs.modal", function(e) {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+          });
+        }
+      },
+      false
+    );
+  </script>
 </div>
