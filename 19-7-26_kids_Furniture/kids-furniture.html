@@ -1,0 +1,112 @@
+<style>
+  .kfc .container-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+  .kfc .container-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+  .kfc .upper-l-cell {
+    flex-basis: 35.5%;
+  }
+  .kfc .upper-r-cell {
+    flex-basis: 64.5%;
+  }
+  .kfc .lower-l-cell {
+    flex-basis: 49%;
+  }
+  .kfc .lower-r-cell {
+    flex-basis: 49%;
+  }
+  .kfc .upper-text {
+    font-size: 6rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2e5179;
+  }
+  .kfc .subheading {
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333333;
+  }
+  .kfc .lower-text {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2e5179;
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 767px) {
+    .kfc .container-top,
+    .kfc .container-bottom {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="kfc">
+  <div class="container-top">
+    <div class="upper-l-cell">
+      <div class="mobile-content hidden-md hidden-lg">
+        <h1 class="upper-text">KIDS + TEENS</h1>
+        <p class="subheading">
+          Your kids are growing up, and their furniture + decor can too.
+        </p>
+      </div>
+      <img
+        class="img-responsive hidden-xs"
+        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-hero-2.jpg"
+        alt=""
+      />
+    </div>
+    <div class="upper-r-cell">
+      <img
+        class="img-responsive"
+        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-hero-1.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="container-bottom">
+    <div class="lower-l-cell">
+      <img
+        class="img-responsive"
+        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-commercial.jpg"
+        alt=""
+      />
+      <h2 class="lower-text">Watch Highlights &rsaquo;</h2>
+    </div>
+    <div class="lower-r-cell">
+      <img
+        class="img-responsive"
+        src="https://www.livingspaces.com/globalassets/images/lp/2019/07/0729-kids-teens-beds-under-300.jpg"
+        alt=""
+      />
+      <h2 class="lower-text">Beds Under $300 &rsaquo;</h2>
+    </div>
+  </div>
+</div>
