@@ -1,4 +1,10 @@
 <style>
+  .kfc .hidden-md {
+    display: none;
+  }
+  .kfc .hidden-xs {
+    display: block;
+  }
   .kfc .container-top {
     width: 100%;
     display: flex;
@@ -126,6 +132,9 @@
   /* END MODAL */
 
   @media (max-width: 767px) {
+    .kfc .upper-r-cell {
+      margin-left: -5px;
+    }
     .page-content div.container:first-of-type {
       padding-left: 0;
       padding-right: 0;
@@ -133,6 +142,12 @@
     .kfc .container-top,
     .kfc .container-bottom {
       flex-direction: column;
+    }
+    .kfc .hidden-md {
+      display: block;
+    }
+    .kfc .hidden-xs {
+      display: none;
     }
   }
 </style>
@@ -181,13 +196,18 @@
       </div>
     </div>
     <div class="lower-r-cell">
-      <a href="/departments/kids/furniture/kids-beds?sale_price=%5b*+TO+300%5d">
+      <a href="https://www.livingspaces.com/inspiration/catalogs/">
         <img
-          class="img-responsive"
-          src="/globalassets/images/lp/2019/07/0729-kids-teens-beds-under-300.jpg"
-          alt="Beds under $300"
+          class="img-responsive hidden-xs"
+          src="/globalassets/images/lp/2019/07/0731_kids_teens_catalog.jpg"
+          alt="Kids + Teens Catalog"
         />
-        <h2 class="lower-text">Beds Under $300 &rsaquo;</h2>
+        <img
+          class="img-responsive hidden-md hidden-lg"
+          src="/globalassets/images/lp/2019/07/0731_kids_teens_catalog_mobile.jpg"
+          alt="Kids + Teens Catalog"
+        />
+        <h2 class="lower-text">Shop Kids + Teens Catalog &rsaquo;</h2>
       </a>
     </div>
   </div>
