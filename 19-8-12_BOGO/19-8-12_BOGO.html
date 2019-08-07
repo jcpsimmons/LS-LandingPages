@@ -63,9 +63,9 @@
   }
 
   .bogo-container .accent-text {
-      font-weight: 600;
-      color: #478071;
-      font-size: 4rem;
+    font-weight: 600;
+    color: #478071;
+    font-size: 4rem;
   }
 
   .wsl-intro {
@@ -326,34 +326,40 @@
     height: 4rem;
   }
   .bogo-container .green-box {
-      background-color:#478071;
-      text-align: center;
-      color: white;
-      height: 10rem;
-      margin-top: 2rem;
+    background-color: #478071;
+    text-align: center;
+    color: white;
+    height: 10rem;
+    margin-top: 2rem;
   }
   .bogo-container .green-box .box-text {
-      padding-top: 2rem;
-      text-align: center;
+    padding-top: 2rem;
+    text-align: center;
   }
   .bogo-container .green-box .box-text-accent {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 600
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
   }
   .bogo-container .thank-you {
-      font-size: 1.5rem;
-      font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
   .bogo-container .line {
-      width: 22%;
-      display: inline-block;
-      border: .6px solid grey;
-      margin-bottom: .3rem;
+    width: 22%;
+    display: inline-block;
+    border: 0.6px solid grey;
+    margin-bottom: 0.3rem;
   }
   .bogo-container .thank-you-centered {
-      display: inline-block;
-      padding: 0 1rem;
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  .bogo-container .mobile-only {
+    display: none;
+  }
+  .bogo-container .desktop-only {
+    display: block;
   }
 
   /***** Modal *****/
@@ -388,12 +394,12 @@
     border: 0;
   }
   .bogo-container .thank-you-p-text {
-      font-weight: 600;
-      line-height: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
   }
   .bogo-container .three-column-header {
-      font-weight: 600;
-      padding-bottom: 2rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
   }
   .bogo-container .modal-header .close {
     float: none;
@@ -407,13 +413,13 @@
     margin-top: -1rem !important;
   }
   .bogo-container .space-block {
-      padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
   .bogo-container .modal .modal-dialog .modal-content .close {
     color: #fff !important;
     font-size: 4rem !important;
   }
-  
+
   .play-btn {
     text-align: center;
   }
@@ -437,14 +443,19 @@
     }
   }
 
-  /* Small devices (landscape phones, less than 768px) */
-
   @media (max-width: 767px) {
-  }
-
-  /* Extra small devices (portrait phones, less than 576px) */
-
-  @media (max-width: 575px) {
+    .bogo-container .thank-you-p-text {
+      line-height: 2rem;
+    }
+    .generic-html-template > .container {
+      padding: 0;
+    }
+    .bogo-container .mobile-only {
+      display: block;
+    }
+    .bogo-container .desktop-only {
+      display: none;
+    }
     .bogo-container .modal .modal-dialog {
       width: 40rem;
     }
@@ -454,12 +465,55 @@
       margin-right: 8px !important;
       margin-top: 2rem !important;
     }
+    .bogo-container .revive-logo {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 30%;
+    }
+    .bogo-container .three-col-img {
+      padding-bottom: 1.5rem;
+    }
+    .bogo-container .three-column-header {
+      font-size: 1.8rem;
+      padding-bottom: 0;
+    }
+    .bogo-container .thank-you-p-text {
+      padding-top: 2rem;
+      margin: 0 5rem;
+    }
+    .bogo-container .accent-text {
+      font-size: 2.5rem;
+    }
+    .bogo-container .sub-header {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0 3rem;
+    }
+    .bogo-container p {
+      font-size: 1.5rem !important;
+    }
+    .bogo-container {
+      text-align: center;
+    }
+    .bogo-container .thank-you {
+      text-align: center;
+    }
+    .vfc .col1n {
+      padding-top: 0;
+    }
     .hero-header {
       font-size: 4.4rem;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+    }
+    .bogo-container .leftCol {
+      padding: 1rem 0 0 0;
     }
     .rightCol > p,
     .rightCol-txt {
       margin-right: 0 !important;
+      text-align: center;
     }
     .premiumTxt {
       width: 100%;
@@ -491,23 +545,35 @@
       data-theVideo="https://www.youtube.com/embed/YPQCGt791nw"
     >
       <img
-        class="img-responsive center-block wsl-hero"
+        class="img-responsive center-block wsl-hero desktop-only"
         src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_hero.jpg"
         alt="1,835 mattresses donated to foster children,
 3,463 total mattresses donated"
       />
+      <img
+        class="img-responsive center-block wsl-hero mobile-only"
+        src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_hero.jpg"
+        alt="1,835 mattresses donated to foster children,
+3,463 total mattresses donated"
+      />
     </a>
-    <div class="row onTrend">
+    <div class="row onTrend desktop-only">
       <div class="col-md-6 col-sm-6 col-xs-12 leftCol">
         <img
           alt="When you purchase a Premium Revive Set between August 12-18, a child in foster care will receive a free Revive Twin Mattress + Foundation"
-          class="img-responsive center-block"
+          class="img-responsive center-block desktop-only"
           src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner1.jpg"
+        />
+        <img
+          alt="When you purchase a Premium Revive Set between August 12-18, a child in foster care will receive a free Revive Twin Mattress + Foundation"
+          class="img-responsive center-block mobile-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_banner1.jpg"
         />
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
         <div class="sub-header">
-          <span class="accent-text">1835</span> mattresses donated to foster children, <span class="accent-text">3463</span> total mattresses
+          <span class="accent-text">1835 </span>mattresses donated to foster
+          children, <span class="accent-text">3463 </span>total mattresses
           donated
         </div>
         <p>
@@ -518,11 +584,38 @@
         </p>
       </div>
     </div>
+    <div class="row onTrend mobile-only">
+      <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
+        <div class="sub-header">
+          <span class="accent-text">1835</span> mattresses donated to foster
+          children, <span class="accent-text">3463</span> total mattresses
+          donated
+        </div>
+        <p>
+          During our Buy One, Give One events supporting foster care children,
+          we have sold and donated <strong>876</strong> mattresses! Thanks to
+          Arizona Helping Hands and the Arizona community, more children in need
+          have a safe place to sleep.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 leftCol">
+        <img
+          alt="When you purchase a Premium Revive Set between August 12-18, a child in foster care will receive a free Revive Twin Mattress + Foundation"
+          class="img-responsive center-block desktop-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner1.jpg"
+        />
+        <img
+          alt="When you purchase a Premium Revive Set between August 12-18, a child in foster care will receive a free Revive Twin Mattress + Foundation"
+          class="img-responsive center-block mobile-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_banner1.jpg"
+        />
+      </div>
+    </div>
 
     <div class="row vfc">
       <div class="col-md-2 col-sm-2 col-xs-12 col1n">
         <img
-          class="img-responsive"
+          class="img-responsive center-block"
           src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_logo1.jpg"
           width="141"
           height="77"
@@ -538,7 +631,7 @@
           and other supplies to foster care children in need. In 2016, over
           2,000 children received cribs and beds.
           <a target="_blank" href="http://www.azhelpinghands.org/"
-            ><u>Learn more</u> &rsaquo;</a
+            ><u>Learn&nbsp;more</u> &rsaquo;</a
           >
         </p>
       </div>
@@ -548,13 +641,13 @@
     <div class="row onTrend2">
       <div class="col-md-6 col-sm-6 col-xs-12 leftCol2">
         <img
-          class="img-responsive center-block"
+          class="img-responsive center-block desktop-only"
           src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner2.jpg"
         />
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
         <img
-          class="img-responsive wsl-hero"
+          class="img-responsive wsl-hero revive-logo"
           src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_logo2.jpg"
           alt="Revive logo"
         />
@@ -567,76 +660,112 @@
     </div>
     <!-- Thank you block -->
     <div class="row space-block">
-        <div class="col-md-3 text-center green-box">
-            <p class='box-text'><span class="box-text-accent">BUY ONE, GIVE ONE<br>1384 </span>Total Mattresses Delivered</p>
+      <div class="col-md-3 text-center green-box">
+        <p class="box-text">
+          <span class="box-text-accent">BUY ONE, GIVE ONE<br />1384 </span>Total
+          Mattresses Delivered
+        </p>
+      </div>
+      <!-- desktop only -->
+      <div class="col-md-9 text-center desktop-only">
+        <div class="container">
+          <div class="line"></div>
+          <div class="thank-you-centered">
+            <h3 class="thank-you">THANK YOU!</h3>
+          </div>
+          <div class="line"></div>
         </div>
-        <div class="col-md-9 text-center">
-            <div class="container">
-                <div class="line"></div>
-                <div class="thank-you-centered"><h3 class='thank-you'>THANK YOU!</h3></div>
-                <div class="line"></div>
-            </div>
-            <p class='thank-you-p-text'>Because of your Revive purchases, 1384 mattress sets have been donated<br>to veterans and foster care children in need.</p>
-        </div>
+        <p class="thank-you-p-text">
+          Because of your Revive purchases, 1384 mattress sets have been
+          donated<br />to veterans and foster care children in need.
+        </p>
+      </div>
+      <!-- mobile only -->
+      <div class="col-md-9 text-center mobile-only">
+        <p class="thank-you-p-text">
+          <b>THANK YOU!</b> Because of your Revive purchases, 1384 mattress sets
+          have been donated to veterans and foster care children in need.
+        </p>
+      </div>
     </div>
     <!-- 3 column block -->
     <div class="row">
-        <div class="col-md-12">
-                <h2 class="sub-header text-center three-column-header">Eligible Premium Revive Sets - At All Stores + Online</h2>
-        </div>
-        <div class="col-md-4">
-            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta1.jpg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta2.jpg" alt="">
-        </div>
-        <div class="col-md-4">
-            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta3.jpg" alt="">
-        </div>
+      <div class="col-md-12">
+        <h2 class="sub-header text-center three-column-header">
+          Eligible Premium Revive Sets - At All Stores + Online
+        </h2>
+      </div>
+      <div class="col-md-4">
+        <img
+          class="desktop-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta1.jpg"
+          alt=""
+        />
+        <img
+          class="mobile-only img-responsive three-col-img"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_cta1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          class="desktop-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta2.jpg"
+          alt=""
+        />
+        <img
+          class="mobile-only img-responsive three-col-img"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_cta2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          class="desktop-only"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta3.jpg"
+          alt=""
+        />
+        <img
+          class="mobile-only img-responsive three-col-img"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_mobile_cta3.jpg"
+          alt=""
+        />
+      </div>
     </div>
-    </div>
-
-    <!--
-        <div class="bogoSocial">
-            <div>Get Revived on Social!</div>
-            <a href="https://www.instagram.com/RevivebyLS/" target="_blank" role="button" aria-label="revive on instagram"></a>
-            <a href="https://www.facebook.com/RevivebyLivingSpaces/" target="_blank" role="button" aria-label="revive on facebook"></a>
-            <a href="https://twitter.com/RevivebyLS" target="_blank" role="button" aria-label="revive on twitter"></a> </div>
--->
   </div>
-  <!-- MODAL -->
-  <div
-    class="modal fade"
-    id="modal-video"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="modal-video-label"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="modal-video">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                id="main-Video"
-                class="embed-responsive-item"
-                width="1170"
-                src=""
-                webkitallowfullscreen
-                mozallowfullscreen
-                allowfullscreen
-              ></iframe>
-            </div>
+</div>
+<!-- MODAL -->
+<div
+  class="modal fade"
+  id="modal-video"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-video-label"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-video">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              id="main-Video"
+              class="embed-responsive-item"
+              width="1170"
+              src=""
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -644,9 +773,9 @@
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
   playModal();
-  playModal2();
 
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
   function playModal() {
@@ -666,5 +795,4 @@
       });
     });
   }
-
 </script>
