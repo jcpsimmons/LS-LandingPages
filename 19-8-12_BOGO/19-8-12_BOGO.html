@@ -1,0 +1,670 @@
+<style type="text/css">
+  .footer-component {
+    margin-top: 7rem;
+  }
+
+  .dont-display {
+    display: none;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .screen-reader {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 0 !important;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0 !important;
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .floatL {
+    float: left;
+  }
+
+  .floatR {
+    float: right;
+  }
+
+  a.block-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .hero-header {
+    font-size: 6.4rem;
+    color: #478071;
+    line-height: 9.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+  }
+
+  .bogo1n {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+
+  .sub-header {
+    font-size: 3rem;
+    color: #565653;
+    line-height: 3rem;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+
+  .bogo-container .accent-text {
+      font-weight: 600;
+      color: #478071;
+      font-size: 4rem;
+  }
+
+  .wsl-intro {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #464646;
+  }
+
+  .wsl-intro > p {
+    margin: 2.4rem 4.2rem;
+  }
+
+  .premiumTxt {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #464646;
+    width: 72%;
+    margin: 0 auto;
+  }
+
+  .premiumTxt > p {
+    font-weight: 600;
+    margin: 2.4rem 0 1rem;
+  }
+
+  .premiumTxt ul {
+    margin: 0 auto;
+  }
+
+  .premiumTxt ul li {
+    display: inline-block;
+    /* float: left;*/
+    padding: 0 1rem;
+    border-right: 0.1rem solid #333333;
+    line-height: 2.2rem;
+  }
+
+  .premiumTxt ul li:last-child {
+    border: 0;
+  }
+
+  #wsl_wrap #recently_viewed_container {
+    display: none;
+  }
+
+  a.lp-shop-link {
+    display: block;
+    background: #363636;
+    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 6rem;
+  }
+
+  .lp-shop-link span {
+    font-family: Arial;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    text-align: left;
+  }
+
+  .onTrend {
+    position: relative;
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  .onTrend .playVideo {
+    display: block;
+    width: 100%;
+    height: 22.7rem;
+  }
+
+  .onTrend2 {
+    position: relative;
+    width: 100%;
+    margin: 4rem 0;
+  }
+
+  .onTrend2 .playVideo2 {
+    display: block;
+    height: 22.7rem;
+  }
+
+  .leftCol {
+    margin-top: 0.1rem;
+  }
+
+  .rightCol > p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    text-align: left;
+    margin: 1rem 3.2rem 0 0;
+  }
+
+  .rightCol-txt {
+    margin-right: 7.5rem !important;
+  }
+
+  .vfc {
+    margin: 4rem 0 4rem 0;
+  }
+
+  .vfc .col1 {
+    text-align: center;
+    padding-top: 0.9rem;
+  }
+
+  .vfc .col1n {
+    text-align: center;
+    padding-top: 4.5rem;
+  }
+
+  .vfc .col2 > p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .azBlock {
+    background: #f1f1f1;
+    font-size: 1.8rem;
+    padding: 1.8rem;
+  }
+
+  .azBlock span {
+    display: block;
+  }
+
+  .azBlock .col3 {
+    width: 33.2rem;
+    text-transform: uppercase;
+  }
+
+  .azBlock .col3 .bogo1 {
+    width: 14.3rem;
+    padding-right: 1.5rem;
+  }
+
+  .azBlock .col3 .bogo2 {
+    padding-left: 1.5rem;
+    border-left: 0.1rem solid #ccc;
+  }
+
+  .azBlock .col3 span {
+    text-align: right;
+  }
+
+  .azBlock .col3 .bogo2 span {
+    text-align: left;
+  }
+
+  .azBlock span.txt1 {
+    font-size: 4.3rem;
+  }
+
+  .azBlock .col4 {
+    width: 55rem;
+  }
+
+  .azBlock .col4 p {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+
+  .azBlock .sBorder {
+    display: block;
+    width: 44.6rem;
+    height: 0.1rem;
+    margin: 1.5rem auto auto;
+    background: #cccccc;
+  }
+
+  .azBlock .tyTxt {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5rem;
+    background: #f1f1f1;
+    width: 10.4rem;
+    margin: -1.8rem auto auto;
+  }
+
+  .wslVbox {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+
+  .wslVbox .closePlayer {
+    background: #eee;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+
+  .wslVbox2 {
+    position: absolute;
+    left: 0;
+  }
+
+  .wslVbox2 .closePlayer {
+    background: #eee;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+
+  .bogoSocial {
+    background: url("/globalassets/images/lp/2017/0626_revive-social-icon.png")
+      no-repeat center bottom;
+    width: 100%;
+    min-height: 4rem;
+    margin: 5rem auto auto;
+  }
+
+  .bogoSocial div {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .bogoSocial a {
+    display: inline-block;
+    margin: 0 1.5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .bogo-container .green-box {
+      background-color:#478071;
+      text-align: center;
+      color: white;
+      height: 10rem;
+      margin-top: 2rem;
+  }
+  .bogo-container .green-box .box-text {
+      padding-top: 2rem;
+      text-align: center;
+  }
+  .bogo-container .green-box .box-text-accent {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600
+  }
+  .bogo-container .thank-you {
+      font-size: 1.5rem;
+      font-weight: 800;
+  }
+  .bogo-container .line {
+      width: 22%;
+      display: inline-block;
+      border: .6px solid grey;
+      margin-bottom: .3rem;
+  }
+  .bogo-container .thank-you-centered {
+      display: inline-block;
+      padding: 0 1rem;
+  }
+
+  /***** Modal *****/
+
+  .bogo-container .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .bogo-container .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .bogo-container .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .bogo-container .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .bogo-container .modal-header,
+  .bogo-container .modal-footer {
+    border: 0;
+  }
+  .bogo-container .thank-you-p-text {
+      font-weight: 600;
+      line-height: 3rem;
+  }
+  .bogo-container .three-column-header {
+      font-weight: 600;
+      padding-bottom: 2rem;
+  }
+  .bogo-container .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+  .bogo-container .space-block {
+      padding-bottom: 2rem;
+  }
+  .bogo-container .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+  
+  .play-btn {
+    text-align: center;
+  }
+  #main-Video,
+  #revive-video {
+    border: 0.5rem solid #fff;
+  }
+  .bogo-container .modal .modal-dialog {
+    width: 85rem;
+  }
+  /* Large devices (desktops, less than 1200px) */
+
+  @media (max-width: 1199px) {
+  }
+
+  /* Medium devices (tablets, less than 992px) */
+
+  @media (max-width: 991px) {
+    .premiumTxt {
+      width: 81%;
+    }
+  }
+
+  /* Small devices (landscape phones, less than 768px) */
+
+  @media (max-width: 767px) {
+  }
+
+  /* Extra small devices (portrait phones, less than 576px) */
+
+  @media (max-width: 575px) {
+    .bogo-container .modal .modal-dialog {
+      width: 40rem;
+    }
+    .bogo-container .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 2rem !important;
+      margin-right: 8px !important;
+      margin-top: 2rem !important;
+    }
+    .hero-header {
+      font-size: 4.4rem;
+    }
+    .rightCol > p,
+    .rightCol-txt {
+      margin-right: 0 !important;
+    }
+    .premiumTxt {
+      width: 100%;
+    }
+    .premiumTxt ul li {
+      font-size: 1.6rem;
+    }
+    .azBlock .col3 .bogo2 {
+      width: 15.5rem;
+    }
+    .azBlock .col4 {
+      width: 100%;
+    }
+    .azBlock .sBorder {
+      width: 100%;
+      margin: 4.5rem auto auto;
+    }
+  }
+</style>
+
+<div id="content_wrap" class="container bogo-container">
+  <div id="wsl_wrap" class="relative-box">
+    <!-- HERO-->
+    <h1 class="hero-header">BUY ONE, GIVE ONE</h1>
+    <a
+      href="#"
+      data-toggle="modal"
+      data-target="#modal-video"
+      data-theVideo="https://www.youtube.com/embed/YPQCGt791nw"
+    >
+      <img
+        class="img-responsive center-block wsl-hero"
+        src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_hero.jpg"
+        alt="1,835 mattresses donated to foster children,
+3,463 total mattresses donated"
+      />
+    </a>
+    <div class="row onTrend">
+      <div class="col-md-6 col-sm-6 col-xs-12 leftCol">
+        <img
+          alt="When you purchase a Premium Revive Set between August 12-18, a child in foster care will receive a free Revive Twin Mattress + Foundation"
+          class="img-responsive center-block"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner1.jpg"
+        />
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
+        <div class="sub-header">
+          <span class="accent-text">1835</span> mattresses donated to foster children, <span class="accent-text">3463</span> total mattresses
+          donated
+        </div>
+        <p>
+          During our Buy One, Give One events supporting foster care children,
+          we have sold and donated <strong>876</strong> mattresses! Thanks to
+          Arizona Helping Hands and the Arizona community, more children in need
+          have a safe place to sleep.
+        </p>
+      </div>
+    </div>
+
+    <div class="row vfc">
+      <div class="col-md-2 col-sm-2 col-xs-12 col1n">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_logo1.jpg"
+          width="141"
+          height="77"
+          alt="operation dignity logo"
+        />
+      </div>
+      <div class="col-md-10 col-sm-10 col-xs-12 col2">
+        <h2 class="thank-you">About Arizona Helping Hands</h2>
+        <p>
+          A non-profit organization that provides foster and indigent families
+          with donated essentials, Arizona Helping Hands is dedicated to
+          collecting and distributing mattresses, cribs, beds, blankets, clothes
+          and other supplies to foster care children in need. In 2016, over
+          2,000 children received cribs and beds.
+          <a target="_blank" href="http://www.azhelpinghands.org/"
+            ><u>Learn more</u> &rsaquo;</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- revive -->
+    <div class="row onTrend2">
+      <div class="col-md-6 col-sm-6 col-xs-12 leftCol2">
+        <img
+          class="img-responsive center-block"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner2.jpg"
+        />
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
+        <img
+          class="img-responsive wsl-hero"
+          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_logo2.jpg"
+          alt="Revive logo"
+        />
+        <p class="rightCol-txt">
+          Visit the newly revamped Revive Sleep Centers located inside
+          <a href=" /stores"><u>all stores</u></a
+          >, and find your perfect mattress and sleep essentials.
+        </p>
+      </div>
+    </div>
+    <!-- Thank you block -->
+    <div class="row space-block">
+        <div class="col-md-3 text-center green-box">
+            <p class='box-text'><span class="box-text-accent">BUY ONE, GIVE ONE<br>1384 </span>Total Mattresses Delivered</p>
+        </div>
+        <div class="col-md-9 text-center">
+            <div class="container">
+                <div class="line"></div>
+                <div class="thank-you-centered"><h3 class='thank-you'>THANK YOU!</h3></div>
+                <div class="line"></div>
+            </div>
+            <p class='thank-you-p-text'>Because of your Revive purchases, 1384 mattress sets have been donated<br>to veterans and foster care children in need.</p>
+        </div>
+    </div>
+    <!-- 3 column block -->
+    <div class="row">
+        <div class="col-md-12">
+                <h2 class="sub-header text-center three-column-header">Eligible Premium Revive Sets - At All Stores + Online</h2>
+        </div>
+        <div class="col-md-4">
+            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta1.jpg" alt="">
+        </div>
+        <div class="col-md-4">
+            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta2.jpg" alt="">
+        </div>
+        <div class="col-md-4">
+            <img src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_cta3.jpg" alt="">
+        </div>
+    </div>
+    </div>
+
+    <!--
+        <div class="bogoSocial">
+            <div>Get Revived on Social!</div>
+            <a href="https://www.instagram.com/RevivebyLS/" target="_blank" role="button" aria-label="revive on instagram"></a>
+            <a href="https://www.facebook.com/RevivebyLivingSpaces/" target="_blank" role="button" aria-label="revive on facebook"></a>
+            <a href="https://twitter.com/RevivebyLS" target="_blank" role="button" aria-label="revive on twitter"></a> </div>
+-->
+  </div>
+  <!-- MODAL -->
+  <div
+    class="modal fade"
+    id="modal-video"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="main-Video"
+                class="embed-responsive-item"
+                width="1170"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  playModal();
+  playModal2();
+
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function playModal() {
+    var trigger = $("body").find('[data-target="#modal-video"]');
+    trigger.click(function() {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-theVideo"),
+        videoSRCauto =
+          videoSRC +
+          "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+      $(theModal + " iframe").attr("src", videoSRCauto);
+      $(theModal + " button.close").click(function() {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+      $("#modal-video").on("hidden.bs.modal", function(e) {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+    });
+  }
+
+</script>
