@@ -362,8 +362,7 @@
     display: block;
   }
 
-  /***** Modal *****/
-
+  /* MODAL */
   .bogo-container .modal-backdrop.in {
     filter: alpha(opacity=7);
     opacity: 0.7;
@@ -372,10 +371,7 @@
   .bogo-container .modal-content {
     background: none;
     border: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
     border-radius: 0;
-    -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
@@ -393,18 +389,11 @@
   .bogo-container .modal-footer {
     border: 0;
   }
-  .bogo-container .thank-you-p-text {
-    font-weight: 600;
-    line-height: 3rem;
-  }
-  .bogo-container .three-column-header {
-    font-weight: 600;
-    padding-bottom: 2rem;
-  }
+
   .bogo-container .modal-header .close {
     float: none;
     margin: 0;
-    font-size: 36px;
+    font-size: 3.6rem;
     color: #fff;
     font-weight: 300;
     text-shadow: none;
@@ -412,9 +401,7 @@
     margin-right: 0 !important;
     margin-top: -1rem !important;
   }
-  .bogo-container .space-block {
-    padding-bottom: 2rem;
-  }
+
   .bogo-container .modal .modal-dialog .modal-content .close {
     color: #fff !important;
     font-size: 4rem !important;
@@ -423,13 +410,15 @@
   .play-btn {
     text-align: center;
   }
-  #main-Video,
-  #revive-video {
+
+  #same_day_delivery_video {
     border: 0.5rem solid #fff;
   }
+
   .bogo-container .modal .modal-dialog {
-    width: 85rem;
+    width: 95vw;
   }
+  /* END MODAL */
   /* Large devices (desktops, less than 1200px) */
 
   @media (max-width: 1199px) {
@@ -540,8 +529,9 @@
     <h1 class="hero-header">BUY ONE, GIVE ONE</h1>
     <a
       href="#"
+      id="mobile_modal"
       data-toggle="modal"
-      data-target="#modal-video"
+      data-target="#modal-video_01"
       data-theVideo="https://www.youtube.com/embed/YPQCGt791nw"
     >
       <img
@@ -640,10 +630,18 @@
     <!-- revive -->
     <div class="row onTrend2">
       <div class="col-md-6 col-sm-6 col-xs-12 leftCol2">
-        <img
-          class="img-responsive center-block desktop-only"
-          src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner2.jpg"
-        />
+        <a
+          href="#mobile_modal_02"
+          id="mobile_modal_02"
+          data-toggle="modal"
+          data-target="#modal-video_02"
+          data-theVideo="https://www.youtube.com/embed/YPQCGt791nw"
+        >
+          <img
+            class="img-responsive center-block desktop-only"
+            src="/globalassets/images/lp/2019/08/BOGO_FK/0812_BOGO_fosterkids_banner2a.jpg"
+          />
+        </a>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
         <img
@@ -733,66 +731,132 @@
       </div>
     </div>
   </div>
-</div>
-<!-- MODAL -->
-<div
-  class="modal fade"
-  id="modal-video"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="modal-video-label"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div
+    class="modal fade"
+    id="modal-video_01"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="main-Video"
+                class="embed-responsive-item"
+                width="1170"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="modal-video">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              id="main-Video"
-              class="embed-responsive-item"
-              width="1170"
-              src=""
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            ></iframe>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="modal-video_02"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="same_day_delivery_video"
+                class="embed-responsive-item"
+                width="1170"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- MODAL -->
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript">
-  playModal();
-
-  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-  function playModal() {
-    var trigger = $("body").find('[data-target="#modal-video"]');
-    trigger.click(function() {
-      var theModal = $(this).data("target"),
-        videoSRC = $(this).attr("data-theVideo"),
-        videoSRCauto =
-          videoSRC +
-          "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
-      $(theModal + " iframe").attr("src", videoSRCauto);
-      $(theModal + " button.close").click(function() {
-        $(theModal + " iframe").attr("src", videoSRC);
-      });
-      $("#modal-video").on("hidden.bs.modal", function(e) {
-        $(theModal + " iframe").attr("src", videoSRC);
-      });
-    });
-  }
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+<script>
+  window.addEventListener(
+    "load",
+    function() {
+      if (window.jQuery) {
+        var trigger = $("#mobile_modal");
+        trigger.click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-theVideo"),
+            videoSRCauto =
+              videoSRC +
+              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+          $("#modal-video_01").on("hidden.bs.modal", function(e) {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      }
+    },
+    false
+  );
+</script>
+<script>
+  window.addEventListener(
+    "load",
+    function() {
+      if (window.jQuery) {
+        var trigger = $("#mobile_modal_02");
+        trigger.click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-theVideo"),
+            videoSRCauto =
+              videoSRC +
+              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+          $("#modal-video_02").on("hidden.bs.modal", function(e) {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      }
+    },
+    false
+  );
 </script>
