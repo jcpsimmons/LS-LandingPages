@@ -1,0 +1,296 @@
+<style>
+  .LDRP .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .LDRP .full-width-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 1.5rem;
+    align-items: center;
+  }
+  .LDRP .beautyrestDiv {
+    flex-basis: 20%;
+  }
+  .LDRP .kingForQueenDiv {
+    flex-basis: 65%;
+  }
+  .LDRP .leftBlock {
+    flex-basis: 50%;
+    padding-bottom: 4rem;
+  }
+  .LDRP .rightBlock {
+    flex-basis: 50%;
+    padding-bottom: 4rem;
+  }
+  .LDRP .blueText {
+    font-size: 3.6rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #008094;
+    margin-top: 0;
+  }
+  .LDRP .ctaButton {
+    width: 20rem;
+    height: auto;
+    padding-top: 0.8rem;
+  }
+  .LDRP .sn-button {
+    background-color: #008094;
+    color: white;
+    border-radius: 10px;
+    height: 4rem;
+    width: 20rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .LDRP .sn-button p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  .LDRP .sn-button:hover {
+    background-color: #006a7a;
+  }
+  .LDRP .kingForQueenDiv a:hover {
+    text-decoration: none;
+  }
+  .LDRP .ctaButton:hover {
+    filter: brightness(0.9);
+  }
+  .LDRP .beautyrestImg {
+    width: 25rem;
+    height: auto;
+  }
+  .LDRP p {
+    font-size: 2rem;
+    line-height: 1.55;
+  }
+  .LDRP h2 {
+    line-height: 2.5rem;
+  }
+  .LDRP .button-text {
+    color: #f1f1f1;
+    line-height: 6rem;
+    padding: 0 3rem;
+    font-size: 3rem;
+  }
+  .LDRP .blue-button {
+    background-color: #213d50;
+    border-radius: 5px;
+    height: 6rem;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .LDRP .red-text {
+    color: red;
+  }
+  /* MODAL */
+  .LDRP .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .LDRP .modal-content {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .LDRP .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .LDRP .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .LDRP .modal-header,
+  .LDRP .modal-footer {
+    border: 0;
+  }
+
+  .LDRP .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 3.6rem;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+
+  .LDRP .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+
+  .play-btn {
+    text-align: center;
+  }
+
+  #same_day_delivery_video {
+    border: 0.5rem solid #fff;
+  }
+
+  .LDRP .modal .modal-dialog {
+    width: 95vw;
+  }
+  /* END MODAL */
+
+  @media (max-width: 767px) {
+    .LDRP .container,
+    .LDRP .full-width-container {
+      flex-direction: column;
+    }
+    .LDRP .blueText {
+      padding-top: 2rem;
+      text-align: center;
+    }
+    .LDRP .kingForQueenDiv {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .LDRP .beautyrestImg {
+      width: 12.5rem;
+      height: auto;
+      padding-top: 2rem;
+    }
+    .LDRP .full-width-container {
+      flex-direction: column-reverse;
+    }
+  }
+</style>
+
+<div class="LDRP">
+  <div class="full-width-container">
+    <div class="hero-div">
+      <img
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_hero_01.jpg"
+        alt="Labor Day Savings - Save up to $700 on select Tempur-Pedic sets, and up to $800 on select Stearns & Foster sets."
+      />
+    </div>
+  </div>
+  <div class="container">
+    <div class="leftBlock text-center">
+      <div>
+        <img
+          class="img-responsive video-thumb"
+          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_tempurpedic.jpg"
+          alt="King for a Queen Event Video"
+        />
+        <h2 class="red-text"><b>SAVE UP TO $700</b></h2>
+        <h2><b>TEMPUR-PEDIC</b></h2>
+        <h2><b>MATTRESS + ADJUSTABLE BASE</b></h2>
+        <h4>With smarter Tempur-Pedic tech</h4>
+        <div class="blue-button">
+          <h3 class="button-text">Save on Tempur-Pedic &rsaquo;</h3>
+        </div>
+      </div>
+    </div>
+    <div class="rightBlock text-center">
+      <img
+        class="img-responsive"
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_stearnsfoster.jpg"
+        alt="Free Sleep Tracker and $300 Living Spaces Card"
+      />
+      <h2 class="red-text"><b>SAVE UP TO $800</b></h2>
+      <h2><b>STEARNS & FOSTER</b></h2>
+      <h2><b>MATTRESS + ADJUSTABLE BASE</b></h2>
+      <h4>Luxury Ultra-Firm, Ultra-Plush + more</h4>
+      <div class="blue-button">
+        <h3 class="button-text">Save on Stearns & Foster &rsaquo;</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="full-width-container">
+        <div class="hero-div">
+          <img
+            src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_01.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="modal-video_01"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modal-video-label"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="same_day_delivery_video"
+                class="embed-responsive-item"
+                width="1170"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                src=""
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener(
+    "load",
+    function() {
+      if (window.jQuery) {
+        var trigger = $("#mobile_modal");
+        trigger.click(function() {
+          var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-theVideo"),
+            videoSRCauto =
+              videoSRC +
+              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function() {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+          $("#modal-video_01").on("hidden.bs.modal", function(e) {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      }
+    },
+    false
+  );
+</script>
