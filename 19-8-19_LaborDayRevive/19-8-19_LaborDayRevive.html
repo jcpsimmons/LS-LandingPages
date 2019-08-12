@@ -93,9 +93,29 @@
     margin: 0 auto;
   }
   .LDRP .red-text {
-    color: red;
+    color: #b20606;
+  }
+  .LDRP .hero-div-r {
+    display: flex;
+    flex-basis: 50%;
+  }
+  .LDRP .hero-div-l {
+    display: flex;
+    flex-basis: 50%;
+  }
+  .LDRP .hero-container {
+    display: flex;
+    margin-bottom: 4rem;
+    color: #f1f1f1;
+  }
+  .LDRP .extra-line-height {
+      line-height: 3rem;
+  }
+  .LDRP .ul-link {
+      text-decoration: underline;
   }
   /* MODAL */
+
   .LDRP .modal-backdrop.in {
     filter: alpha(opacity=7);
     opacity: 0.7;
@@ -153,7 +173,23 @@
   }
   /* END MODAL */
 
+  .LDRP .desktop-only {
+    display: flex;
+  }
+  .LDRP .mobile-only {
+    display: none;
+  }
+
   @media (max-width: 767px) {
+    .LDRP .desktop-only {
+      display: none;
+    }
+    .LDRP .mobile-only {
+      display: block;
+    }
+    .LDRP h2 {
+      line-height: 3rem;
+    }
     .LDRP .container,
     .LDRP .full-width-container {
       flex-direction: column;
@@ -180,10 +216,31 @@
 </style>
 
 <div class="LDRP">
-  <div class="full-width-container">
-    <div class="hero-div">
+  <div class="container hero-container">
+    <div class="hero-div-l">
+      <a href="https://www.livingspaces.com/stores">
+        <img
+          class="desktop-only img-responsive"
+          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_hero_01_left.jpg"
+          alt="Labor Day Savings - Save up to $700 on select Tempur-Pedic sets, and up to $800 on select Stearns & Foster sets."
+        />
+      </a>
+    </div>
+    <div
+      class="hero-div-r"
+      id="mobile_modal"
+      data-toggle="modal"
+      data-target="#modal-video_01"
+      data-theVideo="https://www.youtube.com/embed/mdkb5ihh9hw"
+    >
       <img
-        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_hero_01.jpg"
+        class="mobile-only img-responsive"
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_hero.jpg"
+        alt="Labor Day Savings - Save up to $700 on select Tempur-Pedic sets, and up to $800 on select Stearns & Foster sets."
+      />
+      <img
+        class="desktop-only img-responsive"
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_hero_02.jpg"
         alt="Labor Day Savings - Save up to $700 on select Tempur-Pedic sets, and up to $800 on select Stearns & Foster sets."
       />
     </div>
@@ -198,7 +255,7 @@
         />
         <h2 class="red-text"><b>SAVE UP TO $700</b></h2>
         <h2><b>TEMPUR-PEDIC</b></h2>
-        <h2><b>MATTRESS + ADJUSTABLE BASE</b></h2>
+        <h2 class='extra-line-height'><b>MATTRESS + ADJUSTABLE BASE</b></h2>
         <h4>With smarter Tempur-Pedic tech</h4>
         <div class="blue-button">
           <h3 class="button-text">Save on Tempur-Pedic &rsaquo;</h3>
@@ -213,13 +270,14 @@
       />
       <h2 class="red-text"><b>SAVE UP TO $800</b></h2>
       <h2><b>STEARNS & FOSTER</b></h2>
-      <h2><b>MATTRESS + ADJUSTABLE BASE</b></h2>
+      <h2 class='extra-line-height'><b>MATTRESS + ADJUSTABLE BASE</b></h2>
       <h4>Luxury Ultra-Firm, Ultra-Plush + more</h4>
       <div class="blue-button">
         <h3 class="button-text">Save on Stearns & Foster &rsaquo;</h3>
       </div>
     </div>
-    <div class="container">
+    <!-- Desktop Only -->
+    <div class="container desktop-only">
       <div class="full-width-container">
         <div class="hero-div">
           <img
@@ -229,68 +287,84 @@
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="modal fade"
-    id="modal-video_01"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="modal-video-label"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="modal-video">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                id="same_day_delivery_video"
-                class="embed-responsive-item"
-                width="1170"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                src=""
-                webkitallowfullscreen
-                mozallowfullscreen
-                allowfullscreen
-              ></iframe>
+    <!-- Mobile Only -->
+    <div class="container mobile-only text-center">
+      <img
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_02.jpg"
+        alt="Revive Mattress"
+      />
+      <img
+        class='img-responsive'
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_logo_02.png"
+        alt="Revive Logo"
+      />
+      <h2 class="red-text"><b>SAVE UP TO $500</b></h2>
+      <h2><b>HOLIDAY HYBRID MATTRESS</b></h2>
+       <a class='ul-link' href="#"><p>Shop Queen, Cal King or Eastern King</a> &rsaquo;</p>
+    </div>
+    <!-- BEGIN MODAL DIV AND SCRIPT -->
+    <div
+      class="modal fade"
+      id="modal-video_01"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modal-video-label"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  id="same_day_delivery_video"
+                  class="embed-responsive-item"
+                  width="1170"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  src=""
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    window.addEventListener(
+      "load",
+      function() {
+        if (window.jQuery) {
+          var trigger = $("#mobile_modal");
+          trigger.click(function() {
+            var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-theVideo"),
+              videoSRCauto =
+                videoSRC +
+                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+            $(theModal + " iframe").attr("src", videoSRCauto);
+            $(theModal + " button.close").click(function() {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+            $("#modal-video_01").on("hidden.bs.modal", function(e) {
+              $(theModal + " iframe").attr("src", videoSRC);
+            });
+          });
+        }
+      },
+      false
+    );
+  </script>
 </div>
-<script>
-  window.addEventListener(
-    "load",
-    function() {
-      if (window.jQuery) {
-        var trigger = $("#mobile_modal");
-        trigger.click(function() {
-          var theModal = $(this).data("target"),
-            videoSRC = $(this).attr("data-theVideo"),
-            videoSRCauto =
-              videoSRC +
-              "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
-          $(theModal + " iframe").attr("src", videoSRCauto);
-          $(theModal + " button.close").click(function() {
-            $(theModal + " iframe").attr("src", videoSRC);
-          });
-          $("#modal-video_01").on("hidden.bs.modal", function(e) {
-            $(theModal + " iframe").attr("src", videoSRC);
-          });
-        });
-      }
-    },
-    false
-  );
-</script>
