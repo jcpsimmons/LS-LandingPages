@@ -93,8 +93,7 @@
     border-radius: 5px;
     height: 6rem;
     width: fit-content;
-    margin: 0 auto;
-    margin-top: 3rem;
+    margin: 1rem auto;
   }
   .LDRP .blue-button:hover {
     background-color: #0d171f;
@@ -116,10 +115,10 @@
     color: #f1f1f1;
   }
   .LDRP .extra-line-height {
-      line-height: 3rem;
+    line-height: 3rem;
   }
   .LDRP .ul-link {
-      text-decoration: underline;
+    text-decoration: underline;
   }
   .LDRP .lbr-day-header {
     background-color: #213d50;
@@ -194,6 +193,9 @@
   .LDRP .desktop-only {
     display: flex;
   }
+  .LDRP .desktop-only-block {
+    display: block;
+  }
   .LDRP .mobile-only {
     display: none;
   }
@@ -202,17 +204,31 @@
     .LDRP .desktop-only {
       display: none;
     }
+    .LDRP .desktop-only-block {
+      display: none;
+    }
     .LDRP .mobile-only {
       display: block;
     }
+    .LDRP .hero-div-r {
+      display: block;
+      flex-basis: 100%;
+    }
+    .LDRP .hero-container {
+    display: block;
+    }
     .LDRP p {
-    line-height: 2.3rem;
+      line-height: 2.3rem;
     }
     .LDRP .extra-line-height {
       line-height: 5rem;
-  }
+    }
     .LDRP h2 {
       line-height: 3rem;
+    }
+    .LDRP .container {
+      flex-wrap: nowrap;
+      justify-content: space-around;
     }
     .LDRP .container,
     .LDRP .full-width-container {
@@ -271,14 +287,15 @@
         alt="Labor Day Savings - Save up to $700 on select Tempur-Pedic sets, and up to $800 on select Stearns & Foster sets."
       />
     </div>
-    <div class="container mobile-only lbr-day-header text-center">
-      <ul style='list-style:disc outside;'>
-          <li>Save up to $700 on select Tempur-Pedic sets</li>
-          <li>Save up to $800 on select Stearns & Foster sets</li>
-          <li>Get a Revive hybrid Queen mattress for just $495</li>
-        </ul>
-          <a href="https://www.livingspaces.com/stores"><h3><b>Find Locations Near You</b> &rsaquo;</h3></a>
-      </div>
+    <div class="container mobile-only" style="padding-top:0">
+      <a href="/stores">
+        <img
+          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_hero_1.jpg"
+          alt="Labor Day Revive Event"
+          class="img-responsive"
+        />
+      </a>
+    </div>
   </div>
   <div class="container">
     <div class="leftBlock text-center">
@@ -290,16 +307,23 @@
         />
         <img
           class="img-responsive mobile-only"
-          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_tempurpedic.jpg"
+          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_tempurpedic_1.jpg"
           alt="Tempur Pedic Mattress and Adjustable Base"
         />
-        <h2 class="red-text"><b>SAVE UP TO $700</b></h2>
-        <h2><b>TEMPUR-PEDIC</b></h2>
-        <h2 class='extra-line-height'><b>MATTRESS + ADJUSTABLE BASE</b></h2>
-        <h4 class='ctaExtraPadding'>With smarter Tempur-Pedic tech</h4>
+        <h2 class="red-text desktop-only-block"><b>SAVE UP TO $700</b></h2>
+        <h2 class="desktop-only-block"><b>TEMPUR-PEDIC</b></h2>
+        <h2 class="extra-line-height desktop-only-block">
+          <b>MATTRESS + ADJUSTABLE BASE</b>
+        </h2>
+        <h4 class="ctaExtraPadding desktop-only-block">
+          With smarter Tempur-Pedic tech
+        </h4>
         <div class="blue-button">
-          <a href="https://www.livingspaces.com/departments/mattresses/promotions/tempur-pedic-labor-day-event">
-          <h3 class="button-text">Save on Tempur-Pedic &rsaquo;</h3></a>
+          <a
+            href="https://www.livingspaces.com/departments/mattresses/promotions/tempur-pedic-labor-day-event"
+          >
+            <h3 class="button-text">Save on Tempur-Pedic &rsaquo;</h3></a
+          >
         </div>
       </div>
     </div>
@@ -309,41 +333,53 @@
         src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_stearnsfoster.jpg"
         alt="Free Sleep Tracker and $300 Living Spaces Card"
       />
+      <h2 class="desktop-only-block red-text"><b>SAVE UP TO $800</b></h2>
+      <h2 class="desktop-only-block"><b>STEARNS & FOSTER</b></h2>
+      <h2 class="desktop-only-block extra-line-height">
+        <b>MATTRESS + TEMPUR-PEDIC ADJUSTABLE BASE</b>
+      </h2>
+      <h4 class="desktop-only-block ctaExtraPadding">
+        Luxury Ultra-Firm, Ultra-Plush + more
+      </h4>
       <img
         class="img-responsive mobile-only"
-        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_stearnsfoster.jpg"
+        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_stearnsfoster_1.jpg"
         alt="Free Sleep Tracker and $300 Living Spaces Card"
       />
-      <h2 class="red-text"><b>SAVE UP TO $800</b></h2>
-      <h2><b>STEARNS & FOSTER</b></h2>
-      <h2 class='extra-line-height'><b>MATTRESS + TEMPUR-PEDIC ADJUSTABLE BASE</b></h2>
-      <h4 class='ctaExtraPadding'>Luxury Ultra-Firm, Ultra-Plush + more</h4>
       <div class="blue-button">
-        <a href="https://www.livingspaces.com/departments/mattresses/promotions/stearns-and-foster-labor-day-event">
-        <h3 class="button-text">Save on Stearns & Foster &rsaquo;</h3></a>
+        <a
+          href="https://www.livingspaces.com/departments/mattresses/promotions/stearns-and-foster-labor-day-event"
+        >
+          <h3 class="button-text">Save on Stearns & Foster &rsaquo;</h3></a
+        >
       </div>
     </div>
     <!-- Desktop Only -->
     <div class="container desktop-only">
       <div class="full-width-container">
         <div class="hero-div">
+          <a href="href="https://www.livingspaces.com/departments/mattresses/promotions/revive-holiday-hybrid-labor-day"">
           <img
             src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_01.jpg"
             alt=""
           />
+        </a>
         </div>
       </div>
     </div>
     <!-- Mobile Only -->
-    <div class="container mobile-only text-center" style="background-color:#f1f1f1">
-      <img
-      class='img-responsive'
-        src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_revive.jpg"
-        alt="Revive Mattress"
-      />
-      <h2 class="red-text"><b>SAVE UP TO $500</b></h2>
-      <h2><b>HOLIDAY HYBRID MATTRESS</b></h2>
-       <a class='ul-link' href="https://www.livingspaces.com/departments/mattresses/promotions/revive-holiday-hybrid-labor-day"><h3>Shop Queen, Cal King or Eastern King &rsaquo;</h3> 
+    <div
+      class="container mobile-only text-center"
+    >
+      <a
+        class="ul-link"
+        href="https://www.livingspaces.com/departments/mattresses/promotions/revive-holiday-hybrid-labor-day"
+      >
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_mobile_revive_1.jpg"
+          alt="Revive Mattress"
+      /></a>
     </div>
     <!-- BEGIN MODAL DIV AND SCRIPT -->
     <div
