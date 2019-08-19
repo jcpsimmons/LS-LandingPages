@@ -98,6 +98,9 @@
   .LDRP .blue-button:hover {
     background-color: #0d171f;
   }
+  .LDRP .blue-button a {
+    text-decoration: none !important;
+  }
   .LDRP .red-text {
     color: #b20606;
   }
@@ -215,7 +218,7 @@
       flex-basis: 100%;
     }
     .LDRP .hero-container {
-    display: block;
+      display: block;
     }
     .LDRP p {
       line-height: 2.3rem;
@@ -270,11 +273,13 @@
       <h1><b>LABOR DAY SAVINGS</b></h1>
     </div>
     <div
+      role="button"
+      tabindex="0"
       class="hero-div-r"
       id="mobile_modal"
       data-toggle="modal"
       data-target="#modal-video_01"
-      data-theVideo="https://www.youtube.com/embed/mdkb5ihh9hw"
+      data-theVideo="https://www.youtube.com/embed/tdmpSWv6ecw"
     >
       <img
         class="mobile-only img-responsive"
@@ -320,7 +325,7 @@
         </h4>
         <div class="blue-button">
           <a
-            href="https://www.livingspaces.com/departments/mattresses/promotions/tempur-pedic-labor-day-event"
+            href="https://www.livingspaces.com/departments/mattresses/promotions/labor-day-event/tempur-pedic-labor-day-event"
           >
             <h3 class="button-text">Save on Tempur-Pedic &rsaquo;</h3></a
           >
@@ -348,7 +353,7 @@
       />
       <div class="blue-button">
         <a
-          href="https://www.livingspaces.com/departments/mattresses/promotions/stearns-and-foster-labor-day-event"
+          href="https://www.livingspaces.com/departments/mattresses/promotions/labor-day-event/stearns-and-foster-labor-day-event"
         >
           <h3 class="button-text">Save on Stearns & Foster &rsaquo;</h3></a
         >
@@ -358,22 +363,22 @@
     <div class="container desktop-only">
       <div class="full-width-container">
         <div class="hero-div">
-          <a href="href="https://www.livingspaces.com/departments/mattresses/promotions/revive-holiday-hybrid-labor-day"">
-          <img
-            src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_01.jpg"
-            alt=""
-          />
-        </a>
+          <a
+            href="https://www.livingspaces.com/departments/mattresses/promotions/labor-day-event/revive-holiday-hybrid-labor-day"
+          >
+            <img
+              src="/globalassets/images/lp/2019/08/LaborDayRevivePromo/0819_laborday_revive_lp_revive_01.jpg"
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </div>
     <!-- Mobile Only -->
-    <div
-      class="container mobile-only text-center"
-    >
+    <div class="container mobile-only text-center">
       <a
         class="ul-link"
-        href="https://www.livingspaces.com/departments/mattresses/promotions/revive-holiday-hybrid-labor-day"
+        href="https://www.livingspaces.com/departments/mattresses/promotions/labor-day-event/revive-holiday-hybrid-labor-day"
       >
         <img
           class="img-responsive"
@@ -440,6 +445,9 @@
             $("#modal-video_01").on("hidden.bs.modal", function(e) {
               $(theModal + " iframe").attr("src", videoSRC);
             });
+          });
+          $("#mobile_modal").keydown(function(e) {
+            if (e.keyCode === 13) $(this).trigger("click");
           });
         }
       },
