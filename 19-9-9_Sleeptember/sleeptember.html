@@ -1,0 +1,279 @@
+<style>
+    /* DISPLAY MODULATION */
+    .x .desktop-only {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    /* TOP LEVEL CONTAINER */
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem 0;
+    }
+
+    /* TOP-TEXT BANNER and CALLOUT */
+    .x .top-banner {
+        background-color: #516c92;
+        color: #fff;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .x .top-banner h1 {
+        margin-bottom: 2.5rem;
+    }
+
+    .x .first-callout {
+        flex-basis: 98%;
+    }
+
+    /* FLEX SIZING OF CONTENT BOXES */
+    .x .first-cont-l {
+        flex-basis: 59.1%;
+    }
+
+    .x .first-cont-r {
+        flex-basis: 40.9%;
+    }
+
+    .x .second-cont-l {
+        flex-basis: 50%;
+        padding-right: .75rem
+    }
+
+    .x .second-cont-r {
+        flex-basis: 50%;
+        padding-left: .75rem
+    }
+
+    /* VARIOUS TEXT STYLING */
+    .x b {
+        color: #354c6c;
+    }
+
+    .x b:hover {
+        color: #26374f;
+    }
+
+    /* MODAL */
+    .x .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .x .modal-content {
+        background: none;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .x .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .x .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .x .modal-header,
+    .x .modal-footer {
+        border: 0;
+    }
+
+    .x .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 3.6rem;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 0 !important;
+        margin-top: -1rem !important;
+    }
+
+    .x .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .play-btn {
+        text-align: center;
+    }
+
+    #same_day_delivery_video {
+        border: 0.5rem solid #fff;
+    }
+
+    .x .modal .modal-dialog {
+        width: 95vw;
+    }
+
+    /* END MODAL */
+
+    @media (max-width: 767px) {
+
+        /* SETUP */
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+
+        .x .container {
+            flex-direction: column;
+        }
+
+        /* SPACING HACK */
+        .generic-html-template>.container {
+            padding: 0;
+        }
+
+        /* CONTAINER SPACING */
+        .x .second-cont-l {
+            padding-right: 0
+        }
+
+        .x .second-cont-r {
+            padding-left: 0
+        }
+
+        /* TEXT STYLING */
+        .x .top-banner h1 {
+            margin-bottom: 2.3rem;
+        }
+
+        .x .first-callout {
+            width: 97%;
+            text-align: center;
+        }
+
+    }
+</style>
+
+<div class="x">
+    <div class="container">
+        <div class="top-banner text-center">
+            <h1>SLEEPTEMBER</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="first-callout">
+            <p class="desktop-only">Complete your sleep essentials with a hybrid Queen set, mattress protector, sheets
+                and two pillows for
+                just $895. Plus, get a $300 Living Spaces card when you test out the new Beautyrest Black C-Class or the
+                Tempur-Pedic Luxe Adapt. <a href="https://www.livingspaces.com/stores"><b>Locations Near You
+                        &rsaquo;</b></a></p>
+            <p class="mobile-only">Sleep better with a Queen mattress set, protector, sheets +
+                pillows – all for just $895. Plus, get a $300 Living Spaces card when you test our mattresses in-store.
+                <a href="https://www.livingspaces.com/stores"><b>Locations Near You &rsaquo;</b></a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="first-cont-l">
+            <div class="videoModal">
+                <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
+                    data-theVideo="https://www.youtube.com/embed/mdkb5ihh9hw">
+                    <img class='img-responsive video-thumb desktop-only'
+                        src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_hero_01a.jpg"
+                        alt="Sleeptember Revive Mattress Special">
+                    <img class='img-responsive video-thumb mobile-only'
+                        src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_mobile_hero_01a.jpg"
+                        alt="Sleeptember Revive Mattress Special">
+                </div>
+            </div>
+
+        </div>
+        <div class="first-cont-r">
+            <a href="">
+                <img class='img-responsive desktop-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_hero_01b.jpg"
+                    alt="Complete Sleep Package for just $895">
+                <img class='img-responsive mobile-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_mobile_hero_01b.jpg"
+                    alt="Complete Sleep Package for just $895">
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="second-cont-l">
+            <a href="">
+                <img class='img-responsive desktop-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_img_02.jpg"
+                    alt="New Beautyrest Black C-Class Mattress - Shop Now">
+                <img class='img-responsive mobile-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_mobile_img_02.jpg"
+                    alt="New Beautyrest Black C-Class Mattress - Shop Now">
+            </a>
+        </div>
+        <div class="second-cont-r">
+            <a href="">
+                <img class='img-responsive desktop-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_img_03.jpg"
+                    alt="New Tempur-Pedic Luxe Adapt Mattress - Shop Now">
+                <img class='img-responsive mobile-only'
+                    src="/globalassets/images/lp/2019/09/sleeptember/0909_sleeptember_revive_lp_mobile_img_03.jpg"
+                    alt="New Tempur-Pedic Luxe Adapt Mattress - Shop Now">
+            </a>
+        </div>
+    </div>
+    <!-- MODAL POPUP WINDOW AND SCRIPT -->
+    <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="same_day_delivery_video" class="embed-responsive-item" width="1170"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=""
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener(
+            "load",
+            function () {
+                if (window.jQuery) {
+                    var trigger = $("#mobile_modal");
+                    trigger.click(function () {
+                        var theModal = $(this).data("target"),
+                            videoSRC = $(this).attr("data-theVideo"),
+                            videoSRCauto =
+                                videoSRC +
+                                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                        $(theModal + " iframe").attr("src", videoSRCauto);
+                        $(theModal + " button.close").click(function () {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                        $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                    });
+                }
+            },
+            false
+        );
+    </script>
+</div>
