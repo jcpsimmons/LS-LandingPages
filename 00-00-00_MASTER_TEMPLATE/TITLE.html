@@ -1,0 +1,134 @@
+<style>
+    /* DIV SPACING */
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    .x .hero-img {
+        flex-basis: 100%
+    }
+
+    .x .yt-thumb,
+    .x .disclaimer {
+        flex-basis: 50%;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+    }
+
+    /* TEXT MODIFICATION */
+    /* MODAL */
+
+    .x .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .x .modal-content {
+        background: none;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .x .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .x .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .x .modal-header,
+    .x .modal-footer {
+        border: 0;
+    }
+
+    .x .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 3.6rem;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 0 !important;
+        margin-top: -1rem !important;
+    }
+
+    .x .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .play-btn {
+        text-align: center;
+    }
+
+    #same_day_delivery_video {
+        border: 0.5rem solid #fff;
+    }
+
+    .x .modal .modal-dialog {
+        width: 95vw;
+    }
+
+    /* END MODAL */
+</style>
+<div class="x">
+    <!-- HERO -->
+    <div class="container">
+        <div class="hero-img">
+            <img src="" alt="" class="img-responsive">
+        </div>
+    </div>
+    <!-- SIDE-BY-SIDE -->
+    <div class="container">
+        <div class="yt-thumb">
+            <img src="" alt="" class="img-responsive">
+        </div>
+        <div class="disclaimer">
+            <img src="" alt="" class="img-responsive">
+        </div>
+    </div>
+    <!-- FOOTER TEXT -->
+    <div class="container">
+        <div class="footer-text">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio inventore, illo fugit voluptatem
+                temporibus similique error animi necessitatibus reiciendis quasi laborum itaque, nam ducimus sit magni,
+                eos autem doloremque repellendus. &rsaquo;</p>
+        </div>
+    </div>
+</div>
