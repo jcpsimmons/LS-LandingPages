@@ -9,18 +9,27 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding-bottom: 1.5rem;
         align-items: center;
     }
 
     .x .hero-img {
-        flex-basis: 100%
+        flex-basis: 100%;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    @media (max-width: 1199px) {
+        .x .hero-img {
+            width: 98.6%;
+            padding-left: 1.5rem;
+        }
     }
 
     .x .yt-thumb,
     .x .disclaimer {
-        flex-basis: 50%;
+        flex-basis: 48%;
     }
 
     /* DESKTOP/MOBILE ONLY */
@@ -40,6 +49,7 @@
     .footer-text {
         font-size: 1.9rem;
         line-height: 1.8;
+        text-align: center
     }
 
     .footer-text a {
@@ -132,9 +142,18 @@
             font-size: 1.7rem;
         }
 
-        /* Spacing fix - TK check on prod */
-
+        .x .hero-img {
+            width: 100%;
+            padding-left: 0;
+        }
     }
+
+    /* weird flex spacing issue fix */
+    /* @media (min-width: 1200px) {
+        .x .hero-img {
+            margin-left: -2.7rem;
+        }
+    } */
 </style>
 <div class="x">
     <!-- HERO -->
@@ -159,7 +178,7 @@
                     more &rsaquo;</a></p>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="justify-content: space-between">
         <div class="yt-thumb">
             <div class="videoModal">
                 <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
@@ -171,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div class="disclaimer desktop-only" style="padding-right: 3rem">
+        <div class="disclaimer desktop-only">
             <img src="/globalassets/images/lp/2019/09/custom-upholstery/0909-specialorder-lp-r-block.jpg"
                 alt="No extra charge | Ready within 3-4 weeks | Instant rendering" class="img-responsive">
         </div>
