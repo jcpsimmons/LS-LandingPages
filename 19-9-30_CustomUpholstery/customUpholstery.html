@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between !important;
         padding-bottom: 1.5rem;
         align-items: center;
     }
@@ -17,13 +17,12 @@
     .x .hero-img {
         flex-basis: 100%;
         width: 100%;
-        padding-left: 0;
+        padding: 0 1.25rem;
     }
 
-    @media (max-width: 1199px) {
+    @media (min-width: 1199px) {
         .x .hero-img {
-            width: 98.6%;
-            padding-left: 1.5rem;
+            padding: 0 1.5rem;
         }
     }
 
@@ -135,6 +134,7 @@
 
         .x .container {
             flex-direction: column;
+            padding: 0;
         }
 
         .x .footer-text {
@@ -145,6 +145,11 @@
         .x .hero-img {
             width: 100%;
             padding-left: 0;
+        }
+
+        .product-listing-template .col-xs-12 {
+            width: 100%;
+            padding: 0;
         }
     }
 
@@ -182,11 +187,13 @@
         <div class="yt-thumb">
             <div class="videoModal">
                 <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
-                    data-theVideo="https://www.youtube.com/embed/mdkb5ihh9hw">
+                    data-theVideo="https://www.youtube.com/embed/r5TWIqN7tb0">
                     <img class='img-responsive video-thumb desktop-only'
-                        src="/globalassets/images/lp/2019/09/custom-upholstery/0909-videomodal-TMP.jpg" alt="TK">
+                        src="/globalassets/images/lp/2019/09/custom-upholstery/0909-specialorder-lp-video_v2.jpg"
+                        alt="Special Order Video">
                     <img class='img-responsive video-thumb mobile-only'
-                        src="/globalassets/images/lp/2019/09/custom-upholstery/0909-videomodal-TMP-mobile.jpg" alt="TK">
+                        src="/globalassets/images/lp/2019/09/custom-upholstery/0909-specialorder-lp-mobile-video_v2.jpg"
+                        alt="Special Order Video">
                 </div>
             </div>
         </div>
