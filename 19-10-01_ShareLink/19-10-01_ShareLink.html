@@ -1,0 +1,139 @@
+<style>
+    #liked-items-vue-container .page-title {
+        display: inline-block;
+    }
+
+    .share_wrapper {
+        display: inline-block;
+        float: center;
+        margin-top: 2.3rem;
+        font-size: 1.8rem;
+    }
+
+    .share_btn {
+        margin-left: 1rem;
+        padding: 0.3rem 2rem;
+        background-color: #fff;
+        border: .1rem solid #00699a;
+        color: #00699a;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: .2rem;
+    }
+
+    #shareModal {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    #shareModal .modal-dialog {
+        width: 50rem;
+    }
+
+    .shareModal-title {
+        margin: 2rem 0;
+    }
+
+    .shareModal-box {
+        border-top: .1rem solid #d5d5d5;
+        padding: .25rem 0;
+    }
+
+    .shareModal-box:last-child {
+        border-bottom: .1rem solid #d5d5d5;
+    }
+
+    #shareURL {
+        width: 100%;
+        border: 1px solid #fff;
+        background-color: #F0F0F0;
+        height: 3.5rem;
+        margin-top: .5rem;
+    }
+
+    #shareEmail {
+        text-decoration: none !important;
+    }
+
+    .copied {
+        color: #00699a;
+    }
+
+    .copied_input {
+        background-color: #E5F0F4 !important;
+    }
+
+    @media (max-width: 991px) {
+        .share_btn {
+            padding: .5rem 2rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #shareCopy {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+        }
+
+        .mobileShare-box {
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        .share_wrapper {
+            margin-top: 1.5rem;
+        }
+
+        #liked-items-vue-container .page-title {
+            width: 50%;
+        }
+
+        #shareModal .modal-dialog {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- clipboard js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+<div class="container text-center">
+    <div id="shareBtn" class="share_wrapper">
+        <button type="button" class="share_btn" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"
+                aria-hidden="true"></i> Share This Image on Your Site
+        </button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        if (utag_data.site_type === "desktop") {
+            $('#shareBtn').append('<!-- Modal --><div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h2 class="shareModal-title">Share This Image on Your Site</h2> </div> <div class="modal-body"> <div class="shareModal-box"></div><span><i class="fa fa-code" aria-hidden="true"></i> Click to Copy Embed Code</span> <div id="shareCopy" class="shareModal-box" data-clipboard-target="#shareURL">  <input id="shareURL" type="text"> </div> </div> <div class="modal-footer"> </div> </div> </div></div>');
+            $('h1.page-title span').parent().after('<div id="shareBtn" class="share_wrapper"> <span>Want to show off the items you like?</span> <button type="button" class="share_btn" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button></div>');
+            shareBtnTrigger();
+        } else if (utag_data.site_type === "mobile") {
+            $('#shareBtn').append('<!-- Modal --><div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h2 class="shareModal-title">Share This Image on Your Site</h2> </div> <div class="modal-body"> <div class="shareModal-box"></div><span><i class="fa fa-code" aria-hidden="true"></i> Click to Copy Embed Code</span> <div id="shareCopy" class="shareModal-box mobileShare-box" data-clipboard-target="#shareURL">  <input id="shareURL" type="text"> </div> </div> <div class="modal-footer"> </div> </div> </div></div>');
+            $('h1.page-title span').parent().after('<div id="shareBtn" class="share_wrapper"><button type="button" class="share_btn" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button></div>');
+            shareBtnTrigger();
+        }
+        function shareBtnTrigger() {
+            var clipboard = new ClipboardJS('#shareCopy');
+            clipboard.on('success', function (e) {
+                $("#shareCopy span").html('<span class="copied">Link copied!</span>');
+                $("#shareURL").addClass('copied_input');
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function (e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+            $('body').on('click', '.share_btn', function () {
+                $('#shareURL').attr('value', '<a href="https://www.livingspaces.com/inspiration/ideas-advice/styles/2020-most-popular-decor-trends-by-state" style="display:block"><img style="width:100%" src="https://www.livingspaces.com/globalassets/images/blog/2019/10/1001_decor_trends_map.jpg" alt="national decor trends" /></a>');
+            });
+        }
+    });
+</script>

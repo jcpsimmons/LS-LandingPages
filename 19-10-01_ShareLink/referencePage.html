@@ -1,0 +1,223 @@
+<style type="text/css">
+    /*// Large devices (desktops, less than 1200px)*/
+    .liked-container row {
+        overflow: hidden;
+    }
+
+    .liked-container [class*="col-"] {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .liked-container ol {
+        padding: 0 2rem;
+    }
+
+    .liked-txt {
+        padding: 0 7.4rem;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .liked-title {
+        text-align: center;
+        font-size: 2rem;
+        background-color: #f0f0f0;
+        padding: .5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    h2.page-title {
+        padding: 0 1.5rem;
+    }
+
+    .liked-title .fa-heart {
+        color: #bd5518;
+    }
+
+    .liked-comment {
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2rem;
+    }
+
+    .mob-view {
+        display: none;
+    }
+
+    @media (max-width: 1199px) {}
+
+    /*    Medium devices (tablets, less than 992px)*/
+
+    @media (max-width: 991px) {}
+
+    /*// Small devices (landscape phones, less than 768px)*/
+
+    @media (max-width: 767px) {
+        .mob-view {
+            display: block;
+            text-align: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .desk-view {
+            display: none;
+        }
+
+        .liked-img-1 {
+            content: url(/globalassets/images/LP/2017/1218-likedItems-mobile-01.jpg);
+        }
+
+        .liked-img-2 {
+            content: url(/globalassets/images/LP/2017/1218-likedItems-mobile-02.jpg);
+        }
+
+        #liked-items-vue-container h2.page-title {
+            width: 100%;
+        }
+    }
+
+    /*// Extra small devices (portrait phones, less than 576px)*/
+
+    @media (max-width: 575px) {}
+</style>
+
+<style>
+    #liked-items-vue-container .page-title {
+        display: inline-block;
+    }
+
+    .share_wrapper {
+        display: inline-block;
+        float: right;
+        margin-top: 2.3rem;
+        font-size: 1.8rem;
+    }
+
+    .share_btn {
+        margin-left: 1rem;
+        padding: 0.3rem 2rem;
+        background-color: #fff;
+        border: .1rem solid #00699a;
+        color: #00699a;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: .2rem;
+    }
+
+    #shareModal {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    #shareModal .modal-dialog {
+        width: 50rem;
+    }
+
+    .shareModal-title {
+        margin: 2rem 0;
+    }
+
+    .shareModal-box {
+        border-top: .1rem solid #d5d5d5;
+        padding: 1.5rem 0;
+    }
+
+    .shareModal-box:last-child {
+        border-bottom: .1rem solid #d5d5d5;
+    }
+
+    #shareURL {
+        width: 100%;
+        border: 1px solid #fff;
+        background-color: #F0F0F0;
+        height: 3.5rem;
+        margin-top: .5rem;
+    }
+
+    #shareEmail {
+        text-decoration: none !important;
+    }
+
+    .copied {
+        color: #00699a;
+    }
+
+    .copied_input {
+        background-color: #E5F0F4 !important;
+    }
+
+    @media (max-width: 991px) {
+        .share_btn {
+            padding: .5rem 2rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #shareCopy {
+            display: inline-block;
+            width: 50%;
+            text-align: right;
+        }
+
+        .mobileShare-box {
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        .share_wrapper {
+            margin-top: 1.5rem;
+        }
+
+        #liked-items-vue-container .page-title {
+            width: 50%;
+        }
+
+        #shareModal .modal-dialog {
+            width: 100%;
+        }
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var likedList = app.stores.likeProductsStore.items;
+        var likedListString = likedList.toString();
+        if (utag_data.site_type === "desktop" && likedList.length > 0) {
+            $('#liked-items-vue-container').append('<!-- Modal --><div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h2 class="shareModal-title">Share Your List</h2> </div> <div class="modal-body"> <div class="shareModal-box"> <a id="shareEmail" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a> </div> <div id="shareCopy" class="shareModal-box" data-clipboard-target="#shareURL"> <span>Click to copy the link</span> <input id="shareURL" type="text"> </div> </div> <div class="modal-footer"> </div> </div> </div></div>');
+            $('h1.page-title span').parent().after('<div id="shareBtn" class="share_wrapper"> <span>Want to show off the items you like?</span> <button type="button" class="share_btn" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button></div>');
+            shareBtnTrigger(likedListString);
+        } else if (utag_data.site_type === "mobile" && likedList.length > 0) {
+            $('#liked-items-vue-container').append('<!-- Modal --><div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <h2 class="shareModal-title">Share Your List</h2> </div> <div class="modal-body"> <div class="shareModal-box"> <a id="shareEmail" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a> </div> <div class="shareModal-box"> <a id="shareText" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Text</a> </div> <div id="shareCopy" class="shareModal-box mobileShare-box" data-clipboard-target="#shareURL"> <span>Click to copy the link</span> <input id="shareURL" type="text"> </div> </div> <div class="modal-footer"> </div> </div> </div></div>');
+            $('h1.page-title span').parent().after('<div id="shareBtn" class="share_wrapper"><button type="button" class="share_btn" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button></div>');
+            shareBtnTrigger(likedListString);
+        }
+        function shareBtnTrigger(likedListString) {
+            var clipboard = new ClipboardJS('#shareCopy');
+            clipboard.on('success', function (e) {
+                $("#shareCopy span").html('<span class="copied">Link copied!</span>');
+                $("#shareURL").addClass('copied_input');
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function (e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+            $('body').on('click', '.share_btn', function () {
+                $('#shareURL').attr('value', 'https://www.livingspaces.com/sharelist?pid=' + likedListString);
+                $('#shareEmail').attr('href', 'mailto:?subject=My%20Living%20Spaces%20List&body=https://www.livingspaces.com/sharelist?pid=' + likedListString);
+                $('#shareText').attr('href', 'sms:?&body=https://www.livingspaces.com/sharelist?pid=' + likedListString);
+            });
+        }
+    });
+
+</script>
+
+<script>
+    //Recommended article hack url
+    var recmdArticlesURL = "/departments/mattresses/recommended-articles/liked-items";
+</script>
