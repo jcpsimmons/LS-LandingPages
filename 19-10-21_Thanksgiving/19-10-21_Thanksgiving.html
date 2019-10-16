@@ -14,7 +14,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between !important;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
         align-items: center;
     }
 
@@ -26,6 +26,7 @@
 
     .x .one-third-flex {
         flex-basis: 33%;
+        padding: 1.2rem
     }
 
     .x .half-flex {
@@ -33,11 +34,17 @@
     }
 
     .x .tdt {
-        flex-basis: 50.75%
+        flex-basis: 50.75%;
+        padding-right: .7rem
     }
 
     .x .htis {
-        flex-basis: 45.2%
+        flex-basis: 45.2%;
+        padding-left: .7rem
+    }
+
+    .x .vertbro {
+        padding: 3rem 0;
     }
 
     @media (min-width: 1199px) {
@@ -179,15 +186,15 @@
     <!-- HERO -->
     <div class="slick-hero">
         <div>
-            <a href="/departments/furniture/living-room">
-                <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_living-room.jpg"
+            <a href="/departments/furniture/dining-room">
+                <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_dining-room_v02.jpg"
                     alt="Be Grateful in Style." class="img-responsive">
             </a>
         </div>
 
     </div>
     <!-- spacer text -->
-    <div class="container" style="padding-top:2rem">
+    <div class="container vertbro">
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_copy.jpg" alt="Thanksgiving Savings"
                 class="img-responsive desktop-only">
@@ -195,7 +202,7 @@
         </div>
     </div>
     <!-- 3row-->
-    <div class="container">
+    <div class="container" style="padding-bottom:0">
         <div class="one-third-flex"><a
                 href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_sofas.jpg" class="img-responsive"
@@ -235,7 +242,7 @@
                     class="img-responsive" alt="Host Thanksgiving in style"></a></div>
     </div>
     <!-- spacer text -->
-    <div class="container">
+    <div class="container vertbro">
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_wish-list.jpg"
                 alt="Thanksgiving wish list" class="img-responsive desktop-only">
@@ -264,7 +271,7 @@
     <!--  -->
     <!--  -->
     <!-- spacer text -->
-    <div class="container">
+    <div class="container vertbro">
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_watch.jpg"
                 alt="Watch Thanksgiving unfold" class="img-responsive desktop-only">
@@ -343,7 +350,7 @@
             "load",
             function () {
                 if (window.jQuery) {
-                    $('.slick-hero').append("<div><a href='/departments/furniture/dining-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_dining-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
+                    $('.slick-hero').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
                     $('.slick-hero').slick({
                         infinte: true,
                         adaptiveHeight: true,
