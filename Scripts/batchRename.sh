@@ -1,0 +1,1 @@
+for f in *; do mv "$f" "Thanksgiving_Desktop_${f#TestSR}"; done

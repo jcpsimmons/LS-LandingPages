@@ -1,0 +1,223 @@
+<style type="text/css">
+    .page-title {
+        margin-bottom: 0;
+    }
+
+    .desktop-only {
+        display: flex !important;
+    }
+
+    .mobile-only {
+        display: none !important
+    }
+
+    .row.flex.m-b-5 {
+        display: none !important;
+    }
+
+    .title-txt img {
+        width: 100%
+    }
+
+    .signup-container .primary-button {
+        background: #bd5519 !important;
+        min-width: 15rem !important;
+    }
+
+    .signup-container .form-group {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 1.3rem;
+        margin-right: 1rem;
+    }
+
+    .signup-container .form-control {
+        height: 4.5rem;
+        width: 36rem;
+        border-radius: 0 !important;
+    }
+
+    .dont-display {
+        display: none !important;
+    }
+
+    .signup-header {
+        margin-bottom: 2rem;
+        border-bottom: .2rem solid #d9d9d9;
+    }
+
+    .signup-container .title-txt {
+        font-size: 2.4rem;
+        color: #00699a;
+        padding-right: 0;
+        line-height: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .x-title-txt {
+        color: #00699a;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    .update-txt {
+        font-size: 1.6rem;
+        color: #333;
+        padding-bottom: 1.25rem;
+    }
+
+    .signup-container .email-lp-thank-you-msg {
+        color: #00699a;
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    .signup-container {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    #email_ele_button {
+        margin-left: 1rem;
+    }
+
+    .form-box {
+        padding: 0;
+    }
+
+    @media (max-width: 1199px) {}
+
+    /*    Medium devices (tablets, less than 992px)*/
+
+    @media (max-width: 991px) {
+        .form-box {
+            text-align: center;
+        }
+
+        .title-txt {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .signup-container .form-control {
+            width: 40rem;
+        }
+    }
+
+    /*// Small devices (landscape phones, less than 768px)*/
+
+    @media (max-width: 767px) {
+        .desktop-only {
+            display: none !important;
+        }
+
+        .mobile-only {
+            display: flex !important
+        }
+
+        .update-txt {
+            margin-top: 2rem;
+        }
+
+        .form-box {
+            margin-bottom: 2rem;
+        }
+
+        .signup-container .title-txt {
+            padding: 0 1.5rem;
+            font-size: 1.9rem;
+        }
+
+        .signup-container .form-control {
+            width: 38.5rem;
+        }
+    }
+</style>
+<style>
+    .store-info-component>.row {
+        display: none !important;
+    }
+
+    .map-wrapper {
+        display: none !important;
+    }
+
+    /* .store-info-component>.row:nth-child(2) {
+        visibility: hidden !important
+    }
+
+    @media (max-width: 767px) {
+        .comingsoon {
+            display: inline !important;
+        }
+
+        @media (max-width: 767px) {
+            .store-info-component>.row:nth-child(2) {
+                visibility: unset !important
+            }
+
+            .store-info-component>.row .col-xs-6:nth-child(2) {
+                visibility: hidden !important
+            }
+        } */
+    }
+</style>
+
+<div class="container" style="padding-bottom:3rem;">
+    <h2 style="font-size:1.8rem;font-weight:100;">5540 Winfield Blvd, San Jose, CA 95123 <span
+            style="font-size:1.4rem; font-weight: normal; padding-left: 1rem; color:#c15d45;padding-top: 0; padding-bottom: 4rem; margin-top: 0">AT
+            WESTFIELD
+            OAKRIDGE</span></h2>
+</div>
+
+<div class="container">
+    <a href="/SJVIP">
+        <div class="row">
+            <img class="img-responsive desktop-only" src="/globalassets/images/lp/2019/10/SanJose_desktop.jpg"
+                alt="Grand Prarie Grand Opening - RSVP Here">
+            <img class="img-responsive mobile-only" src="/globalassets/images/lp/2019/10/SanJoseMobile.jpg"
+                alt="Grand Prarie Grand Opening - RSVP Here">
+        </div>
+    </a>
+</div>
+
+
+<div class="container signup-container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 order-sm-2 title-txt desktop-only">
+            <img alt="living spaces store" class="img-responsive"
+                src="/globalassets/images/lp/2019/03/store-lineart.jpg">
+        </div>
+        <div class="col-md-6 col-sm-12 order-sm-1 form-box">
+            <h4 class="x-title-txt">San Jose Store Grand Opening</h4>
+            <h5 class="title-txt">Friday, November 8<sup>th</sup></h5>
+            <p class="update-txt">Sign up for email updates to stay on top of the latest Grand Opening details!</p>
+            <form id="sanjoseForm" class="clearfix" method="post"
+                action="https://mktforms.livingspaces.com/secure/promo-opt-in" pageid="7635536" siteid="329121"
+                parentpageid="7635535" target="email_sanjose_success">
+                <div aria-label="Enter Email Address" class="form-group text-left"> <input name="Email" data-val="true"
+                        data-val-regex="Email is not valid"
+                        data-val-regex-pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-&zwnj;&#8203;]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$"
+                        data-val-required="The email address is required" id="cml_email" type="text" value=""
+                        class="form-control material-input text-box single-line"> <label><span>Enter Email
+                            Address</span></label> <span data-valmsg-for="Email" data-valmsg-replace="true"
+                        class="field-validation-valid"></span>
+                    <div aria-live="polite" class="email-lp-thank-you-msg" style="display: none;">You're all signed up!
+                    </div>
+                </div> <button id="email_sanjose_button" type="submit" aria-label="Sign Up"
+                    class="btn primary-button">Submit</button>
+                <div class="dont-display"><input type="hidden" name="sp_exp" value="yes">
+                    <input type="hidden" name="sp_exp" value="yes">
+                    <input type="hidden" name="formSourceName" value="StandardForm">
+                    <input type="hidden" name="subPromo" value="San Jose">
+                    <input id="hash_mktu" type="hidden" name="mktu">
+                    <iframe name="email_sanjose_success" width="1" height="1" src=""></iframe> </div>
+            </form>
+        </div>
+        <div class="col-md-6 col-sm-12 order-sm-2 title-txt mobile-only">
+            <img alt="living spaces store" class="img-responsive"
+                src="/globalassets/images/lp/2019/03/store-lineart.jpg">
+        </div>
+    </div>
+</div>
