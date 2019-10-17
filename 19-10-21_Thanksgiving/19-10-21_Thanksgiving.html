@@ -220,7 +220,7 @@
             padding: 2rem 0;
         }
 
-        .slick-prev {
+        /* .slick-prev {
             margin-left: 0;
             left: 0;
             z-index: 99
@@ -229,12 +229,12 @@
         .slick-next {
             margin-right: 0;
             right: 0;
-        }
+        } */
     }
 </style>
 <div class="x">
     <!-- HERO -->
-    <div class="slick-hero desktop-only">
+    <div class="slick-hero">
         <div>
             <a href="/departments/furniture/dining-room">
                 <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_dining-room_v02.jpg"
@@ -243,7 +243,7 @@
         </div>
     </div>
     <!-- MOBILE HERO -->
-    <div class="slick-hero mobile-only">
+    <div class="slick-hero-mobile" style="display:none">
         <div>
             <a href="/departments/furniture/dining-room">
                 <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_dining-room.jpg"
@@ -433,9 +433,12 @@
                             autoplaySpeed: 3000
                         });
                     } else {
-                        $('.slick-hero').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
-                        $('.slick-hero').slick({
+                        $(".slick-hero").css("display", "none")
+                        $(".slick-hero-mobile").css("display", "block")
+                        $('.slick-hero-mobile').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
+                        $('.slick-hero-mobile').slick({
                             infinte: true,
+                            arrows: false,
                             adaptiveHeight: true,
                             autoplay: true,
                             autoplaySpeed: 3000
