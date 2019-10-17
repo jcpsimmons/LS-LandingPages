@@ -1,4 +1,13 @@
 <style>
+    .slick-prev {
+        margin-left: 4rem;
+        z-index: 99
+    }
+
+    .slick-next {
+        margin-right: 4rem;
+    }
+
     .x .slick-slide img {
         max-height: 9999rem !important;
     }
@@ -161,7 +170,17 @@
 
         .x .container {
             flex-direction: column;
-            padding: 0;
+            padding: 0rem 1.4rem;
+        }
+
+        .x .tdt {
+            flex-basis: 50.75%;
+            padding-right: 0
+        }
+
+        .x .htis {
+            flex-basis: 45.2%;
+            padding-left: 0
         }
 
         .x .footer-text {
@@ -179,65 +198,117 @@
             padding: 0;
         }
 
+        .x .one-third-flex {
+            flex-basis: 33%;
+            padding: .7rem 0;
+        }
 
+        #second-row-of-three {
+            padding-top: 0;
+        }
+
+        #thanksgiving-savings {
+            padding-top: 3rem;
+        }
+
+        .tdt,
+        .htis {
+            padding: .7rem 0;
+        }
+
+        .text-pad {
+            padding: 2rem 0;
+        }
+
+        .slick-prev {
+            margin-left: 0;
+            left: 0;
+            z-index: 99
+        }
+
+        .slick-next {
+            margin-right: 0;
+            right: 0;
+        }
     }
 </style>
 <div class="x">
     <!-- HERO -->
-    <div class="slick-hero">
+    <div class="slick-hero desktop-only">
         <div>
             <a href="/departments/furniture/dining-room">
                 <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_dining-room_v02.jpg"
                     alt="Be Grateful in Style." class="img-responsive">
             </a>
         </div>
-
+    </div>
+    <!-- MOBILE HERO -->
+    <div class="slick-hero mobile-only">
+        <div>
+            <a href="/departments/furniture/dining-room">
+                <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_dining-room.jpg"
+                    alt="Be Grateful in Style." class="img-responsive">
+            </a>
+        </div>
     </div>
     <!-- spacer text -->
-    <div class="container vertbro">
+    <div class="container vertbro" id="thanksgiving-savings">
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_copy.jpg" alt="Thanksgiving Savings"
                 class="img-responsive desktop-only">
-            <img src="tk" alt="Thanksgiving Savings" class="img-responsive mobile-only">
+            <img src="/globalassets/images/lp/2019/10/thanksgiving-landing-page-mobile_savings.png"
+                alt="Thanksgiving Savings" class="img-responsive mobile-only">
         </div>
     </div>
     <!-- 3row-->
     <div class="container" style="padding-bottom:0">
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d"><img
-                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_sofas.jpg" class="img-responsive"
-                    alt="Sofas under $400"></a></div>
+                href="/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_sofas.jpg"
+                    class="img-responsive desktop-only" alt="Sofas under $400"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_sofas.jpg"
+                    class="img-responsive mobile-only" alt="Sofas under $400"></a></div>
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sale_price=%5b*+TO+600%5d"><img
+                href="/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sale_price=%5b*+TO+600%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_sectionals.jpg"
-                    class="img-responsive" alt="Sectionals under $600"></a></div>
+                    class="img-responsive desktop-only" alt="Sectionals under $600"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_sectionals.jpg"
+                    class="img-responsive mobile-only" alt="Sectionals under $600"></a></div>
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/dining-room/dining-room-sets?sale_price=%5b*+TO+400%5d"><img
+                href="/departments/furniture/dining-room/dining-room-sets?sale_price=%5b*+TO+400%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_dining-sets.jpg"
-                    class="img-responsive" alt="Dining sets under $400"></a></div>
+                    class="img-responsive desktop-only" alt="Dining sets under $400"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_dining-sets.jpg"
+                    class="img-responsive mobile-only" alt="Dining sets under $400"></a></div>
     </div>
-    <div class="container">
+    <div class="container" id="second-row-of-three">
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/bedroom/beds?sizes=queen&sale_price_custom=%5b*+TO+400%5d"><img
+                href="/departments/furniture/bedroom/beds?sizes=queen&sale_price_custom=%5b*+TO+400%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_queen-beds.jpg"
-                    class="img-responsive" alt="Queen Beds under $400"></a></div>
+                    class="img-responsive desktop-only" alt="Queen Beds under $400"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_queen-beds.jpg"
+                    class="img-responsive mobile-only" alt="Queen Beds under $400"></a></div>
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sale_price_custom=%5b*+TO+300%5d"><img
+                href="/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sale_price_custom=%5b*+TO+300%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_tv-stands.jpg"
-                    class="img-responsive" alt="TV Stands under $300"></a></div>
+                    class="img-responsive desktop-only" alt="TV Stands under $300"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_tv-stands.jpg"
+                    class="img-responsive mobile-only" alt="TV Stands under $300"></a></div>
         <div class="one-third-flex"><a
-                href="https://www.livingspaces.com/departments/furniture/living-room/coffee-tables?sale_price_custom=%5b*+TO+300%5d"><img
+                href="/departments/furniture/living-room/coffee-tables?sale_price_custom=%5b*+TO+300%5d"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_coffee-tables.jpg"
-                    class="img-responsive" alt="Coffee tables under $300"></a></div>
+                    class="img-responsive desktop-only" alt="Coffee tables under $300"><img
+                    src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_coffee-tables.jpg"
+                    class="img-responsive mobile-only" alt="Coffee tables under $300"></a></div>
     </div>
     <!-- 2 row -->
     <div class="container">
         <div class="tdt"><a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/how-tos/thanksgiving-decor-tips-hosting-the-holidays-in-style"><img
+                href="/inspiration/ideas-advice/decor-tips/diy-thanksgiving-crafts-for-a-gourd-geous-holiday"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_diy-blog.jpg"
                     class="img-responsive" alt="Thanksgiving decor tips."></a></div>
         <div class="htis"><a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/how-tos/thanksgiving-decor-tips-hosting-the-holidays-in-style"><img
+                href="/inspiration/ideas-advice/how-tos/thanksgiving-decor-tips-hosting-the-holidays-in-style"><img
                     src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_host-thanksgiving.jpg"
                     class="img-responsive" alt="Host Thanksgiving in style"></a></div>
     </div>
@@ -246,7 +317,8 @@
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_wish-list.jpg"
                 alt="Thanksgiving wish list" class="img-responsive desktop-only">
-            <img src="tk" alt="Thanksgiving wish list" class="img-responsive mobile-only">
+            <img src="/globalassets/images/lp/2019/10/thanksgiving-landing-page-mobile_wishlist.jpg"
+                alt="Thanksgiving wish list" class="img-responsive mobile-only text-pad">
         </div>
     </div>
     <!--  -->
@@ -275,7 +347,8 @@
         <div class="hero-img">
             <img src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_watch.jpg"
                 alt="Watch Thanksgiving unfold" class="img-responsive desktop-only">
-            <img src="tk" alt="Watch Thanksgiving unfold" class="img-responsive mobile-only">
+            <img src="/globalassets/images/lp/2019/10/thanksgiving-landing-page-mobile_unfold.png"
+                alt="Watch Thanksgiving unfold" class="img-responsive mobile-only text-pad">
         </div>
     </div>
     <!-- Video Thumbnail -->
@@ -288,7 +361,7 @@
                         src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_video.jpg"
                         alt="Thanksgiving Video">
                     <img class='img-responsive video-thumb mobile-only'
-                        src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_video.jpg"
+                        src="/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_watch-video.jpg"
                         alt="Thanksgiving Video">
                 </div>
             </div>
@@ -350,11 +423,24 @@
             "load",
             function () {
                 if (window.jQuery) {
-                    $('.slick-hero').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
-                    $('.slick-hero').slick({
-                        infinte: true,
-                        adaptiveHeight: true,
-                    });
+                    if (utag_data.site_type == "desktop") {
+                        $('.slick-hero').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Desktop_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
+                        $('.slick-hero').slick({
+                            infinte: true,
+                            arrows: true,
+                            adaptiveHeight: true,
+                            autoplay: true,
+                            autoplaySpeed: 3000
+                        });
+                    } else {
+                        $('.slick-hero').append("<div><a href='/departments/furniture/living-room'><img src='/globalassets/images/lp/2019/10/102119_Thanksgiving_Mobile_living-room.jpg' alt='You're meal you're way.' class='img-responsive'></a> </div>")
+                        $('.slick-hero').slick({
+                            infinte: true,
+                            adaptiveHeight: true,
+                            autoplay: true,
+                            autoplaySpeed: 3000
+                        });
+                    }
                 }
             },
             false
