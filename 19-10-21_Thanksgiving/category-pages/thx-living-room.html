@@ -1,0 +1,88 @@
+<style>
+    /* DIV SPACING */
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    .x .l1 {
+        flex-basis: 68%;
+        padding-right: 1rem;
+    }
+
+    .x .l2 {
+        flex-basis: 32%
+    }
+
+    .x .top-img {
+        padding-bottom: 1.8rem
+    }
+
+    @media (max-width: 1199px) {
+        .x .top-img {
+            padding-bottom: 2rem
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        .x .top-img {
+            padding-bottom: 2.2rem
+        }
+    }
+
+    @media (max-width: 767px) {
+        .x .l1 {
+            flex-basis: 100%;
+            padding-right: 0
+        }
+
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+    }
+</style>
+<div class="x">
+    <!-- HERO -->
+    <div class="container">
+        <div class="l1">
+            <a href="/pdp-lucy-grey-sofa-225882">
+                <img src="/globalassets/images/lp/2019/10/1021_livingroom_category_sofa.jpg" alt="Sofa $395"
+                    class="img-responsive top-img"></a>
+            <a href="/inspiration/ideas-advice/how-tos/thanksgiving-decor-tips-hosting-the-holidays-in-style">
+                <img src="/globalassets/images/lp/2019/10/1021_LRDR_category_banner.png"
+                    alt="Thanksgiving Decor tips: Hosting the holidays in style." class="img-responsive bot-img"> </a>
+        </div>
+        <div class="l2 desktop-only">
+            <a href="/pdp-stratus-cocktail-table-101626">
+                <img src="/globalassets/images/lp/2019/10/1021_livingroom_category_coffeetable.jpg"
+                    alt="Coffee table $395" class="img-responsive"> </a>
+        </div>
+    </div>
+</div>
