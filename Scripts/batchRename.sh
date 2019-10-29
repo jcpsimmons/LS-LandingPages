@@ -1,1 +1,1 @@
-for f in *; do mv "$f" "102119_Thanksgiving_Mobile_${f#TestSR}"; done
+for f in *; do mv "$f" "1104${f#TestSR}"; done

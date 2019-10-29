@@ -1,0 +1,58 @@
+<style>
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 1rem;
+        align-items: center
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    @media (max-width:767px) {
+        .x .desktop-only {
+            display: none
+        }
+
+        .x .desktop-only-block {
+            display: none
+        }
+
+        .x .mobile-only {
+            display: block
+        }
+
+        .x .container {
+            padding: 0
+        }
+
+        .product-listing-template .col-xs-12:first-of-type {
+            padding: 0
+        }
+    }
+</style>
+<div class="x">
+    <div class="container row1">
+        <div class="11" style="flex-basis:100%;">
+            <img alt="Veterans Day Event - Tempur-Pedic, Revive and Beautyrest mattresses on sale."
+                class="img-responsive desktop-only"
+                src="/globalassets/images/lp/2019/11/1104veterans-day-revive_LP.jpg" />
+            <img alt="Veterans Day Event - Tempur-Pedic, Revive and Beautyrest mattresses on sale."
+                class="img-responsive mobile-only"
+                src="/globalassets/images/lp/2019/11/1104revive-veterans-LP-mobile.jpg" />
+        </div>
+    </div>
+</div>
