@@ -1,0 +1,809 @@
+<style type="text/css">
+    /* counter css */
+    .mattress-cnt {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 3.3rem;
+    }
+
+    .counter {
+        font-size: 6.5rem;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .hero-header {
+        font-size: 6.4rem;
+        color: #333 !important;
+        line-height: 9.9rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .hero-img {
+        position: relative;
+    }
+
+    .countbox {
+        position: absolute;
+        width: 34rem;
+        z-index: 1;
+        background-color: #fff;
+        bottom: 4rem;
+        margin-left: -17rem;
+        left: 50%
+    }
+
+    .footer-component {
+        margin-top: 7rem;
+    }
+
+    .dont-display {
+        display: none;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    .screen-reader {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 0 !important;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 0 !important;
+        color: #fff;
+    }
+
+    /* a {
+        text-decoration: none !important;
+    } */
+
+    .floatL {
+        float: left;
+    }
+
+    .floatR {
+        float: right;
+    }
+
+    a.block-link {
+        display: block;
+        text-decoration: none;
+    }
+
+    .hero-giveAway {
+        font-size: 2.4rem;
+        width: 100%;
+        background-color: #118639;
+        text-align: center;
+        color: #fff;
+        padding: .8rem 0;
+        margin: 0 auto;
+    }
+
+    .hero-giveAway span {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+    }
+
+    .hero-giveAway span span {
+        width: 7.2rem;
+        text-align: center;
+    }
+
+    .hero-header {
+        font-size: 6.4rem;
+        color: #758b85;
+        line-height: 9.9rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .bogo1n {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+    }
+
+    .sub-header {
+        font-size: 2rem;
+        color: darkslategray;
+        line-height: 3rem;
+        margin-top: 1rem;
+    }
+
+    .wsl-intro {
+        position: relative;
+        z-index: 2;
+        text-align: left;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #464646;
+    }
+
+    .wsl-intro>p {
+        margin: 2.4rem 4.2rem;
+    }
+
+    .premiumTxt {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #464646;
+        margin: 0 auto 2rem auto;
+        padding-bottom: 2rem;
+    }
+
+    .premiumTxt>p {
+        font-weight: 600;
+        margin: 2.4rem 0 1rem;
+    }
+
+    .premiumTxt ul {
+        width: 100%;
+        margin: 0 auto;
+        color: #464646;
+    }
+
+    .premiumTxt ul li {
+        display: inline-block;
+        float: left;
+        padding: 0 1rem;
+        /* border-right: .1rem solid #333333; */
+        line-height: 2.2rem;
+        text-decoration: underline !important;
+        color: #464646;
+    }
+
+    /* 
+    .premiumTxt ul li:last-child {
+        border: 0;
+    } */
+
+    #wsl_wrap #recently_viewed_container {
+        display: none;
+    }
+
+    a.lp-shop-link {
+        display: block;
+        background: #363636;
+        margin-top: 2rem;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-weight: 300;
+        font-size: 2.2rem;
+        line-height: 6rem;
+    }
+
+    .lp-shop-link span {
+        font-family: Arial;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 3.7rem;
+    }
+
+    .onTrend {
+        position: relative;
+        width: 100%;
+        margin: 3rem 0;
+    }
+
+    .onTrend .playVideo {
+        display: block;
+        width: 100%;
+        height: 22.7rem;
+    }
+
+    .onTrend2 {
+        position: relative;
+        width: 100%;
+        margin: 4rem 0;
+    }
+
+    .onTrend2 .playVideo2 {
+        display: block;
+        height: 22.7rem;
+    }
+
+    .leftCol {
+        margin-top: .1rem;
+    }
+
+    .rightCol>p {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        text-align: left;
+        margin: 1rem 3.2rem 0 0;
+    }
+
+    .rightCol-txt {
+        margin-right: 7.5rem !important;
+    }
+
+    .vfc {
+        margin: 4rem 0 4rem 0;
+    }
+
+    .vfc .col1 {
+        text-align: center;
+        padding-top: .9rem;
+    }
+
+    .vfc .col1n {
+        text-align: center;
+        padding-top: 4.5rem;
+    }
+
+    .vfc .col2>p {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .azBlock {
+        background: #f1f1f1;
+        font-size: 1.8rem;
+        padding: 1.8rem;
+    }
+
+    .azBlock span {
+        display: block;
+    }
+
+    .azBlock .col3 {
+        text-transform: uppercase;
+    }
+
+    .azBlock .col3 .bogo1 {
+        width: 14.3rem;
+        padding-right: 1.5rem;
+    }
+
+    .azBlock .col3 .bogo2 {
+        padding-left: 1.5rem;
+        border-left: .1rem solid #ccc;
+    }
+
+    .azBlock .col3 span {
+        text-align: left;
+    }
+
+    .azBlock span.txt1 {
+        font-size: 4.3rem;
+    }
+
+    .azBlock .col4 {
+        width: 55rem;
+    }
+
+    .azBlock .col4 p {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: center;
+    }
+
+    .azBlock .sBorder {
+        display: block;
+        width: 44.6rem;
+        height: .1rem;
+        margin: 1.5rem auto auto;
+        background: #cccccc;
+    }
+
+    .azBlock .tyTxt {
+        text-transform: uppercase;
+        text-align: center;
+        padding: .5rem;
+        background: #f1f1f1;
+        width: 10.4rem;
+        margin: -1.8rem auto auto;
+    }
+
+    .wslVbox {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    .wslVbox .closePlayer {
+        background: #eee;
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.5rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+    }
+
+    .wslVbox2 {
+        position: absolute;
+        left: 0;
+    }
+
+    .wslVbox2 .closePlayer {
+        background: #eee;
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.5rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+    }
+
+    .bogoSocial {
+        background: url('/globalassets/images/lp/2017/0626_revive-social-icon.png') no-repeat center bottom;
+        width: 19%;
+        min-height: 4rem;
+        margin: 5rem auto auto;
+    }
+
+    .bogoSocial div {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .bogoSocial a {
+        display: inline-block;
+        margin: 0 1.5rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .hero-img img {
+        position: relative;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 25.4rem;
+        color: #fff;
+        text-align: center;
+        width: 96rem;
+    }
+
+    .hero-title {
+        font-size: 8.4rem;
+        text-transform: uppercase;
+    }
+
+    .hero-date {
+        text-transform: uppercase;
+        font-size: 3.4rem;
+        font-weight: 600;
+    }
+
+    .hero-txt {
+        font-size: 3rem;
+        padding: 0 12rem;
+        line-height: 4.5rem;
+    }
+
+    sup {
+        vertical-align: super;
+        font-size: 2rem;
+    }
+
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .vetLogo {
+        padding-top: 4.7rem;
+    }
+
+    .vetLogo2 {
+        padding-top: 3.7rem;
+    }
+
+    /* Large devices (desktops, less than 1200px) */
+    @media (max-width: 1199px) {}
+
+    /* Medium devices (tablets, less than 992px) */
+    @media (max-width: 991px) {
+        .premiumTxt ul {
+            width: 85%;
+        }
+
+        .hero-giveAway {
+            width: 100%;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .bogoSocial {
+            background: url(/globalassets/images/lp/2017/0626_revive-social-icon.png) no-repeat center bottom;
+            width: 26%;
+            min-height: 4rem;
+            margin: 5rem auto auto;
+        }
+
+        .bogoSocial a {
+            display: inline-block;
+            margin: 0 1.3rem;
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    /* Small devices (landscape phones, less than 768px) */
+    @media (max-width: 767px) {
+        .hero-giveAway {
+            width: 100%;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .wsl-hero {
+            margin-top: 5rem;
+        }
+
+        .counter {
+            font-size: 4rem;
+        }
+
+        .mattress-cnt {
+            padding-top: 1rem;
+            font-size: 2rem
+        }
+
+        .countbox {
+            bottom: 0
+        }
+    }
+
+    /* Extra small devices (portrait phones, less than 576px) */
+    @media (max-width: 575px) {
+
+        .vetLogo,
+        .vetLogo2 {
+            padding-top: 0;
+        }
+
+        .hero-giveAway {
+            width: 100%;
+        }
+
+        .hero-content {
+            display: none;
+        }
+
+        .wsl-hero {
+            margin-top: 5rem;
+        }
+
+        .wsl-intro>p {
+            margin: 2.4rem 1.5rem;
+        }
+
+        .hero-header {
+            font-size: 4.4rem;
+        }
+
+        .rightCol>p,
+        .rightCol-txt {
+            margin-right: 0 !important;
+        }
+
+        .premiumTxt {
+            width: 100%;
+        }
+
+        .premiumTxt ul li {
+            border: 0;
+            float: none;
+            padding: 0;
+            border-right: 0;
+            line-height: 2.8rem;
+            text-align: left;
+            display: list-item;
+            font-size: 1.8rem;
+        }
+
+        .azBlock .col3 .bogo2 {
+            width: 15.5rem;
+        }
+
+        .azBlock .col4 {
+            width: 100%;
+        }
+
+        .azBlock .sBorder {
+            width: 100%;
+            margin: 4.5rem auto auto;
+        }
+
+        .bogoSocial {
+            background: url(/globalassets/images/lp/2017/0626_revive-social-icon.png) no-repeat center bottom;
+            width: 70%;
+            min-height: 4rem;
+            margin: 5rem auto auto;
+        }
+
+        .bogoSocial a {
+            display: inline-block;
+            margin: 0 1.3rem;
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+</style>
+
+
+<div id="content_wrap" class="container">
+    <h1 class="hero-header sr-only">Buy One, Give One event</h1>
+    <div id="wsl_wrap" class="relative-box">
+
+        <!-- HERO-->
+        <div class="hero-img">
+            <div class="countbox">
+                <div class="sub-header">
+                    <div class="counter" data-count="1628">0</div>
+                    <div class="mattress-cnt"> mattress sets donated</div>
+                </div>
+            </div>
+            <img class="img-responsive center-block wsl-hero"
+                src="/globalassets/images/lp/2019/11/0212_BuyOneGiveOne_veterans-header.jpg"
+                alt="Buy one, give one events" />
+        </div>
+
+        <div class="wsl-intro">
+            <p>Through our partnerships with veteran care foundations, you can get the support you need and give heroes
+                the support they deserve during our ongoing Buy One, Give One Events.</p>
+            <p>We are honored to help our veterans relax, renew and recharge through the Revive Sleep Center experience.
+                Providing comfort and relief is a mission we share with Furnishing Hope, AMVETS National Service
+                Foundation and Veterans Furniture Center, and a quality mattress is the perfect place for our veterans
+                to begin healing. Together, we all have the ability to give back to true heroes.</p>
+        </div>
+        <!-- revive -->
+        <div class="row onTrend2">
+            <div class="col-md-6 col-sm-6 col-xs-12 leftCol2"> <a class="playVideo2" data-toggle="modal"
+                    data-target="#modal-video" data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
+                    aria-label="click to Watch the revive commercial" href="" alt="Watch the revive commercial"><img
+                        class="img-responsive center-block" src="/globalassets/images/lp/2017/0515_video-bg.jpg" /></a>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 rightCol">
+                <img class="img-responsive wsl-hero" src="/globalassets/images/lp/2017/0515_BuyOneGiveOne_07.png"
+                    width="203" height="112" alt="Revive logo" />
+                <p class="rightCol-txt">Let us help you find the perfect mattress and sleep necessities in store at any
+                    Revive Sleep Center, located inside <a href=" /stores"><u>all Living Spaces</u></a> locations.</p>
+            </div>
+        </div>
+
+        <div class="premiumTxt clearfix">
+            <p>Select Revive products are eligible - in store and online</p>
+            <ul style="font-weight:600;">
+                <li>
+                    <p><a href="
+                        https://www.livingspaces.com/search?term=copper+hybrid+mattress&query=copper+hybrid+mattress">Copper
+                            Hybrid Mattresses</a></p>
+                </li>
+                <li>
+                    <p><a
+                            href="https://www.livingspaces.com/search?term=Latex+Choice+Mattress&query=Latex+Choice+Mattress">Latex
+                            Choice Mattresses</a></p>
+                </li>
+                <li>
+                    <p><a
+                            href="https://www.livingspaces.com/search?term=Latex+Hybrid+Mattress&query=Latex+Hybrid+Mattress">Latex
+                            Choice Mattresses</a></p>
+                </li>
+                <li>
+                    <p><a
+                            href="https://www.livingspaces.com/departments/mattresses/foundations/adjustable-bases/revive/4">Adjustable
+                            Bases 4.0</a></p>
+                </li>
+                <li>
+                    <p><a
+                            href="https://www.livingspaces.com/departments/mattresses/foundations/adjustable-bases/revive/5">Adjustable
+                            Bases 5.0</a></p>
+                </li>
+            </ul>
+        </div <div class="row vfc dont-display">
+        <div class="col-md-2 col-sm-2 col-xs-12 col1n"><img class="img-responsive"
+                src="/globalassets/images/lp/2017/0817_Operation-Dignity_Badge-Logo.jpg" alt="operation dignity logo" />
+        </div>
+        <div class="col-md-10 col-sm-10 col-xs-12 col2">
+            <h2>About Operation Dignity</h2>
+            <p>Operation Dignity provides shelter, transitional and permanent housing, and supportive services to help
+                homeless veterans and their families escape crisis and regain stability. They operate 15 shelter beds
+                and 91 transitional housing beds for veterans at three properties in Oakland, Alameda and Berkeley.</p>
+        </div>
+    </div>
+    <div class="row vfc dont-display">
+        <div class="col-md-2 col-sm-2 col-xs-12 col1n"><img class="img-responsive"
+                src="/globalassets/images/lp/2017/0817_united-for-change.png" alt="VFC logo" /></div>
+        <div class="col-md-10 col-sm-10 col-xs-12 col2">
+            <h2>About United for Change</h2>
+            <p>United for Change collects donated furniture and household goods for veterans who are transitioning from
+                homelessness to permanent supportive housing. Since its inception, United for Change has supplied over
+                1,400 veterans with furnishings.</p>
+        </div>
+    </div>
+    <div class="row vfc">
+        <div class="col-md-2 col-sm-2 col-xs-12 col1"><img class="img-responsive vetLogo"
+                src="/globalassets/images/lp/2017/1030_FH-logo.jpg" alt="AMVETS logo" /></div>
+        <div class="col-md-10 col-sm-10 col-xs-12 col2">
+            <h2>About Furnishing Hope</h2>
+            <p> Initially established in 2003, Furnishing Hope shifted their focus to veterans entirely in 2010 after
+                witnessing how difficult the transition from active duty to civilian living had been. The privately
+                funded 501 C (3) then teamed up with Living Spaces, as well as other sponsors and donors, to fill the
+                homes of veterans with furniture, accessories and supplies.</p>
+        </div>
+    </div>
+    <div class="row vfc">
+        <div class="col-md-2 col-sm-2 col-xs-12 visible-xs-block col1"><img class="img-responsive vetLogo"
+                src="/globalassets/images/lp/2017/0817_logo_amvets.jpg" alt="AMVETS logo" /></div>
+        <div class="col-md-10 col-sm-10 col-xs-12 col2">
+            <h2>About AMVETS National Service Foundation</h2>
+            <p>AMVETS National Service Foundation provides support to veterans through service programs as well as
+                providing community and youth-oriented programs designed to promote unity and patriotism. AMVETS
+                National Service Foundation is continuing its commitment to freedom made by our veterans, past and
+                present.<br /><a
+                    href="https://www.usveteransmagazine.com/2018/04/10/american-veterans-amvets-department-california-services-foundation-addressing-homeless-veterans-national-partner-living-spaces/"
+                    target="_blank"><u>Read about our partnership in U.S. Veterans Magazine</u></a> ›</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 hidden-xs col1"><img class="img-responsive vetLogo"
+                src="/globalassets/images/lp/2017/0817_logo_amvets.jpg" alt="AMVETS logo" /></div>
+    </div>
+    <div class="row vfc">
+        <div class="col-md-2 col-sm-2 col-xs-12 col1"><img class="img-responsive vetLogo2"
+                src="/globalassets/images/lp/2019/02/0213_veterans_furniture_center_2.jpg"
+                alt="Veterans Furniture Center" /></div>
+        <div class="col-md-10 col-sm-10 col-xs-12 col2">
+            <h2>About Veterans Furniture Center</h2>
+            <p>A volunteer-based, veteran run organization based in Phoenix, AZ, Veterans Furniture Center is dedicated
+                to assisting formerly homeless veterans transition to permanent housing by providing them new furniture
+                and household goods to make a home and return to society.</p>
+        </div>
+    </div>
+
+    <div class="bogoSocial">
+        <div>Get Revived on Social!</div>
+        <a href="https://www.instagram.com/revivebyls/?hl=en" target="_blank" role="button"
+            aria-label="revive on instagram"></a>
+        <a href="https://www.facebook.com/RevivebyLivingSpaces/" target="_blank" role="button"
+            aria-label="revive on facebook"></a>
+        <a href="https://twitter.com/revivebyls?lang=en" target="_blank" role="button"
+            aria-label="revive on twitter"></a>
+    </div>
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //bogo mattress counter
+    $('.counter').each(function () {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+
+        $({ countNum: $this.text() }).animate({
+            countNum: countTo
+        },
+            {
+                duration: 3000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                    $this.text("1,628");
+                }
+            });
+    });
+</script>
+<script>
+    playModal();
+
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+</script>

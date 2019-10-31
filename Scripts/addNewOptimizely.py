@@ -1,8 +1,10 @@
 import os
 import requests
+from bs4 import BeautifulSoup
+from pyvirtualdisplay import Display
+from selenium import webdriver
 
 OPTIMIZELY_SCRIPT_PATH = "/mnt/z/EpiContent/scripts/optimizely"
-
 
 def makeDirAndMove():
     '''
