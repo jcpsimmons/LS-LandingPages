@@ -1,0 +1,90 @@
+<style>
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 1rem;
+        align-items: center
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    .x .twoone,
+    .x .twotwo {
+        flex-basis: 50% !important;
+    }
+
+    .x .row2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding: 2rem 0 1rem;
+        align-items: center
+    }
+
+    @media (max-width:767px) {
+        .x .desktop-only {
+            display: none
+        }
+
+        .x .desktop-only-block {
+            display: none
+        }
+
+        .x .mobile-only {
+            display: block
+        }
+
+        .x .container {
+            padding: 0
+        }
+
+        .product-listing-template .col-xs-12:first-of-type {
+            padding: 0
+        }
+
+        .x .row2 {
+            flex-direction: column;
+        }
+    }
+</style>
+<div class="x">
+    <div class="container row1">
+        <div class="11" style="flex-basis:100%;">
+            <a href="https://www.livingspaces.com/departments/mattresses/promotions/veteransday">
+                <img alt="Veterans Day Event - Tempur-Pedic, Revive and Beautyrest mattresses on sale."
+                    class="img-responsive desktop-only"
+                    src="/globalassets/images/lp/2019/11/veterans-day-revive_promo.jpg" />
+                <img alt="Veterans Day Event - Tempur-Pedic, Revive and Beautyrest mattresses on sale."
+                    class="img-responsive mobile-only"
+                    src="/globalassets/images/lp/2019/11/revive-veterans-hero-mobile.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="row2">
+
+        <div class="twoone"> <a href="https://www.livingspaces.com/event/buy-one-give-one/veterans"><img
+                    class="img-responsive" src="/globalassets/images/lp/2019/11/veterans-bogo-L.jpg"
+                    alt="Veterans' Day Buy One Give One"></a></div>
+        <div class="twotwo"><a href="https://www.livingspaces.com/event/buy-one-give-one/veterans"><img
+                    class="img-responsive" src="/globalassets/images/lp/2019/11/veterans-bogo-R.png"
+                    alt="When you purchase a premium Revive Mattress we'll donate a plush mattress to support local veterans organizations."></a>
+        </div>
+
+    </div>
+</div>

@@ -102,6 +102,10 @@
         .generic-html-template>.container {
             padding: 0;
         }
+
+        .product-listing-template .col-xs-12:first-of-type {
+            padding: 0;
+        }
     }
 
     /* TEXT MODIFICATION */
@@ -216,7 +220,7 @@
     <!-- MIDDLE SECTION - DESKTOP ONLY -->
     <div class="container desktop-only">
         <div class="mid-l">
-            <a href="https://www.livingspaces.com/pdp-kit-larkin-espresso-queen-panel-bed-246552">
+            <a href="https://www.livingspaces.com/pdp-kit-larkin-espresso-full-panel-bed-246558">
                 <img src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-queenbed-246552.jpg"
                     alt="$295 Queen Bed" class="img-responsive"></a>
         </div>
@@ -225,12 +229,9 @@
             <div class="yt-thumb">
                 <div class="videoModal">
                     <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
-                        data-theVideo="https://www.youtube.com/embed/ybo0J2A5umk">
+                        data-theVideo="https://www.youtube.com/embed/iQTd2qTg1-I">
                         <img class='img-responsive video-thumb desktop-only'
-                            src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video.jpg"
-                            alt="Veterans Day Video">
-                        <img class='img-responsive video-thumb mobile-only'
-                            src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video.jpg"
+                            src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video_v01.jpg"
                             alt="Veterans Day Video">
                     </div>
                 </div>
@@ -245,13 +246,10 @@
         <!-- Video Thumbnail -->
         <div class="yt-thumb">
             <div class="videoModal">
-                <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
-                    data-theVideo="https://www.youtube.com/embed/ybo0J2A5umk">
-                    <img class='img-responsive video-thumb desktop-only'
-                        src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video.jpg"
-                        alt="Veterans Day Video">
+                <div id="mobile_modal02" data-toggle="modal" data-target="#modal-video_02" tabindex="0"
+                    data-theVideo="https://www.youtube.com/embed/iQTd2qTg1-I">
                     <img class='img-responsive video-thumb mobile-only'
-                        src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video.jpg"
+                        src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-video-mobile_v01.jpg"
                         alt="Veterans Day Video">
                 </div>
             </div>
@@ -278,7 +276,7 @@
     <!-- FOOTER BANNER -->
     <div class="container">
         <div class="footer-banner">
-            <a href="#pending">
+            <a href="https://www.livingspaces.com/departments/mattresses/promotions/veteransday">
                 <img src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-veteransday-revive.jpg"
                     alt="Veterans Day Revive Event" class=" desktop-only img-responsive">
                 <img src="https://www.livingspaces.com/globalassets/images/lp/2019/11/1104-veteransday-lp-veteransday-revive-mobile.jpg"
@@ -286,7 +284,7 @@
             </a>
         </div>
     </div>
-    <!-- MODAL -->
+    <!-- MODAL Desktop -->
     <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -307,7 +305,28 @@
             </div>
         </div>
     </div>
-    <!-- MODAL SCRIPT -->
+    <!-- MODAL - Mobile -->
+    <div class="modal fade" id="modal-video_02" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="same_day_delivery_video" class="embed-responsive-item" width="1170"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=""
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL SCRIPT - DESKTOP -->
     <script>
         window.addEventListener(
             "load",
@@ -325,6 +344,32 @@
                             $(theModal + " iframe").attr("src", videoSRC);
                         });
                         $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                    });
+                }
+            },
+            false
+        );
+    </script>
+    <!-- MODAL SCRIPT - MOBILE -->
+    <script>
+        window.addEventListener(
+            "load",
+            function () {
+                if (window.jQuery) {
+                    var trigger = $("#mobile_modal02");
+                    trigger.click(function () {
+                        var theModal = $(this).data("target"),
+                            videoSRC = $(this).attr("data-theVideo"),
+                            videoSRCauto =
+                                videoSRC +
+                                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                        $(theModal + " iframe").attr("src", videoSRCauto);
+                        $(theModal + " button.close").click(function () {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                        $("#modal-video_02").on("hidden.bs.modal", function (e) {
                             $(theModal + " iframe").attr("src", videoSRC);
                         });
                     });
