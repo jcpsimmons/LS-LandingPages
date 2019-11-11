@@ -1,0 +1,192 @@
+<style>
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 1rem;
+        align-items: center
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    /* BEGIN LEGACY CSS */
+    .black_friday_title_Box {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .black_friday_title_Box h2 {
+        font-weight: 600;
+    }
+
+    .bf_product_box {
+        border: .1rem solid #d5d6d5;
+        display: block;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .bf_product_name {
+        margin-top: 3rem;
+        padding: 0 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .bf_product_price {
+        color: #b9170f;
+        font-size: 2rem;
+    }
+
+    .bf_product_price,
+    .bf_product_name {
+        display: block;
+        text-align: center;
+    }
+
+    .black_friday_title_Box p {
+        margin: 3rem 0 1rem;
+    }
+
+    .product_instore_cta {
+        color: #356459;
+    }
+
+    .black_friday_title_Box p.mmProd {
+        cursor: pointer;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 767px) {
+
+        #product_list [class*="col-"],
+        #product_list_iso [class*="col-"] {
+            padding: 0 .7rem;
+        }
+
+        .bf_product_box {
+            margin-bottom: 1.4rem;
+        }
+
+        .bf_product_name {
+            padding: 0 0.8rem;
+        }
+    }
+
+    /* END LEGACY CSS */
+
+    @media (max-width:767px) {
+        .x .desktop-only {
+            display: none
+        }
+
+        .x .desktop-only-block {
+            display: none
+        }
+
+        .x .mobile-only {
+            display: block
+        }
+    }
+</style>
+<div class="x">
+    <div class="container row1">
+        <div class="11" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Black Friday Doorbuster Event" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+    </div>
+    <div class="container row2">
+        <div class="21" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Accent chairs starting at $95" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+    </div>
+    <div class="container row3">
+        <div class="31" style="flex-basis:50%;">
+            <a href="/TK-LINK">
+                <img alt="Dining table $195" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+        <div class="32" style="flex-basis:50%;">
+            <a href="/TK-LINK">
+                <img alt="No interest if paid in full" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+    </div>
+    <div class="container row4">
+        <div class="41" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Sofa $195" class="img-responsive" src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+    </div>
+    <div class="container row5">
+        <div class="51" style="flex-basis:50%;">
+            <a href="/TK-LINK">
+                <img alt="In store and online accessories starting at $5" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+        <div class="52" style="flex-basis:50%;">
+            <a href="/TK-LINK">
+                <img alt="Rugs starting at $49" class="img-responsive"
+                    src="/globalassets/images/lp/2019/11/TK_IMAGE.JPG" />
+            </a>
+        </div>
+    </div>
+    <div class="container row5" id="product_list_iso"></div>
+    <div class="container row6" id="product_list"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        if (typeof (bfProductList) !== "undefined") {
+            createProductTiles();
+            var n = window.SameHeightComponent({
+                parentSelector: ".same-height-component",
+                childrenSelector: ".same-height-target"
+            })
+        }
+    });
+
+    function createProductTiles() {
+        var keys = Object.keys(bfProductList),
+            tiles = '';
+        for (var i = 0; i < keys.length; i++) {
+            var key = keys[i];
+            tiles = '<div class="col-sm-3 col-xs-6"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/images/lp/2018/11/bf/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></div>';
+            if (bfProductList[key].iso) {
+                $('#product_list_iso').append(tiles);
+            } else {
+                $('#product_list').append(tiles);
+            }
+        }
+    }
+    $(function () {
+        //scroll to main products section
+        var target = '#earlybf'
+        $('.mmProd').click(function (e) { e.preventDefault(); $('html,body').animate({ scrollTop: $(target).offset().top }); })
+    });
+</script>

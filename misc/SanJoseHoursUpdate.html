@@ -1,0 +1,13 @@
+<script>
+  var anotherInterval = setInterval(function () {
+    if (typeof window.jQuery !== "undefined") {
+      clearInterval(anotherInterval);
+      insertHtml =
+        "<span>Mon-Thur 10am - 9pm</span><span>Fri 10am - 10pm</span><span>Sat 9am - 10pm</span><span>Sun 9am - 9pm</span>";
+      $(".store-info-component .row .title")
+        .siblings()
+        .remove();
+      $(".store-info-component .row .title").after(insertHtml);
+    }
+  }, 50);
+</script>
