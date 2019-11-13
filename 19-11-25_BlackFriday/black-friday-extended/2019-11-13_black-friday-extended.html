@@ -1,0 +1,174 @@
+<style>
+    /* font import */
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 5rem;
+        align-items: center
+    }
+
+    /* Text */
+    .x h1,
+    .x h2,
+    .x h3,
+    .x h4,
+    .x h5,
+    .x h6,
+    .x p,
+    .x span,
+    .x a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400
+    }
+
+    .x .callout-text {
+        text-align: center;
+        padding: 6rem 4rem 0;
+        font-size: 2rem
+    }
+
+    .x .stylized {
+        border-bottom: 3px solid #e3d55c;
+        font-weight: 700;
+    }
+
+    /* DIV SPACING */
+
+    .x .twoone {
+        padding-right: 2.5rem
+    }
+
+    .x .twotwo {
+        padding-left: 2.5rem
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    .x .dining-table-half {
+        padding-right: 2.5rem
+    }
+
+    .x .financing-half {
+        padding-left: 2.5rem
+    }
+
+    @media (max-width:767px) {
+        .x .desktop-only {
+            display: none
+        }
+
+        .x .desktop-only-block {
+            display: none
+        }
+
+        .x .mobile-only {
+            display: block
+        }
+
+        /* SPACING */
+        .x .container {
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+
+        .x .twoone {
+            padding-bottom: 1rem
+        }
+
+        .x .twoone,
+        .x .twotwo {
+            flex-basis: 100%;
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        .x .callout-text {
+            padding-top: 2rem;
+        }
+
+        .x .dining-table-half {
+            padding-right: 0;
+            padding-bottom: 1rem
+        }
+
+        .x .financing-half {
+            padding-left: 0
+        }
+    }
+</style>
+<h1>BLACK FRIDAY EXTENDED</h1>
+<div class="x">
+    <div class="container row1">
+        <div class="oneone" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Black friday weekend deals - sofa $195" class="img-responsive desktop-only"
+                    src="/globalassets/BlackFriday/2019/BF-Deals-Hero.jpg" />
+                <img alt="Black friday weekend deals - sofa $195" class="img-responsive mobile-only"
+                    src="/globalassets/BlackFriday/2019/black-friday-LP-extended-mobile.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="container row2" style="padding-bottom:2.5rem">
+        <div class="twoone" style="flex-basis:45%;">
+            <a href="/TK-LINK">
+                <img alt="rugs starting at $49" class="img-responsive" src="/globalassets/BlackFriday/2019/rugs.jpg" />
+            </a>
+        </div>
+        <div class="twotwo" style="flex-basis:55%;">
+            <a href="/TK-LINK">
+                <img alt="In store and online accessories starting at $5" class="img-responsive"
+                    src="/globalassets/BlackFriday/2019/BF-landing-page-preview.gif" />
+            </a>
+        </div>
+    </div>
+    <p class="callout-text" style="margin-bottom:2.5rem; padding-top:0">Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. <span class="stylized">Shop
+            Now</span></p>
+    <div class="container accent-chairs">
+        <div class="threeone" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Accent chairs starting at $95" class="img-responsive"
+                    src="/globalassets/BlackFriday/2019/BF-Queen-Bed-245369.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="container accent-chairs">
+        <div class="threeone" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Dining table $195" class="img-responsive"
+                    src="/globalassets/BlackFriday/2019/BF-landing-page-extended_07.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="container accent-chairs">
+        <div class="threeone" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Accent chairs starting at $95" class="img-responsive"
+                    src="/globalassets/BlackFriday/2019/accent-chairs.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="container accent-chairs">
+        <div class="threeone" style="flex-basis:100%;">
+            <a href="/TK-LINK">
+                <img alt="Sofa $195" class="img-responsive" src="/globalassets/BlackFriday/2019/sofa.jpg" />
+            </a>
+        </div>
+    </div>
+</div>

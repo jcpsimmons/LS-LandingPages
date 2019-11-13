@@ -1,0 +1,115 @@
+<style type="text/css">
+    html.js.flexbox.canvas.canvastext.webgl.touch.geolocation.postmessage.no-websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.no-cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.generatedcontent.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths body div.page-content section.page.DeliveryOptionsPageProxy section.container.find-store-component.delivery-options div#delivery-options.row.search-container div.col-xs-12.marg-bottom-25 {
+        margin-bottom: 0
+    }
+
+    .do-container {
+        font-size: 2rem;
+        margin: 5rem 0;
+    }
+
+    .do-list img {
+        margin-right: 1.5rem;
+    }
+
+    .option-list {
+        padding: 0;
+    }
+
+    .option-list li {
+        padding: .3rem 0 .3rem 4.4rem;
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    .option-list li:nth-child(1) {
+        background: url(globalassets/images/LP/Delivery-Options-desktop_03.jpg) no-repeat left top;
+    }
+
+    .option-list li:nth-child(2) {
+        background: url(globalassets/images/LP/Delivery-Options-desktop_01.jpg) no-repeat left top;
+    }
+
+    .option-list li:nth-child(3) {
+        background: url(globalassets/images/LP/Delivery-Options-desktop_02.jpg) no-repeat left top;
+    }
+
+    .change_delivery_wrapper {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .change_delivery_wrapper a {
+        font-size: 2rem;
+    }
+
+    .thx {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 2rem;
+        align-items: center
+    }
+
+    .left-image,
+    .right-image {
+        flex-basis: 50%
+    }
+
+    @media (max-width: 991px) {
+        .option-list li {
+            padding: .3rem 0 1rem 6rem;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+    }
+
+    /*// Small devices (landscape phones, less than 768px)*/
+
+    @media (max-width: 767px) {
+        .change_delivery_wrapper {
+            padding: 1rem 0 0;
+        }
+
+        .delivery_window_link {
+            margin-bottom: 0;
+        }
+
+        .thx {
+            flex-direction: column;
+            margin: 0;
+        }
+    }
+
+    /*// Extra small devices (portrait phones, less than 576px)*/
+
+    @media (max-width: 575px) {}
+</style>
+<div class="container do-container">
+    <div class="row thx">
+        <div class="left-image"><img src="/globalassets/images/shared/thxgivingL.jpg" alt="Image of Thanksgiving meal"
+                class="img-responsive"></div>
+        <div class="right-image"><img src="/globalassets/images/shared/thxgivingR.png" alt="Get it before Thanksgiving!"
+                class="img-responsive"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="option-list">
+                <li>Same-day delivery available in certain areas for purchases made before 4:00pm.</li>
+                <li>Delivery and assembly of unlimited items for one low, flat delivery fee.</li>
+                <li>Free pickup at any retail location or distribution center. Same-day pickup available at our Rialto
+                    and Fremont distribution centers along with our Phoenix and Pflugerville stores. Next-day pickup
+                    available at all stores except Summerlin. The Summerlin store has 2-day pickup.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row change_delivery_wrapper">
+        <div class="col-xs-12">
+            <div class="delivery_window_link"><a href="/changedelivery"><i aria-hidden="true"
+                        class="fa fa-calendar-check-o"></i> Do you need to schedule or change your delivery window?
+                    Learn More ›</a></div>
+        </div>
+    </div>
+</div>
