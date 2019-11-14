@@ -1,4 +1,70 @@
 <style>
+    .black_friday_title_Box {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .black_friday_title_Box h2 {
+        font-weight: 600;
+    }
+
+    .bf_product_box {
+        border: .1rem solid #d5d6d5;
+        display: block;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .bf_product_name {
+        margin-top: 3rem;
+        padding: 0 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .bf_product_price {
+        color: #b9170f;
+        font-size: 2rem;
+    }
+
+    .bf_product_price,
+    .bf_product_name {
+        display: block;
+        text-align: center;
+    }
+
+    .black_friday_title_Box p {
+        margin: 3rem 0 1rem;
+    }
+
+    .product_instore_cta {
+        color: #356459;
+    }
+
+    .black_friday_title_Box p.mmProd {
+        cursor: pointer;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 767px) {
+
+        #product_list [class*="col-"],
+        #product_list_iso [class*="col-"] {
+            padding: 0 .7rem;
+        }
+
+        .bf_product_box {
+            margin-bottom: 1.4rem;
+        }
+
+        .bf_product_name {
+            padding: 0 0.8rem;
+        }
+    }
+</style>
+<style>
     /* font import */
     @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
@@ -112,25 +178,23 @@
         }
     }
 </style>
-<h1>BLACK FRIDAY DOORBUSTER</h1>
+<h1>BLACK FRIDAY WEEKEND</h1>
 <div class="x">
     <div class="container row1">
-        <div class="oneone" style="flex-basis:100%;">
-            <a href="/TK-LINK">
-                <img alt="Black friday doorbuster event doors open Friday at 7AM" class="img-responsive desktop-only"
-                    src="/globalassets/BlackFriday/2019/hero.jpg" />
-                <img alt="Black friday doorbuster event doors open Friday at 7AM" class="img-responsive mobile-only"
-                    src="/globalassets/BlackFriday/2019/black-friday-LP-door-buster-mobile.jpg" />
-            </a>
+        <div id="clickToScroll" class="oneone" style="flex-basis:100%;">
+            <img alt="Black friday weekend deals - sofa $195" class="img-responsive desktop-only"
+                src="/globalassets/BlackFriday/2019/BF-Weekend-Deals.jpg" />
+            <img alt="Black friday weekend deals - sofa $195" class="img-responsive mobile-only"
+                src="/globalassets/BlackFriday/2019/black-friday-LP-weekend-mobile.jpg" />
             <p class="callout-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span
-                    class="stylized">Preview Now</span></p>
+                    class="stylized">Shop Now</span></p>
         </div>
     </div>
     <div class="container accent-chairs">
         <div class="threeone" style="flex-basis:100%;">
             <a href="/TK-LINK">
                 <img alt="Accent chairs starting at $95" class="img-responsive"
-                    src="/globalassets/BlackFriday/2019/accent-chairs.jpg" />
+                    src="/globalassets/BlackFriday/2019/BF-Queen-Bed-245369.jpg" />
             </a>
         </div>
     </div>
@@ -148,10 +212,11 @@
             </a>
         </div>
     </div>
-    <div class="container row3">
+    <div class="container accent-chairs">
         <div class="threeone" style="flex-basis:100%;">
             <a href="/TK-LINK">
-                <img alt="Sofa $195" class="img-responsive" src="/globalassets/BlackFriday/2019/sofa.jpg" />
+                <img alt="Accent chairs starting at $95" class="img-responsive"
+                    src="/globalassets/BlackFriday/2019/accent-chairs.jpg" />
             </a>
         </div>
     </div>
@@ -167,5 +232,9 @@
                     src="/globalassets/BlackFriday/2019/BF-landing-page-preview.gif" />
             </a>
         </div>
+    </div>
+    <div id="bf-products">
+        <div id="product_list" class="row"></div>
+        <div id="product_list_iso" class="row"></div>
     </div>
 </div>

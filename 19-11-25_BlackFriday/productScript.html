@@ -24,7 +24,11 @@
     }
     $(function () {
         //scroll to main products section
-        var target = '#earlybf'
-        $('.mmProd').click(function (e) { e.preventDefault(); $('html,body').animate({ scrollTop: $(target).offset().top }); })
+        var target = '#bfproducts'
+        $("#clickToScroll").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#bf-products").offset().top
+            }, 500);
+        });
     });
 </script>
