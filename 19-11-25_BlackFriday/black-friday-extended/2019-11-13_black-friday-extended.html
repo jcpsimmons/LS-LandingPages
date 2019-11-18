@@ -95,7 +95,22 @@
     .x .callout-text {
         text-align: center;
         padding: 6rem 4rem 0;
-        font-size: 2rem
+        font-size: 2rem;
+        margin-bottom: 3rem
+    }
+
+    .x .callout-text:hover {
+        text-decoration: none;
+    }
+
+    .x .oneone a:hover {
+        text-decoration: none;
+    }
+
+    @media (max-width:767px) {
+        .x .callout-text {
+            margin-bottom: 1rem
+        }
     }
 
     .x .stylized {
@@ -190,12 +205,14 @@
 <div class="x">
     <div class="container row1">
         <div id="clickToScroll" class="oneone" style="flex-basis:100%;">
-            <img alt="Black friday weekend deals - sofa $195" class="img-responsive desktop-only"
-                src="/globalassets/BlackFriday/2019/BF-Deals-Hero.jpg" />
-            <img alt="Black friday weekend deals - sofa $195" class="img-responsive mobile-only"
-                src="/globalassets/BlackFriday/2019/black-friday-LP-extended-mobile.jpg" />
-            <p class="callout-text"> Final hours! These unmissable deals are here today, gone tomorrow! <span
-                    class="stylized">Shop Now ></span></p>
+            <a href="#product_list">
+                <img alt="Black friday weekend deals - sofa $195" class="img-responsive desktop-only"
+                    src="/globalassets/BlackFriday/2019/BF-Deals-Hero.jpg" />
+                <img alt="Black friday weekend deals - sofa $195" class="img-responsive mobile-only"
+                    src="/globalassets/BlackFriday/2019/black-friday-LP-extended-mobile.jpg" />
+                <p class="callout-text"> Final hours! These unmissable deals are here today, gone tomorrow! <span
+                        class="stylized">Shop Now ></span></p>
+            </a>
         </div>
     </div>
     <div class="container row2" style="padding-bottom:2.5rem">
