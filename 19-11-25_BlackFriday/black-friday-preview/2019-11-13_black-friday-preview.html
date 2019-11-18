@@ -65,6 +65,10 @@
     }
 </style>
 <style>
+    #bf-products {
+        pointer-events: none;
+    }
+
     /* font import */
     @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
@@ -90,6 +94,10 @@
     .x a {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400
+    }
+
+    #rugsAccessories {
+        padding-top: 2rem
     }
 
     .x .callout-text {
@@ -118,6 +126,33 @@
         font-weight: 700;
     }
 
+    /* SOLD OUT CSS */
+    .sold-out {
+        background-color: lightgrey
+    }
+
+    .sold-out img {
+        filter: brightness(83%);
+    }
+
+    .sotext {
+        float: left;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -45px;
+        margin-top: -20px;
+        z-index: 5;
+        background-color: yellow;
+        padding: 10px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .row1 {
+        padding-bottom: 1rem !important
+    }
+
     /* DIV SPACING */
 
     .x .twoone {
@@ -127,6 +162,7 @@
     .x .twotwo {
         padding-left: 2.5rem
     }
+
 
     /* DESKTOP/MOBILE ONLY */
     .x .desktop-only {
@@ -155,13 +191,21 @@
         }
 
         /* SPACING */
+        #rugsAccessories {
+            padding-bottom: 2rem;
+        }
+
         .x .container {
             flex-direction: column;
             padding-bottom: 1rem;
         }
 
         .x .twoone {
-            padding-bottom: 1rem
+            padding-bottom: .5rem
+        }
+
+        .x .twotwo {
+            padding-top: .5rem
         }
 
         .x .twoone,
@@ -172,11 +216,11 @@
         }
 
         .x .callout-text {
-            padding-top: 2rem;
+            padding: 2rem 0 0;
+            margin-bottom: 0
         }
     }
 </style>
-<h1>BLACK FRIDAY PREVIEW</h1>
 <div class="x">
     <div class="container row1">
         <div id="clickToScroll" class="oneone" style="flex-basis:100%;">
@@ -191,12 +235,12 @@
         </div>
     </div>
     <div class="container row2">
-        <div class="twoone" style="flex-basis:45%;">
+        <div class="twoone" style="flex-basis:45.5%;">
             <a href="#rugsAccessories">
                 <img alt="rugs starting at $49" class="img-responsive" src="/globalassets/BlackFriday/2019/rugs.jpg" />
             </a>
         </div>
-        <div class="twotwo" style="flex-basis:55%;">
+        <div class="twotwo" style="flex-basis:54.5%;">
             <a href="#rugsAccessories">
                 <img alt="In store and online accessories starting at $5" class="img-responsive"
                     src="/globalassets/BlackFriday/2019/BF-landing-page-preview.gif" />
