@@ -103,11 +103,15 @@
         margin-bottom: 3rem
     }
 
-    .x .callout-text:hover {
+    .x .callout-text:hover,
+    .x .callout-text:active,
+    .x .callout-text:visited {
         text-decoration: none;
     }
 
-    .x .oneone a:hover {
+    .x .oneone a:hover,
+    .x .oneone a:active,
+    .x .oneone a:visited {
         text-decoration: none;
     }
 
@@ -124,6 +128,7 @@
     .x .stylized {
         border-bottom: 3px solid #e3d55c;
         font-weight: 700;
+        white-space: nowrap;
     }
 
     /* DIV SPACING */
@@ -160,6 +165,15 @@
 
     .x .financing-half {
         padding-left: 2.5rem
+    }
+
+    /* PRODUCT HOVER STYLING */
+    #bf-products a:hover {
+        text-decoration: none;
+    }
+
+    #bf-products .bf_product_box:hover {
+        border: 1px solid #00699A
     }
 
     /* SOLD OUT CSS */
@@ -250,7 +264,8 @@
                 <img alt="Black friday weekend deals - sofa $195" class="img-responsive mobile-only"
                     src="/globalassets/BlackFriday/2019/black-friday-LP-extended-mobile.jpg" />
                 <p class="callout-text"> Final hours! These unmissable deals are here today, gone tomorrow! <span
-                        class="stylized">Shop Now ></span><br>While supplies last.</p>
+                        class="stylized">Shop Now <i class="fa fa-chevron-right" aria-hidden="true"
+                            style="font-size:1.5rem"></i></span><br>While supplies last.</p>
             </a>
         </div>
     </div>
@@ -305,5 +320,8 @@
                 alt="Rugs + Accessories Starting at $5" class="img-responsive center-block">
         </div>
         <div id="product_list_iso" class="row"></div>
+        <a href="https://www.livingspaces.com/departments/mattresses/promotions/blackfriday">
+            <img id="rugsAccessories" src="/globalassets/BlackFriday/2019/accessories-section.png"
+                alt="Rugs + Accessories Starting at $5" class="img-responsive center-block"></a>
     </div>
 </div>

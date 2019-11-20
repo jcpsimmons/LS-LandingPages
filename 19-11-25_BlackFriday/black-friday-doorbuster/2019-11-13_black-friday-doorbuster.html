@@ -103,11 +103,15 @@
         margin-bottom: 3rem
     }
 
-    .x .callout-text:hover {
+    .x .callout-text:hover,
+    .x .callout-text:active,
+    .x .callout-text:visited {
         text-decoration: none;
     }
 
-    .x .oneone a:hover {
+    .x .oneone a:hover,
+    .x .oneone a:active,
+    .x .oneone a:visited {
         text-decoration: none;
     }
 
@@ -120,6 +124,7 @@
     .x .stylized {
         border-bottom: 3px solid #e3d55c;
         font-weight: 700;
+        white-space: nowrap;
     }
 
     /* DIV SPACING */
@@ -152,6 +157,16 @@
 
     .x .financing-half {
         padding-left: 2.5rem
+    }
+
+    /* PRODUCT HOVER STYLING */
+    #bf-products a:hover {
+        text-decoration: none;
+    }
+
+
+    #bf-products .bf_product_box:hover {
+        border: 1px solid #00699A
     }
 
     /* SOLD OUT CSS */
@@ -243,7 +258,8 @@
                 <img alt="Black friday doorbuster event doors open Friday at 7AM" class="img-responsive mobile-only"
                     src="/globalassets/BlackFriday/2019/black-friday-LP-door-buster-mobile.jpg" />
                 <p class="callout-text">Black Friday Doorbuster Deals are finally here! <span class="stylized">Shop Now
-                        ></span><br>While supplies last.</p>
+                        <i class="fa fa-chevron-right" aria-hidden="true" style="font-size:1.5rem"></i></span><br>While
+                    supplies last.</p>
             </a>
         </div>
     </div>

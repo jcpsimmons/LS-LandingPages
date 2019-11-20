@@ -107,11 +107,16 @@
         margin-bottom: 3rem
     }
 
-    .x .callout-text:hover {
+    .x .callout-text:hover,
+    .x .callout-text:active,
+    .x .callout-text:visited {
         text-decoration: none;
     }
 
-    .x .oneone a:hover {
+
+    .x .oneone a:hover,
+    .x .oneone a:active,
+    .x .oneone a:visited {
         text-decoration: none;
     }
 
@@ -124,6 +129,7 @@
     .x .stylized {
         border-bottom: 3px solid #e3d55c;
         font-weight: 700;
+        white-space: nowrap;
     }
 
     /* SOLD OUT CSS */
@@ -161,6 +167,16 @@
 
     .x .twotwo {
         padding-left: 2.5rem
+    }
+
+    /* PRODUCT HOVER STYLING */
+    #bf-products a:hover {
+        text-decoration: none;
+    }
+
+
+    #bf-products .bf_product_box:hover {
+        border: 1px solid #00699A
     }
 
 
@@ -230,7 +246,9 @@
                 <img alt="Black friday preview doors open Friday at 7AM" class="img-responsive mobile-only"
                     src="/globalassets/BlackFriday/2019/black-friday-LP-preview-mobile.jpg" />
                 <p class="callout-text">We've got unbelievable deals for every room in your home! <span
-                        class="stylized">Preview Now ></span><br>While supplies last.</p>
+                        class="stylized">Preview Now <i class="fa fa-chevron-right" aria-hidden="true"
+                            style="font-size:1.5rem"></i>
+                    </span><br>While supplies last.</p>
             </a>
         </div>
     </div>
