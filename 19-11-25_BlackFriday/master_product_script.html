@@ -1,4 +1,849 @@
 <script>
+    // "56131": {
+    //     "sku": "56131",
+    //     "name": "Percy 5 Piece Counter Set",
+    //     "price": "$195 ",
+    //     "doorbuster": "X",
+    //     "wknd-deals": "X",
+    //     "iso": false,
+    //     "sold-out": true <----------- add this for sold out item UI
+    // },
+    var bfProductList = {
+        "56131": {
+            "sku": "56131",
+            "name": "Percy 5 Piece Counter Set",
+            "price": "$195 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "69702": {
+            "sku": "69702",
+            "name": "Metal Wine Rack",
+            "price": "$20 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "76848": {
+            "sku": "76848",
+            "name": "Metal Bike Bookend",
+            "price": "$30 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true,
+        },
+        "80781": {
+            "sku": "80781",
+            "name": "Griffin Cayenne Sofa",
+            "price": "$195 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "85054": {
+            "sku": "85054",
+            "name": "Accent Pillow-Nora Seaglass 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "85055": {
+            "sku": "85055",
+            "name": "Accent Pillow-Nora Cream 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "88247": {
+            "sku": "88247",
+            "name": "22 Inch Gold Abstract Sculpture",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "92124": {
+            "sku": "92124",
+            "name": "Brown Metal Wine Rack",
+            "price": "$30 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "102945": {
+            "sku": "102945",
+            "name": "Wood Tray Set Of 2",
+            "price": "$40 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "105885": {
+            "sku": "105885",
+            "name": "2 Piece Set Copper Table Sculptures",
+            "price": "$37 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "107883": {
+            "sku": "107883",
+            "name": "Suzy Dark Grey Wallaway Recliner",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "107887": {
+            "sku": "107887",
+            "name": "Sloan Grey Rocker Recliner",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "107889": {
+            "sku": "107889",
+            "name": "Sloan Chocolate Rocker Recliner",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "108022": {
+            "sku": "108022",
+            "name": "Accent Pillow-Felt Circles Grey 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "108028": {
+            "sku": "108028",
+            "name": "Accent Pillow-Felt Circles Silver 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "111515": {
+            "sku": "111515",
+            "name": "18 Inch Copper Sculpture",
+            "price": "$35 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "201770": {
+            "sku": "201770",
+            "name": "14 Inch Glass Vase",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "203042": {
+            "sku": "203042",
+            "name": "9 Inch Gold Table Decoration",
+            "price": "$12 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "206465": {
+            "sku": "206465",
+            "name": "Mercury Dark Grey Accent Chair",
+            "price": "$175 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "206466": {
+            "sku": "206466",
+            "name": "Mercury Lime Accent Chair",
+            "price": "$175 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "206467": {
+            "sku": "206467",
+            "name": "Mercury Mandarin Accent Chair",
+            "price": "$175 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "207076": {
+            "sku": "207076",
+            "name": "18 Inch Silver Dimension Sculpture",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "207147": {
+            "sku": "207147",
+            "name": "12 Inch Grey Prizm Vase",
+            "price": "$30 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "207156": {
+            "sku": "207156",
+            "name": "2 Piece Set Dark Metal Basket",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "207811": {
+            "sku": "207811",
+            "name": "13 Inch Mixed Grey Jewelry Box",
+            "price": "$35 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "225986": {
+            "sku": "225986",
+            "name": "Suzy Dark Grey Reclining Sofa",
+            "price": "$495 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "233030": {
+            "sku": "233030",
+            "name": "Siri Dark Chocolate Power Recliner",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "233031": {
+            "sku": "233031",
+            "name": "Siri Light Brown Power Recliner",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "233033": {
+            "sku": "233033",
+            "name": "Siri Dark Grey Power Recliner",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "235702": {
+            "sku": "235702",
+            "name": "Youth-Silver Robot Tabletop",
+            "price": "$19 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        // "235790": {
+        //     "sku": "235790",
+        //     "name": "11 Inch Bronze Textured Vase",
+        //     "price": "$15 ",
+        //     "doorbuster": "",
+        //     "wknd-deals": "",
+        //     "iso": true
+        // },
+        "244100": {
+            "sku": "244100",
+            "name": "Finley Chest Of Drawers",
+            "price": "$170 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "244114": {
+            "sku": "244114",
+            "name": "Finley Queen 4 Piece Bedroom Set",
+            "price": "$495 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "244126": {
+            "sku": "244126",
+            "name": "Pike 5 Piece Dining Set",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "244490": {
+            "sku": "244490",
+            "name": "Kelsey Coral Accent Chair",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "244491": {
+            "sku": "244491",
+            "name": "Kelsey Denim Blue Accent Chair",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "244492": {
+            "sku": "244492",
+            "name": "Kelsey Light Grey Accent Chair",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "245363": {
+            "sku": "245363",
+            "name": "Matias Grey 6 Piece Dining Set",
+            "price": "$495 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "245368": {
+            "sku": "245368",
+            "name": "Amelia Full Upholstered Panel Bed",
+            "price": "$85 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "245369": {
+            "sku": "245369",
+            "name": "Amelia Queen Upholstered Panel Bed",
+            "price": "$95 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "245370": {
+            "sku": "245370",
+            "name": "Amelia Twin Upholstered Panel Bed",
+            "price": "$75 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "248533": {
+            "sku": "248533",
+            "name": "Nerviano Mocha Wallaway Recliner",
+            "price": "$150 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "248535": {
+            "sku": "248535",
+            "name": "Nerviano Grey Wallaway Recliner",
+            "price": "$150 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "248581": {
+            "sku": "248581",
+            "name": "Oates 2 Piece Living Room Set",
+            "price": "$495 ",
+            "doorbuster": "",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "248584": {
+            "sku": "248584",
+            "name": "Oates Queen Sofa Sleeper",
+            "price": "$495 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "249681": {
+            "sku": "249681",
+            "name": "Oscar Glass TV Stand",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "249682": {
+            "sku": "249682",
+            "name": "Oscar Wood TV Stand",
+            "price": "$250 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "249837": {
+            "sku": "249837",
+            "name": "Jameson White 5 Piece Counter Set",
+            "price": "$395 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "250637": {
+            "sku": "250637",
+            "name": "11 Inch Blk + White Rnd Marble Sculpture",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "250664": {
+            "sku": "250664",
+            "name": "Sasha Light Grey Power Reclining Sofa With Usb",
+            "price": "$495 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "250665": {
+            "sku": "250665",
+            "name": "Sasha Light Grey Power Recliner With Usb",
+            "price": "$350 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "251254": {
+            "sku": "251254",
+            "name": "Assorted Black + Grey Planter With Metal Stand",
+            "price": "$5 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "251575": {
+            "sku": "251575",
+            "name": "Marco Charcoal Queen 4 Piece Bedroom Set",
+            "price": "$630 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "251577": {
+            "sku": "251577",
+            "name": "Marco Charcoal Chest Of Drawers",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "252470": {
+            "sku": "252470",
+            "name": "Luxem Slate Swivel Glider Recliner",
+            "price": "$250 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "252471": {
+            "sku": "252471",
+            "name": "Luxem Stone Swivel Glider Recliner",
+            "price": "$250 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "253012": {
+            "sku": "253012",
+            "name": "Durango Grey Twin Over Twin Bunk Bed",
+            "price": "$295 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "253022": {
+            "sku": "253022",
+            "name": "Casen 2 Piece Living Room Set",
+            "price": "$395 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "253178": {
+            "sku": "253178",
+            "name": "Stark Swivel Chair",
+            "price": "$195 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253180": {
+            "sku": "253180",
+            "name": "Stark Sofa With Reversible Chaise",
+            "price": "$395 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253272": {
+            "sku": "253272",
+            "name": "63X90 Rug-Mosaic Light Grey",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253273": {
+            "sku": "253273",
+            "name": "63X90 Rug-Vinum Grey",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253274": {
+            "sku": "253274",
+            "name": "63X90 Rug-Cubix Blue",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253275": {
+            "sku": "253275",
+            "name": "63X90 Rug-Cubix Grey",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253276": {
+            "sku": "253276",
+            "name": "63X90 Rug-Trigon Grey/Blue",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253277": {
+            "sku": "253277",
+            "name": "63X90 Rug-Sawtooth Blue",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253278": {
+            "sku": "253278",
+            "name": "94X126 Rug-Mosaic Light Grey",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253279": {
+            "sku": "253279",
+            "name": "94X126 Rug-Vinum Grey",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253280": {
+            "sku": "253280",
+            "name": "94X126 Rug-Cubix Blue",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253281": {
+            "sku": "253281",
+            "name": "94X126 Rug-Cubix Grey",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253282": {
+            "sku": "253282",
+            "name": "94X126 Rug-Trigon Grey/Blue",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253283": {
+            "sku": "253283",
+            "name": "94X126 Rug-Sawtooth Blue",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253284": {
+            "sku": "253284",
+            "name": "63X90 Rug-Vector Brown",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253285": {
+            "sku": "253285",
+            "name": "63X90 Rug-Ross Multi",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253286": {
+            "sku": "253286",
+            "name": "94X126 Rug-Vector Brown",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253287": {
+            "sku": "253287",
+            "name": "94X126 Rug-Ross Multi",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253295": {
+            "sku": "253295",
+            "name": "Ella Grey Accent Chair",
+            "price": "$95 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253296": {
+            "sku": "253296",
+            "name": "Ella Light Grey Accent Chair",
+            "price": "$95 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253297": {
+            "sku": "253297",
+            "name": "Ella Green Accent Chair",
+            "price": "$95 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253301": {
+            "sku": "253301",
+            "name": "Desi Light Grey Accent Chair",
+            "price": "$125 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253302": {
+            "sku": "253302",
+            "name": "Desi Blue Accent Chair",
+            "price": "$125 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253303": {
+            "sku": "253303",
+            "name": "Desi Earth Accent Chair",
+            "price": "$125 ",
+            "doorbuster": "",
+            "wknd-deals": "X",
+            "iso": false
+        },
+        "253304": {
+            "sku": "253304",
+            "name": "63X90 Rug-Tracks Multi",
+            "price": "$49 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253305": {
+            "sku": "253305",
+            "name": "94X126 Rug-Tracks Multi",
+            "price": "$99 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "253309": {
+            "sku": "253309",
+            "name": "Bryton 3 Piece Sectional With Right Arm Facing Chaise",
+            "price": "$795 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "253311": {
+            "sku": "253311",
+            "name": "Bryton 3 Piece Sectional With Left Arm Facing Chaise",
+            "price": "$795 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "253316": {
+            "sku": "253316",
+            "name": "Seren 2 Piece Livingroom Set",
+            "price": "$595 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "253320": {
+            "sku": "253320",
+            "name": "Seren 2 Piece Sectional With Left Arm Facing Chaise",
+            "price": "$595 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "253321": {
+            "sku": "253321",
+            "name": "Seren 2 Piece Sectional With Right Arm Facing Chaise",
+            "price": "$595 ",
+            "doorbuster": "X",
+            "wknd-deals": "X ",
+            "iso": false
+        },
+        "254398": {
+            "sku": "254398",
+            "name": "Accent Pillow-Dina Camel/Blue 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "254399": {
+            "sku": "254399",
+            "name": "Accent Pillow-Shay Navy 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "254400": {
+            "sku": "254400",
+            "name": "Accent Pillow-Kian Grey 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "254401": {
+            "sku": "254401",
+            "name": "Accent Pillow-Raine Taupe 18X18",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "255207": {
+            "sku": "255207",
+            "name": "Coronado Black 58 Inch TV Stand",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "255208": {
+            "sku": "255208",
+            "name": "Coronado Dark Pine 58 Inch TV Stand",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "255209": {
+            "sku": "255209",
+            "name": "Coronado Medium Pine 58 Inch TV Stand",
+            "price": "$195 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": false
+        },
+        "255866": {
+            "sku": "255866",
+            "name": "Accent Pillow-Felt Circles Silver 20X20",
+            "price": "$9 ",
+            "doorbuster": "X",
+            "wknd-deals": "X",
+            "iso": true
+        },
+        "256367": {
+            "sku": "256367",
+            "name": "7 Inch Metal Bike Figures",
+            "price": "$20 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256369": {
+            "sku": "256369",
+            "name": "17 Inch Metal Wood Wine Holder",
+            "price": "$40 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256370": {
+            "sku": "256370",
+            "name": "Metal Birds Set Of 2",
+            "price": "$15 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256371": {
+            "sku": "256371",
+            "name": "9 Inch Bronze Hands Decor",
+            "price": "$40 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256372": {
+            "sku": "256372",
+            "name": "9 Inch Antique Gold Hands Decor",
+            "price": "$40 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256373": {
+            "sku": "256373",
+            "name": "Burlap Book Box Set Of 3",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        },
+        "256374": {
+            "sku": "256374",
+            "name": "13 Inch Sitting Elephant",
+            "price": "$25 ",
+            "doorbuster": "",
+            "wknd-deals": "",
+            "iso": true
+        }
+    }
+</script>
+<script>
     function generateTiles() {
         $(document).ready(function () {
             if (typeof (bfProductList) !== "undefined") {
@@ -15,7 +860,6 @@
                 tiles = '';
             for (var i = 0; i < keys.length; i++) {
                 var key = keys[i];
-
                 if (bfProductList[key].hasOwnProperty('sold-out')) {
                     tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
                     if (bfProductList[key].iso) {
@@ -34,22 +878,15 @@
             }
         }
         // Add smooth scrolling to all links
-        $("a").on('click', function (event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            } // End if
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash;
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top //no need of parseInt here
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
         });
     }
     // Wait Loop
