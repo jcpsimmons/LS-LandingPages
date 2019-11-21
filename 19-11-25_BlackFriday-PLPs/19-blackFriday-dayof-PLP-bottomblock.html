@@ -1,0 +1,37 @@
+<style>
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+    }
+</style>
+<div class="x">
+    <div class="container">
+        <a href="https://www.livingspaces.com/event/blackfriday">
+            <img src="/globalassets/BlackFriday/2019/BF-Revive_PLP_Deals_Preview.jpg"
+                alt="More Black Friday deals starting at $5" class="img-responsive desktop-only">
+            <img src="/globalassets/BlackFriday/2019/black-friday-revive-mobile_preview.jpg"
+                alt="More Black Friday deals starting at $5" class="img-responsive mobile-only">
+        </a>
+    </div>
+</div>
