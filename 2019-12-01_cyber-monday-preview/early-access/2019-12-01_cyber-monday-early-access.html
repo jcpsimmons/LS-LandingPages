@@ -1,0 +1,342 @@
+<style>
+    /* legacy CSS for products */
+    .black_friday_title_Box {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .black_friday_title_Box h2 {
+        font-weight: 600;
+    }
+
+    .bf_product_box {
+        border: .1rem solid #d5d6d5;
+        display: block;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .bf_product_name {
+        margin-top: 3rem;
+        padding: 0 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .bf_product_price {
+        color: #274a7a;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+
+    .bf_product_price,
+    .bf_product_name {
+        display: block;
+        text-align: center;
+    }
+
+    .black_friday_title_Box p {
+        margin: 3rem 0 1rem;
+    }
+
+    .product_instore_cta {
+        color: #356459;
+    }
+
+    #clickToScroll {
+        cursor: pointer;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 767px) {
+
+        #product_list [class*="col-"],
+        #product_list_iso [class*="col-"] {
+            padding: 0 .7rem;
+        }
+
+        .bf_product_box {
+            margin-bottom: 1.4rem;
+        }
+
+        .bf_product_name {
+            padding: 0 0.8rem;
+        }
+    }
+</style>
+<style>
+    /* DIV SPACING */
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    .x .hero-img {
+        flex-basis: 100%
+    }
+
+    .x .yt-thumb,
+    .x .disclaimer {
+        flex-basis: 50%;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    .x .mobile-only-flex {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+
+        .x .mobile-only-flex {
+            display: flex;
+        }
+    }
+
+    /* TEXT MODIFICATION */
+    /* MODAL */
+
+    .x .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .x .modal-content {
+        background: none;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .x .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .x .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .x .modal-header,
+    .x .modal-footer {
+        border: 0;
+    }
+
+    .x .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 3.6rem;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 0 !important;
+        margin-top: -1rem !important;
+    }
+
+    .x .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .play-btn {
+        text-align: center;
+    }
+
+    #same_day_delivery_video {
+        border: 0.5rem solid #fff;
+    }
+
+    .x .modal .modal-dialog {
+        width: 95vw;
+    }
+
+    /* END MODAL */
+</style>
+<style>
+    .x .sectional,
+    .x .sofa,
+    .x .dining-set {
+        flex-basis: 33.333333%;
+        padding: 0 .5rem
+    }
+
+    .x .callout-text {
+        padding: 2rem 0 1rem
+    }
+
+    .x .three-across {
+        margin: 0 -.5rem;
+        width: 100.3%;
+        padding-left: 1.5rem
+    }
+
+    .x .hero-img {
+        padding-left: 1.5rem
+    }
+
+    /* products styling; */
+
+    .x #bf-products {
+        padding: 0 1.5rem
+    }
+
+    .x .was-price {
+        font-size: 1.5rem;
+        padding-left: .5rem;
+        font-weight: normal;
+        color: black;
+        text-decoration: line-through;
+    }
+
+    @media (max-width: 1199px) {
+        .x .three-across {
+            width: 101%;
+            padding-left: 0
+        }
+
+        .x .hero-img {
+            padding-left: 0
+        }
+
+        .x #bf-products {
+            padding: 0
+        }
+    }
+
+    .x .sofa-mobile,
+    .x .dining-mobile {
+        flex-basis: 50%
+    }
+
+    .x .sofa-mobile {
+        padding-right: 1rem
+    }
+
+    .x .dining-mobile {
+        padding-left: 1rem
+    }
+
+    .generic-html-template>.container {
+        padding: 0
+    }
+
+    .x .hero-img a,
+    .x .hero-img a:hover,
+    .x .hero-img a:active,
+    .x .hero-img a:visited {
+        text-decoration: none;
+    }
+
+    .x .financing-banner {
+        padding: 1.875rem 0
+    }
+
+    @media (max-width: 767px) {
+        .x .callout-text {
+            padding: 2rem 2rem .25rem
+        }
+
+        .x h4 {
+            font-size: 1.5rem;
+        }
+
+        .x #bf-products {
+            padding: 3rem
+        }
+    }
+</style>
+<div class="x">
+    <!-- HERO -->
+    <div class="container" style="padding-top:0">
+        <div class="hero-img text-center"><a href="#bf-products">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-hero.jpg"
+                    alt="up to 80 percent off cyber monday" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-mobile-hero.jpg"
+                    alt="up to 80 percent off cyber monday" class="img-responsive mobile-only">
+                <h4 class="callout-text">Shop the Living Spaces Cyber Monday Event to get the best online deals on
+                    furniture
+                    you’ll love.</h4>
+            </a>
+        </div>
+    </div>
+    <!-- 3 across desktop only -->
+    <div class="container three-across desktop-only">
+        <div class="sectional">
+            <a href="https://www.livingspaces.com/pdp-arrowmask-2-piece-sectional-wraf-chaise-223418">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-sectional-223418.jpg" alt="$595 sectional"
+                    class="img-responsive"></a>
+        </div>
+        <div class="sofa">
+            <a href="https://www.livingspaces.com/pdp-turdur-sofa-223508">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-sofa-223508.jpg" alt="$350 sofa"
+                    class="img-responsive"></a>
+        </div>
+        <div class="dining-set">
+            <a href="https://www.livingspaces.com/pdp-carson-white-5-piece-dining-set-254190">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-diningset-250750.jpg"
+                    alt="$195 5pc dining set" class="img-responsive"></a>
+        </div>
+    </div>
+    <!-- 2 across mobile only  -->
+    <div class="container two-across mobile-only-flex">
+        <div class="sofa-mobile"><a href="https://www.livingspaces.com/pdp-turdur-sofa-223508">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-mobile-sofa-223508.jpg" alt="$350 sofa"
+                    class="img-responsive"></a>
+        </div>
+        <div class="dining-mobile"> <a href="https://www.livingspaces.com/pdp-carson-white-5-piece-dining-set-254190">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-mobile-diningset-250750.jpg"
+                    alt="$195 dining set" class="img-responsive"></a>
+        </div>
+    </div>
+    <!-- FOOTER TEXT -->
+    <div class="container">
+        <div class="financing-banner">
+            <a href="https://www.livingspaces.com/company/financing">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-financing.jpg"
+                    alt="No interest until January 2023" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-mobile-financing.jpg"
+                    alt="No interest until January 2023" class="img-responsive mobile-only"></a>
+        </div>
+    </div>
+    <div id="bf-products" style="pointer-events: none;">
+        <div id="product_list" class="row"></div>
+        <div class="container">
+            <img id="rugsAccessories" src="/globalassets/BlackFriday/2019/accessories-section.png"
+                alt="Rugs + Accessories Starting at $5" class="img-responsive center-block desktop-only">
+            <img id="rugsAccessories" src="/globalassets/BlackFriday/2019/BF-Rugs-Accessories-Mobile.jpg"
+                alt="Rugs + Accessories Starting at $5" class="img-responsive center-block mobile-only">
+        </div>
+        <div id="product_list_iso" class="row"></div>
+    </div>
+</div>
