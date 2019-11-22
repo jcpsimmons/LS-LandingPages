@@ -210,7 +210,7 @@
     .x .sofa,
     .x .dining-set {
         flex-basis: 33.333333%;
-        padding: 0 .5rem
+        /* padding: 0 .5rem */
     }
 
     .x .callout-text {
@@ -218,14 +218,12 @@
     }
 
     .x .three-across {
-        margin: 0 -.5rem;
+        /* margin: 0 -.5rem;
         width: 100.3%;
-        padding-left: 1.5rem
+        padding-right: 1.5rem */
     }
 
-    .x .hero-img {
-        padding-left: 1.5rem
-    }
+
 
     /* products styling; */
 
@@ -243,7 +241,7 @@
 
     @media (max-width: 1199px) {
         .x .three-across {
-            width: 101%;
+            width: 100%;
             padding-left: 0
         }
 
@@ -296,10 +294,6 @@
         flex-basis: 100%;
     }
 
-    #cyber-monday-clearance {
-        padding-left: .5rem
-    }
-
     #queen-bed-set {
         padding-right: .5rem
     }
@@ -328,6 +322,14 @@
         .x .discount {
             padding-bottom: 2rem
         }
+
+        .x #mobile_modal {
+            padding-bottom: 2rem;
+        }
+
+        .x #hero-container {
+            padding-bottom: 1rem
+        }
     }
 </style>
 <style>
@@ -350,12 +352,12 @@
 </style>
 <div class="x">
     <!-- HERO -->
-    <div class="container" style="padding-top:0">
+    <div class="container" id="hero-container" style="padding-top:0">
         <div class="hero-img text-center">
             <a href="#bf-products">
                 <div class="countdown-timer" id="countdown-timer"></div>
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-hero.jpg" alt="up to 70 percent off cyber monday"
-                    class="img-responsive desktop-only">
+                    class="img-responsive desktop-only center-block">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-mobile-hero.jpg"
                     alt="up to 80 percent off cyber monday" class="img-responsive mobile-only">
                 <h4 class="callout-text">Your first, last and only chance for huge savings!</h4>
@@ -364,17 +366,17 @@
     </div>
     <!-- 3 across desktop only -->
     <div class="container three-across desktop-only">
-        <div class="sectional">
+        <div class="sectional col-md-4">
             <a href="https://www.livingspaces.com/pdp-arrowmask-2-piece-sectional-wraf-chaise-223418">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-diningset-250750.jpg" alt="$195 5pc dining set"
                     class="img-responsive"></a>
         </div>
-        <div class="sofa">
+        <div class="sofa col-md-4">
             <a href="https://www.livingspaces.com/pdp-turdur-sofa-223508">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-sofa-237963.jpg" alt="$295 sofa"
                     class="img-responsive"></a>
         </div>
-        <div class="dining-set" style="flex-direction: column;">
+        <div class="dining-set col-md-4" style="flex-direction: column;">
             <div class='videoModal'>
                 <div id='desktop_modal' data-toggle='modal' data-target='#modal-video_01' tabindex='0'
                     data-theVideo='https://www.youtube.com/embed/61h03_1L2QE'><img class='img-responsive video-thumb'
@@ -404,14 +406,13 @@
             data-theVideo='https://www.youtube.com/embed/61h03_1L2QE'><img class='img-responsive video-thumb'
                 src='/globalassets/images/lp/2019/12/1202-cm-lp-mobile-video.jpg' alt='LS Cyber monday video'></div>
     </div>
-    <!-- FOOTER TEXT -->
     <div class="container desktop-only">
-        <div class="queen-bed-row-box" id="queen-bed-set">
+        <div class="queen-bed-row-box col-md-6" id="queen-bed-set">
             <a href="https://www.livingspaces.com/company/financing">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-bedroomset-230096.jpg"
                     alt="$695 queen 4pc bedroom set" class="img-responsive">
         </div>
-        <div class="queen-bed-row-box" id="cyber-monday-clearance">
+        <div class="queen-bed-row-box col-md-6" id="cyber-monday-clearance">
             <a href="https://www.livingspaces.com/company/financing">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-clearance-banner.jpg"
                     alt="enjoy up to 70 percent off cyber monday clearance" class="img-responsive">
@@ -433,7 +434,7 @@
         <div class="fw-flex">
             <a href="">
                 <img src="/globalassets/images/lp/2019/12/1202-cm-lp-financing.jpg" alt="No interest until January 2023"
-                    class="img-responsive">
+                    class="img-responsive center-block">
             </a>
         </div>
     </div>
