@@ -1,0 +1,552 @@
+<style>
+    /* legacy CSS for products */
+    .black_friday_title_Box {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .black_friday_title_Box h2 {
+        font-weight: 600;
+    }
+
+    .bf_product_box {
+        border: .1rem solid #d5d6d5;
+        display: block;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .bf_product_name {
+        margin-top: 3rem;
+        padding: 0 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .bf_product_price {
+        color: #274a7a;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+
+    .bf_product_price,
+    .bf_product_name {
+        display: block;
+        text-align: center;
+    }
+
+    .black_friday_title_Box p {
+        margin: 3rem 0 1rem;
+    }
+
+    .product_instore_cta {
+        color: #356459;
+    }
+
+    #clickToScroll {
+        cursor: pointer;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 767px) {
+
+        #product_list [class*="col-"],
+        #product_list_iso [class*="col-"] {
+            padding: 0 .7rem;
+        }
+
+        .bf_product_box {
+            margin-bottom: 1.4rem;
+        }
+
+        .bf_product_name {
+            padding: 0 0.8rem;
+        }
+    }
+</style>
+<style>
+    /* DIV SPACING */
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 1rem;
+        align-items: center;
+    }
+
+    .x .hero-img {
+        flex-basis: 100%
+    }
+
+    .x .yt-thumb,
+    .x .disclaimer {
+        flex-basis: 50%;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    .x .mobile-only-flex {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+
+        .x .mobile-only-flex {
+            display: flex;
+        }
+    }
+
+    /* TEXT MODIFICATION */
+    /* MODAL */
+
+    /* .x .modal-header,
+    .x .modal-body {
+        padding: 0
+    } */
+
+    .x .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7 !important;
+    }
+
+    .x .modal-content {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+    .x .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .x .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .x .modal-header,
+    .x .modal-footer {
+        border: 0;
+    }
+
+    .x .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 3.6rem;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 1.6rem !important;
+        margin-top: -1.2rem !important;
+    }
+
+    .x .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .play-btn {
+        text-align: center;
+    }
+
+    #same_day_delivery_video {
+        border: 0.5rem solid transparent;
+    }
+
+    .x .modal .modal-dialog {
+        width: 95vw;
+    }
+
+    /* END MODAL */
+</style>
+<style>
+    /* Text */
+    .x h1,
+    .x h2,
+    .x h3,
+    .x h4,
+    .x h5,
+    .x h6,
+    .x p,
+    .x span,
+    .x a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-color: #333333
+    }
+
+    .x .sectional,
+    .x .sofa,
+    .x .dining-set {
+        flex-basis: 33.333333%;
+        padding: 0 .5rem
+    }
+
+    .x .callout-text {
+        padding: 2rem 0 1rem
+    }
+
+    .x .three-across {
+        margin: 0 -.5rem;
+        width: 100.3%;
+        padding-left: 1.5rem
+    }
+
+    .x .hero-img {
+        padding-left: 1.5rem
+    }
+
+    /* products styling; */
+
+    .x #bf-products {
+        padding: 0 1.5rem
+    }
+
+    .x .was-price {
+        font-size: 1.5rem;
+        padding-left: .5rem;
+        font-weight: normal;
+        color: black;
+        text-decoration: line-through;
+    }
+
+    @media (max-width: 1199px) {
+        .x .three-across {
+            width: 101%;
+            padding-left: 0
+        }
+
+        .x .hero-img {
+            padding-left: 0
+        }
+
+        .x #bf-products {
+            padding: 0
+        }
+    }
+
+    .x .sofa-mobile,
+    .x .dining-mobile {
+        flex-basis: 50%
+    }
+
+    .x .sofa-mobile {
+        padding-right: 1rem
+    }
+
+    .x .dining-mobile {
+        padding-left: 1rem
+    }
+
+    .generic-html-template>.container {
+        padding: 0
+    }
+
+    .x .hero-img a,
+    .x .hero-img a:hover,
+    .x .hero-img a:active,
+    .x .hero-img a:visited {
+        text-decoration: none;
+    }
+
+    .x .financing-banner {
+        padding: 1.875rem 0
+    }
+
+    .x #endtable-desktop {
+        padding-top: 1.25rem
+    }
+
+    .x .queen-bed-row-box {
+        flex-basis: 50%;
+    }
+
+    .x .fw-flex {
+        flex-basis: 100%;
+    }
+
+    #cyber-monday-clearance {
+        padding-left: .5rem
+    }
+
+    #queen-bed-set {
+        padding-right: .5rem
+    }
+
+    @media (max-width: 767px) {
+        .x .callout-text {
+            padding: 2rem 2rem .25rem
+        }
+
+        .x h4 {
+            font-size: 1.5rem;
+        }
+
+        .x #bf-products {
+            padding: 3rem
+        }
+
+        .x .container {
+            padding-bottom: 2rem;
+        }
+
+        .x .financing-banner {
+            padding: 0
+        }
+
+        .x .discount {
+            padding-bottom: 2rem
+        }
+    }
+</style>
+<style>
+    .countdown-timer {
+        font-size: 2rem;
+        position: absolute;
+        top: 21%;
+        left: 42%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: #274a7a
+    }
+
+    @media (max-width: 767px) {
+        .countdown-timer {
+            top: 22%;
+            left: 31%;
+        }
+    }
+</style>
+<div class="x">
+    <!-- HERO -->
+    <div class="container" style="padding-top:0">
+        <div class="hero-img text-center">
+            <a href="#bf-products">
+                <div class="countdown-timer" id="countdown-timer"></div>
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-hero.jpg" alt="up to 70 percent off cyber monday"
+                    class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-mobile-hero.jpg"
+                    alt="up to 80 percent off cyber monday" class="img-responsive mobile-only">
+                <h4 class="callout-text">Your first, last and only chance for huge savings!</h4>
+            </a>
+        </div>
+    </div>
+    <!-- 3 across desktop only -->
+    <div class="container three-across desktop-only">
+        <div class="sectional">
+            <a href="https://www.livingspaces.com/pdp-arrowmask-2-piece-sectional-wraf-chaise-223418">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-diningset-250750.jpg" alt="$195 5pc dining set"
+                    class="img-responsive"></a>
+        </div>
+        <div class="sofa">
+            <a href="https://www.livingspaces.com/pdp-turdur-sofa-223508">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-sofa-237963.jpg" alt="$295 sofa"
+                    class="img-responsive"></a>
+        </div>
+        <div class="dining-set" style="flex-direction: column;">
+            <div class='videoModal'>
+                <div id='desktop_modal' data-toggle='modal' data-target='#modal-video_01' tabindex='0'
+                    data-theVideo='https://www.youtube.com/embed/61h03_1L2QE'><img class='img-responsive video-thumb'
+                        src='/globalassets/images/lp/2019/12/1202-cm-lp-video.jpg' alt='LS Cyber monday video'></div>
+            </div>
+            <div id="endtable-desktop">
+                <a href="https://www.livingspaces.com/pdp-carson-white-5-piece-dining-set-254190">
+                    <img src="/globalassets/images/lp/2019/12/1202-cm-lp-endtable-230125.jpg" alt="End table $195"
+                        class="img-responsive"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 2 across mobile only  -->
+    <div class="container two-across mobile-only-flex">
+        <div class="sofa-mobile"><a href="https://www.livingspaces.com/pdp-turdur-sofa-223508">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-mobile-diningset-250750.jpg"
+                    alt="$195 5pc dining set" class="img-responsive"></a>
+        </div>
+        <div class="dining-mobile"> <a href="https://www.livingspaces.com/pdp-carson-white-5-piece-dining-set-254190">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-mobile-sofa-237963.jpg" alt="$295 sofa"
+                    class="img-responsive"></a>
+        </div>
+    </div>
+    <!-- Mobile vid modal -->
+    <div class='videoModal mobile-only'>
+        <div id='mobile_modal' data-toggle='modal' data-target='#modal-video_01' tabindex='0'
+            data-theVideo='https://www.youtube.com/embed/61h03_1L2QE'><img class='img-responsive video-thumb'
+                src='/globalassets/images/lp/2019/12/1202-cm-lp-mobile-video.jpg' alt='LS Cyber monday video'></div>
+    </div>
+    <!-- FOOTER TEXT -->
+    <div class="container desktop-only">
+        <div class="queen-bed-row-box" id="queen-bed-set">
+            <a href="https://www.livingspaces.com/company/financing">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-bedroomset-230096.jpg"
+                    alt="$695 queen 4pc bedroom set" class="img-responsive">
+        </div>
+        <div class="queen-bed-row-box" id="cyber-monday-clearance">
+            <a href="https://www.livingspaces.com/company/financing">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-clearance-banner.jpg"
+                    alt="enjoy up to 70 percent off cyber monday clearance" class="img-responsive">
+        </div>
+    </div>
+    <div class="container mobile-only" style="flex-direction: column;">
+        <div class="discount">
+            <a href="">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-clearance-mobile-banner.jpg"
+                    alt="enjoy up to 70 percent off cyber monday clearance" class="img-responsive "></a>
+        </div>
+        <div class="financing-banner">
+            <a href="https://www.livingspaces.com/company/financing">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-mobile-financing.jpg"
+                    alt="No interest until January 2023" class="img-responsive "></a>
+        </div>
+    </div>
+    <div class="container desktop-only ">
+        <div class="fw-flex">
+            <a href="">
+                <img src="/globalassets/images/lp/2019/12/1202-cm-lp-financing.jpg" alt="No interest until January 2023"
+                    class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <div id="bf-products">
+        <div id="product_list" class="row"></div>
+        <div class="container">
+            <!-- <div class="fw-flex">
+                <img id="rugsAccessories" src="/globalassets/BlackFriday/2019/accessories-section.png"
+                    alt="Rugs + Accessories Starting at $5" class="img-responsive center-block desktop-only">
+                <img id="rugsAccessories" src="/globalassets/BlackFriday/2019/BF-Rugs-Accessories-Mobile.jpg"
+                    alt="Rugs + Accessories Starting at $5" class="img-responsive center-block mobile-only">
+            </div> -->
+        </div>
+        <div id="product_list_iso" class="row"></div>
+    </div>
+</div>
+<!-- MODAL POPUP WINDOW AND SCRIPT -->
+<div class='modal fade' id='modal-video_01' tabindex='-1' role='dialog' aria-labelledby='modal-video-label'>
+    <div class='modal-dialog' role='document'>
+        <div class='modal-content' style="background-color:transparent">
+            <div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span
+                        aria-hidden='true'>&times;</span></button></div>
+            <div class='modal-body'>
+                <div class='modal-video'>
+                    <div class='embed-responsive embed-responsive-16by9'><iframe id='same_day_delivery_video'
+                            class='embed-responsive-item' width='1170'
+                            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' src=''
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // JS for Desktop Modal
+    window.addEventListener(
+        "load",
+        function () {
+            if (window.jQuery) {
+                var trigger = $("#desktop_modal");
+                trigger.click(function () {
+                    var theModal = $(this).data("target"),
+                        videoSRC = $(this).attr("data-theVideo"),
+                        videoSRCauto =
+                            videoSRC +
+                            "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                    $(theModal + " iframe").attr("src", videoSRCauto);
+                    $(theModal + " button.close").click(function () {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                    $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                });
+            }
+        },
+        false
+    );
+</script>
+<script>
+    // JS for Mobile Modal
+    window.addEventListener(
+        "load",
+        function () {
+            if (window.jQuery) {
+                var trigger = $("#mobile_modal");
+                trigger.click(function () {
+                    var theModal = $(this).data("target"),
+                        videoSRC = $(this).attr("data-theVideo"),
+                        videoSRCauto =
+                            videoSRC +
+                            "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                    $(theModal + " iframe").attr("src", videoSRCauto);
+                    $(theModal + " button.close").click(function () {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                    $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                        $(theModal + " iframe").attr("src", videoSRC);
+                    });
+                });
+            }
+        },
+        false
+    );
+</script>
+<script>
+    var countDownDate = new Date(2019, 11, 21, 23, 59, 59).getTime();
+
+    // Do every second
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (hours.toString().length == 1) {
+            hours = "0" + hours.toString()
+        }
+        if (minutes.toString().length == 1) {
+            minutes = "0" + minutes.toString()
+        }
+        if (seconds.toString().length == 1) {
+            seconds = "0" + seconds.toString()
+        }
+
+        // Display the result in the element with id="demo"
+        document.getElementById("countdown-timer").innerHTML = "ends in " + hours + " : " + minutes + " : " + seconds;
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown-timer").innerHTML = "Sale has Ended";
+        }
+    }, 1000);
+</script>
