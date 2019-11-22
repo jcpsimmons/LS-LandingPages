@@ -142,7 +142,7 @@
 
     .x .callout-text {
         text-align: center;
-        padding: 6rem 4rem 0;
+        padding: 0 4rem 0;
         font-size: 2rem;
         margin-bottom: 3rem
     }
@@ -169,12 +169,22 @@
 
     @media (max-width: 767px) {
         .x .callout-text {
-            padding: 2rem 0 0;
+            padding: 2rem 2rem 0;
             font-size: 1.75rem;
         }
 
         .product-listing-template>.col-xs-12 {
             padding: 0
+        }
+
+        .x #financing-banner {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+        .page .container {
+            padding-top: 0;
+            padding-bottom: 0
         }
     }
 </style>
@@ -183,24 +193,21 @@
     <div class="container">
         <div class="hero-img">
             <a href="javascript:document.getElementsByClassName('product-item')[0].scrollIntoView(true)">
-                <img src="/globalassets/BlackFriday/2019/black-friday-revive-PLP-header.jpg"
+                <img src="/globalassets/BlackFriday/2019/black-friday-revive-PLP-header-preview.jpg"
                     alt="Black Friday Deals Save up to $800" class="img-responsive desktop-only">
-                <img src="/globalassets/BlackFriday/2019/black-friday-revive-mobile-header.jpg"
-                    alt="Black Friday Deals Save up to $800" class="img-responsive mobile-only">
+                <img src="/globalassets/BlackFriday/2019/BF-Revive-Mobile.jpg" alt="Black Friday Deals Save up to $800"
+                    class="img-responsive mobile-only">
+                <p class="callout-text">Get the perfect pairing at an unbelievable price! Shop mattresses and adjustable
+                    bases now.
+                </p>
             </a>
         </div>
-        <div class="hero-img">
+        <div class="hero-img" id="financing-banner">
             <a href="https://www.livingspaces.com/company/financing">
                 <img src="/globalassets/BlackFriday/2019/BF-Revive_PLP_finance.jpg"
                     alt="Financing - no interest until January 2023" class="img-responsive desktop-only">
                 <img src="/globalassets/BlackFriday/2019/black-friday-revive-mobile_finance.jpg"
                     alt="Financing - no interest until January 2023" class="img-responsive mobile-only"></a>
-            <a href="javascript:document.getElementsByClassName('product-item')[0].scrollIntoView(true)">
-                <p class="callout-text">Last chance for Black Friday steals. <span class="stylized">Shop the Event
-                        <i class="fa fa-chevron-right" aria-hidden="true" style="font-size:1.5rem"></i></span> While
-                    supplies last.
-                </p>
-            </a>
         </div>
     </div>
 </div>
