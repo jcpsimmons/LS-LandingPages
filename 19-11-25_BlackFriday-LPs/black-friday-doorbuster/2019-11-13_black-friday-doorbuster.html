@@ -72,7 +72,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between !important;
         padding-bottom: 5rem;
         align-items: center
@@ -119,6 +119,10 @@
         .x .callout-text {
             margin-bottom: 1rem;
             font-size: 1.75rem;
+        }
+
+        .x .container {
+            flex-wrap: wrap;
         }
     }
 
