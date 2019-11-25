@@ -1,908 +1,1620 @@
+<style>
+   #product_list {
+      margin-left: 0;
+      margin-right: 0
+   }
+
+   .x #bf-products {
+      padding: 0
+   }
+
+   .bf_product_box:hover,
+   .bf_product_box:active {
+      border: .1rem solid #274a7a;
+      text-decoration: none;
+   }
+
+   #bf-products a:hover,
+   #bf-products a:active {
+      text-decoration: none;
+   }
+
+   .col-sm-3:nth-child(4n+1) {
+      clear: left;
+   }
+
+   @media (max-width: 767px) {
+      .col-xs-6:nth-child(2n+1) {
+         clear: left;
+      }
+   }
+
+   @media (min-width: 768px) and (max-width: 1199px) {
+      #product_list {
+         margin-left: -15px;
+         margin-right: -15px
+      }
+   }
+</style>
 <script>
-    // "56131": {
-    //     "sku": "56131",
-    //     "name": "Percy 5 Piece Counter Set",
-    //     "price": "$195 ",
-    //     "doorbuster": "X",
-    //     "wknd-deals": "X",
-    //     "iso": false,
-    //     "sold-out": true <----------- add this for sold out item UI
-    // },
-    var bfProductList = {
-        "56131": {
-            "sku": "56131",
-            "name": "Percy 5 Piece Counter Set",
-            "price": "$195 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "69702": {
-            "sku": "69702",
-            "name": "Metal Wine Rack",
-            "price": "$20 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "76848": {
-            "sku": "76848",
-            "name": "Metal Bike Bookend",
-            "price": "$30 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true,
-        },
-        "80781": {
-            "sku": "80781",
-            "name": "Griffin Cayenne Sofa",
-            "price": "$195 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "85054": {
-            "sku": "85054",
-            "name": "Accent Pillow-Nora Seaglass 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "85055": {
-            "sku": "85055",
-            "name": "Accent Pillow-Nora Cream 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "88247": {
-            "sku": "88247",
-            "name": "22 Inch Gold Abstract Sculpture",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "92124": {
-            "sku": "92124",
-            "name": "Brown Metal Wine Rack",
-            "price": "$30 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "102945": {
-            "sku": "102945",
-            "name": "Wood Tray Set Of 2",
-            "price": "$40 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "105885": {
-            "sku": "105885",
-            "name": "2 Piece Set Copper Table Sculptures",
-            "price": "$37 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "107883": {
-            "sku": "107883",
-            "name": "Suzy Dark Grey Wallaway Recliner",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "107887": {
-            "sku": "107887",
-            "name": "Sloan Grey Rocker Recliner",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "107889": {
-            "sku": "107889",
-            "name": "Sloan Chocolate Rocker Recliner",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "108022": {
-            "sku": "108022",
-            "name": "Accent Pillow-Felt Circles Grey 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "108028": {
-            "sku": "108028",
-            "name": "Accent Pillow-Felt Circles Silver 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "111515": {
-            "sku": "111515",
-            "name": "18 Inch Copper Sculpture",
-            "price": "$35 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "201770": {
-            "sku": "201770",
-            "name": "14 Inch Glass Vase",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "203042": {
-            "sku": "203042",
-            "name": "9 Inch Gold Table Decoration",
-            "price": "$12 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "206465": {
-            "sku": "206465",
-            "name": "Mercury Dark Grey Accent Chair",
-            "price": "$175 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "206466": {
-            "sku": "206466",
-            "name": "Mercury Lime Accent Chair",
-            "price": "$175 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "206467": {
-            "sku": "206467",
-            "name": "Mercury Mandarin Accent Chair",
-            "price": "$175 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "207076": {
-            "sku": "207076",
-            "name": "18 Inch Silver Dimension Sculpture",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "207147": {
-            "sku": "207147",
-            "name": "12 Inch Grey Prizm Vase",
-            "price": "$30 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "207156": {
-            "sku": "207156",
-            "name": "2 Piece Set Dark Metal Basket",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "207811": {
-            "sku": "207811",
-            "name": "13 Inch Mixed Grey Jewelry Box",
-            "price": "$35 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "225986": {
-            "sku": "225986",
-            "name": "Suzy Dark Grey Reclining Sofa",
-            "price": "$495 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "233030": {
-            "sku": "233030",
-            "name": "Siri Dark Chocolate Power Recliner",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "233031": {
-            "sku": "233031",
-            "name": "Siri Light Brown Power Recliner",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "233033": {
-            "sku": "233033",
-            "name": "Siri Dark Grey Power Recliner",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "235702": {
-            "sku": "235702",
-            "name": "Youth-Silver Robot Tabletop",
-            "price": "$19 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        // "235790": {
-        //     "sku": "235790",
-        //     "name": "11 Inch Bronze Textured Vase",
-        //     "price": "$15 ",
-        //     "doorbuster": "",
-        //     "wknd-deals": "",
-        //     "iso": true
-        // },
-        "244100": {
-            "sku": "244100",
-            "name": "Finley Chest Of Drawers",
-            "price": "$170 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "244114": {
-            "sku": "244114",
-            "name": "Finley Queen 4 Piece Bedroom Set",
-            "price": "$495 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "244126": {
-            "sku": "244126",
-            "name": "Pike 5 Piece Dining Set",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "244490": {
-            "sku": "244490",
-            "name": "Kelsey Coral Accent Chair",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "244491": {
-            "sku": "244491",
-            "name": "Kelsey Denim Blue Accent Chair",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "244492": {
-            "sku": "244492",
-            "name": "Kelsey Light Grey Accent Chair",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "245363": {
-            "sku": "245363",
-            "name": "Matias Grey 6 Piece Dining Set",
-            "price": "$495 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "245368": {
-            "sku": "245368",
-            "name": "Amelia Full Upholstered Panel Bed",
-            "price": "$85 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "245369": {
-            "sku": "245369",
-            "name": "Amelia Queen Upholstered Panel Bed",
-            "price": "$95 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "245370": {
-            "sku": "245370",
-            "name": "Amelia Twin Upholstered Panel Bed",
-            "price": "$75 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "248533": {
-            "sku": "248533",
-            "name": "Nerviano Mocha Wallaway Recliner",
-            "price": "$150 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "248535": {
-            "sku": "248535",
-            "name": "Nerviano Grey Wallaway Recliner",
-            "price": "$150 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "248581": {
-            "sku": "248581",
-            "name": "Oates 2 Piece Living Room Set",
-            "price": "$495 ",
-            "doorbuster": "",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "248584": {
-            "sku": "248584",
-            "name": "Oates Queen Sofa Sleeper",
-            "price": "$495 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "249681": {
-            "sku": "249681",
-            "name": "Oscar Glass TV Stand",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "249682": {
-            "sku": "249682",
-            "name": "Oscar Wood TV Stand",
-            "price": "$250 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "249837": {
-            "sku": "249837",
-            "name": "Jameson White 5 Piece Counter Set",
-            "price": "$395 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "250637": {
-            "sku": "250637",
-            "name": "11 Inch Blk + White Rnd Marble Sculpture",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "250664": {
-            "sku": "250664",
-            "name": "Sasha Light Grey Power Reclining Sofa With Usb",
-            "price": "$495 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "250665": {
-            "sku": "250665",
-            "name": "Sasha Light Grey Power Recliner With Usb",
-            "price": "$350 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "251254": {
-            "sku": "251254",
-            "name": "Assorted Black + Grey Planter With Metal Stand",
-            "price": "$5 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "251575": {
-            "sku": "251575",
-            "name": "Marco Charcoal Queen 4 Piece Bedroom Set",
-            "price": "$630 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "251577": {
-            "sku": "251577",
-            "name": "Marco Charcoal Chest Of Drawers",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "252470": {
-            "sku": "252470",
-            "name": "Luxem Slate Swivel Glider Recliner",
-            "price": "$250 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "252471": {
-            "sku": "252471",
-            "name": "Luxem Stone Swivel Glider Recliner",
-            "price": "$250 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "253012": {
-            "sku": "253012",
-            "name": "Durango Grey Twin Over Twin Bunk Bed",
-            "price": "$295 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "253022": {
-            "sku": "253022",
-            "name": "Casen 2 Piece Living Room Set",
-            "price": "$395 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "253178": {
-            "sku": "253178",
-            "name": "Stark Swivel Chair",
-            "price": "$195 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253180": {
-            "sku": "253180",
-            "name": "Stark Sofa With Reversible Chaise",
-            "price": "$395 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253272": {
-            "sku": "253272",
-            "name": "63X90 Rug-Mosaic Light Grey",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253273": {
-            "sku": "253273",
-            "name": "63X90 Rug-Vinum Grey",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253274": {
-            "sku": "253274",
-            "name": "63X90 Rug-Cubix Blue",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253275": {
-            "sku": "253275",
-            "name": "63X90 Rug-Cubix Grey",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253276": {
-            "sku": "253276",
-            "name": "63X90 Rug-Trigon Grey/Blue",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253277": {
-            "sku": "253277",
-            "name": "63X90 Rug-Sawtooth Blue",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253278": {
-            "sku": "253278",
-            "name": "94X126 Rug-Mosaic Light Grey",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253279": {
-            "sku": "253279",
-            "name": "94X126 Rug-Vinum Grey",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253280": {
-            "sku": "253280",
-            "name": "94X126 Rug-Cubix Blue",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253281": {
-            "sku": "253281",
-            "name": "94X126 Rug-Cubix Grey",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253282": {
-            "sku": "253282",
-            "name": "94X126 Rug-Trigon Grey/Blue",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253283": {
-            "sku": "253283",
-            "name": "94X126 Rug-Sawtooth Blue",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253284": {
-            "sku": "253284",
-            "name": "63X90 Rug-Vector Brown",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253285": {
-            "sku": "253285",
-            "name": "63X90 Rug-Ross Multi",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253286": {
-            "sku": "253286",
-            "name": "94X126 Rug-Vector Brown",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253287": {
-            "sku": "253287",
-            "name": "94X126 Rug-Ross Multi",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253295": {
-            "sku": "253295",
-            "name": "Ella Grey Accent Chair",
-            "price": "$95 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253296": {
-            "sku": "253296",
-            "name": "Ella Light Grey Accent Chair",
-            "price": "$95 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253297": {
-            "sku": "253297",
-            "name": "Ella Green Accent Chair",
-            "price": "$95 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253301": {
-            "sku": "253301",
-            "name": "Desi Light Grey Accent Chair",
-            "price": "$125 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253302": {
-            "sku": "253302",
-            "name": "Desi Blue Accent Chair",
-            "price": "$125 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253303": {
-            "sku": "253303",
-            "name": "Desi Earth Accent Chair",
-            "price": "$125 ",
-            "doorbuster": "",
-            "wknd-deals": "X",
-            "iso": false
-        },
-        "253304": {
-            "sku": "253304",
-            "name": "63X90 Rug-Tracks Multi",
-            "price": "$49 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253305": {
-            "sku": "253305",
-            "name": "94X126 Rug-Tracks Multi",
-            "price": "$99 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "253309": {
-            "sku": "253309",
-            "name": "Bryton 3 Piece Sectional With Right Arm Facing Chaise",
-            "price": "$795 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "253311": {
-            "sku": "253311",
-            "name": "Bryton 3 Piece Sectional With Left Arm Facing Chaise",
-            "price": "$795 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "253316": {
-            "sku": "253316",
-            "name": "Seren 2 Piece Livingroom Set",
-            "price": "$595 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "253320": {
-            "sku": "253320",
-            "name": "Seren 2 Piece Sectional With Left Arm Facing Chaise",
-            "price": "$595 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "253321": {
-            "sku": "253321",
-            "name": "Seren 2 Piece Sectional With Right Arm Facing Chaise",
-            "price": "$595 ",
-            "doorbuster": "X",
-            "wknd-deals": "X ",
-            "iso": false
-        },
-        "254398": {
-            "sku": "254398",
-            "name": "Accent Pillow-Dina Camel/Blue 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "254399": {
-            "sku": "254399",
-            "name": "Accent Pillow-Shay Navy 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "254400": {
-            "sku": "254400",
-            "name": "Accent Pillow-Kian Grey 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "254401": {
-            "sku": "254401",
-            "name": "Accent Pillow-Raine Taupe 18X18",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "255207": {
-            "sku": "255207",
-            "name": "Coronado Black 58 Inch TV Stand",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "255208": {
-            "sku": "255208",
-            "name": "Coronado Dark Pine 58 Inch TV Stand",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "255209": {
-            "sku": "255209",
-            "name": "Coronado Medium Pine 58 Inch TV Stand",
-            "price": "$195 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": false
-        },
-        "255866": {
-            "sku": "255866",
-            "name": "Accent Pillow-Felt Circles Silver 20X20",
-            "price": "$9 ",
-            "doorbuster": "X",
-            "wknd-deals": "X",
-            "iso": true
-        },
-        "256367": {
-            "sku": "256367",
-            "name": "7 Inch Metal Bike Figures",
-            "price": "$20 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256369": {
-            "sku": "256369",
-            "name": "17 Inch Metal Wood Wine Holder",
-            "price": "$40 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256370": {
-            "sku": "256370",
-            "name": "Metal Birds Set Of 2",
-            "price": "$15 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256371": {
-            "sku": "256371",
-            "name": "9 Inch Bronze Hands Decor",
-            "price": "$40 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256372": {
-            "sku": "256372",
-            "name": "9 Inch Antique Gold Hands Decor",
-            "price": "$40 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256373": {
-            "sku": "256373",
-            "name": "Burlap Book Box Set Of 3",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        },
-        "256374": {
-            "sku": "256374",
-            "name": "13 Inch Sitting Elephant",
-            "price": "$25 ",
-            "doorbuster": "",
-            "wknd-deals": "",
-            "iso": true
-        }
-    }
+   // "56131": {
+   //     "sku": "56131",
+   //     "name": "Percy 5 Piece Counter Set",
+   //     "price": "$195 ",
+   //     "doorbuster": "X",
+   //     "wknd-deals": "X",
+   //     "iso": false,
+   //     "sold-out": true <----------- add this for sold out item UI
+   // },
+   var cmProducts =
+   {
+      "102212": {
+         "name": "Dean Sand Queen Upholstered Panel Bed",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102221": {
+         "name": "Dean Charcoal Queen Upholstered Panel Bed",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102768": {
+         "name": "Dean Charcoal Full Upholstered Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102769": {
+         "name": "Dean Charcoal Twin Upholstered Panel Bed",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102774": {
+         "name": "Dean Sand Full Upholstered Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102775": {
+         "name": "Dean Sand Twin Upholstered Panel Bed",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102797": {
+         "name": "Kate Dove Full Upholstered Bed",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102799": {
+         "name": "Kate Dove Twin Upholstered Bed",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "102863": {
+         "name": "Knox Queen Metal Panel Bed",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "203247": {
+         "name": "Rylee California King Upholstered Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "203249": {
+         "name": "Rylee Eastern King Upholstered Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "203251": {
+         "name": "Rylee Queen Upholstered Panel Bed",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "210747": {
+         "name": "Kenneth Queen Upholstered Panel Bed",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "210751": {
+         "name": "Kenneth Eastern King Upholstered Panel Bed",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "210753": {
+         "name": "Kenneth California King Upholstered Panel Bed",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216491": {
+         "name": "Chad Grey Dresser",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216492": {
+         "name": "Chad Grey Mirror",
+         "price": "$40.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216494": {
+         "name": "Chad Grey Nightstand",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216496": {
+         "name": "Chad Grey Chest Of Drawers",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216511": {
+         "name": "Chad Grey Full Panel Bed",
+         "price": "$180.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216539": {
+         "name": "Chad Grey Twin Panel Bed",
+         "price": "$170.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216543": {
+         "name": "Chad Grey California King Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "216546": {
+         "name": "Chad Grey Eastern King Panel Bed",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "217616": {
+         "name": "Malia Power Reclining Console Loveseat With Usb",
+         "price": "$650.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "217617": {
+         "name": "Malia Power Reclining Sofa With Usb",
+         "price": "$695.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "217619": {
+         "name": "Malia Power Recliner With Usb",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "217758": {
+         "name": "Emmerson Upholstered Twin Daybed With Trundle",
+         "price": "$450.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223272": {
+         "name": "Mcdade Ash Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223274": {
+         "name": "Mcdade Ash Chair",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223277": {
+         "name": "Mcdade Ash Loveseat",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223279": {
+         "name": "Mcdade Ash Sofa",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223311": {
+         "name": "Mcdade Ash 2 Piece Sectional With Right Arm Facing Armless Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223319": {
+         "name": "Mcdade Ash 2 Piece Sectional With Left Arm Facing Armless Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223334": {
+         "name": "Mcdade Graphite 2 Piece Sectional With Right Arm Facing Armless Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223336": {
+         "name": "Mcdade Graphite 2 Piece Sectional With Left Arm Facing Armless Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223362": {
+         "name": "Linday Park Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223364": {
+         "name": "Linday Park Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223366": {
+         "name": "Linday Park Accent Chair",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223368": {
+         "name": "Linday Park Loveseat",
+         "price": "$380.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223371": {
+         "name": "Linday Park Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223375": {
+         "name": "Linday Park Queen Sofa Sleeper",
+         "price": "$650.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223418": {
+         "name": "Arrowmask 2 Piece Sectional with Right Arm Facing Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223426": {
+         "name": "Arrowmask 2 Piece Sectional with Left Arm Facing Chaise",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223458": {
+         "name": "Turdur 2 Piece Sectional With Right Arm Facing Loveseat",
+         "price": "$720.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223462": {
+         "name": "Turdur 3 Piece Sectional With Right Arm Facing Loveseat",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223470": {
+         "name": "Turdur 2 Piece Sectional With Left Arm Facing Loveseat",
+         "price": "$720.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223474": {
+         "name": "Turdur 3 Piece Sectional With Left Arm Facing Loveseat",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223503": {
+         "name": "Turdur Accent Chair",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223505": {
+         "name": "Turdur Loveseat",
+         "price": "$320.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223508": {
+         "name": "Turdur Sofa",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223511": {
+         "name": "Turdur Queen Sofa Sleeper",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "223596": {
+         "name": "Piper Kids Activity Chair",
+         "price": "$60.00 ",
+         "sale-price": "$25.00 ",
+         "iso": "Both"
+      },
+      "225748": {
+         "name": "London Optical Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225750": {
+         "name": "London Optical Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225756": {
+         "name": "London Optical Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225764": {
+         "name": "London Optical Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225768": {
+         "name": "London Dark Grey Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225770": {
+         "name": "London Dark Grey Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225776": {
+         "name": "London Dark Grey Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225785": {
+         "name": "London Dark Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225793": {
+         "name": "Allie Jade Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225795": {
+         "name": "Allie Jade Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225801": {
+         "name": "Allie Jade Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225810": {
+         "name": "Allie Jade Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225813": {
+         "name": "Allie Dark Grey Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225815": {
+         "name": "Allie Dark Grey Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225820": {
+         "name": "Allie Dark Grey Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225826": {
+         "name": "Allie Dark Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225876": {
+         "name": "Lucy Grey Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225880": {
+         "name": "Lucy Grey Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225882": {
+         "name": "Lucy Grey Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225887": {
+         "name": "Lucy Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225892": {
+         "name": "Lucy Dark Grey Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225895": {
+         "name": "Lucy Dark Grey Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225899": {
+         "name": "Lucy Dark Grey Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225902": {
+         "name": "Lucy Dark Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225918": {
+         "name": "Lucy Grey 2 Piece Sectional with Right Arm Facing Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225935": {
+         "name": "Lucy Grey 2 Piece Sectional With Left Arm Facing Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225956": {
+         "name": "Lucy Dark Grey 2 Piece Sectional W/Raf Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "225972": {
+         "name": "Lucy Dark Grey 2 Piece Sectional With Left Arm Facing Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "227560": {
+         "name": "Pendant-Eden Bell Shaped",
+         "price": "$69.00 ",
+         "sale-price": "$15.00 ",
+         "iso": "Both"
+      },
+      "232265": {
+         "name": "Deanne Mirror",
+         "price": "$195.00 ",
+         "sale-price": "$20.00 ",
+         "iso": "Both"
+      },
+      "233502": {
+         "name": "Davor Brown Power Reclining Loveseat With Console",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "233504": {
+         "name": "Davor Brown Power Reclining Sofa",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "233505": {
+         "name": "Davor Brown Power Recliner",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237956": {
+         "name": "Jacoby Denim Chaise",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237957": {
+         "name": "Jacoby Denim Loveseat",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237959": {
+         "name": "Jacoby Denim Full Sofa Sleeper",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237963": {
+         "name": "Jacoby Denim Sofa",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237968": {
+         "name": "Jacoby Gunmetal Chaise",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237971": {
+         "name": "Jacoby Gunmetal Loveseat",
+         "price": "$280.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237974": {
+         "name": "Jacoby Gunmetal Full Sofa Sleeper",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "237975": {
+         "name": "Jacoby Gunmetal Sofa",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "240956": {
+         "name": "Chase Sable Power Recliner W/Power Headrest & Usb",
+         "price": "$595.00 ",
+         "sale-price": "$395.00 ",
+         "iso": "Both"
+      },
+      "241106": {
+         "name": "Casey Umber 66 Inch Tv Stand",
+         "price": "$550.00 ",
+         "sale-price": "$350.00 ",
+         "iso": "Both"
+      },
+      "243300": {
+         "name": "Laurent 60 Inch Tv Stand",
+         "price": "$795.00 ",
+         "sale-price": "$430.00 ",
+         "iso": "Both"
+      },
+      "243396": {
+         "name": "Calvin Slate 3 Piece Sectional with Right Arm Facing Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "243398": {
+         "name": "Calvin Slate 3 Piece Sectional with Left Arm Facing Chaise",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244080": {
+         "name": "Tucker Sofa With Reversible Chaise",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244081": {
+         "name": "Tucker Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244082": {
+         "name": "Tucker Accent Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244085": {
+         "name": "Tucker Queen Sleeper With Reversible Chaise",
+         "price": "$695.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244090": {
+         "name": "Fenton 3 Piece Sectional With Left Arm Facing Cuddler",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244092": {
+         "name": "Fenton 3 Piece Sectional With Left Arm Facing Cuddler",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244097": {
+         "name": "Finley Mirror",
+         "price": "$40.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244098": {
+         "name": "Finley Dresser",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244099": {
+         "name": "Finley Nightstand",
+         "price": "$90.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244100": {
+         "name": "Finley Chest Of Drawers",
+         "price": "$170.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244103": {
+         "name": "Finley California King Panel Bed",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244107": {
+         "name": "Finley Full Panel Bed",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244111": {
+         "name": "Finley Eastern King Panel Bed",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244114": {
+         "name": "Finley Queen 4 Piece Bedroom Set",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244115": {
+         "name": "Finley Queen Panel Bed",
+         "price": "$170.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244118": {
+         "name": "Finley Twin Panel Bed",
+         "price": "$130.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244478": {
+         "name": "Krista Grey Accent Chair",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244479": {
+         "name": "Krista Blue Accent Chair",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244480": {
+         "name": "Krista Green Accent Chair",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244481": {
+         "name": "Krista Eggplant Accent Chair",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244483": {
+         "name": "Kendra Orange Accent Chair",
+         "price": "$275.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244484": {
+         "name": "Kendra Grey Accent Chair",
+         "price": "$275.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244485": {
+         "name": "Kendra Beige Accent Chair",
+         "price": "$275.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244486": {
+         "name": "Katrina Blue Swivel Glider Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244487": {
+         "name": "Katrina Grey Swivel Glider Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244488": {
+         "name": "Katrina Beige Swivel Glider Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244490": {
+         "name": "Kelsey Coral Accent Chair",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244491": {
+         "name": "Kelsey Denim Blue Accent Chair",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244492": {
+         "name": "Kelsey Light Grey Accent Chair",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "244924": {
+         "name": "61X84 Outdoor Rug-Yellow And Green Large Ikat",
+         "price": "$95.00 ",
+         "sale-price": "$49.00 ",
+         "iso": "Both"
+      },
+      "244927": {
+         "name": "61X84 Outdoor Rug-Grey And Yellow Ikat",
+         "price": "$95.00 ",
+         "sale-price": "$49.00 ",
+         "iso": "Both"
+      },
+      "246090": {
+         "name": "Kinsley Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246091": {
+         "name": "Kinsley Chair",
+         "price": "$320.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246092": {
+         "name": "Kinsley Loveseat",
+         "price": "$380.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246096": {
+         "name": "Kinsley Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246100": {
+         "name": "Kinsley Queen Sofa Sleeper",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246449": {
+         "name": "Ginger Buttercup Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246450": {
+         "name": "Ginger Buttercup Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246451": {
+         "name": "Ginger Buttercup Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246452": {
+         "name": "Ginger Buttercup Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246453": {
+         "name": "Ginger Grey Loveseat",
+         "price": "$375.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246454": {
+         "name": "Ginger Grey Sofa",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246455": {
+         "name": "Ginger Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "246462": {
+         "name": "Ginger Grey Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247020": {
+         "name": "Fenton 3 Piece Sectional With Left Facing Corner Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247022": {
+         "name": "Fenton 3 Piece Sectional With Right Facing Corner Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247307": {
+         "name": "Aaron Steel Blue Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247308": {
+         "name": "Aaron Charcoal Chair",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247309": {
+         "name": "Aaron Steel Blue Loveseat",
+         "price": "$450.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247310": {
+         "name": "Aaron Charcoal Loveseat",
+         "price": "$450.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247311": {
+         "name": "Aaron Steel Blue Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247312": {
+         "name": "Aaron Charcoal Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247313": {
+         "name": "Aaron Steel Blue Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247314": {
+         "name": "Aaron Charcoal Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "247316": {
+         "name": "Angie Light Grey Sofa",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248543": {
+         "name": "Devonwood 3 Piece Sectional with Left Arm Facing Loveseat",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248544": {
+         "name": "Devonwood 2 Piece Sectional with Left Arm Facing Loveseat",
+         "price": "$750.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248548": {
+         "name": "Devonwood 3 Piece Sectional with Right Arm Facing Loveseat",
+         "price": "$895.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248549": {
+         "name": "Devonwood 2 Piece Sectional with Right Arm Facing Loveseat",
+         "price": "$750.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248557": {
+         "name": "Chappell 3 Piece Sectional With Left Arm Facing Loveseat",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248558": {
+         "name": "Chappell 2 Piece Sectional With Left Arm Facing Loveseat",
+         "price": "$850.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248562": {
+         "name": "Chappell 3 Piece Sectional with Right Arm Facing Loveseat",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248563": {
+         "name": "Chappell 2 Piece Sectional With Right Arm Facing Loveseat",
+         "price": "$850.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248572": {
+         "name": "Bray Accent Chair",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248573": {
+         "name": "Bray Loveseat",
+         "price": "$470.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248576": {
+         "name": "Bray Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248579": {
+         "name": "Bray Queen Sofa Sleeper",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248620": {
+         "name": "Cassie Mirror",
+         "price": "$55.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248621": {
+         "name": "Cassie Dresser",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248622": {
+         "name": "Cassie Nightstand",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248623": {
+         "name": "Cassie Chest of Drawers",
+         "price": "$220.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "248632": {
+         "name": "Cassie Queen Panel Bed",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250663": {
+         "name": "Sasha Light Grey Power Reclining Console Loveseat With Usb",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250664": {
+         "name": "Sasha Light Grey Power Reclining Sofa With Usb",
+         "price": "$595.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250665": {
+         "name": "Sasha Light Grey Power Recliner With Usb",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250746": {
+         "name": "Aquarius II Dark Grey Cocktail Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250747": {
+         "name": "Aquarius II Light Grey Cocktail Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250748": {
+         "name": "Aquarius II Dark Grey 2 Pc Sectional With Right Arm Facing Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250750": {
+         "name": "Aquarius II Light Grey 2 Pc Sectional With Right Arm Facing Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250752": {
+         "name": "Aquarius II Dark Grey 2 Pc Sectional With Left Arm Facing Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250754": {
+         "name": "Aquarius II Light Grey 2 Pc Sectional With Left Arm Facing Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      //    "250760": {
+      //       "name": "Aquarius II Light Grey Ottoman",
+      //       "price": "$150.00 ",
+      //       "sale-price": "",
+      //       "iso": "Both"
+      //    },
+      "250761": {
+         "name": "Aquarius II Light Grey Chair",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250762": {
+         "name": "Aquarius II Light Grey Loveseat",
+         "price": "$450.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250763": {
+         "name": "Aquarius II Light Grey Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250764": {
+         "name": "Aquarius II Dark Grey Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250765": {
+         "name": "Aquarius II Dark Grey Chair",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250766": {
+         "name": "Aquarius II Dark Grey Loveseat",
+         "price": "$450.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "250767": {
+         "name": "Aquarius II Dark Grey Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251009": {
+         "name": "Fairfax Denim Velvet Chair",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251010": {
+         "name": "Fairfax Steel Grey Velvet Chair",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251011": {
+         "name": "Fairfax Denim Velvet Loveseat",
+         "price": "$475.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251012": {
+         "name": "Fairfax Steel Grey Velvet Loveseat",
+         "price": "$475.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251013": {
+         "name": "Fairfax Denim Velvet Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251014": {
+         "name": "Fairfax Steel Grey Velvet Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251015": {
+         "name": "Fairfax Denim Velvet Ottoman",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251016": {
+         "name": "Fairfax Steel Grey Velvet Ottoman",
+         "price": "$175.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251076": {
+         "name": "Amherst Royal Chair",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251077": {
+         "name": "Amherst Royal Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251078": {
+         "name": "Amherst Royal Loveseat",
+         "price": "$475.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251085": {
+         "name": "Amherst Cobblestone Chair",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251086": {
+         "name": "Amherst Cobblestone 2 Pc Sectional With Right Arm Facing Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251087": {
+         "name": "Amherst Royal 2 Pc Sectional With Right Arm Facing Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251090": {
+         "name": "Amherst Cobblestone 2 Pc Sectional With Left Arm Facing Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251091": {
+         "name": "Amherst Royal 2 Pc Sectional With Left Arm Facing Chaise",
+         "price": "$995.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251094": {
+         "name": "Amherst Cobblestone Sofa",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251095": {
+         "name": "Amherst Cobblestone Loveseat",
+         "price": "$475.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251096": {
+         "name": "Amherst Cobblestone Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251097": {
+         "name": "Amherst Royal Ottoman",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "251828": {
+         "name": "Matias Brown 6 Piece Dining Set",
+         "price": "$495.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "252435": {
+         "name": "Rupert Graphite Recliner",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "252436": {
+         "name": "Rupert Pecan Recliner",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "252439": {
+         "name": "Dillard Ivory Recliner",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "252440": {
+         "name": "Dillard Tumbleweed Recliner",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253178": {
+         "name": "Stark Swivel Chair",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253180": {
+         "name": "Stark Sofa With Reversible Chaise",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253292": {
+         "name": "Amy Beige Accent Chair",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253293": {
+         "name": "Amy Grey Accent Chair",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253294": {
+         "name": "Amy Blue Accent Chair",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253295": {
+         "name": "Ella Grey Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253296": {
+         "name": "Ella Light Grey Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253297": {
+         "name": "Ella Green Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253298": {
+         "name": "Rosie Grey Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253299": {
+         "name": "Rosie Seafoam Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253300": {
+         "name": "Rosie Blush Accent Chair",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253301": {
+         "name": "Desi Light Grey Accent Chair",
+         "price": "$125.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253302": {
+         "name": "Desi Blue Accent Chair",
+         "price": "$125.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253303": {
+         "name": "Desi Earth Accent Chair",
+         "price": "$125.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253753": {
+         "name": "Reid Smoke Chair",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253754": {
+         "name": "Reid Gunmetal Chair",
+         "price": "$250.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253762": {
+         "name": "Reid Smoke Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253763": {
+         "name": "Reid Gunmetal Ottoman",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253764": {
+         "name": "Reid Smoke Sofa",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253765": {
+         "name": "Reid Gunmetal Sofa",
+         "price": "$350.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253766": {
+         "name": "Reid Smoke Loveseat",
+         "price": "$320.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253767": {
+         "name": "Reid Gunmetal Loveseat",
+         "price": "$320.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253916": {
+         "name": "Kodi 5 Piece Counter Set",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "253952": {
+         "name": "Jan Sand Sofa With Reversible Chaise",
+         "price": "$395.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253984": {
+         "name": "60X96 Rug-Hilla White/Birch",
+         "price": "$49.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253985": {
+         "name": "60X96 Rug-Birmingham Grey/Taupe",
+         "price": "$49.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253986": {
+         "name": "60X96 Rug-Keva Forest",
+         "price": "$49.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253987": {
+         "name": "63X90 Rug-Hurley Cotton/Grey",
+         "price": "$49.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "253988": {
+         "name": "63X90 Rug-Karshan Cotton/Aqua",
+         "price": "$49.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "254190": {
+         "name": "Prairie 5 Piece Dining Set",
+         "price": "$195.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "255333": {
+         "name": "Allie Jade 2 Piece Sectional With Left Arm Facing Sofa",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "255334": {
+         "name": "Allie Dark Grey 2 Piece Sectional With Left Arm Facing Sofa",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "255335": {
+         "name": "Allie Jade 2 Piece Sectional With Right Arm Facing Sofa",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "255336": {
+         "name": "Allie Dark Grey 2 Piece Sectional With Right Arm Facing Sofa",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "255709": {
+         "name": "Kerri Stone 2 Piece Sectional With Left Arm Facing Sofa Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "255710": {
+         "name": "Kerri Stone 2 Piece Sectional With Right Arm Facing Sofa Chaise",
+         "price": "$795.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "255911": {
+         "name": "Lorra Upholstered Daybed With Trundle",
+         "price": "$295.00 ",
+         "sale-price": "",
+         "iso": "Both"
+      },
+      "256052": {
+         "name": "Rosalie Queen Upholstered Platform Bed",
+         "price": "$150.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      },
+      "256053": {
+         "name": "Colleen Queen Upholstered Panel Bed",
+         "price": "$95.00 ",
+         "sale-price": "",
+         "iso": "Online Only"
+      }
+   }
 </script>
 <script>
-    function generateTiles() {
-        $(document).ready(function () {
-            if (typeof (bfProductList) !== "undefined") {
-                createProductTiles();
-                var n = window.SameHeightComponent({
-                    parentSelector: ".same-height-component",
-                    childrenSelector: ".same-height-target"
-                })
+   function generateTiles() {
+      $(document).ready(function () {
+         if (typeof (cmProducts) !== "undefined") {
+            createProductTiles();
+            var n = window.SameHeightComponent({
+               parentSelector: ".same-height-component",
+               childrenSelector: ".same-height-target"
+            })
+         }
+      });
+
+      function createProductTiles() {
+         var keys = Object.keys(cmProducts),
+            tiles = '';
+         for (var i = 0; i < keys.length; i++) {
+            var key = keys[i];
+            // SOLD OUT UI
+            if (cmProducts[key].hasOwnProperty('sold-out')) {
+               tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '</span></div></a></div>';
+               $('#product_list').append(tiles);
+            } else {
+               if (cmProducts[key]["sale-price"].length > 1) {
+                  // IN STOCK UI - SALE PRICE
+                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '<span class="was-price">was ' + cmProducts[key]["sale-price"] + '</span></div></a></div>';
+                  $('#product_list').append(tiles);
+               } else {
+                  // IN STOCK UI - NO SALE PRICE
+                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '</span></div></a></div>';
+                  $('#product_list').append(tiles);
+               }
             }
-        });
+         }
+      }
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+         // Make sure this.hash has a value before overriding default behavior
+         if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-        function createProductTiles() {
-            var keys = Object.keys(bfProductList),
-                tiles = '';
-            for (var i = 0; i < keys.length; i++) {
-                var key = keys[i];
+            // Store hash
+            var hash = this.hash;
+            $('html, body').animate({
+               scrollTop: $(hash).offset().top
+            }, 800, function () {
 
-                if (bfProductList[key].hasOwnProperty('sold-out')) {
-                    tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
-                    if (bfProductList[key].iso) {
-                        $('#product_list_iso').append(tiles);
-                    } else {
-                        $('#product_list').append(tiles);
-                    }
-                } else {
-                    tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
-                    if (bfProductList[key].iso) {
-                        $('#product_list_iso').append(tiles);
-                    } else {
-                        $('#product_list').append(tiles);
-                    }
-                }
-            }
-        }
-        // Add smooth scrolling to all links
-        $("a").on('click', function (event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            } // End if
-        });
-    }
-    // Wait Loop
-    var anotherInterval = setInterval(function () {
-        if (typeof window.jQuery !== "undefined") {
-            clearInterval(anotherInterval);
-            generateTiles()
-        }
-    }, 50);
+               // Add hash (#) to URL when done scrolling (default click behavior)
+               window.location.hash = hash;
+            });
+         } // End if
+      });
+   }
+   // Wait Loop
+   var anotherInterval = setInterval(function () {
+      if (typeof window.jQuery !== "undefined") {
+         clearInterval(anotherInterval);
+         generateTiles()
+      }
+   }, 50);
 
 </script>
