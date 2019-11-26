@@ -21,6 +21,14 @@
         padding-top: .5rem
     }
 
+    .x .was-price {
+        font-size: 1.75rem;
+        padding-left: .3rem;
+        font-weight: normal;
+        color: black;
+        text-decoration: line-through;
+    }
+
     @media (max-width: 767px) {
 
         #product_list,
@@ -32,7 +40,6 @@
             margin: -1.25rem -1.25rem
         }
     }
-
 </style>
 <script>
     // "56131": {
@@ -395,7 +402,8 @@
             "price": "$495 ",
             "doorbuster": "",
             "wknd-deals": "X ",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$680"
         },
         "248584": {
             "sku": "248584",
@@ -403,7 +411,8 @@
             "price": "$495 ",
             "doorbuster": "",
             "wknd-deals": "",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$595"
         },
         "249681": {
             "sku": "249681",
@@ -411,7 +420,8 @@
             "price": "$195 ",
             "doorbuster": "",
             "wknd-deals": "",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$295"
         },
         "249682": {
             "sku": "249682",
@@ -419,7 +429,8 @@
             "price": "$250 ",
             "doorbuster": "",
             "wknd-deals": "",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$295"
         },
         "249837": {
             "sku": "249837",
@@ -443,7 +454,8 @@
             "price": "$495 ",
             "doorbuster": "",
             "wknd-deals": "",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$595"
         },
         "250665": {
             "sku": "250665",
@@ -451,7 +463,8 @@
             "price": "$350 ",
             "doorbuster": "",
             "wknd-deals": "",
-            "iso": false
+            "iso": false,
+            "wasPrice": "$395"
         },
         "251254": {
             "sku": "251254",
@@ -897,6 +910,7 @@
             for (var i = 0; i < keys.length; i++) {
                 var key = keys[i];
                 if (bfProductList[key].hasOwnProperty('sold-out')) {
+                    // SOLD OUT UI
                     tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
                     if (bfProductList[key].iso) {
                         $('#product_list_iso').append(tiles);
@@ -904,11 +918,22 @@
                         $('#product_list').append(tiles);
                     }
                 } else {
-                    tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
-                    if (bfProductList[key].iso) {
-                        $('#product_list_iso').append(tiles);
+                    if (bfProductList[key].hasOwnProperty('wasPrice')) {
+                        // INCLUDE WAS PRICE
+                        tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '<span class="was-price">was ' + bfProductList[key].wasPrice + '</span></div></a></div>';
+                        if (bfProductList[key].iso) {
+                            $('#product_list_iso').append(tiles);
+                        } else {
+                            $('#product_list').append(tiles);
+                        }
                     } else {
-                        $('#product_list').append(tiles);
+                        // NO WAS PRICE
+                        tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + bfProductList[key].sku + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/BlackFriday/2019/ProductImages/' + bfProductList[key].sku + '.jpg"><span class="bf_product_name">' + bfProductList[key].name + '</span><span class="bf_product_price">' + bfProductList[key].price + '</span></div></a></div>';
+                        if (bfProductList[key].iso) {
+                            $('#product_list_iso').append(tiles);
+                        } else {
+                            $('#product_list').append(tiles);
+                        }
                     }
                 }
             }
