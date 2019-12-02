@@ -26,7 +26,7 @@
 
     .bf_product_price {
         color: #274a7a;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: normal;
     }
 
@@ -72,7 +72,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-evenly;
         padding-bottom: 1.5rem;
         align-items: center;
@@ -188,6 +188,12 @@
         }
     }
 
+    .x .queen-bed-row-box {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    }
+
+
     /* END MODAL */
 </style>
 <style>
@@ -219,8 +225,8 @@
     }
 
     .x .was-price {
-        font-size: 1.5rem;
-        padding-left: .5rem;
+        font-size: 1.75rem;
+        padding-left: .3rem;
         font-weight: normal;
         color: black;
         text-decoration: line-through;
@@ -269,6 +275,13 @@
         padding: 1.875rem 0
     }
 
+    @media (min-width: 1200px) {
+        .insert {
+            margin-left: 0;
+            padding-left: 1.3rem !important
+        }
+    }
+
     @media (max-width: 767px) {
         .x .callout-text {
             padding: 2rem 2rem .25rem
@@ -291,7 +304,8 @@
                     alt="up to 80 percent off cyber monday" class="img-responsive desktop-only">
                 <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-mobile-hero.jpg"
                     alt="up to 80 percent off cyber monday" class="img-responsive mobile-only">
-                <h4 class="callout-text">Shop the Living Spaces Cyber Monday Event to get the best online deals on
+                <h4 class="callout-text" style="font-size:2rem">Shop the Living Spaces Cyber Monday Event to get the
+                    best online deals on
                     furniture
                     you’ll love.</h4>
             </a>
@@ -326,9 +340,30 @@
                     alt="$195 dining set" class="img-responsive"></a>
         </div>
     </div>
+    <div class="container desktop-only insert">
+        <div class="queen-bed-row-box col-md-6" id="queen-bed-set" style="padding-left:0; padding-right:.5rem">
+            <a href="https://www.livingspaces.com/pdp-finley-queen-4-piece-bedroom-set-244114">
+                <img src="/globalassets/images/lp/2019/12/1202_cm_lp_bedroomset_244114.jpg"
+                    alt="$695 queen 4pc bedroom set" class="img-responsive"></a>
+        </div>
+        <div class="queen-bed-row-box col-md-6" id="cyber-monday-clearance" style="padding-right:0;padding-left:.5rem">
+            <a href="https://www.livingspaces.com/event/cybermonday/clearance">
+                <img src="/globalassets/images/lp/2019/12/1202_cm_clearance_lp_banner.gif"
+                    alt="enjoy up to 70 percent off cyber monday clearance" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <div class="container mobile-only" style="flex-direction: column;">
+        <div class="discount">
+            <a href="https://www.livingspaces.com/event/cybermonday/clearance">
+                <img src="/globalassets/images/lp/2019/12/1202_cm_clearance_lp_mobile_banner.gif"
+                    alt="enjoy up to 70 percent off cyber monday clearance" class="img-responsive ">
+            </a>
+        </div>
+    </div>
     <!-- FOOTER TEXT -->
     <div class="container">
-        <div class="financing-banner">
+        <div class="financing-banner" style="padding-top:0">
             <a href="https://www.livingspaces.com/company/financing">
                 <img src="/globalassets/images/lp/2019/12/1201-cm-preview-lp-financing.jpg"
                     alt="No interest until January 2023" class="img-responsive desktop-only">

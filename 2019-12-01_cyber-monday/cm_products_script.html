@@ -8,6 +8,11 @@
       padding: 0
    }
 
+   .bf_product_box .img-responsive {
+      width: auto;
+      max-height: 127.8px;
+   }
+
    .bf_product_box:hover,
    .bf_product_box:active {
       border: .1rem solid #274a7a;
@@ -15,6 +20,7 @@
    }
 
    #bf-products a:hover,
+   #bf-products a:focus,
    #bf-products a:active {
       text-decoration: none;
    }
@@ -27,6 +33,29 @@
       .col-xs-6:nth-child(2n+1) {
          clear: left;
       }
+   }
+
+   .sold-out {
+      pointer-events: none;
+      background-color: lightgrey
+   }
+
+   .sold-out img {
+      filter: brightness(83%);
+   }
+
+   .sotext {
+      float: left;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -45px;
+      margin-top: -20px;
+      z-index: 5;
+      background-color: #294b79;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
    }
 </style>
 <script>
@@ -43,55 +72,55 @@
    {
       "244847": {
          "name": "Table Lamp-White Wicker",
-         "price": "$60 ",
-         "sale-price": "$120",
-         "iso": "Both"
+         "price": "$120 ",
+         "sale-price": "$60",
+         "iso": "Both",
       },
       "203271": {
          "name": "Table Lamp-Antique Mirror X Frame ",
-         "price": "$75 ",
-         "sale-price": "$150",
+         "price": "$150 ",
+         "sale-price": "$75",
          "iso": "Both"
       },
       "243480": {
          "name": "Table Lamp-Purple Frosted Glass",
-         "price": "$125 ",
-         "sale-price": "$250",
+         "price": "$250 ",
+         "sale-price": "$125",
          "iso": "Both"
       },
       "102212": {
          "name": "Dean Sand Queen Upholstered Panel Bed",
-         "price": "$350 ",
+         "price": "$395 ",
          "sale-price": "",
          "iso": "Both"
       },
       "102221": {
          "name": "Dean Charcoal Queen Upholstered Panel Bed",
-         "price": "$350 ",
+         "price": "$395 ",
          "sale-price": "",
          "iso": "Both"
       },
       "102768": {
          "name": "Dean Charcoal Full Upholstered Panel Bed",
-         "price": "$295 ",
+         "price": "$350 ",
          "sale-price": "",
          "iso": "Both"
       },
       "102769": {
          "name": "Dean Charcoal Twin Upholstered Panel Bed",
-         "price": "$280 ",
+         "price": "$295 ",
          "sale-price": "",
          "iso": "Both"
       },
       "102774": {
          "name": "Dean Sand Full Upholstered Panel Bed",
-         "price": "$295 ",
+         "price": "$350 ",
          "sale-price": "",
          "iso": "Both"
       },
       "102775": {
          "name": "Dean Sand Twin Upholstered Panel Bed",
-         "price": "$280 ",
+         "price": "$295 ",
          "sale-price": "",
          "iso": "Both"
       },
@@ -217,7 +246,7 @@
       },
       "217758": {
          "name": "Emmerson Upholstered Twin Daybed With Trundle",
-         "price": "$450 ",
+         "price": "$495 ",
          "sale-price": "",
          "iso": "Both"
       },
@@ -368,7 +397,7 @@
       "223596": {
          "name": "Piper Kids Activity Chair",
          "price": "$60 ",
-         "sale-price": "$25 ",
+         "sale-price": "$15 ",
          "iso": "Both"
       },
       "225748": {
@@ -539,23 +568,18 @@
          "sale-price": "",
          "iso": "Both"
       },
-      "227560": {
-         "name": "Pendant-Eden Bell Shaped",
-         "price": "$69 ",
-         "sale-price": "$15 ",
-         "iso": "Both"
-      },
       "232265": {
          "name": "Deanne Mirror",
          "price": "$195 ",
-         "sale-price": "$20 ",
+         "sale-price": "$20",
          "iso": "Both"
       },
       "233502": {
          "name": "Davor Brown Power Reclining Loveseat With Console",
          "price": "$595 ",
          "sale-price": "",
-         "iso": "Both"
+         "iso": "Both",
+         "sold-out": true
       },
       "233504": {
          "name": "Davor Brown Power Reclining Sofa",
@@ -759,7 +783,8 @@
          "name": "Krista Green Accent Chair",
          "price": "$175 ",
          "sale-price": "",
-         "iso": "Both"
+         "iso": "Both",
+         "sold-out": true
       },
       "244481": {
          "name": "Krista Eggplant Accent Chair",
@@ -783,7 +808,8 @@
          "name": "Kendra Beige Accent Chair",
          "price": "$275 ",
          "sale-price": "",
-         "iso": "Both"
+         "iso": "Both",
+         "sold-out": true
       },
       "244486": {
          "name": "Katrina Blue Swivel Glider Chair",
@@ -975,7 +1001,8 @@
          "name": "Angie Light Grey Sofa",
          "price": "$195 ",
          "sale-price": "",
-         "iso": "Both"
+         "iso": "Both",
+         "sold-out": true
       },
       "248543": {
          "name": "Devonwood 3 Piece Sectional with Left Arm Facing Loveseat",
@@ -1028,26 +1055,27 @@
       "248572": {
          "name": "Bray Accent Chair",
          "price": "$250 ",
-         "sale-price": "",
+         "sale-price": "$195",
          "iso": "Both"
       },
       "248573": {
          "name": "Bray Loveseat",
          "price": "$470 ",
-         "sale-price": "",
+         "sale-price": "$420",
          "iso": "Both"
       },
       "248576": {
          "name": "Bray Sofa",
          "price": "$495 ",
-         "sale-price": "",
+         "sale-price": "$450",
          "iso": "Both"
       },
       "248579": {
          "name": "Bray Queen Sofa Sleeper",
          "price": "$795 ",
          "sale-price": "",
-         "iso": "Both"
+         "iso": "Both",
+         "sold-out": true
       },
       "248620": {
          "name": "Cassie Mirror",
@@ -1082,19 +1110,19 @@
       "250663": {
          "name": "Sasha Light Grey Power Reclining Console Loveseat With Usb",
          "price": "$595 ",
-         "sale-price": "",
+         "sale-price": "$495",
          "iso": "Both"
       },
       "250664": {
          "name": "Sasha Light Grey Power Reclining Sofa With Usb",
          "price": "$595 ",
-         "sale-price": "",
+         "sale-price": "$495",
          "iso": "Both"
       },
       "250665": {
          "name": "Sasha Light Grey Power Recliner With Usb",
          "price": "$395 ",
-         "sale-price": "",
+         "sale-price": "$350",
          "iso": "Both"
       },
       "250746": {
@@ -1479,13 +1507,15 @@
          "name": "60X96 Rug-Hilla White/Birch",
          "price": "$49 ",
          "sale-price": "",
-         "iso": "Online Only"
+         "iso": "Online Only",
+         "sold-out": true
       },
       "253985": {
          "name": "60X96 Rug-Birmingham Grey/Taupe",
          "price": "$49 ",
          "sale-price": "",
-         "iso": "Online Only"
+         "iso": "Online Only",
+         "sold-out": true
       },
       "253986": {
          "name": "60X96 Rug-Keva Forest",
@@ -1503,7 +1533,8 @@
          "name": "63X90 Rug-Karshan Cotton/Aqua",
          "price": "$49 ",
          "sale-price": "",
-         "iso": "Online Only"
+         "iso": "Online Only",
+         "sold-out": true
       },
       "254190": {
          "name": "Prairie 5 Piece Dining Set",
@@ -1537,13 +1568,13 @@
       },
       "255709": {
          "name": "Kerri Stone 2 Piece Sectional With Left Arm Facing Sofa Chaise",
-         "price": "$795 ",
+         "price": "$895 ",
          "sale-price": "",
          "iso": "Online Only"
       },
       "255710": {
          "name": "Kerri Stone 2 Piece Sectional With Right Arm Facing Sofa Chaise",
-         "price": "$795 ",
+         "price": "$895 ",
          "sale-price": "",
          "iso": "Online Only"
       },
@@ -1586,16 +1617,16 @@
             var key = keys[i];
             // SOLD OUT UI
             if (cmProducts[key].hasOwnProperty('sold-out')) {
-               tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '</span></div></a></div>';
+               tiles = '<div class="col-sm-3 col-xs-6" style="pointer-events:none;"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target sold-out"><div class="sotext">SOLD OUT</div><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price.trim() + '</span></div></a></div>';
                $('#product_list').append(tiles);
             } else {
                if (cmProducts[key]["sale-price"].length > 1) {
                   // IN STOCK UI - SALE PRICE
-                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '<span class="was-price">was ' + cmProducts[key]["sale-price"] + '</span></div></a></div>';
+                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span>' + '<span class="bf_product_price">' + cmProducts[key]["sale-price"].trim() + '<span class="was-price">was ' + cmProducts[key].price.trim() + '</span></span></div></a></div>';
                   $('#product_list').append(tiles);
                } else {
                   // IN STOCK UI - NO SALE PRICE
-                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price + '</span></div></a></div>';
+                  tiles = '<div class="col-sm-3 col-xs-6"><a href="https://www.livingspaces.com/' + key + '"><div class="bf_product_box same-height-target"><img class="img-responsive center-block" alt="" src="/globalassets/cyber-monday/2019/cm-product-photos/CM-' + key + '.jpg"><span class="bf_product_name">' + cmProducts[key].name + '</span><span class="bf_product_price">' + cmProducts[key].price.trim() + '</span></div></a></div>';
                   $('#product_list').append(tiles);
                }
             }

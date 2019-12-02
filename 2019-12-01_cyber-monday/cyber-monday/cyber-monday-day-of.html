@@ -26,7 +26,7 @@
 
     .bf_product_price {
         color: #274a7a;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: normal;
     }
 
@@ -69,25 +69,39 @@
     /* DIV SPACING */
     .x .container {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
-        flex-wrap: wrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
     .x .hero-img {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%
     }
 
     .x .yt-thumb,
     .x .disclaimer {
+        -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     }
 
     /* DESKTOP/MOBILE ONLY */
     .x .desktop-only {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -117,6 +131,8 @@
         }
 
         .x .mobile-only-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
     }
@@ -206,6 +222,7 @@
     .x .sectional,
     .x .sofa,
     .x .dining-set {
+        -ms-flex-preferred-size: 33.333333%;
         flex-basis: 33.333333%;
         /* padding: 0 .5rem */
     }
@@ -245,6 +262,7 @@
 
     .x .sofa-mobile,
     .x .dining-mobile {
+        -ms-flex-preferred-size: 50%;
         flex-basis: 50%
     }
 
@@ -280,16 +298,15 @@
     }
 
     .x .queen-bed-row-box {
+        -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     }
 
     .x .fw-flex {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
 
-    #queen-bed-set {
-        padding-right: .5rem
-    }
 
     @media (max-width: 767px) {
         .x .callout-text {
@@ -333,6 +350,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         color: #274a7a;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%)
     }
 
@@ -343,7 +361,8 @@
 
     @media (max-width: 575px) {
         .countdown-timer {
-            top: 11%;
+            top: 10%;
+            font-size: 1.3rem;
             left: 49%;
         }
     }
@@ -376,15 +395,15 @@
 </style>
 <div class="x">
     <!-- HERO -->
-    <div class="container" id="hero-container" style="padding-top:0">
+    <div class="container" id="hero-container" style="padding-top:0;padding-bottom:1rem">
         <div class="col-md-12 text-center" id="hero-flex-block">
             <a href="#bf-products">
-                <img src="/globalassets/images/lp/2019/12/1202_cm_lp_Hero_v2.jpg"
-                    alt="up to 70 percent off cyber monday" class="img-responsive desktop-only center-block">
-                <img src="/globalassets/images/lp/2019/12/1202_cm_lp_mobile_Hero_v2.jpg"
+                <img src="/globalassets/images/lp/2019/12/1202_cm_lp_Hero_2.jpg" alt="up to 70 percent off cyber monday"
+                    class="img-responsive desktop-only center-block">
+                <img src="/globalassets/images/lp/2019/12/1202_cm_lp_mobile_Hero_2.jpg"
                     alt="up to 80 percent off cyber monday" class="img-responsive mobile-only">
                 <div class="countdown-timer" id="countdown-timer"></div>
-                <h4 class="callout-text">Your first, last and only chance for huge savings!</h4>
+                <h4 class="callout-text" style="font-size:2rem">Your first, last and only chance for huge savings!</h4>
             </a>
         </div>
     </div>
