@@ -1,102 +1,435 @@
 <style>
-    /* FLEX STYLING */
-    .x .container {
-        width: 100%;
+    /* SPACING */
+    .x_full_container {
+        max-width: 2200px;
+        margin: 0 auto 6rem;
+        position: relative;
+    }
+
+    .x_regular_container {
+        max-width: 1140px;
+        margin: 0 auto 6rem;
+    }
+
+    .holiday_hero_container {
         display: flex;
-        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between !important;
-        padding-bottom: 5rem;
-        align-items: center
+        justify-content: center;
     }
 
-    .x #shop-by-price-container {
-        justify-content: space-around !important;
+    .bg-image {
+        width: 100%;
     }
 
-    .x .full-width {
-        flex-basis: 100%
+    #notch-banner {
+        min-height: 225px;
     }
 
-    .x .half-width {
-        flex-basis: 50%
+    .holiday_subTitle img {
+        margin-bottom: 4rem;
     }
 
-    .x .third-width {
-        flex-basis: 33%
+    .holiday_bg_subTitle {
+        margin-bottom: 4rem;
+    }
+
+    .holiday_bg_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .holiday_bg_content_links_wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .holiday_bg_content_links_wrapper a {
+        display: block;
+    }
+
+    .holiday_product_under_wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .masonry-row-one {
+        padding-bottom: 2rem;
+    }
+
+    .masonry-row-two {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+
+    .holiday-favorites-header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+
+    .holiday_product_under_box {
+        flex-basis: 32.33%
+    }
+
+    .blog-image-box {
+        flex-basis: 49.2%
+    }
+
+    /* .holiday_hero_right_box {
+
+    } */
+    .holiday_hero_left_box {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #324020;
+    }
+
+    .hero-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .holiday_bg_content_links_wrapper img {
+        min-width: 250px;
+    }
+
+    .gifts-for-everyone img {
+        padding-bottom: 4rem;
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    .holiday_subTitle {
+        padding-bottom: 4rem;
     }
 
     /* TEXT */
-    .x p .body-text {}
+    .cta-text {
+        text-align: center;
+        font-size: 2rem;
+        font: 'SourceSansPro'sans-serif;
+        color: #67502c;
+        padding: 2rem 0;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .desktop-only {
+        display: flex;
+    }
+
+    .desktop-only-block {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    @media (max-width:767px) {
+        .desktop-only {
+            display: none
+        }
+
+        .desktop-only-block {
+            display: none
+        }
+
+        .mobile-only {
+            display: flex
+        }
+
+        .x_regular_container {
+            padding-left: 2rem;
+            padding-right: 2rem
+        }
+
+
+        .masonry-row-one {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap
+        }
+
+        .masonry-row-one img {
+            padding-bottom: 2rem
+        }
+
+        .holiday_bg_content_links_wrapper {
+            flex-direction: column;
+        }
+
+        .holiday_product_under_wrapper {
+            flex-direction: column;
+        }
+
+        .holiday_product_under_box {
+            margin-bottom: 2rem;
+        }
+
+        .img-responsive.center-block.holiday_bg_subTitle {
+            width: 80%;
+            padding-top: 2rem;
+        }
+
+        .holiday_product_under_wrapper.mobile-only,
+        #product-categories {
+            margin-bottom: 0;
+        }
+    }
 </style>
-<div class="x">
-    <div class="container" id='hero-container'>
-        <div class="full-width">
-            <img src="/globalassets/images/lp/2019/12/Holiday/" alt="Celebrate the holidays in comfort and style"
-                class="img-responsive">
+
+<section class="x_regular_container desktop-only">
+    <div class="holiday_hero_container">
+        <div class="holiday_hero_left_box">
+            <div class="gift-gif">
+                <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_animation.gif"
+                    alt="Celebrate the holidays in comfort and style">
+            </div>
+            <div class="hero-text">
+                <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_celebrate.png"
+                    alt="Celebrate the holidays in comfort and style">
+            </div>
+            <div class="hero-links">
+                <div class="shop-save"><img class="img-responsive"
+                        src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_shop_save.png" alt="shop and save">
+                </div>
+                <div class="get-inspired"><img class="img-responsive"
+                        src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_get_inspired.png" alt="get inspired">
+                </div>
+            </div>
+        </div>
+        <div class="holiday_hero_right_box">
+            <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_hero.jpg"
+                alt="Christmas dinner table">
         </div>
     </div>
-    <div class="container" id='cta-container'>
-        <div class="full-width">
-            <img src="" alt="Gifts for everyone" class="img-responsive">
-        </div>
-        <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</section>
+
+<section class="x_regular_container mobile-only">
+    <div class="holiday_hero_container">
+        <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-lp-mobile_header.gif"
+            alt="Celebrate the holidays in comfort and style" class="img-responsive">
     </div>
-    <div class="container" id='shop-by-price-container'>
-        <div class="full-width">
-            <img src="" alt="Shop by price" class="img-responsive">
+</section>
+
+<section class="x_regular_container">
+    <div class="gifts-for-everyone-container">
+        <div class="gifts-for-everyone">
+            <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/gifts-for-everyone.png"
+                alt="gifts for everyone">
         </div>
-        <div class="third-width"><img src="" alt="under $15" class="img-responsive"></div>
-        <div class="third-width"><img src="" alt="under $30" class="img-responsive"></div>
-        <div class="third-width"><img src="" alt="under $100" class="img-responsive"></div>
+        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
-    <div class="container" id='holiday-savings-container'>
-        <div class="full-width">
-            <img src="" alt="Holiday Savings" class="img-responsive">
-        </div>
-        <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-    <div class="container" id='product-category-container'>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-        <div class="third-width">
-            <img src="" alt="" class="img-responsive">
-        </div>
-    </div>
-    <div class="container" id='your-holiday-container'>
-        <div class="full-width">
-            <img src="" alt="your holiday, styled 3 ways" class="img-responsive">
-        </div>
-    </div>
-    <div class="container" id='first-masonry-container'>
-        <div class="full-width">
-            <img src="" alt="A very rustic christmas - read and get inspired" class="img-reponsive">
+</section>
+
+<section class="x_full_container">
+    <img id="notch-banner" class="bg-image desktop-only" src="/globalassets/images/lp/2019/12/Holiday/bg.png"
+        alt="banner background image">
+    <img id="notch-banner" class="bg-image mobile-only" src="/globalassets/images/lp/2019/12/Holiday/Mobile/bg.png"
+        alt="banner background image">
+    <div class="holiday_bg_content">
+        <img src="/globalassets/images/lp/2019/12/Holiday/shop-by-price.png" alt="Shop by price"
+            class="img-responsive center-block holiday_bg_subTitle">
+        <div class="holiday_bg_content_links_wrapper">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/under-15.png" alt="under $15"
+                    class="desktop-only img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-15-mobile.png" alt="under $15"
+                    class="mobile-only img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/under-50.png" alt="under $50"
+                    class="desktop-only img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-50-mobile.png" alt="under $50"
+                    class="mobile-only img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/under-100.png" alt="under $100"
+                    class="desktop-only img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-100-mobile.png" alt="under $100"
+                    class="mobile-only img-responsive center-block">
+            </a>
         </div>
     </div>
-    <div class="container" id='second-masonry-container'>
-        <div class="half-width">
-            <img src="" alt="A very merry mid-century modern Christmas" class="img-responsive">
+</section>
+
+<section class="x_regular_container" id="product-categories">
+    <div class="holiday_subTitle">
+        <img src="/globalassets/images/lp/2019/12/Holiday/holiday-savings.jpg" alt="Holiday Savings"
+            class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-savings.png" alt="Holiday Savings"
+            class="img-responsive mobile-only">
+        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, vel dolor eum deleniti
+            minima architecto
+            odit cumque dolore.</p>
+    </div>
+    <div class="holiday_product_under_wrapper desktop-only">
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/sofas.jpg" alt="Sofas under $400"
+                    class="img-responsive">
+            </a>
         </div>
-        <div class="half-width">
-            <img src="" alt="Boho by the beach Christmas" class="img-responsive">
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/sectionals.jpg" alt="Sectionals under $600"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/dining-sets.jpg" alt="Dining sets under $400"
+                    class="img-responsive">
+            </a>
         </div>
     </div>
-    <div class="container" id='holiday-favorites-container'>
-        <div class="full-width">
-            <img src="" alt="Holiday favorites" class="img-responsive">
+    <div class="holiday_product_under_wrapper desktop-only">
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/queen-beds.jpg" alt="Queen beds under $400"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/tv-stands.jpg" alt="TV stands under $300"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/coffee-tables.jpg" alt="coffee tables under $300"
+                    class="img-responsive">
+            </a>
         </div>
     </div>
-</div>
+    <div class="holiday_product_under_wrapper mobile-only">
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/sofas.png" alt="Sofas under $400"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/sectionals.png" alt="Sectionals under $600"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/dining-sets.png" alt="Dining sets under $400"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/queen-beds.png" alt="Queen beds under $400"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/tv-stands.png" alt="Tv stands under $300"
+                    class="img-responsive">
+            </a>
+        </div>
+        <div class="holiday_product_under_box">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/coffee-tables.png"
+                    alt="Coffee tables under $300" class="img-responsive">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="x_full_container desktop-only">
+    <img class="bg-image desktop-only" src="/globalassets/images/lp/2019/12/Holiday/ornaments-bg.png"
+        alt="background image">
+    <img class="bg-image mobile-only" src="/globalassets/images/lp/2019/12/Holiday/Mobile/ornaments-bg.png"
+        alt="background image">
+    <div class="holiday_bg_content">
+        <img src="/globalassets/images/lp/2019/12/Holiday/3-ways.png" alt="your holiday, styled 3 ways"
+            class="img-responsive">
+        <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <div class="holiday_bg_content_links_wrapper">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="under $15"
+                    class="img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="under $50"
+                    class="img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="under $100"
+                    class="img-responsive center-block">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="x_full_container mobile-only">
+    <img class="bg-image" src="/globalassets/images/lp/2019/12/Holiday/Mobile/ornaments-bg.png" alt="">
+    <div class="holiday_bg_content">
+        <img src="/globalassets/images/lp/2019/12/Holiday/3-ways.png" alt="your holiday, styled 3 ways"
+            class="img-responsive">
+        <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <div class="holiday_bg_content_links_wrapper">
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="under $15"
+                    class="img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="under $50"
+                    class="img-responsive center-block">
+            </a>
+            <a href="#">
+                <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="under $100"
+                    class="img-responsive center-block">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="x_regular_container">
+    <div class="masonry-row-one">
+        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/rustic-blog.jpg"
+                alt="A very rustic christmas - read and get inspired" class="img-responsive desktop-only"></a>
+        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-blog.jpg"
+                alt="A very rustic christmas - read and get inspired" class="img-responsive mobile-only"></a>
+        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-blog.jpg"
+                alt="a very merry mid century modern christmas - read and get inspired"
+                class="img-responsive mobile-only"></a>
+        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-blog.jpg"
+                alt="boho by the beach christmas - read and get inspired" class="img-responsive mobile-only"></a>
+        <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-favorites.png" alt="holiday favorites"
+            class="img-responsive mobile-only">
+    </div>
+    <div class="masonry-row-two desktop-only">
+        <div class="blog-image-box"><a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/modern-blog.jpg"
+                    alt="a very merry mid century modern christmas - read and get inspired" class="img-responsive"></a>
+        </div>
+        <div class="blog-image-box"><a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/boho-blog.jpg"
+                    alt="boho by the beach christmas - read and get inspired" class="img-responsive"></a></div>
+    </div>
+</section>
+
+<section class="x_regular_container desktop-only">
+    <div class="holiday-favorites-header">
+        <img src="/globalassets/images/lp/2019/12/Holiday/holiday-favorites.png" alt="holiday favorites">
+    </div>
+</section>
