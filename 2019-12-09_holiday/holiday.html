@@ -1,4 +1,40 @@
 <style>
+    /* remove container modified to work with PLP */
+    .generic-html-template>.container {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    /* reset Container*/
+
+    .container .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media (min-width: 768px) {
+        .container .container {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container .container {
+            width: 970px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container .container {
+            width: 1170px;
+        }
+    }
+</style>
+<style>
     /* SPACING */
     .x_full_container {
         max-width: 2200px;
@@ -73,7 +109,7 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .holiday_product_under_box {
@@ -82,6 +118,10 @@
 
     .blog-image-box {
         flex-basis: 49.2%
+    }
+
+    .product-list-component .product-list-header {
+        padding: 0
     }
 
     /* .holiday_hero_right_box {
@@ -116,6 +156,14 @@
         padding-bottom: 4rem;
     }
 
+    .last-block {
+        margin-bottom: 0
+    }
+
+    .rm-padding {
+        padding-bottom: 0
+    }
+
     /* TEXT */
     .cta-text {
         text-align: center;
@@ -127,28 +175,32 @@
 
     /* DESKTOP/MOBILE ONLY */
     .desktop-only {
-        display: flex;
+        display: flex !important;
     }
 
     .desktop-only-block {
-        display: block;
+        display: block !important;
     }
 
     .mobile-only {
-        display: none;
+        display: none !important;
+    }
+
+    .bloomreachblock {
+        padding-left: 1.1rem
     }
 
     @media (max-width:767px) {
         .desktop-only {
-            display: none
+            display: none !important
         }
 
         .desktop-only-block {
-            display: none
+            display: none !important
         }
 
         .mobile-only {
-            display: flex
+            display: flex !important
         }
 
         .x_regular_container {
@@ -160,7 +212,8 @@
         .masonry-row-one {
             display: flex;
             flex-direction: column;
-            flex-wrap: nowrap
+            flex-wrap: nowrap;
+            padding-bottom: 0
         }
 
         .masonry-row-one img {
@@ -186,6 +239,18 @@
 
         .holiday_product_under_wrapper.mobile-only,
         #product-categories {
+            margin-bottom: 0;
+        }
+
+        #notch-banner {
+            min-height: 320px
+        }
+
+        .bloomreachblock {
+            padding-left: 0
+        }
+
+        .last-block-mobile {
             margin-bottom: 0;
         }
     }
@@ -218,7 +283,7 @@
     </div>
 </section>
 
-<section class="x_regular_container mobile-only">
+<section class="x_full_container mobile-only">
     <div class="holiday_hero_container">
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-lp-mobile_header.gif"
             alt="Celebrate the holidays in comfort and style" class="img-responsive">
@@ -244,19 +309,19 @@
         <img src="/globalassets/images/lp/2019/12/Holiday/shop-by-price.png" alt="Shop by price"
             class="img-responsive center-block holiday_bg_subTitle">
         <div class="holiday_bg_content_links_wrapper">
-            <a href="#">
+            <a href="https://www.livingspaces.com/departments/featured/gift-ideas/under-15">
                 <img src="/globalassets/images/lp/2019/12/Holiday/under-15.png" alt="under $15"
                     class="desktop-only img-responsive center-block">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-15-mobile.png" alt="under $15"
                     class="mobile-only img-responsive center-block">
             </a>
-            <a href="#">
+            <a href="https://www.livingspaces.com/departments/featured/gift-ideas/under-50">
                 <img src="/globalassets/images/lp/2019/12/Holiday/under-50.png" alt="under $50"
                     class="desktop-only img-responsive center-block">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-50-mobile.png" alt="under $50"
                     class="mobile-only img-responsive center-block">
             </a>
-            <a href="#">
+            <a href="https://www.livingspaces.com/departments/featured/gift-ideas/under-100">
                 <img src="/globalassets/images/lp/2019/12/Holiday/under-100.png" alt="under $100"
                     class="desktop-only img-responsive center-block">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/under-100-mobile.png" alt="under $100"
@@ -278,19 +343,22 @@
     </div>
     <div class="holiday_product_under_wrapper desktop-only">
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/sofas.jpg" alt="Sofas under $400"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sale_price=%5b*+TO+600%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/sectionals.jpg" alt="Sectionals under $600"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/dining-room/dining-room-sets?sale_price=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/dining-sets.jpg" alt="Dining sets under $400"
                     class="img-responsive">
             </a>
@@ -298,19 +366,22 @@
     </div>
     <div class="holiday_product_under_wrapper desktop-only">
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/bedroom/beds?sizes=queen&sale_price_custom=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/queen-beds.jpg" alt="Queen beds under $400"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sale_price_custom=%5b*+TO+300%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/tv-stands.jpg" alt="TV stands under $300"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/coffee-tables?sale_price_custom=%5b*+TO+300%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/coffee-tables.jpg" alt="coffee tables under $300"
                     class="img-responsive">
             </a>
@@ -318,37 +389,43 @@
     </div>
     <div class="holiday_product_under_wrapper mobile-only">
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/sofas.png" alt="Sofas under $400"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sale_price=%5b*+TO+600%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/sectionals.png" alt="Sectionals under $600"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/dining-room/dining-room-sets?sale_price=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/dining-sets.png" alt="Dining sets under $400"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/bedroom/beds?sizes=queen&sale_price_custom=%5b*+TO+400%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/queen-beds.png" alt="Queen beds under $400"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sale_price_custom=%5b*+TO+300%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/tv-stands.png" alt="Tv stands under $300"
                     class="img-responsive">
             </a>
         </div>
         <div class="holiday_product_under_box">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/departments/furniture/living-room/coffee-tables?sale_price_custom=%5b*+TO+300%5d">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/coffee-tables.png"
                     alt="Coffee tables under $300" class="img-responsive">
             </a>
@@ -368,15 +445,15 @@
         <div class="holiday_bg_content_links_wrapper">
             <a href="#">
                 <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="under $15"
-                    class="img-responsive center-block">
+                    class="img-responsive desktop-only">
             </a>
             <a href="#">
                 <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="under $50"
-                    class="img-responsive center-block">
+                    class="img-responsive desktop-only">
             </a>
             <a href="#">
                 <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="under $100"
-                    class="img-responsive center-block">
+                    class="img-responsive desktop-only">
             </a>
         </div>
     </div>
@@ -390,22 +467,22 @@
         <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="holiday_bg_content_links_wrapper">
             <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="under $15"
-                    class="img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-christmas-mobile.png"
+                    alt="rustic christmas" class="img-responsive mobile-only">
             </a>
             <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="under $50"
-                    class="img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-christmas.png" alt="modern christmas"
+                    class="img-responsive mobile-only">
             </a>
             <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="under $100"
-                    class="img-responsive center-block">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-christmas-mobile.png" alt="boho christmas"
+                    class="img-responsive mobile-only">
             </a>
         </div>
     </div>
 </section>
 
-<section class="x_regular_container">
+<section class="x_regular_container last-block-mobile">
     <div class="masonry-row-one">
         <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/rustic-blog.jpg"
                 alt="A very rustic christmas - read and get inspired" class="img-responsive desktop-only"></a>
@@ -417,7 +494,7 @@
         <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-blog.jpg"
                 alt="boho by the beach christmas - read and get inspired" class="img-responsive mobile-only"></a>
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-favorites.png" alt="holiday favorites"
-            class="img-responsive mobile-only">
+            class="img-responsive mobile-only rm-padding">
     </div>
     <div class="masonry-row-two desktop-only">
         <div class="blog-image-box"><a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/modern-blog.jpg"
@@ -428,7 +505,7 @@
     </div>
 </section>
 
-<section class="x_regular_container desktop-only">
+<section class="x_regular_container desktop-only last-block">
     <div class="holiday-favorites-header">
         <img src="/globalassets/images/lp/2019/12/Holiday/holiday-favorites.png" alt="holiday favorites">
     </div>
