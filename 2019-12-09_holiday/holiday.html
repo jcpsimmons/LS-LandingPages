@@ -33,8 +33,7 @@
             width: 1170px;
         }
     }
-</style>
-<style>
+
     /* SPACING */
     .x_full_container {
         max-width: 2200px;
@@ -168,9 +167,10 @@
     .cta-text {
         text-align: center;
         font-size: 2rem;
-        font: 'SourceSansPro'sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
         color: #67502c;
         padding: 2rem 0;
+        letter-spacing: .111rem;
     }
 
     /* DESKTOP/MOBILE ONLY */
@@ -216,8 +216,17 @@
             padding-bottom: 0
         }
 
+        .gifts-for-everyone img {
+            width: 100%
+        }
+
         .masonry-row-one img {
             padding-bottom: 2rem
+        }
+
+        .holiday_bg_content {
+            width: 80%;
+            padding-top: 1rem;
         }
 
         .holiday_bg_content_links_wrapper {
@@ -268,11 +277,17 @@
                     alt="Celebrate the holidays in comfort and style">
             </div>
             <div class="hero-links">
-                <div class="shop-save"><img class="img-responsive"
-                        src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_shop_save.png" alt="shop and save">
+                <div class="shop-save">
+                    <a href="#priced-products"><img class="img-responsive"
+                            src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_shop_save.png"
+                            alt="shop and save"></a>
                 </div>
-                <div class="get-inspired"><img class="img-responsive"
-                        src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_get_inspired.png" alt="get inspired">
+                <div class="get-inspired">
+                    <a href="#blog-block">
+                        <img class="img-responsive"
+                            src="/globalassets/images/lp/2019/12/Holiday/holiday_LP_get_inspired.png"
+                            alt="get inspired">
+                    </a>
                 </div>
             </div>
         </div>
@@ -307,7 +322,9 @@
         alt="banner background image">
     <div class="holiday_bg_content">
         <img src="/globalassets/images/lp/2019/12/Holiday/shop-by-price.png" alt="Shop by price"
-            class="img-responsive center-block holiday_bg_subTitle">
+            class="img-responsive center-block holiday_bg_subTitle desktop-only">
+        <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/shop-by-price.png" alt="Shop by price"
+            class="img-responsive center-block holiday_bg_subTitle mobile-only">
         <div class="holiday_bg_content_links_wrapper">
             <a href="https://www.livingspaces.com/departments/featured/gift-ideas/under-15">
                 <img src="/globalassets/images/lp/2019/12/Holiday/under-15.png" alt="under $15"
@@ -341,7 +358,7 @@
             minima architecto
             odit cumque dolore.</p>
     </div>
-    <div class="holiday_product_under_wrapper desktop-only">
+    <div class="holiday_product_under_wrapper desktop-only" id="priced-products">
         <div class="holiday_product_under_box">
             <a
                 href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d">
@@ -440,24 +457,30 @@
         alt="background image">
     <div class="holiday_bg_content">
         <img src="/globalassets/images/lp/2019/12/Holiday/3-ways.png" alt="your holiday, styled 3 ways"
-            class="img-responsive">
+            class="img-responsive" style="padding-top:2rem">
         <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="holiday_bg_content_links_wrapper">
-            <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="under $15"
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm">
+                <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="rustic christmas"
                     class="img-responsive desktop-only">
             </a>
-            <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="under $50"
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas">
+                <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="modern christmas"
                     class="img-responsive desktop-only">
             </a>
-            <a href="#">
-                <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="under $100"
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621">
+                <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="boho christmas"
                     class="img-responsive desktop-only">
             </a>
         </div>
     </div>
 </section>
+
+<!-- this is for the blog anchor tag (one hidden on mobile, one hidden on desktop) -->
+<div id="blog-block"></div>
 
 <section class="x_full_container mobile-only">
     <img class="bg-image" src="/globalassets/images/lp/2019/12/Holiday/Mobile/ornaments-bg.png" alt="">
@@ -466,15 +489,18 @@
             class="img-responsive">
         <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="holiday_bg_content_links_wrapper">
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-christmas-mobile.png"
                     alt="rustic christmas" class="img-responsive mobile-only">
             </a>
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-christmas.png" alt="modern christmas"
                     class="img-responsive mobile-only">
             </a>
-            <a href="#">
+            <a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-christmas-mobile.png" alt="boho christmas"
                     class="img-responsive mobile-only">
             </a>
@@ -484,23 +510,33 @@
 
 <section class="x_regular_container last-block-mobile">
     <div class="masonry-row-one">
-        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/rustic-blog.jpg"
+        <a
+            href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm"><img
+                src="/globalassets/images/lp/2019/12/Holiday/rustic-blog.jpg"
                 alt="A very rustic christmas - read and get inspired" class="img-responsive desktop-only"></a>
         <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-blog.jpg"
                 alt="A very rustic christmas - read and get inspired" class="img-responsive mobile-only"></a>
-        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-blog.jpg"
+        <a
+            href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas"><img
+                src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-blog.jpg"
                 alt="a very merry mid century modern christmas - read and get inspired"
                 class="img-responsive mobile-only"></a>
-        <a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-blog.jpg"
+        <a
+            href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621"><img
+                src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-blog.jpg"
                 alt="boho by the beach christmas - read and get inspired" class="img-responsive mobile-only"></a>
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-favorites.png" alt="holiday favorites"
             class="img-responsive mobile-only rm-padding">
     </div>
     <div class="masonry-row-two desktop-only">
-        <div class="blog-image-box"><a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/modern-blog.jpg"
+        <div class="blog-image-box"><a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas"><img
+                    src="/globalassets/images/lp/2019/12/Holiday/modern-blog.jpg"
                     alt="a very merry mid century modern christmas - read and get inspired" class="img-responsive"></a>
         </div>
-        <div class="blog-image-box"><a href="#"><img src="/globalassets/images/lp/2019/12/Holiday/boho-blog.jpg"
+        <div class="blog-image-box"><a
+                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621"><img
+                    src="/globalassets/images/lp/2019/12/Holiday/boho-blog.jpg"
                     alt="boho by the beach christmas - read and get inspired" class="img-responsive"></a></div>
     </div>
 </section>
