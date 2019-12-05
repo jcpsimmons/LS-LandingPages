@@ -460,18 +460,15 @@
             class="img-responsive" style="padding-top:2rem">
         <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="holiday_bg_content_links_wrapper">
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm">
+            <a href="#rustic-blog">
                 <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="rustic christmas"
                     class="img-responsive desktop-only">
             </a>
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas">
+            <a href="#modern-blog-desktop">
                 <img src="/globalassets/images/lp/2019/12/Holiday/modern-link.png" alt="modern christmas"
                     class="img-responsive desktop-only">
             </a>
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621">
+            <a href="#boho-blog-desktop">
                 <img src="/globalassets/images/lp/2019/12/Holiday/boho-link.png" alt="boho christmas"
                     class="img-responsive desktop-only">
             </a>
@@ -489,18 +486,15 @@
             class="img-responsive">
         <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="holiday_bg_content_links_wrapper">
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm">
+            <a href="#rustic-blog">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-christmas-mobile.png"
                     alt="rustic christmas" class="img-responsive mobile-only">
             </a>
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas">
+            <a href="#modern-blog-mobile">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-christmas.png" alt="modern christmas"
                     class="img-responsive mobile-only">
             </a>
-            <a
-                href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621">
+            <a href="#boho-blog-mobile">
                 <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-christmas-mobile.png" alt="boho christmas"
                     class="img-responsive mobile-only">
             </a>
@@ -509,7 +503,7 @@
 </section>
 
 <section class="x_regular_container last-block-mobile">
-    <div class="masonry-row-one">
+    <div class="masonry-row-one" id="rustic-blog">
         <a
             href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/rustic-christmas-a-guide-to-cabin-in-the-woods-charm"><img
                 src="/globalassets/images/lp/2019/12/Holiday/rustic-blog.jpg"
@@ -520,24 +514,28 @@
             href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas"><img
                 src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-blog.jpg"
                 alt="a very merry mid century modern christmas - read and get inspired"
-                class="img-responsive mobile-only"></a>
+                class="img-responsive mobile-only" id="modern-blog-mobile"></a>
         <a
             href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621"><img
                 src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-blog.jpg"
-                alt="boho by the beach christmas - read and get inspired" class="img-responsive mobile-only"></a>
+                alt="boho by the beach christmas - read and get inspired" class="img-responsive mobile-only"
+                id="boho-blog-mobile"></a>
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-favorites.png" alt="holiday favorites"
             class="img-responsive mobile-only rm-padding">
     </div>
+
     <div class="masonry-row-two desktop-only">
         <div class="blog-image-box"><a
                 href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-very-merry-mid-century-modern-christmas"><img
                     src="/globalassets/images/lp/2019/12/Holiday/modern-blog.jpg"
-                    alt="a very merry mid century modern christmas - read and get inspired" class="img-responsive"></a>
+                    alt="a very merry mid century modern christmas - read and get inspired" class="img-responsive"
+                    id="modern-blog-desktop"></a>
         </div>
         <div class="blog-image-box"><a
                 href="https://www.livingspaces.com/inspiration/ideas-advice/decor-tips/a-bohemian-christmas-carol#block233621"><img
                     src="/globalassets/images/lp/2019/12/Holiday/boho-blog.jpg"
-                    alt="boho by the beach christmas - read and get inspired" class="img-responsive"></a></div>
+                    alt="boho by the beach christmas - read and get inspired" class="img-responsive"
+                    id="boho-blog-desktop"></a></div>
     </div>
 </section>
 
@@ -546,3 +544,27 @@
         <img src="/globalassets/images/lp/2019/12/Holiday/holiday-favorites.png" alt="holiday favorites">
     </div>
 </section>
+
+<script>
+    const smoothScroll = () => {
+        // smooth scroll behavior
+        $("a").on('click', function (event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    }
+
+    var anotherInterval = setInterval(function () {
+        if (typeof window.jQuery !== "undefined") {
+            clearInterval(anotherInterval);
+            smoothScroll()
+        }
+    }, 50);
+</script>
