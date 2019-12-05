@@ -1,4 +1,5 @@
 <style>
+    /* CONTAINER STYLING */
     /* remove container modified to work with PLP */
     .generic-html-template>.container {
         width: 100% !important;
@@ -33,6 +34,46 @@
             width: 1170px;
         }
     }
+
+    /* ------------------------------------------------ */
+
+    /* FIX BLOOMREACH BLOCK */
+
+    #block236860 {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media (max-width: 767px) {
+        #block236860 {
+            margin-right: -15px;
+            margin-left: -15px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #block236860 {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        #block236860 {
+            width: 970px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        #block236860 {
+            width: 1170px;
+        }
+    }
+
+    /* ----------------------------------------- */
 
     /* SPACING */
     .x_full_container {
@@ -186,9 +227,9 @@
         display: none !important;
     }
 
-    .bloomreachblock {
+    /* .bloomreachblock {
         padding-left: 1.1rem
-    }
+    } */
 
     @media (max-width:767px) {
         .desktop-only {
@@ -354,7 +395,8 @@
             class="img-responsive desktop-only">
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-savings.png" alt="Holiday Savings"
             class="img-responsive mobile-only">
-        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, vel dolor eum deleniti
+        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, vel dolor eum
+            deleniti
             minima architecto
             odit cumque dolore.</p>
     </div>
@@ -541,7 +583,8 @@
 
 <section class="x_regular_container desktop-only last-block">
     <div class="holiday-favorites-header">
-        <img src="/globalassets/images/lp/2019/12/Holiday/holiday-favorites.png" alt="holiday favorites">
+        <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/holiday-favorites.png"
+            alt="holiday favorites">
     </div>
 </section>
 
