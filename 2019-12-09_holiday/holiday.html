@@ -1,4 +1,18 @@
 <style>
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+    .img-responsive.center-block.holiday_bg_subTitle.desktop-only {
+        padding-bottom: 0
+    }
+
     /* CONTAINER STYLING */
     /* remove container modified to work with PLP */
     .generic-html-template>.container {
@@ -88,8 +102,13 @@
     }
 
     .holiday_hero_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -101,9 +120,6 @@
         min-height: 225px;
     }
 
-    .holiday_subTitle img {
-        margin-bottom: 4rem;
-    }
 
     .holiday_bg_subTitle {
         margin-bottom: 4rem;
@@ -113,15 +129,22 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 
     .holiday_bg_content_links_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        padding-top: 2rem
     }
 
     .holiday_bg_content_links_wrapper a {
@@ -129,35 +152,64 @@
     }
 
     .holiday_product_under_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-bottom: 2rem;
+        padding: 0 1.5rem
     }
 
     .masonry-row-one {
+        padding: 0 1.5rem 2rem;
+    }
+
+
+    .img-responsive.center-block.holiday_bg_subTitle.desktop-only {
         padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    .smaller-bottom-margin {
+        margin-bottom: 2rem;
     }
 
     .masonry-row-two {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-bottom: 4rem;
+        padding: 0 1.5rem;
     }
 
     .holiday-favorites-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-bottom: 2rem;
     }
 
     .holiday_product_under_box {
+        -ms-flex-preferred-size: 32.33%;
         flex-basis: 32.33%
     }
 
     .blog-image-box {
+        -ms-flex-preferred-size: 49.2%;
         flex-basis: 49.2%
     }
 
@@ -165,45 +217,77 @@
         padding: 0
     }
 
+    /* 
+    .holiday_bg_content_links_wrapper img {
+        padding-bottom: 1rem;
+    } */
 
     /* .holiday_hero_right_box {
-
+    
     } */
     .holiday_hero_left_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         background-color: #324020;
     }
 
     .hero-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
+    /* 
     .holiday_bg_content_links_wrapper img {
         min-width: 250px;
-    }
+    } */
 
     .gifts-for-everyone img {
-        padding-bottom: 4rem;
         width: 50%;
         display: block;
         margin: auto;
     }
 
     .holiday_subTitle {
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .last-block {
-        margin-bottom: 0
+        margin-bottom: 0;
+        padding: 0 1.5rem
     }
 
     .rm-padding {
         padding-bottom: 0
+    }
+
+
+    .holiday_bg_content .cta-text {
+        padding: 1rem 0 1rem
+    }
+
+
+    #notch-banner .holiday_bg_content {
+        width: auto !important
+    }
+
+    #shop-by-price-container .holiday_bg_content {
+        width: 80%
     }
 
     /* TEXT */
@@ -212,12 +296,14 @@
         font-size: 2rem;
         font-family: 'Source Sans Pro', sans-serif;
         color: #67502c;
-        padding: 2rem 0;
+        padding: 2rem 5rem;
         letter-spacing: .111rem;
     }
 
     /* DESKTOP/MOBILE ONLY */
     .desktop-only {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
     }
 
@@ -229,11 +315,21 @@
         display: none !important;
     }
 
+    .mobile-only-block {
+        display: none !important;
+    }
+
     /* .bloomreachblock {
         padding-left: 1.1rem
     } */
 
     @media (max-width:767px) {
+
+        .x_full_container,
+        .x_regular_container {
+            max-width: 100%;
+        }
+
         .desktop-only {
             display: none !important
         }
@@ -243,60 +339,106 @@
         }
 
         .mobile-only {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
             display: flex !important
         }
 
+        .mobile-only-block {
+            display: block !important
+        }
+
         .x_regular_container {
-            padding-left: 2rem;
-            padding-right: 2rem
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
         }
 
 
         .masonry-row-one {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-            padding-bottom: 0
+            padding: 0
         }
 
-        .gifts-for-everyone img {
-            width: 100%
-        }
-
-        .masonry-row-one img {
-            padding-bottom: 2rem
-        }
-
-        .holiday_bg_content {
-            width: 80%;
-            padding-top: 1rem;
-        }
-
-        .holiday_bg_content_links_wrapper {
-            flex-direction: column;
-        }
-
-        .holiday_product_under_wrapper {
-            flex-direction: column;
-        }
-
-        .holiday_product_under_box {
-            margin-bottom: 2rem;
+        #shop-by-price-container .holiday_bg_content {
+            width: auto
         }
 
         .img-responsive.center-block.holiday_bg_subTitle {
+            padding-bottom: 2rem
+        }
+
+        .gifts-for-everyone img {
+            width: 70%
+        }
+
+        .masonry-row-one img {
+            padding-bottom: 1.5rem
+        }
+
+        .holiday_bg_content {
+            padding-top: 4rem;
+            width: auto
+        }
+
+
+        #mobile-blogs .holiday_bg_content_links_wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        #mobile-blogs .holiday_bg_content_links_wrapper img {
+            padding-bottom: 1rem;
+        }
+
+        .holiday_product_under_wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding: 0
+        }
+
+        .holiday_bg_content_links_wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-bottom: 1rem
+        }
+
+        .holiday_product_under_box {
+            margin-bottom: 1.5rem;
+        }
+
+        .holiday_bg_content .cta-text {
+            padding: 2rem 0rem 0rem
+        }
+
+        #mobile-blogs,
+        #shop-by-price-container {
+            margin: 0 auto 2rem
+        }
+
+        /* .img-responsive.center-block.holiday_bg_subTitle {
             width: 80%;
             padding-top: 2rem;
-        }
+        } */
 
         .holiday_product_under_wrapper.mobile-only,
         #product-categories {
             margin-bottom: 0;
         }
 
-        #notch-banner {
-            min-height: 320px
-        }
 
         .bloomreachblock {
             padding-left: 0
@@ -304,6 +446,43 @@
 
         .last-block-mobile {
             margin-bottom: 0;
+        }
+
+        .add-mobile-side-padding {
+            padding: 0 1.5rem;
+        }
+
+        #mobile-hero {
+            margin-bottom: 5rem
+        }
+
+        #notch-banner .holiday_bg_content {
+            width: 75% !important
+        }
+
+        #mobile-blogs .holiday_bg_content_links_wrapper img {
+            width: 60%;
+            margin: auto
+        }
+
+        .img-responsive.center-block.holiday_bg_subTitle.desktop-only {
+            padding-bottom: 2rem
+        }
+
+        .holiday_hero_container {
+            display: block;
+        }
+
+        .bg-image {
+            height: auto;
+        }
+
+        #ornaments-bg-mobile {
+            display: block !important;
+        }
+
+        .holiday_bg_content_links_wrapper {
+            display: block
         }
     }
 </style>
@@ -341,24 +520,24 @@
     </div>
 </section>
 
-<section class="x_full_container mobile-only">
+<section class="x_full_container mobile-only" id="mobile-hero">
     <div class="holiday_hero_container">
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-lp-mobile_header.gif"
             alt="Celebrate the holidays in comfort and style" class="img-responsive">
     </div>
 </section>
 
-<section class="x_regular_container">
+<section class="x_regular_container smaller-bottom-margin">
     <div class="gifts-for-everyone-container">
         <div class="gifts-for-everyone">
             <img class="img-responsive" src="/globalassets/images/lp/2019/12/Holiday/gifts-for-everyone.png"
                 alt="gifts for everyone">
         </div>
-        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="cta-text">Gifts to make the holidays – and home – a little brighter.</p>
     </div>
 </section>
 
-<section class="x_full_container">
+<section class="x_full_container" id="shop-by-price-container">
     <img id="notch-banner" class="bg-image desktop-only" src="/globalassets/images/lp/2019/12/Holiday/bg.png"
         alt="banner background image">
     <img id="notch-banner" class="bg-image mobile-only" src="/globalassets/images/lp/2019/12/Holiday/Mobile/bg.png"
@@ -397,10 +576,8 @@
             class="img-responsive desktop-only">
         <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/holiday-savings.png" alt="Holiday Savings"
             class="img-responsive mobile-only">
-        <p class="cta-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, vel dolor eum
-            deleniti
-            minima architecto
-            odit cumque dolore.</p>
+        <p class="cta-text">Deals so bright, they’re nothing short of holiday magic. Get ready for merry hosting – in a
+            home you love.</p>
     </div>
     <div class="holiday_product_under_wrapper desktop-only" id="priced-products">
         <div class="holiday_product_under_box">
@@ -502,7 +679,7 @@
     <div class="holiday_bg_content">
         <img src="/globalassets/images/lp/2019/12/Holiday/3-ways.png" alt="your holiday, styled 3 ways"
             class="img-responsive" style="padding-top:2rem">
-        <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p class="cta-text">Get in the spirit of the season with festive looks for every taste.</p>
         <div class="holiday_bg_content_links_wrapper">
             <a href="#rustic-blog">
                 <img src="/globalassets/images/lp/2019/12/Holiday/rustic-link.png" alt="rustic christmas"
@@ -523,24 +700,25 @@
 <!-- this is for the blog anchor tag (one hidden on mobile, one hidden on desktop) -->
 <div id="blog-block"></div>
 
-<section class="x_full_container mobile-only">
-    <img class="bg-image" src="/globalassets/images/lp/2019/12/Holiday/Mobile/ornaments-bg.png" alt="">
+<section class="x_full_container mobile-only-block" id="mobile-blogs">
+    <img class="bg-image" src="/globalassets/images/lp/2019/12/Holiday/Mobile/ornaments-bg.png" alt=""
+        id="ornaments-bg-mobile">
     <div class="holiday_bg_content">
-        <img src="/globalassets/images/lp/2019/12/Holiday/3-ways.png" alt="your holiday, styled 3 ways"
+        <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/3-ways.png" alt="your holiday, styled 3 ways"
             class="img-responsive">
-        <p class="cta-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p class="cta-text">Get in the spirit of the season with festive looks for every taste.</p>
         <div class="holiday_bg_content_links_wrapper">
             <a href="#rustic-blog">
-                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-christmas-mobile.png"
-                    alt="rustic christmas" class="img-responsive mobile-only">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/rustic-link.png" alt="rustic christmas"
+                    class="img-responsive mobile-only" style="width: 64%">
             </a>
-            <a href="#modern-blog-mobile">
-                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-christmas.png" alt="modern christmas"
-                    class="img-responsive mobile-only">
+            <a href=" #modern-blog-mobile">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/modern-link.png" alt="modern christmas"
+                    class="img-responsive mobile-only" style="width: 66%">
             </a>
             <a href="#boho-blog-mobile">
-                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-christmas-mobile.png" alt="boho christmas"
-                    class="img-responsive mobile-only">
+                <img src="/globalassets/images/lp/2019/12/Holiday/Mobile/boho-link.png" alt="boho christmas"
+                    class="img-responsive mobile-only" style="width: 61%">
             </a>
         </div>
     </div>
@@ -589,27 +767,3 @@
             alt="holiday favorites">
     </div>
 </section>
-
-<script>
-    const smoothScroll = () => {
-        // smooth scroll behavior
-        $("a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-                    window.location.hash = hash;
-                });
-            }
-        });
-    }
-
-    var anotherInterval = setInterval(function () {
-        if (typeof window.jQuery !== "undefined") {
-            clearInterval(anotherInterval);
-            smoothScroll()
-        }
-    }, 50);
-</script>
