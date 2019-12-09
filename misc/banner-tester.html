@@ -4,14 +4,60 @@ BANNER TESTER - for displaying Black Frday/Cyber Monday banners pre-deploy
 TO USE: Simply find the datastore in the script tag below (variable named 'insertData'). Replace the dates, and image links and the script will do the rest. If you need to add or remove days, simply add/remove objects to the insertData array - the script will handle it for you.
 
 -->
+<script>
+    let insertData = [
+        {
+            'name': 'Holiday LP',
+            'runtime': 'November 1 to November 2',
+            'imageDesktop': 'https://livingspaces.com/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
+            'imageMobile': 'https://livingspaces.com/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg',
+            'altText': 'the alt text for the image',
+            'srText': 'screen reader text in an h1 tag',
+            'link': '/event/holiday',
+            'isPrimary': true
+        },
+        {
+            'name': 'Holiday Mattress',
+            'runtime': 'November 1 to November 2',
+            'imageDesktop': 'https://livingspaces.com/globalassets/images/home/2019/12/1209_holidaysleep_hp_hero.jpg',
+            'imageMobile': 'https://livingspaces.com/globalassets/images/home/2019/12/1209_holidaysleep_hp_mobile.jpg',
+            'altText': 'alt text for second image',
+            'srText': 'screen reader text in a p tag',
+            'link': '/departments/mattresses/promotions',
+            'isPrimary': false
+        },
+    ]
+</script>
 <style>
-    .mobile-image {
+    .container.ls_hp_container {
         max-width: 35%
     }
 
-    .borders {
+    #root pre {
+        margin-top: 2rem;
+    }
+
+    .marker {
+        color: black;
+        position: absolute;
+        transform: translate(-53%, -54%);
+        padding: 5rem .5rem;
+        border-radius: 100%;
+    }
+
+    .primary {
+        background-color: #00ff00;
+        font-size: 4rem;
+    }
+
+    .secondary {
+        background-color: #ffff00;
+        font-size: 2.5rem;
+    }
+
+    .tile {
         padding: 4rem;
-        margin: 3rem 0;
+        margin: 8rem 0;
         background-color: #3c3c3c;
         color: white;
         border-radius: 15px;
@@ -32,63 +78,20 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
     }
 </style>
 <div class="text-center">
-    <pre>
-
-88888888ba                                                                    888888888888                                                    
-88      "8b                                                                        88                           ,d                            
-88      ,8P                                                                        88                           88                            
-88aaaaaa8P'  ,adPPYYba,  8b,dPPYba,   8b,dPPYba,    ,adPPYba,  8b,dPPYba,          88   ,adPPYba,  ,adPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,  
-88""""""8b,  ""     `Y8  88P'   `"8a  88P'   `"8a  a8P_____88  88P'   "Y8          88  a8P_____88  I8[    ""    88    a8P_____88  88P'   "Y8  
-88      `8b  ,adPPPPP88  88       88  88       88  8PP"""""""  88                  88  8PP"""""""   `"Y8ba,     88    8PP"""""""  88          
-88      a8P  88,    ,88  88       88  88       88  "8b,   ,aa  88                  88  "8b,   ,aa  aa    ]8I    88,   "8b,   ,aa  88          
-88888888P"   `"8bbdP"Y8  88       88  88       88   `"Ybbd8"'  88                  88   `"Ybbd8"'  `"YbbdP"'    "Y888  `"Ybbd8"'  88          
-                                                                                                                                              
-                                                                                                                                              
-    </pre>
+    <img src="/globalassets/images/tools/bt.jpg" alt="banner tester" class="img-responsive">
 </div>
 <div class="text-center" id="root"></div>
 <script>
-    let insertData = [
-        {
-            'name': 'BF Preview',
-            'runtime': 'November 1 to November 2',
-            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
-            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
-        },
-        {
-            'name': 'BF Day Of',
-            'runtime': 'November 2 to November 3',
-            'imageDesktop': '/globalassets/images/home/2019/12/1209_holidaysleep_hp_hero.jpg',
-            'imageMobile': '/globalassets/images/home/2019/12/1209_holidaysleep_hp_mobile.jpg'
-        },
-        {
-            'name': 'BF Weekend',
-            'runtime': 'November 3 to November 20',
-            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
-            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
-        },
-        {
-            'name': 'BF Extended',
-            'runtime': 'November 20 to November 25',
-            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
-            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
-        },
-        {
-            'name': 'CM Early Access',
-            'runtime': 'November 25 to November 31',
-            'imageDesktop': '/globalassets/images/home/2019/11/1201_cm_preview_lp_hero_v2.jpg',
-            'imageMobile': '/globalassets/images/home/2019/11/1201_cm_preview_lp_mobile_Hero.jpg'
-        },
-        {
-            'name': 'CM Day Of',
-            'runtime': 'November 31 to December 100th',
-            'imageDesktop': '/globalassets/images/home/2019/11/1202_cm_hp_hero_banner.jpg',
-            'imageMobile': '/globalassets/images/home/2019/11/1202_cm_hp_hero_mobile_page.jpg'
-        }
-    ]
+    function escapeHTML(html) {
+        return html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
 
     insertHtml = insertData.map((obj) => {
-        return `<div class="borders" id="${obj.name}"> <h1><span>${obj.name}</span></h1> <h2><i>${obj.runtime}</i></h2> <h3>Desktop</h3><div><img src="${obj.imageDesktop}" alt="" class="img-responsive"></div> <h3>Mobile</h3><div><img class="mobile-image" src="${obj.imageMobile}" alt="" class="img-responsive"></div></div>`
+        let srTag = ''
+        obj.isPrimary ? srTag = 'h1' : srTag = 'p'
+        let desktopCode = `<!-- DESKTOP --> <section class="ls_mb"> <div id="ls_hero_event"> <a href="${obj.link}"> <div class="ls_hero_cm"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> <source srcset="${obj.imageDesktop}?w=575" media="(max-width: 575px)"> <source srcset="${obj.imageDesktop}?w=767" media="(max-width: 767px)"> <source srcset="${obj.imageDesktop}?w=991" media="(max-width: 991px)"> <source srcset="${obj.imageDesktop}?w=1199" media="(max-width: 1199px)"> <!--[if IE 9]></video><![endif]--> <img alt="${obj.altText}" class="img-responsive img_target" src="${obj.imageDesktop}"> </picture> <${srTag} class="sr-only">${obj.srText}</${srTag}> </div> </a> </div> </section>`
+        let mobileCode = `<!-- MOBILE --> <div class="container ls_hp_container"> <div id="ls_hero_event" class="ls_hero_wrapper"> <div class="ls_hero_slider"> <a href="${obj.link}"> <picture> <source media="(min-width: 768px)" srcset="${obj.imageMobile}?w=780"> <source media="(min-width: 576px)" srcset="${obj.imageMobile}?w=576"> <source media="(min-width: 414px)" srcset="${obj.imageMobile}?w=414"> <img src="${obj.imageMobile}" class="img-responsive" alt="${obj.altText}"> </picture> <${srTag} class="sr-only">${obj.srText}</${srTag}> </a> </div> </div> </div>`
+        return `<div class='tile'><div class='${obj.isPrimary ? 'primary' : 'secondary'} marker'>${obj.isPrimary ? 'PRIMARY' : 'SECONDARY'}</div><h1><span>${obj.name}</span></h1><h2><i>${obj.runtime}</i></h2>${desktopCode}<pre>${escapeHTML(desktopCode)}</pre>${mobileCode}<pre>${escapeHTML(mobileCode)}</pre></div>`
     }).join("")
 
     document.getElementById("root").innerHTML = insertHtml
