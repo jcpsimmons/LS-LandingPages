@@ -1,0 +1,215 @@
+<style>
+    /***** Modal *****/
+    .revive_pormo_banner {
+        margin-bottom: 2rem;
+    }
+
+    .revive_pormo_banner .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .revive_pormo_banner .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .revive_pormo_banner .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .revive_pormo_banner .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .revive_pormo_banner .modal-header,
+    .revive_pormo_banner .modal-footer {
+        border: 0;
+    }
+
+    .revive_pormo_banner .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 36px;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 0 !important;
+        margin-top: -1rem !important;
+    }
+
+    .revive_pormo_banner .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .video_hero {
+        cursor: pointer;
+    }
+
+    #fRelief-video {
+        border: .5rem solid #fff;
+    }
+
+    .revive_pormo_banner .modal .modal-dialog {
+        width: 85rem;
+    }
+
+    .revive_pormo_banner p {
+        font-size: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .revive_pormo_banner p a {
+        font-weight: 600;
+    }
+
+    .revive_promo_wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: 4rem 0;
+    }
+
+    .revive_promo_cta {
+        background-color: #5c6175;
+        font-size: 2.5rem;
+        padding: 1rem 3rem;
+        flex-basis: 40%;
+        text-align: center;
+        border-radius: .5rem;
+    }
+
+    .revive_promo_cta a {
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+
+
+    .revive_promo_link {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 767px) {
+        .revive_promo_wrapper {
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .revive_promo_cta {
+            flex-basis: 80%;
+            margin: 1rem 0;
+        }
+
+        .revive_promo_box_right,
+        .revive_promo_box_left {
+            flex-basis: 100%;
+            border-top: .2rem solid #d5d5d5;
+            padding-top: 3rem;
+            margin-top: 2rem;
+        }
+
+        .revive_pormo_banner .modal .modal-dialog {
+            width: 40rem;
+        }
+
+        .revive_pormo_banner .modal .modal-dialog .modal-content .close {
+            color: #fff !important;
+            font-size: 2rem !important;
+            margin-right: 8px !important;
+            margin-top: 2rem !important;
+        }
+    }
+</style>
+<section class="revive_pormo_banner">
+    <img class="img-responsive video_hero hidden-xs" data-toggle="modal" data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/DocQHwMKlTY"
+        src="/globalassets/images/lp/2019/12/revive_holidaysleep_hero_2.jpg" alt="Holiday Sleep Event">
+    <img class="img-responsive video_hero visible-xs" data-toggle="modal" data-target="#modal-video_01"
+        data-theVideo="https://www.youtube.com/embed/DocQHwMKlTY"
+        src="/globalassets/images/lp/2019/12/revive_holidaysleep_mobile_hero_1.jpg" alt="Holiday Sleep Event">
+    <a href="/departments/mattresses/promotions/beautyrest">
+        <img class="img-responsive video_hero hidden-xs"
+            src="/globalassets/images/lp/2019/12/revive_holidaysleep_hero_1.jpg" alt="King for price of Queen">
+        <img class="img-responsive video_hero visible-xs"
+            src="/globalassets/images/lp/2019/12/revive_holidaysleep_mobile_hero_2.jpg" alt="King for price of Queen">
+    </a>
+    <p class="sr-only">Find the best deals on the top mattress brands, including our exclusive Hybrid Carbondale
+        collection by Beautyrest. For a limited time, save big on the entire collection and get a king mattress for the
+        price of a queen! Shop Beautyrest</p>
+    <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="fRelief-video" class="embed-responsive-item" width="1170" src=""
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="revive_promo_wrapper">
+    <div class="revive_promo_cta">
+        <a href="/departments/mattresses/foundations/adjustable-bases/revive">
+            Shop Revive Adjustable Base &rsaquo;
+        </a>
+    </div>
+    <div class="revive_promo_cta">
+        <a href="/clearance/mattresses">
+            Shop Mattress Deals &rsaquo;
+        </a>
+    </div>
+</section>
+
+<section class="revive_promo_link">
+    <a href="/event/buy-one-give-one/supporting-foster-kids">
+        <img class="img-responsive video_hero hidden-xs"
+            src="/globalassets/images/lp/2019/12/revive_holidaysleep_fosterkids.jpg" alt="Buy one Give one event">
+        <img class="img-responsive video_hero visible-xs"
+            src="/globalassets/images/lp/2019/12/revive_holidaysleep_mobile_fosterkids.jpg"
+            alt="Buy one Give one event">
+        <p class="sr-only">Holiday Sleep event. Dec 12/9 - 12/22 buy one give one. Purchase a Premium Revive mattress
+            set and we’ll give a FREE twin set to a child in foster care. Learn more</p>
+    </a>
+</section>
+
+<script>
+    window.addEventListener('load', function () {
+        if (window.jQuery) {
+            var trigger = $(".video_hero")
+            trigger.click(function () {
+                var theModal = $(this).data("target"),
+                    videoSRC = $(this).attr("data-theVideo"),
+                    videoSRCauto = videoSRC +
+                        "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                $(theModal + ' iframe').attr('src', videoSRCauto);
+                $(theModal + ' button.close').click(function () {
+                    $(theModal + ' iframe').attr('src', videoSRC);
+                });
+                $('#modal-video_01').on('hidden.bs.modal', function (e) {
+                    $(theModal + ' iframe').attr('src', videoSRC);
+                })
+            });
+        }
+    }, false);
+</script>
