@@ -1,0 +1,95 @@
+<!-- 
+BANNER TESTER - for displaying Black Frday/Cyber Monday banners pre-deploy
+
+TO USE: Simply find the datastore in the script tag below (variable named 'insertData'). Replace the dates, and image links and the script will do the rest. If you need to add or remove days, simply add/remove objects to the insertData array - the script will handle it for you.
+
+-->
+<style>
+    .mobile-image {
+        max-width: 35%
+    }
+
+    .borders {
+        padding: 4rem;
+        margin: 3rem 0;
+        background-color: #3c3c3c;
+        color: white;
+        border-radius: 15px;
+    }
+
+    #root img {
+        box-shadow: 5px 5px 9px black
+    }
+
+    #root span {
+        background-color: white;
+        padding: 0 2rem
+    }
+
+    #root h1 {
+        color: black;
+        padding: 0 2rem;
+    }
+</style>
+<div class="text-center">
+    <pre>
+
+88888888ba                                                                    888888888888                                                    
+88      "8b                                                                        88                           ,d                            
+88      ,8P                                                                        88                           88                            
+88aaaaaa8P'  ,adPPYYba,  8b,dPPYba,   8b,dPPYba,    ,adPPYba,  8b,dPPYba,          88   ,adPPYba,  ,adPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,  
+88""""""8b,  ""     `Y8  88P'   `"8a  88P'   `"8a  a8P_____88  88P'   "Y8          88  a8P_____88  I8[    ""    88    a8P_____88  88P'   "Y8  
+88      `8b  ,adPPPPP88  88       88  88       88  8PP"""""""  88                  88  8PP"""""""   `"Y8ba,     88    8PP"""""""  88          
+88      a8P  88,    ,88  88       88  88       88  "8b,   ,aa  88                  88  "8b,   ,aa  aa    ]8I    88,   "8b,   ,aa  88          
+88888888P"   `"8bbdP"Y8  88       88  88       88   `"Ybbd8"'  88                  88   `"Ybbd8"'  `"YbbdP"'    "Y888  `"Ybbd8"'  88          
+                                                                                                                                              
+                                                                                                                                              
+    </pre>
+</div>
+<div class="text-center" id="root"></div>
+<script>
+    let insertData = [
+        {
+            'name': 'BF Preview',
+            'runtime': 'November 1 to November 2',
+            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
+            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
+        },
+        {
+            'name': 'BF Day Of',
+            'runtime': 'November 2 to November 3',
+            'imageDesktop': '/globalassets/images/home/2019/12/1209_holidaysleep_hp_hero.jpg',
+            'imageMobile': '/globalassets/images/home/2019/12/1209_holidaysleep_hp_mobile.jpg'
+        },
+        {
+            'name': 'BF Weekend',
+            'runtime': 'November 3 to November 20',
+            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
+            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
+        },
+        {
+            'name': 'BF Extended',
+            'runtime': 'November 20 to November 25',
+            'imageDesktop': '/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg',
+            'imageMobile': '/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg'
+        },
+        {
+            'name': 'CM Early Access',
+            'runtime': 'November 25 to November 31',
+            'imageDesktop': '/globalassets/images/home/2019/11/1201_cm_preview_lp_hero_v2.jpg',
+            'imageMobile': '/globalassets/images/home/2019/11/1201_cm_preview_lp_mobile_Hero.jpg'
+        },
+        {
+            'name': 'CM Day Of',
+            'runtime': 'November 31 to December 100th',
+            'imageDesktop': '/globalassets/images/home/2019/11/1202_cm_hp_hero_banner.jpg',
+            'imageMobile': '/globalassets/images/home/2019/11/1202_cm_hp_hero_mobile_page.jpg'
+        }
+    ]
+
+    insertHtml = insertData.map((obj) => {
+        return `<div class="borders" id="${obj.name}"> <h1><span>${obj.name}</span></h1> <h2><i>${obj.runtime}</i></h2> <h3>Desktop</h3><div><img src="${obj.imageDesktop}" alt="" class="img-responsive"></div> <h3>Mobile</h3><div><img class="mobile-image" src="${obj.imageMobile}" alt="" class="img-responsive"></div></div>`
+    }).join("")
+
+    document.getElementById("root").innerHTML = insertHtml
+</script>
