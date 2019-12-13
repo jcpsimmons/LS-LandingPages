@@ -33,9 +33,6 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
         max-width: 35%
     }
 
-    #root pre {
-        margin-top: 2rem;
-    }
 
     .marker {
         color: black;
@@ -50,6 +47,10 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
         font-size: 4rem;
     }
 
+    .generic-html-template {
+        background-color: black
+    }
+
     .secondary {
         background-color: #ffff00;
         font-size: 2.5rem;
@@ -61,6 +62,15 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
         background-color: #3c3c3c;
         color: white;
         border-radius: 15px;
+    }
+
+    .hero {
+        margin-top: 4rem;
+        border-radius: 15px;
+    }
+
+    #root pre {
+        margin: 2rem 0 4rem;
     }
 
     #root img {
@@ -78,7 +88,7 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
     }
 </style>
 <div class="text-center">
-    <img src="/globalassets/images/tools/bt.jpg" alt="banner tester" class="img-responsive">
+    <img class='hero' src="/globalassets/images/tools/bt.jpg" alt="banner tester" class="img-responsive">
 </div>
 <div class="text-center" id="root"></div>
 <script>
