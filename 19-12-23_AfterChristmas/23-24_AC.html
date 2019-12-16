@@ -1,0 +1,407 @@
+<style>
+    /* GENERAL POSITIONING */
+    .ac .flex-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .ac .flex-col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .m-top-bottom {
+        margin: 5rem 0
+    }
+
+    .m-bottom {
+        margin-bottom: 5rem;
+    }
+
+    .m-top {
+        margin: 5rem 0 0 0
+    }
+
+    .m-top-small {
+        margin: 1.5rem 0 0 0;
+    }
+
+    /* TEXT */
+    #CTA {
+        font-size: 2rem;
+        text-align: center;
+        color: #333333;
+    }
+
+    /* WIDE ROW STYLING */
+    .ac .wide-row {
+        background-color: #f5f8f5;
+        position: relative;
+        padding: 2rem;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        width: 98vw;
+        left: calc(-49vw + 50%)
+    }
+
+    .ac .wide-row .link-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 5rem auto 5rem
+    }
+
+    .ac .wide-row .flex-item {
+        margin: 0 auto
+    }
+
+    .ac .notch {
+        left: 50%;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        height: 2rem;
+        width: 2rem;
+        transform: translateX(-50%);
+        border-top: 2rem solid white;
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-bottom: 0;
+    }
+
+
+    #ProductTiles .flex-item,
+    #ProductTiles2 .flex-item {
+        flex-basis: 32.25%
+    }
+
+    /* VIDEO MODAL */
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* END MODAL */
+
+    /* DESKTOP/MOBILE ONLY */
+    .desktop-only {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+
+    .desktop-only-block {
+        display: block !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    .mobile-only-block {
+        display: none !important;
+    }
+
+    @media (max-width:767px) {
+        /* DESKTOP/MOBILE ONLY */
+
+        .desktop-only {
+            display: none !important
+        }
+
+        .desktop-only-block {
+            display: none !important
+        }
+
+        .mobile-only {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important
+        }
+
+        .mobile-only-block {
+            display: block !important
+        }
+
+        .generic-html-template>.container {
+            padding: 0
+        }
+
+        #NotchContainer .link-container,
+        #ProductTiles,
+        #ProductTiles2 {
+            flex-direction: column;
+        }
+
+        #ProductTiles2 {
+            margin: auto;
+        }
+
+        #ProductTiles .flex-item,
+        #ProductTiles2 .flex-item {
+            margin-top: 1rem
+        }
+
+        #CTA {
+            padding: 0 2rem;
+        }
+
+        .ac .wide-row {
+            width: auto;
+            left: auto;
+        }
+
+        .ac .wide-row .link-container {
+            margin: 1rem 7rem 1rem
+        }
+
+    }
+</style>
+
+<div class="ac">
+
+    <!-- HERO -->
+    <div class="m-bottom" id="Hero">
+        <a href="/pdp-mcdade-ash-sofa-223279">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero.jpg" alt="Sofa $249"
+                class="img-responsive desktop-only-block">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero_mobile.jpg" alt="Sofa $249"
+                class="mobile-only block img-responsive">
+        </a>
+    </div>
+
+    <!-- CTA TEXT -->
+    <div class="m-top-bottom" id="CTA">
+        <p>Get the best gifts of all when you shop sofas, beds, dining sets and more for less.</p>
+    </div>
+
+    <!-- 2x1 BANNER (D ONLY) -->
+    <div class="flex-row m-top-bottom desktop-only">
+        <div class="flex-item"><a href="#ScrollMarker"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_gif_secondlayer.gif"
+                    alt="Coffee table" class="img-responsive "></a></div>
+        <div class="flex-item">
+            <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+                data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
+                aria-label="click to Watch the revive commercial" href="" alt="Watch the 
+                revive commercial">
+                <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_video_FPO.png"
+                    alt="After Christmas doorbuster event" class="img-responsive ">
+            </a>
+        </div>
+    </div>
+
+    <!-- VIDEO (M ONLY) -->
+    <div id="MobileVideo" class="mobile-only">
+        <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+            data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
+            aria-label="click to Watch the revive commercial" href="" alt="Watch the revive commercial">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_video_FPO_fpo.png"
+                alt="After Christmas doorbuster event" class="img-responsive">
+        </a>
+    </div>
+
+    <!-- 3 LINKS IN NOTCH CONTAINER -->
+    <div class="wide-row flex-row m-top-bottom" id="NotchContainer">
+        <div class="notch"></div>
+        <div class="link-container">
+            <div class="flex-item"><a href="">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_bestsellers.png" alt=""
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_bestsellers.png"
+                        alt="" class="img-responsive mobile-only">
+                </a>
+            </div>
+            <div class="flex-item">
+                <a href="/departments/featured/new-arrivals">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_newitems.png" alt=""
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_newitems.png" alt=""
+                        class="img-responsive mobile-only">
+                </a>
+            </div>
+            <div class="flex-item">
+                <a href="/clearance">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_saveupto50.png" alt=""
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_saveupto50.png"
+                        alt="" class="img-responsive mobile-only">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP BY CATEGORY BANNER -->
+    <div class="m-top-bottom">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_shopbycategory.png" alt=""
+            class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_catagory.png" alt=""
+            class="img-responsive mobile-only">
+    </div>
+
+
+    <!-- PRODUCT CATEGORY TILES -->
+    <div class="flex-row m-top" id="ProductTiles">
+        <div class="flex-item"><a
+                href="/departments/furniture/living-room/sofas-and-sectionals/sofas?sale_price=%5b*+TO+400%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_sofasunder400.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_sofasunder400.jpg" alt=""
+                    class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a
+                href="/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sale_price=%5b*+TO+600%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_sectionalsunder600.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_sectionalsunder600.jpg"
+                    alt="" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a
+                href="/departments/furniture/dining-room/dining-room-sets?sale_price=%5b*+TO+400%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_diningsetsunder400.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_diningsetsunder400.jpg"
+                    alt="" class="img-responsive mobile-only"></a></div>
+    </div>
+    <div class="m-top-small flex-row" id="ProductTiles2">
+        <div class="flex-item"><a
+                href="/departments/furniture/bedroom/beds?sizes=queen&sale_price_custom=%5b*+TO+400%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_queenbedsunder400.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_queenbedsunder400.jpg"
+                    alt="" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a
+                href="/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sale_price_custom=%5b*+TO+300%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_tvstandsunder300.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_tvstandsunder300.jpg"
+                    alt="" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a
+                href="/departments/furniture/living-room/coffee-tables?sale_price_custom=%5b*+TO+300%5d"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_coffeesetsunder300.jpg" alt=""
+                    class="img-responsive desktop-only"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_coffeetablesunder300.jpg"
+                    alt="" class="img-responsive mobile-only"></a></div>
+    </div>
+</div>
+<div id="ScrollMarker"></div>
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+
+    function smoothScroll() {
+        $(".ac a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    }
+
+    var anotherInterval = setInterval(function () {
+        if (typeof window.jQuery !== "undefined") {
+            clearInterval(anotherInterval);
+            playModal();
+            smoothScroll();
+        }
+    }, 50)
+</script>
