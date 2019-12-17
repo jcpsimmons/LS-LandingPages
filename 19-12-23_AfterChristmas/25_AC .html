@@ -30,6 +30,28 @@
         margin: 1.5rem 0 0 0;
     }
 
+    /* HERO BUTTONS */
+    .ac div.button {
+        background-color: white;
+        border: 2px solid #cba243;
+    }
+
+    .ac div.button h2 {
+        font-size: 2rem;
+        text-align: center;
+        color: #333333;
+        white-space: nowrap;
+        margin: 1rem 2rem 1rem;
+    }
+
+    #CTAButtons {
+        position: absolute;
+        bottom: 11%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
     /* TEXT */
     #CTA {
         font-size: 2rem;
@@ -134,6 +156,7 @@
         box-shadow: none;
     }
 
+
     /* END MODAL */
 
     /* DESKTOP/MOBILE ONLY */
@@ -213,14 +236,37 @@
 
 <div class="ac">
 
-    <!-- HERO -->
-    <div class="m-bottom" id="Hero">
-        <a href="/pdp-mcdade-ash-sofa-223279">
-            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero.jpg" alt="Sofa $249"
-                class="img-responsive desktop-only-block">
-            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero_mobile.jpg" alt="Sofa $249"
-                class="mobile-only block img-responsive">
-        </a>
+    <!-- HERO DESKTOP -->
+    <div class="m-bottom flex-row desktop-only" id="HeroDesktop">
+        <div class="flex-item"> <a href="/pdp-mcdade-ash-sofa-223279">
+                <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_heroL.jpg" alt="Sofa $295"
+                    class="img-responsive"></a></div>
+        <div class="flex-item" style="position: relative;">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_heroR.jpg"
+                alt="After Christmas Doorbuster Event" class="img-responsive">
+            <div id="CTAButtons" class="flex-col">
+                <div class="flex-item">
+                    <div class="button" role='button'>
+                        <a href="#CategoryBanner">
+                            <h2>shop + save &rsaquo;</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-item" style="margin-top:3rem">
+                    <div class="button" role='button'>
+                        <a href="/inspiration/ideas-advice">
+                            <h2>holiday inspiration &rsaquo;</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO MOBILE -->
+    <div class="m-bottom flex-row mobile-only-block" id='HeroMobile'>
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_hero.png"
+            alt="After Christmas Doorbuster Event" class="img-responsive">
     </div>
 
     <!-- CTA TEXT -->
@@ -237,7 +283,7 @@
             <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
                 data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
                 aria-label="click to Watch the revive commercial" href="" alt="Watch the 
-                revive commercial">
+                    revive commercial">
                 <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_video_FPO.png"
                     alt="After Christmas doorbuster event" class="img-responsive ">
             </a>
@@ -284,8 +330,44 @@
         </div>
     </div>
 
+    <!-- DOORBUSTER SPECIALS BANNER -->
+    <div class="m-top-bottom">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_doorbusterspecials.png"
+            alt="Doorbuster Specials" class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_mobile_doorbusterspecials.png"
+            alt="Doorbuster Specials" class="img-responsive mobile-only">
+    </div>
+
+    <!-- DOORBUSTER SPECIALS TILES DESKTOP -->
+    <div class="flex-row m-top desktop-only" id="DoorbusterTiles">
+        <div class="flex-item" style="flex-basis:57.25%"> <a href="/pdp-milton-queen-panel-bed-94665"></a><img
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_94665.jpg" alt="Queen bed 195"
+                class="img-responsive"> </a></div>
+        <div class="flex-item" style="flex-basis:41.03%"> <a href="/stores"></a><img
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_instore.jpg"
+                alt="Pillows starting at $9" class="img-responsive"> </a></div>
+    </div>
+    <div class="flex-row m-top-small desktop-only" id="DoorbusterTiles2">
+        <div class="flex-item" style="flex-basis:41.03%"> <a href="/pdp-pierce-black-room-divider-246581"></a><img
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_246581.jpg" alt="Room divider 350"
+                class="img-responsive"> </a></div>
+        <div class="flex-item" style="flex-basis:57.25%"> <a
+                href="/pdp-kara-3-piece-round-dining-set-with-wood-back-chairs-250783"></a><img
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_250783.jpg" alt="Dining set 395"
+                class="img-responsive"> </a></div>
+    </div>
+
+    <!-- DOORBUSTER SPECIALS TILES MOBILE -->
+    <div class="mobile-only-block">
+        <a href=""> <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_mobile_94665.jpg"
+                alt="Queen bed 195" class="img-responsive"></a>
+        <a href=""><img style="margin-top:2rem;"
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_mobile_250783.jpg"
+                alt="Dining set 295" class="img-responsive"></a>
+    </div>
+
     <!-- SHOP BY CATEGORY BANNER -->
-    <div class="m-top-bottom" id="#CategoryBanner">
+    <div class="m-top-bottom" id="CategoryBanner">
         <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_shopbycategory.png"
             alt="Shop by category" class="img-responsive desktop-only">
         <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_catagory.png" alt="Shop by category"
