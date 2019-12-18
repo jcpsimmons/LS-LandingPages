@@ -1,0 +1,253 @@
+<style>
+    .nyc .flex-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .nyc .flex-col {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nyc>div {
+        margin-bottom: 3rem;
+    }
+
+    .nyc .half-flex-l {
+        padding-right: 3rem;
+    }
+
+    .nyc .card-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%
+    }
+
+    .nyc .card-text h2,
+    .nyc .card-text h3,
+    .nyc .card-text h4.card-link {
+        color: #d9b67e
+    }
+
+    .nyc .card-text h3 {
+        font-size: 2rem;
+    }
+
+    .nyc .card-text h4.card-link {
+        font-size: 1.75rem;
+    }
+
+    .nyc h2,
+    .nyc h3 {
+        margin: 0 0 1rem !important;
+    }
+
+    .nyc h4.card-link {
+        margin: 1rem 0 1rem !important;
+    }
+
+    .nyc .card-text h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    .nyc .card-text h4.card-link {
+        font-weight: bold;
+        border-bottom: 1px solid #d9b67e;
+        padding: 0 .5rem .5rem;
+        white-space: nowrap;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .desktop-only {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+
+    .desktop-only-block {
+        display: block !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    .mobile-only-block {
+        display: none !important;
+    }
+
+
+    div#CardLinks {
+        padding: 0 4rem;
+    }
+
+
+    @media(min-width:585px) and (max-width:767px) {
+        .nyc .card-text {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    }
+
+    @media (max-width:767px) {
+        /* DESKTOP/MOBILE ONLY */
+
+        .desktop-only {
+            display: none !important
+        }
+
+        .desktop-only-block {
+            display: none !important
+        }
+
+        .mobile-only {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important
+        }
+
+        .mobile-only-block {
+            display: block !important
+        }
+
+        .nyc #CardLinks,
+        .nyc #DiningSetAndPillows {
+            flex-direction: column !important;
+            align-items: center;
+        }
+
+        .nyc .half-flex-l {
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+
+        .nyc .unpad-mobile {
+            margin-left: -16px;
+            margin-right: -16px;
+            margin-top: -1.4rem;
+        }
+
+        .nyc>div {
+            margin-bottom: 2rem;
+        }
+
+        .nyc .flex-col {
+            align-items: center;
+        }
+
+
+        .nyc .card-text h3 {
+            font-size: 1.8rem;
+        }
+
+        .nyc .card-text h2 {
+
+            font-size: 2rem;
+        }
+
+        .nyc .card-text h4.card-link {
+            font-size: 1.5rem
+        }
+    }
+</style>
+<div class="nyc">
+
+    <!-- hero-desktop -->
+    <div class="flex-row desktop-only" id="hero-row">
+        <div class="flex-item"><a href="#queen-bed"><img
+                    src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_shop_deals.jpg"
+                    alt="New year new style" class="img-responsive"></a></div>
+        <div class="flex-item"><a href="/pdp-london-optical-sofa-225756"><img
+                    src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_sofa_hero.jpg"
+                    alt="sofa $395" class="img-responsive"></a></div>
+    </div>
+
+
+    <!-- hero-mobile -->
+    <div class="flex-col mobile-only unpad-mobile">
+        <div class="flex-item"><a href="#queen-bed"><img
+                    src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-header.jpg" alt=""
+                    class="img-responsive"></a></div>
+        <div class="flex-item"><a href="/pdp-london-optical-sofa-225756"><img
+                    src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-sofa.jpg" alt=""
+                    class="img-responsive"></a></div>
+    </div>
+
+    <!-- financing banner -->
+    <div class="unpad-mobile"><a href="/company/financing"><img
+                src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_finance.jpg"
+                alt="finnacing banner" class="img-responsive desktop-only-block">
+            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-finance.jpg"
+                alt="finnacing banner" class="img-responsive mobile-only-block">
+        </a>
+    </div>
+
+    <!-- dancing/save big -->
+    <div class="flex-row">
+        <div class="flex-item half-flex-l desktop-only"><img
+                src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_dancing.gif" alt="dancing women"
+                class="img-responsive"></div>
+        <div class="flex-item" style="position:relative">
+            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_celebrate_bg.jpg"
+                alt="clearance bg img" class="img-responsive desktop-only">
+            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-celebrate.jpg"
+                alt="clearance bg img" class="img-responsive mobile-only">
+            <div class="flex-col card-text">
+                <div class="flex-item" style="width:100%">
+                    <h2>CELEBRATE + SAVE BIG</h2>
+                </div>
+                <div class="flex-item">
+                    <h3>Ring in 2020 with pieces you love at prices you'll adore.</h3>
+                </div>
+                <div class="flex-row" id="CardLinks">
+                    <div class="flex-item">
+                        <a href="/departments/featured/most-popular">
+                            <h4 class="card-link">bestsellers</h4>
+                        </a>
+                    </div>
+                    <div class="flex-item">
+                        <a href="/departments/featured/new-arrivals">
+                            <h4 class="card-link">new items</h4>
+                        </a>
+                    </div>
+                    <div class="flex-item">
+                        <a href="/clearance/outlet">
+                            <h4 class="card-link">outlet</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="queen-bed"><a href="/pdp-marco-charcoal-queen-panel-bed-251576"><img
+                src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_16.jpg" alt="queen bed $395"
+                class="img-responsive desktop-only-block">
+            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile_15.jpg"
+                alt="queen bed $395" class="img-responsive mobile-only-block">
+        </a></div>
+
+
+    <div class="flex-row" id="DiningSetAndPillows">
+        <div class="flex-item half-flex-l"><a href="/pdp-kit-macie-black-5-piece-dining-set-243504"><img
+                    src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_18.jpg"
+                    alt="dining set $495" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-dining.jpg"
+                    alt="dining set $495" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_20.jpg"
+                alt="in-store-only pillows starting at $9" class="img-responsive desktop-only">
+            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-pillows.jpg"
+                alt="in-store-only pillows starting at $9" class="img-responsive mobile-only"></div>
+    </div>
+
+
+</div>
