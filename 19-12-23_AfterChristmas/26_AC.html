@@ -30,6 +30,55 @@
         margin: 1.5rem 0 0 0;
     }
 
+    /* HERO BUTTONS */
+    .ac div.button a:hover,
+    .ac div.button a:visited,
+    .ac div.button a:active {
+        text-decoration: none;
+    }
+
+    .ac div.button:hover {
+        transform: scale(.97);
+    }
+
+    .ac #DoorbusterTiles .flex-item,
+    .ac #DoorbusterTiles2 .flex-item {
+        transition: .3s
+    }
+
+    .ac #DoorbusterTiles .flex-item:hover,
+    .ac #DoorbusterTiles2 .flex-item:hover {
+        transform: scale(.97);
+    }
+
+    .ac div.button {
+        transition: .3s;
+        background-color: white;
+        border: 2px solid #cba243;
+    }
+
+    .ac div.button h2 {
+        font-size: 2rem;
+        text-align: center;
+        color: #333333;
+        white-space: nowrap;
+        margin: 1rem 2rem 1rem;
+    }
+
+    #CTAButtons {
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    @media (min-width: 1200px) {
+        #CTAButtons {
+            bottom: 17%;
+        }
+    }
+
+
     /* TEXT */
     #CTA {
         font-size: 2rem;
@@ -134,6 +183,7 @@
         box-shadow: none;
     }
 
+
     /* END MODAL */
 
     /* DESKTOP/MOBILE ONLY */
@@ -208,31 +258,78 @@
             margin: 1rem 7rem 1rem
         }
 
+
+        #CTAButtons-Mobile {
+            position: absolute;
+            bottom: 4%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
     }
 </style>
 
 <div class="ac">
 
-    <!-- HERO -->
-    <div class="m-bottom" id="Hero">
-        <a href="/pdp-mcdade-ash-sofa-223279">
-            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero.jpg" alt="Sofa $249"
-                class="img-responsive desktop-only-block">
-            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_hero_mobile.jpg" alt="Sofa $249"
-                class="mobile-only block img-responsive">
-        </a>
+    <!-- HERO DESKTOP -->
+    <div class="m-bottom flex-row desktop-only" id="HeroDesktop">
+        <div class="flex-item"> <a href="/pdp-mcdade-ash-sofa-223279">
+                <img src="/globalassets/images/lp/2019/12/after-christmas/122619_acdb_lp_heroL.jpg" alt="Sofa $295"
+                    class="img-responsive"></a></div>
+        <div class="flex-item" style="position: relative;">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122619_acdb_lp_heroR.jpg"
+                alt="After Christmas Doorbuster Event" class="img-responsive">
+            <div id="CTAButtons" class="flex-col">
+                <div class="flex-item">
+                    <div class="button" role='button'>
+                        <a href="#CategoryBanner">
+                            <h2>shop + save &rsaquo;</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-item" style="margin-top:3rem">
+                    <div class="button" role='button'>
+                        <a href="/inspiration/ideas-advice">
+                            <h2>holiday inspiration &rsaquo;</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO MOBILE -->
+    <div class="m-bottom flex-row mobile-only-block" id='HeroMobile' style="position:relative">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122619_acdb_lp_mobile_hero.png"
+            alt="After Christmas Doorbuster Event" class="img-responsive" style="position:relative">
+        <div id="CTAButtons-Mobile" class="flex-col">
+            <div class="flex-item">
+                <div class="button" role='button'>
+                    <a href="#CategoryBanner">
+                        <h2>shop + save &rsaquo;</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-item" style="margin-top:2.5rem">
+                <div class="button" role='button'>
+                    <a href="/inspiration/ideas-advice">
+                        <h2>holiday inspiration &rsaquo;</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- CTA TEXT -->
     <div class="m-top-bottom" id="CTA">
-        <p>Get the best gifts of all when you shop sofas, beds, dining sets and more for less.</p>
+        <p>Get what you really want and save big on sofas, dining sets, beds and more.</p>
     </div>
 
     <!-- 2x1 BANNER (D ONLY) -->
     <div class="flex-row m-top-bottom desktop-only">
-        <div class="flex-item"><a href="#CategoryBanner"><img
-                    src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_gif_secondlayer.gif"
-                    alt="Coffee table" class="img-responsive "></a></div>
+        <div class="flex-item"><a href="/company/financing"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_financing_secondlayer.jpg"
+                    alt="special financing banner" class="img-responsive "></a></div>
         <div class="flex-item">
             <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
                 data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
@@ -242,6 +339,14 @@
                     alt="After Christmas doorbuster event" class="img-responsive ">
             </a>
         </div>
+    </div>
+
+    <!-- Financing (M ONLY) -->
+    <div id="MobileFinancing" class="mobile-only m-bottom">
+        <a href="/company/financing">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_mobile_financing_secondlayer.png"
+                alt="Special financing banner" class="img-responsive">
+        </a>
     </div>
 
     <!-- VIDEO (M ONLY) -->
@@ -254,38 +359,45 @@
         </a>
     </div>
 
-    <!-- 3 LINKS IN NOTCH CONTAINER -->
-    <div class="wide-row flex-row m-top-bottom" id="NotchContainer">
-        <div class="notch"></div>
-        <div class="link-container">
-            <div class="flex-item"><a href="">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_bestsellers.png"
-                        alt="Bestsellers" class="img-responsive desktop-only">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_bestsellers.png"
-                        alt="Bestsellers" class="img-responsive mobile-only">
-                </a>
-            </div>
-            <div class="flex-item">
-                <a href="/departments/featured/new-arrivals">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_newitems.png"
-                        alt="New Items" class="img-responsive desktop-only">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_newitems.png"
-                        alt="New Items" class="img-responsive mobile-only">
-                </a>
-            </div>
-            <div class="flex-item">
-                <a href="/clearance">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_saveupto50.png"
-                        alt="Save Up to 50 Percent" class="img-responsive desktop-only">
-                    <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_saveupto50.png"
-                        alt="Save Up to 50 Percent" class="img-responsive mobile-only">
-                </a>
-            </div>
-        </div>
+    <!-- DOORBUSTER SPECIALS BANNER -->
+    <div class="m-top-bottom">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_doorbusterspecials.png"
+            alt="Doorbuster Specials" class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_mobile_doorbusterspecials.png"
+            alt="Doorbuster Specials" class="img-responsive mobile-only">
+    </div>
+
+    <!-- DOORBUSTER SPECIALS TILES DESKTOP -->
+    <div class="flex-row m-top desktop-only" id="DoorbusterTiles">
+        <div class="flex-item" style="flex-basis:57.25%"> <a href="/pdp-milton-queen-panel-bed-94665"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_94665.jpg"
+                    alt="Queen bed 195" class="img-responsive"> </a></div>
+        <div class="flex-item" style="flex-basis:41.03%"> <a href="/stores"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_instore.jpg"
+                    alt="Pillows starting at $9" class="img-responsive"> </a></div>
+    </div>
+    <div class="flex-row m-top-small desktop-only" id="DoorbusterTiles2">
+        <div class="flex-item" style="flex-basis:41.03%"> <a href="/pdp-pierce-black-room-divider-246581"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_246581.jpg"
+                    alt="Room divider 350" class="img-responsive"> </a></div>
+        <div class="flex-item" style="flex-basis:57.25%"> <a
+                href="/pdp-kara-3-piece-round-dining-set-with-wood-back-chairs-250783"><img
+                    src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_250783.jpg"
+                    alt="Dining set 395" class="img-responsive"> </a></div>
+    </div>
+
+    <!-- DOORBUSTER SPECIALS TILES MOBILE -->
+    <div class="mobile-only-block">
+        <a href="/pdp-milton-queen-panel-bed-94665"> <img
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_mobile_94665.jpg"
+                alt="Queen bed 195" class="img-responsive"></a>
+        <a href="/pdp-kara-3-piece-round-dining-set-with-wood-back-chairs-250783"><img style="margin-top:2rem;"
+                src="/globalassets/images/lp/2019/12/after-christmas/122519_acdb_lp_bed_mobile_250783.jpg"
+                alt="Dining set 295" class="img-responsive"></a>
     </div>
 
     <!-- SHOP BY CATEGORY BANNER -->
-    <div class="m-top-bottom" id="#CategoryBanner">
+    <div class="m-top-bottom" id="CategoryBanner">
         <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_shopbycategory.png"
             alt="Shop by category" class="img-responsive desktop-only">
         <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_catagory.png" alt="Shop by category"
@@ -333,6 +445,14 @@
                     alt="Coffee sets under 300" class="img-responsive desktop-only"><img
                     src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_mobile_coffeetablesunder300.jpg"
                     alt="Coffee sets under 300" class="img-responsive mobile-only"></a></div>
+    </div>
+
+    <div class="m-top-bottom">
+        <a href="/departments/mattresses/promotions/new-year-clearance">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122619_acdb_lp_revive.jpg" alt=""
+                class="img-responsive desktop-only-block">
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122619_acdb_lp_mobile_revive.jpg" alt=""
+                class="img-responsive mobile-only-block"></a>
     </div>
 </div>
 
