@@ -1,15 +1,30 @@
 <style>
     .nyc .flex-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
     .nyc .flex-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
         align-items: stretch;
     }
 
@@ -25,6 +40,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
         width: 80%
@@ -93,6 +109,7 @@
 
     @media(min-width:585px) and (max-width:767px) {
         .nyc .card-text {
+            -webkit-transform: translate(-50%, -50%) scale(1.5);
             transform: translate(-50%, -50%) scale(1.5);
         }
     }
@@ -120,7 +137,12 @@
 
         .nyc #CardLinks,
         .nyc #DiningSetAndPillows {
+            -webkit-box-orient: vertical !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
             flex-direction: column !important;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
@@ -140,6 +162,8 @@
         }
 
         .nyc .flex-col {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
