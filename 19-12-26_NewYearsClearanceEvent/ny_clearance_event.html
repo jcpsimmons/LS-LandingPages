@@ -7,7 +7,7 @@
         flex-wrap: nowrap;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between;
+        å justify-content: space-between;
     }
 
     .nyc .flex-col {
@@ -28,6 +28,10 @@
         align-items: stretch;
     }
 
+    .nyc .flex-item {
+        margin: auto;
+    }
+
     .nyc>div {
         margin-bottom: 3rem;
     }
@@ -43,7 +47,7 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
-        width: 80%
+        width: 90%
     }
 
     .nyc .card-text h2,
@@ -196,7 +200,7 @@
 
 
     <!-- hero-mobile -->
-    <div class="flex-col mobile-only unpad-mobile">
+    <div class="flex-col mobile-only unpad-mobile" style="padding-bottom:1.5rem">
         <div class="flex-item"><a href="#queen-bed"><img
                     src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-header.jpg" alt=""
                     class="img-responsive"></a></div>
@@ -216,14 +220,17 @@
 
     <!-- dancing/save big -->
     <div class="flex-row">
-        <div class="flex-item half-flex-l desktop-only"><img
-                src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_dancing.gif" alt="dancing women"
-                class="img-responsive"></div>
+        <div class="flex-item half-flex-l desktop-only">
+            <div>
+                <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_dancing.gif"
+                    alt="dancing women" class="img-responsive">
+            </div>
+        </div>
         <div class="flex-item" style="position:relative">
-            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_celebrate_bg.jpg"
-                alt="clearance bg img" class="img-responsive desktop-only">
-            <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-celebrate.jpg"
-                alt="clearance bg img" class="img-responsive mobile-only">
+            <div><img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny_clearance_lp_celebrate_bg.jpg"
+                    alt="clearance bg img" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/01/ny-clearance-event/ny-clearance-lp-mobile-celebrate.jpg"
+                    alt="clearance bg img" class="img-responsive mobile-only"></div>
             <div class="flex-col card-text">
                 <div class="flex-item" style="width:100%">
                     <h2>CELEBRATE + SAVE BIG</h2>
