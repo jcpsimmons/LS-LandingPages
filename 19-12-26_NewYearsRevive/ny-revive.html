@@ -1,0 +1,172 @@
+<style>
+    .x .row {
+        margin-left: -15px;
+        margin-right: -15px;
+
+    }
+
+    .x h1.cta-text {
+        color: #333333;
+        font-size: 2rem;
+    }
+
+    .x .cta-link {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #333333;
+    }
+
+    @media (max-width: 767px) {
+        .x .col-md-12 {
+            padding: 0 0 2rem 0 !important;
+        }
+
+        .x .row {
+            margin-top: 1rem;
+        }
+
+        .x {
+            margin-top: -1.4rem;
+        }
+    }
+
+    /* VIDEO MODAL */
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+    /* END MODAL */
+</style>
+<div class="x">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+                data-theVideo="https://www.youtube.com/embed/dWBYp3zYGT4" role="button"
+                aria-label="click to Watch the revive commercial" href="" alt="Watch the 
+                revive commercial">
+                <img src="/globalassets/images/lp/2019/12/1223_ny_revive_lp.png" alt=""
+                    class="visible-sm visible-md visible-lg img-responsive">
+                <img src="/globalassets/images/lp/2019/12/1223_ny-revive_lp_mobile.png" alt=""
+                    class="visible-xs img-responsive"></a>
+            <h1 class="cta-text"><b>SAVE 30%</b> on select floor models. <a href="/stores"
+                    style="font-size:2rem!important"><span class='cta-link'>Find a
+                        Store</a> &rsaquo;</span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+
+    function smoothScroll() {
+        $(".ac a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    }
+
+    var anotherInterval = setInterval(function () {
+        if (typeof window.jQuery !== "undefined") {
+            clearInterval(anotherInterval);
+            playModal();
+            smoothScroll();
+        }
+    }, 50)
+</script>

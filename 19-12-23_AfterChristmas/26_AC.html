@@ -1,4 +1,13 @@
 <style>
+    .promoproducttilesblock {
+        margin: 5rem 15px;
+    }
+
+    #ProductTiles .flex-item:hover,
+    #ProductTiles2 .flex-item:hover {
+        border: 2px solid #cba243;
+    }
+
     /* GENERAL POSITIONING */
     .ac .flex-row {
         display: flex;
@@ -30,6 +39,7 @@
         margin: 1.5rem 0 0 0;
     }
 
+
     /* HERO BUTTONS */
     .ac div.button a:hover,
     .ac div.button a:visited,
@@ -37,8 +47,14 @@
         text-decoration: none;
     }
 
+
+    .ac div.button {
+        transition: .3s;
+        opacity: 100%;
+    }
+
     .ac div.button:hover {
-        transform: scale(.97);
+        opacity: 90%;
     }
 
     .ac #DoorbusterTiles .flex-item,
@@ -48,7 +64,9 @@
 
     .ac #DoorbusterTiles .flex-item:hover,
     .ac #DoorbusterTiles2 .flex-item:hover {
-        transform: scale(.97);
+        transform: scale(.95) translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
     }
 
     .ac div.button {
@@ -332,7 +350,7 @@
                     alt="special financing banner" class="img-responsive "></a></div>
         <div class="flex-item">
             <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
-                data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
+                data-theVideo="https://www.youtube.com/embed/JGdO1mhob5k" role="button"
                 aria-label="click to Watch the revive commercial" href="" alt="Watch the 
                     revive commercial">
                 <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_video_FPO.png"
@@ -352,9 +370,9 @@
     <!-- VIDEO (M ONLY) -->
     <div id="MobileVideo" class="mobile-only">
         <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
-            data-theVideo="https://www.youtube.com/embed/fqDTdCwaapc" role="button"
+            data-theVideo="https://www.youtube.com/embed/JGdO1mhob5k" role="button"
             aria-label="click to Watch the revive commercial" href="" alt="Watch the revive commercial">
-            <img src="/globalassets/images/lp/2019/12/after-christmas/122319_acdb_lp_video_FPO_fpo.png"
+            <img src="/globalassets/images/lp/2019/12/after-christmas/122619__acdb_lp_video.png"
                 alt="After Christmas doorbuster event" class="img-responsive">
         </a>
     </div>
