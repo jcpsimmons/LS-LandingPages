@@ -1,0 +1,231 @@
+<style>
+    .rws {
+        padding-bottom: 5rem;
+    }
+
+    .rws .flex-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .rws .flex-item {
+        margin: auto;
+    }
+
+    .rws img {
+        padding-bottom: 3rem;
+    }
+
+    .rws #Banner {
+        padding-bottom: 1rem;
+    }
+
+    .rws #VideoContainer {
+        padding-top: 1rem;
+    }
+
+    .rws .cta-text {
+        padding-bottom: 2rem;
+        font-size: 2rem
+    }
+
+    .rws .desktop-only {
+        display: block
+    }
+
+    .rws .mobile-only {
+        display: none
+    }
+
+    @media(max-width:767px) {
+        .rws {
+            margin-left: -15px;
+            margin-right: -15px;
+            margin-top: -5px;
+        }
+
+        .rws .desktop-only {
+            display: none
+        }
+
+        .rws .mobile-only {
+            display: block
+        }
+    }
+
+    /* VIDEO MODAL */
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+    /* END MODAL */
+
+    @media (max-width:767px) {
+        .rws .cta-text {
+            font-size: 1.5rem
+        }
+
+        .rws .shop-now-cta {
+            background-color: #6f6c84;
+            height: 7rem;
+            margin-bottom: 2rem;
+        }
+
+        .rws .shop-now-cta a:visited,
+        .rws .shop-now-cta a:hover,
+        .rws .shop-now-cta a:active {
+            text-decoration: none;
+        }
+
+        .rws .shop-now-cta h4 {
+            margin: 0 !important;
+            color: #fff;
+            padding-top: 2rem;
+            font-size: 2.4rem !important;
+        }
+
+        .rws #VideoContainer img {
+            padding-bottom: 0
+        }
+
+        #Banner img.mobile-only {
+            padding-bottom: 1rem
+        }
+
+        .rws .cta-text {
+            padding-bottom: 0
+        }
+    }
+</style>
+
+<div class="rws">
+    <div id="Banner">
+        <img src="/globalassets/images/lp/2020/01/0113_wintersavings_1_promo_lp_header.jpg" alt="Revive Header"
+            class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2020/01/0113_wintersavings_1_promo_lp_mobile_header.jpg" alt="Revive Header"
+            class="img-responsive mobile-only">
+    </div>
+    <div>
+        <p class="cta-text text-center">Not only will you find deals on all of the top mattress brands, you can save
+            up to $700
+            on the Revive Freedom Mattress. Plus, when you purchase the Revive Freedom Mattress, you’ll receive 2
+            Organic Latex Pillows for free.</p>
+    </div>
+    <div id="VideoContainer">
+        <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+            data-theVideo="https://www.youtube.com/embed/iOF1U7I53H8" role="button"
+            aria-label="click to Watch the revive commercial" href="" alt="Watch the 
+                    revive commercial">
+            <img src="/globalassets/images/lp/2020/01/0113_wintersavings_2_promo_lp_banner_1a.jpg"
+                alt="Winter savings video" class="img-responsive desktop-only">
+            <img src="/globalassets/images/lp/2020/01/0113_wintersavings_2_promo_lp_mobile_banner_a.jpg"
+                alt="Winter savings video" class="img-responsive mobile-only">
+        </a>
+        <div class="mobile-only shop-now-cta text-center">
+            <h4><a href="/departments/mattresses/promotions/winter-savings" style="padding:0;margin:0;color:#fff">Shop
+                    Now</a>
+                &rsaquo;</h4>
+        </div>
+    </div>
+    <div><a href="/event/winter-savings-event"><img
+                src="/globalassets/images/lp/2020/01/0113_wintersavings_2_promo_lp_banner_2.jpg"
+                alt="winter savings panel" class="img-responsive desktop-only"><img
+                src="/globalassets/images/lp/2020/01/0113_wintersavings_3_promo_lp_mobile_banner.jpg"
+                alt="winter savings panel" class="img-responsive mobile-only"></a></div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+    var anotherInterval = setInterval(function () {
+        if (typeof window.jQuery !== "undefined") {
+            clearInterval(anotherInterval);
+            playModal();
+        }
+    }, 50)
+</script>

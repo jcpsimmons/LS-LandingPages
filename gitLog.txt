@@ -1,0 +1,1658 @@
+Thu Jan 2 09:23:38 2020 -0800 - [Josh] de97c6fd889150e2a3136ec8f329fb895b2825bb
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+Tue Dec 24 10:08:12 2019 -0800 - [Josh Simmons] a51e172cdce15692636c19b07c72ebc50f638783
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ 19-12-23_AfterChristmas/prods.txt                  |  12 +-
+ .../ny_clearance_event.html                        |   2 +-
+ misc/privacyPolicy.html                            | 600 +++++++++++++++++++++
+ 4 files changed, 612 insertions(+), 2 deletions(-)
+
+Mon Dec 23 15:02:59 2019 -0800 - [jcpsimmons@gmail.com] 6b6af3e769c75da0bea9384a4b7fbc0e192814cf
+Mon Dec 23 15:02:28 2019 -0800 - [jcpsimmons@gmail.com] cbbdf3a3e1a69a14277f8a4140cce36be458c6bb
+ 19-12-23_AfterChristmas/23-24_AC.html              |  19 ++-
+ 19-12-23_AfterChristmas/25_AC .html                |  25 ++-
+ 19-12-23_AfterChristmas/26_AC.html                 |  28 +++-
+ 19-12-23_AfterChristmas/iso-banner.html            |   8 +
+ 19-12-23_AfterChristmas/prods.txt                  |   3 +
+ 19-12-23_AfterChristmas/reg-prods-banner.html      |   7 +
+ .../ny_clearance_event.html                        |   6 +-
+ 19-12-26_NewYearsRevive/ny-revive.html             | 172 +++++++++++++++++++++
+ 19-12-26_NewYearsRevive/skus.txt                   |   1 +
+ 9 files changed, 252 insertions(+), 17 deletions(-)
+
+Fri Dec 20 14:43:20 2019 -0800 - [Josh Simmons] 77a55cc7369714b1a069e54b0034c893372e945c
+ .../ny_clearance_event.html                        | 27 ++++++++++++++--------
+ 1 file changed, 17 insertions(+), 10 deletions(-)
+
+Fri Dec 20 14:24:00 2019 -0800 - [Josh Simmons] b54356ed5ac3acdd6cabf4ef03a54486cc109a68
+ .DS_Store | Bin 0 -> 6148 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+Wed Dec 18 16:17:24 2019 -0800 - [Josh] c10e67b8c7ab0cab9417b6fed719b36fe8bc5949
+ 19-12-23_AfterChristmas/25_AC .html                |  3 +++
+ .../ny_clearance_event.html                        | 24 ++++++++++++++++++++++
+ 2 files changed, 27 insertions(+)
+
+Wed Dec 18 15:47:53 2019 -0800 - [Josh] 300ca79d2a3454b1964917078b23ff8b472f7897
+ 19-12-23_AfterChristmas/23-24_AC.html |   2 +-
+ 19-12-23_AfterChristmas/25_AC .html   |  52 ++++++---
+ 19-12-23_AfterChristmas/26_AC.html    | 202 +++++++++++++++++++++++++++-------
+ 3 files changed, 198 insertions(+), 58 deletions(-)
+
+Wed Dec 18 13:17:11 2019 -0800 - [Josh] 5063c25232038d4c91fc18ce8789ba2a8811fd1e
+ 19-12-23_AfterChristmas/25_AC .html                |  36 ++-
+ .../ny_clearance_event.html                        | 253 +++++++++++++++++++++
+ .../ny_clearance_products.txt                      |   1 +
+ 3 files changed, 287 insertions(+), 3 deletions(-)
+
+Mon Dec 16 16:55:45 2019 -0800 - [Josh] 46dad1562d9dc3cd9e73425a9fb026693ce1c9f5
+ 19-12-23_AfterChristmas/23-24_AC.html |  70 ++---
+ 19-12-23_AfterChristmas/25_AC .html   | 489 ++++++++++++++++++++++++++++++++++
+ 19-12-23_AfterChristmas/26_AC.html    | 407 ++++++++++++++++++++++++++++
+ 3 files changed, 931 insertions(+), 35 deletions(-)
+
+Mon Dec 16 14:40:54 2019 -0800 - [Josh] 990243e4ca65b73b85a4eae07c88b6db003648ec
+ 19-12-23_AfterChristmas/23-24_AC.html  | 407 +++++++++++++++++++++++++++++++++
+ misc/THE_CSS_NOTCH.html                |   6 +-
+ old/2019-12-09_holiday-revive/skus.txt |   4 +-
+ 3 files changed, 414 insertions(+), 3 deletions(-)
+
+Fri Dec 13 15:42:58 2019 -0800 - [Josh] 54bb8c4b3b9c5d03a28fa1693a37caf2d791b2f0
+ misc/THE_CSS_NOTCH.html | 33 +++++++++++++++++++++++++++++++++
+ misc/banner-tester.html | 18 ++++++++++++++----
+ 2 files changed, 47 insertions(+), 4 deletions(-)
+
+Mon Dec 9 11:41:15 2019 -0800 - [Josh] ce1589717db30c2f5a5446ec3b823e544aa884ed
+ misc/banner-tester.html | 113 +++++++++++++++++++++++++-----------------------
+ 1 file changed, 58 insertions(+), 55 deletions(-)
+
+Mon Dec 9 09:42:56 2019 -0800 - [Josh] bb531546ae6f7ad0e40326ea11459b840913b00d
+ misc/banner-tester.html | 95 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 95 insertions(+)
+
+Mon Dec 9 08:47:54 2019 -0800 - [Josh] 76e88b3a757eec9a65f694bb285ce2c11a45aa98
+ .../2019-11-13_black-friday-doorbuster.html                 |   0
+ .../2019-11-13_black-friday-extended.html                   |   0
+ .../black-friday-extended/extended_productScript.html       |   0
+ .../2019-11-13_black-friday-preview.html                    |   0
+ .../black-friday-preview/img/BF-landing-page-preview.gif    | Bin
+ .../img/black-friday-LP-preview-mobile.jpg                  | Bin
+ .../black-friday-preview/img/preview-hero.jpg               | Bin
+ .../black-friday-preview/img/rugs.jpg                       | Bin
+ .../black-friday-preview/img/sofa.jpg                       | Bin
+ .../black-friday-preview/preview_productScript.html         |   0
+ .../2019-11-13_black-friday-weekend.html                    |   0
+ .../black-friday-weekend/weekend_productScript.html         |   0
+ .../19-11-25_BlackFriday-LPs}/master_product_script.html    |   0
+ .../19-11-25_BlackFriday-LPs}/misc/pdp-header.html          |   0
+ .../product-data/DEPRECATEDProductJSON.html                 |   0
+ .../19-11-25_BlackFriday-LPs}/product-data/ProductData.csv  |   0
+ .../19-11-25_BlackFriday-LPs}/product-data/ProductData.xlsx | Bin
+ .../19-11-25_BlackFriday-LPs}/product-data/output.json      |   0
+ .../product-data/productDataCSVtoJSON.js                    |   0
+ .../19-11-25_BlackFriday-LPs}/product-images/102945.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/105885.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/107883.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/107887.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/107889.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/108022.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/108028.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/111515.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/201770.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/206465.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/206466.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/206467.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/207076.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/207147.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/207156.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/207811.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/225986.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/233030.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/233031.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/233033.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/235702.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236257.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236258.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236260.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236262.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236265.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236268.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236271.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236275.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236279.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236283.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236286.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236288.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236290.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236291.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236293.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236295.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236296.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236297.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236298.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236299.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236300.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236301.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236302.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236303.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236304.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236305.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236306.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236307.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236309.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/236312.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244100.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244114.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244126.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244490.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244491.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/244492.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/245363.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/245368.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/245369.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/245370.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/248533.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/248535.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/248581.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/248584.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/249837.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250580.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250581.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250582.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250583.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250584.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250585.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250586.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250587.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250588.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250589.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250590.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250591.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250592.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250593.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250594.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250595.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250596.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250597.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250598.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250599.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250600.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250637.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250664.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250665.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250884.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250885.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250886.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/250887.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251254.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251575.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251577.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251817.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251818.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251819.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251820.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251821.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251822.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251823.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251824.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251825.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/251826.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/252470.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/252471.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253012.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253022.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253178.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253180.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253272.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253274.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253276.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253277.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253278.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253279.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253280.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253282.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253283.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253284.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253285.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253286.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253287.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253295.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253296.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253297.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253301.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253302.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253303.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253304.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253305.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253309.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253311.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253316.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253320.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253321.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253803.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/253804.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254398.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254399.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254400.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254401.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254571.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254572.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254573.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254574.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/254575.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/255207.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/255208.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/255209.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/255866.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256109.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256110.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256111.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256367.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256369.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256370.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/256373.jpg     | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/56131.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/69702.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/76848.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/80781.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/85054.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/85055.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/88247.jpg      | Bin
+ .../19-11-25_BlackFriday-LPs}/product-images/92124.jpg      | Bin
+ .../19-blackFriday-dayof-PLP-bottomblock.html               |   0
+ .../19-blackFriday-dayof-PLP-topblock.html                  |   0
+ .../19-blackFriday-preview-PLP-bottomblock.html             |   0
+ .../19-blackFriday-preview-PLP-topblock.html                |   0
+ .../19-11-25_BlackFriday-PLPs}/products.txt                 |   0
+ .../allegedly-the-final-product-list.csv                    |   0
+ .../clearance-PLP/cm-plp-header.html                        |   0
+ .../2019-12-01_cyber-monday}/clearance-PLP/skuList.txt      |   0
+ .../2019-12-01_cyber-monday}/cm_products_script.html        |   0
+ .../cyber-monday/cyber-monday-day-of.html                   |   0
+ .../early-access/2019-12-01_cyber-monday-early-access.html  |   0
+ .../2019-12-01_cyber-monday}/early-access/countown.js       |   0
+ .../img/1201-cm-preview-lp-diningset-250750.jpg             | Bin
+ .../img/1201-cm-preview-lp-financing.jpg                    | Bin
+ .../img/1201-cm-preview-lp-hero.jpg                         | Bin
+ .../img/1201-cm-preview-lp-mobile-diningset-250750.jpg      | Bin
+ .../img/1201-cm-preview-lp-mobile-financing.jpg             | Bin
+ .../img/1201-cm-preview-lp-mobile-hero.jpg                  | Bin
+ .../img/1201-cm-preview-lp-mobile-sofa-223508.jpg           | Bin
+ .../img/1201-cm-preview-lp-sectional-223418.jpg             | Bin
+ .../img/1201-cm-preview-lp-sofa-223508.jpg                  | Bin
+ .../2019-12-09_holiday-revive}/holiday-revive.html          |   0
+ .../2019-12-09_holiday-revive}/skus.txt                     |   0
+ {2019-12-09_holiday => old/2019-12-09_holiday}/holiday.html |   0
+ .../2019-12-09_holiday}/price-under-plps/price-unders.html  |   0
+ {2019-12-09_holiday => old/2019-12-09_holiday}/products.txt |   0
+ .../2019-12-09_holidayBOGO}/holiday-bogo.html               |   0
+ 215 files changed, 0 insertions(+), 0 deletions(-)
+
+Mon Dec 9 08:38:25 2019 -0800 - [Josh] def050b443729fb254d3e2eccecc805a302ebe8c
+ 2019-12-09_holidayBOGO/holiday-bogo.html | 52 +++++++++++++++++---------------
+ 1 file changed, 27 insertions(+), 25 deletions(-)
+
+Mon Dec 9 08:35:52 2019 -0800 - [Josh] 44ee1ac510b769869bf227a8574665c0a0ac276f
+ 2019-12-09_holiday-revive/holiday-revive.html      | 215 +++++++++++++++++++++
+ 2019-12-09_holiday-revive/skus.txt                 |   1 +
+ .../price-under-plps/price-unders.html             | 133 +++++++++++++
+ 3 files changed, 349 insertions(+)
+
+Fri Dec 6 11:52:07 2019 -0800 - [jcpsimmons@gmail.com] 41a0be62a4c7acbd6204a824fa13da21dc689a48
+ 2019-12-09_holiday/holiday.html                    |  30 ++++++++++++---------
+ 2019-12-09_holiday/img/3-ways.png                  | Bin 8138 -> 0 bytes
+ 2019-12-09_holiday/img/bg.png                      | Bin 4133 -> 0 bytes
+ 2019-12-09_holiday/img/boho-blog.jpg               | Bin 168549 -> 0 bytes
+ 2019-12-09_holiday/img/boho-link.png               | Bin 2680 -> 0 bytes
+ 2019-12-09_holiday/img/coffee-tables.jpg           | Bin 20229 -> 0 bytes
+ 2019-12-09_holiday/img/dining-sets.jpg             | Bin 31138 -> 0 bytes
+ 2019-12-09_holiday/img/get-inspired.jpg            | Bin 3983 -> 0 bytes
+ 2019-12-09_holiday/img/get-inspired.png            | Bin 1876 -> 0 bytes
+ 2019-12-09_holiday/img/gift-animation.jpg          | Bin 2940 -> 0 bytes
+ 2019-12-09_holiday/img/gifts-for-everyone.png      | Bin 5666 -> 0 bytes
+ 2019-12-09_holiday/img/holiday-favorites.jpg       | Bin 20260 -> 0 bytes
+ 2019-12-09_holiday/img/holiday-favorites.png       | Bin 5540 -> 0 bytes
+ 2019-12-09_holiday/img/holiday-savings.jpg         | Bin 19575 -> 0 bytes
+ 2019-12-09_holiday/img/holiday_LP_animation.gif    | Bin 3774 -> 0 bytes
+ 2019-12-09_holiday/img/holiday_LP_celebrate.png    | Bin 7496 -> 0 bytes
+ 2019-12-09_holiday/img/holiday_LP_get_inspired.png | Bin 2595 -> 0 bytes
+ 2019-12-09_holiday/img/holiday_LP_hero.jpg         | Bin 128579 -> 0 bytes
+ 2019-12-09_holiday/img/holiday_LP_shop_save.png    | Bin 2784 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/3-ways.png           | Bin 8143 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/bg.png               | Bin 2590 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/boho-blog.jpg        | Bin 217443 -> 0 bytes
+ .../img/mobile/boho-christmas-mobile.png           | Bin 2726 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/coffee-tables.png    | Bin 43044 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/dining-sets.png      | Bin 64347 -> 0 bytes
+ .../img/mobile/gifts-for-everyone.png              | Bin 4197 -> 0 bytes
+ .../img/mobile/holiday-favorites.png               | Bin 8087 -> 0 bytes
+ .../img/mobile/holiday-lp-mobile_header.gif        | Bin 128573 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/holiday-savings.png  | Bin 6705 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/modern-blog.jpg      | Bin 210456 -> 0 bytes
+ .../img/mobile/modern-christmas-mobile.png         | Bin 2862 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/modern-christmas.png | Bin 2862 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/ornaments-bg.png     | Bin 19708 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/queen-beds.png       | Bin 51965 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/rustic-blog.jpg      | Bin 217016 -> 0 bytes
+ .../img/mobile/rustic-christmas-mobile.png         | Bin 2715 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/sectionals.png       | Bin 92873 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/shop-by-price.png    | Bin 5032 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/sofas.png            | Bin 80880 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/tv-stands.png        | Bin 72422 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/under-100-mobile.png | Bin 2276 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/under-15-mobile.png  | Bin 2224 -> 0 bytes
+ 2019-12-09_holiday/img/mobile/under-50-mobile.png  | Bin 2322 -> 0 bytes
+ .../img/mobile/your-holiday-styled-3-ways.png      | Bin 8143 -> 0 bytes
+ 2019-12-09_holiday/img/modern-blog.jpg             | Bin 156944 -> 0 bytes
+ 2019-12-09_holiday/img/modern-link.png             | Bin 2775 -> 0 bytes
+ 2019-12-09_holiday/img/ornaments-bg.jpg            | Bin 48861 -> 0 bytes
+ 2019-12-09_holiday/img/ornaments-bg.png            | Bin 55911 -> 0 bytes
+ 2019-12-09_holiday/img/queen-beds.jpg              | Bin 21314 -> 0 bytes
+ 2019-12-09_holiday/img/rustic-blog.jpg             | Bin 192636 -> 0 bytes
+ 2019-12-09_holiday/img/rustic-link.png             | Bin 2719 -> 0 bytes
+ 2019-12-09_holiday/img/sectionals.jpg              | Bin 25784 -> 0 bytes
+ 2019-12-09_holiday/img/shop-and-save.png           | Bin 1182 -> 0 bytes
+ 2019-12-09_holiday/img/shop-by-price.jpg           | Bin 9187 -> 0 bytes
+ 2019-12-09_holiday/img/shop-by-price.png           | Bin 4378 -> 0 bytes
+ 2019-12-09_holiday/img/sofas.jpg                   | Bin 21928 -> 0 bytes
+ 2019-12-09_holiday/img/tv-stands.jpg               | Bin 25262 -> 0 bytes
+ 2019-12-09_holiday/img/under-100.png               | Bin 2431 -> 0 bytes
+ 2019-12-09_holiday/img/under-15.png                | Bin 2385 -> 0 bytes
+ 2019-12-09_holiday/img/under-50.png                | Bin 2895 -> 0 bytes
+ 60 files changed, 18 insertions(+), 12 deletions(-)
+
+Fri Dec 6 10:03:52 2019 -0800 - [Josh] 2fa20d754b8e94abfc2ac90cff7cb435bd017f5c
+ 2019-12-09_holiday/holiday.html                    | 292 ++++++--
+ 2019-12-09_holidayBOGO/holiday-bogo.html           | 804 +++++++++++++++++++++
+ .../SummerHosting}/FLEX_SummerHosting_2019.html    |   0
+ .../img/desktop/0708-summertime-hosting-dining.jpg | Bin
+ .../0708-summertime-hosting-food-series.jpg        | Bin
+ .../img/desktop/0708-summertime-hosting-hero.jpg   | Bin
+ .../img/desktop/0708-summertime-hosting-sofa.jpg   | Bin
+ .../0708-summertime-hosting-video-section.jpg      | Bin
+ .../0708-summertime-hosting-mobile-dining.jpg      | Bin
+ .../mobile/0708-summertime-hosting-mobile-hero.jpg | Bin
+ .../mobile/0708-summertime-hosting-mobile-sofa.jpg | Bin
+ .../optimized/0708-summertime-hosting-dining.jpg   | Bin
+ .../0708-summertime-hosting-food-series.jpg        | Bin
+ .../img/optimized/0708-summertime-hosting-hero.jpg | Bin
+ .../0708-summertime-hosting-mobile-dining.jpg      | Bin
+ .../0708-summertime-hosting-mobile-hero.jpg        | Bin
+ .../0708-summertime-hosting-mobile-sofa.jpg        | Bin
+ .../img/optimized/0708-summertime-hosting-sofa.jpg | Bin
+ .../0708-summertime-hosting-video-section.jpg      | Bin
+ 19 files changed, 1027 insertions(+), 69 deletions(-)
+
+Thu Dec 5 10:09:02 2019 -0800 - [Josh] 636f4ab6a8d20aa9107fb8241630ac8278c75aee
+ 2019-12-09_holiday/holiday.html | 12 +++++++-----
+ Scripts/workFrontElim.js        |  7 +++++++
+ cssHacks/haxx.css               | 10 ++++++++++
+ 3 files changed, 24 insertions(+), 5 deletions(-)
+
+Thu Dec 5 09:21:05 2019 -0800 - [Josh] b95694f48a65ed1316da02847965cf7c5a518945
+ 2019-12-09_holiday/holiday.html | 51 +++++++++++++++++++++++++++++++++++++----
+ 2019-12-09_holiday/products.txt | 13 ++++++++++-
+ 2 files changed, 59 insertions(+), 5 deletions(-)
+
+Thu Dec 5 08:44:09 2019 -0800 - [Josh] 3d8de44fce9c8f72c4870a08945a53affa25c0cc
+ 2019-12-09_holiday/holiday.html | 58 ++++++++++++++++++++++++++++-------------
+ 1 file changed, 40 insertions(+), 18 deletions(-)
+
+Tue Dec 3 15:52:20 2019 -0800 - [Josh] 3ab0e7d2ffa53b5a9a9a39e57cde3d63ca7dc2f2
+ 2019-12-09_holiday/holiday.html | 84 +++++++++++++++++++++++++++++------------
+ 1 file changed, 60 insertions(+), 24 deletions(-)
+
+Tue Dec 3 14:53:50 2019 -0800 - [Josh] a654ef2d193c85f41467bcc62f153a118d44a853
+ 2019-12-09_holiday/holiday.html                    | 149 ++++++++++++++++-----
+ .../img/mobile/holiday-favorites.png               | Bin 5981 -> 8087 bytes
+ 2019-12-09_holiday/img/mobile/holiday-savings.png  | Bin 5718 -> 6705 bytes
+ 2019-12-09_holiday/img/mobile/modern-christmas.png | Bin 0 -> 2862 bytes
+ 2019-12-09_holiday/img/mobile/ornaments-bg.png     | Bin 49554 -> 19708 bytes
+ 2019-12-09_holiday/products.txt                    |   1 +
+ 6 files changed, 114 insertions(+), 36 deletions(-)
+
+Tue Dec 3 10:02:55 2019 -0800 - [Josh] 7d2e7fbf8aad99e1ac8d6ebf16c0c7643c6a4ffb
+ 2019-12-09_holiday/holiday.html                    | 461 ++++++++++++++++++---
+ 2019-12-09_holiday/img/3-ways.png                  | Bin 0 -> 8138 bytes
+ 2019-12-09_holiday/img/bg.png                      | Bin 0 -> 4133 bytes
+ 2019-12-09_holiday/img/boho-blog.jpg               | Bin 0 -> 168549 bytes
+ 2019-12-09_holiday/img/boho-link.png               | Bin 0 -> 2680 bytes
+ 2019-12-09_holiday/img/coffee-tables.jpg           | Bin 0 -> 20229 bytes
+ 2019-12-09_holiday/img/dining-sets.jpg             | Bin 0 -> 31138 bytes
+ 2019-12-09_holiday/img/get-inspired.jpg            | Bin 0 -> 3983 bytes
+ 2019-12-09_holiday/img/get-inspired.png            | Bin 0 -> 1876 bytes
+ 2019-12-09_holiday/img/gift-animation.jpg          | Bin 0 -> 2940 bytes
+ 2019-12-09_holiday/img/gifts-for-everyone.png      | Bin 0 -> 5666 bytes
+ 2019-12-09_holiday/img/holiday-favorites.jpg       | Bin 0 -> 20260 bytes
+ 2019-12-09_holiday/img/holiday-favorites.png       | Bin 0 -> 5540 bytes
+ 2019-12-09_holiday/img/holiday-savings.jpg         | Bin 0 -> 19575 bytes
+ 2019-12-09_holiday/img/holiday_LP_animation.gif    | Bin 0 -> 3774 bytes
+ 2019-12-09_holiday/img/holiday_LP_celebrate.png    | Bin 0 -> 7496 bytes
+ 2019-12-09_holiday/img/holiday_LP_get_inspired.png | Bin 0 -> 2595 bytes
+ 2019-12-09_holiday/img/holiday_LP_hero.jpg         | Bin 0 -> 128579 bytes
+ 2019-12-09_holiday/img/holiday_LP_shop_save.png    | Bin 0 -> 2784 bytes
+ 2019-12-09_holiday/img/mobile/3-ways.png           | Bin 0 -> 8143 bytes
+ 2019-12-09_holiday/img/mobile/bg.png               | Bin 0 -> 2590 bytes
+ 2019-12-09_holiday/img/mobile/boho-blog.jpg        | Bin 0 -> 217443 bytes
+ .../img/mobile/boho-christmas-mobile.png           | Bin 0 -> 2726 bytes
+ 2019-12-09_holiday/img/mobile/coffee-tables.png    | Bin 0 -> 43044 bytes
+ 2019-12-09_holiday/img/mobile/dining-sets.png      | Bin 0 -> 64347 bytes
+ .../img/mobile/gifts-for-everyone.png              | Bin 0 -> 4197 bytes
+ .../img/mobile/holiday-favorites.png               | Bin 0 -> 5981 bytes
+ .../img/mobile/holiday-lp-mobile_header.gif        | Bin 0 -> 128573 bytes
+ 2019-12-09_holiday/img/mobile/holiday-savings.png  | Bin 0 -> 5718 bytes
+ 2019-12-09_holiday/img/mobile/modern-blog.jpg      | Bin 0 -> 210456 bytes
+ .../img/mobile/modern-christmas-mobile.png         | Bin 0 -> 2862 bytes
+ 2019-12-09_holiday/img/mobile/ornaments-bg.png     | Bin 0 -> 49554 bytes
+ 2019-12-09_holiday/img/mobile/queen-beds.png       | Bin 0 -> 51965 bytes
+ 2019-12-09_holiday/img/mobile/rustic-blog.jpg      | Bin 0 -> 217016 bytes
+ .../img/mobile/rustic-christmas-mobile.png         | Bin 0 -> 2715 bytes
+ 2019-12-09_holiday/img/mobile/sectionals.png       | Bin 0 -> 92873 bytes
+ 2019-12-09_holiday/img/mobile/shop-by-price.png    | Bin 0 -> 5032 bytes
+ 2019-12-09_holiday/img/mobile/sofas.png            | Bin 0 -> 80880 bytes
+ 2019-12-09_holiday/img/mobile/tv-stands.png        | Bin 0 -> 72422 bytes
+ 2019-12-09_holiday/img/mobile/under-100-mobile.png | Bin 0 -> 2276 bytes
+ 2019-12-09_holiday/img/mobile/under-15-mobile.png  | Bin 0 -> 2224 bytes
+ 2019-12-09_holiday/img/mobile/under-50-mobile.png  | Bin 0 -> 2322 bytes
+ .../img/mobile/your-holiday-styled-3-ways.png      | Bin 0 -> 8143 bytes
+ 2019-12-09_holiday/img/modern-blog.jpg             | Bin 0 -> 156944 bytes
+ 2019-12-09_holiday/img/modern-link.png             | Bin 0 -> 2775 bytes
+ 2019-12-09_holiday/img/ornaments-bg.jpg            | Bin 0 -> 48861 bytes
+ 2019-12-09_holiday/img/ornaments-bg.png            | Bin 0 -> 55911 bytes
+ 2019-12-09_holiday/img/queen-beds.jpg              | Bin 0 -> 21314 bytes
+ 2019-12-09_holiday/img/rustic-blog.jpg             | Bin 0 -> 192636 bytes
+ 2019-12-09_holiday/img/rustic-link.png             | Bin 0 -> 2719 bytes
+ 2019-12-09_holiday/img/sectionals.jpg              | Bin 0 -> 25784 bytes
+ 2019-12-09_holiday/img/shop-and-save.png           | Bin 0 -> 1182 bytes
+ 2019-12-09_holiday/img/shop-by-price.jpg           | Bin 0 -> 9187 bytes
+ 2019-12-09_holiday/img/shop-by-price.png           | Bin 0 -> 4378 bytes
+ 2019-12-09_holiday/img/sofas.jpg                   | Bin 0 -> 21928 bytes
+ 2019-12-09_holiday/img/tv-stands.jpg               | Bin 0 -> 25262 bytes
+ 2019-12-09_holiday/img/under-100.png               | Bin 0 -> 2431 bytes
+ 2019-12-09_holiday/img/under-15.png                | Bin 0 -> 2385 bytes
+ 2019-12-09_holiday/img/under-50.png                | Bin 0 -> 2895 bytes
+ 59 files changed, 397 insertions(+), 64 deletions(-)
+
+Mon Dec 2 12:10:44 2019 -0800 - [Josh] eb243ce8ed8c2cc76df1e5ef807c98bc52f2affe
+ .../2019-11-13_black-friday-extended.html          |  19 ----
+ .../master_product_script.html                     |   4 +
+ 2019-12-01_cyber-monday/cm_products_script.html    | 113 +++++++++++++--------
+ .../cyber-monday/cyber-monday-day-of.html          |  43 +++++---
+ .../2019-12-01_cyber-monday-early-access.html      |  47 +++++++--
+ 2019-12-09_holiday/holiday.html                    | 102 +++++++++++++++++++
+ 6 files changed, 250 insertions(+), 78 deletions(-)
+
+Tue Nov 26 12:14:02 2019 -0800 - [Josh] 259b66a4d0926303a5948e4b68b8f153a53a2676
+ .../master_product_script.html                     |  47 +-
+ 2019-12-01_cyber-monday/clearance-PLP/skuList.txt  |   2 +-
+ 2019-12-01_cyber-monday/cm_products_script.html    | 538 +++++++++++----------
+ .../cyber-monday/cyber-monday-day-of.html          |  18 +-
+ 4 files changed, 323 insertions(+), 282 deletions(-)
+
+Mon Nov 25 15:30:03 2019 -0800 - [Josh] f1e4af67a2ef71a8a89c8d0acb6b8fa1fe9fa6e9
+ .../2019-11-13_black-friday-doorbuster.html        |  6 ++++-
+ .../2019-11-13_black-friday-extended.html          |  6 ++++-
+ .../2019-11-13_black-friday-preview.html           | 27 +++++++++++++++++++---
+ .../2019-11-13_black-friday-weekend.html           |  6 ++++-
+ 2019-12-01_cyber-monday/cm_products_script.html    |  7 +-----
+ .../cyber-monday/cyber-monday-day-of.html          |  6 ++---
+ .../2019-12-01_cyber-monday-early-access.html      |  7 ++++++
+ 7 files changed, 50 insertions(+), 15 deletions(-)
+
+Mon Nov 25 13:31:10 2019 -0800 - [Josh] 831a055bb61cd566d20ec13b0eb2dd935f187bde
+ .../master_product_script.html                     |    1 +
+ .../allegedly-the-final-product-list.csv           |  252 ++
+ .../clearance-PLP/cm-plp-header.html               |    8 +
+ 2019-12-01_cyber-monday/clearance-PLP/skuList.txt  |    2 +-
+ 2019-12-01_cyber-monday/cm_products_script.html    | 2510 +++++++++++++-------
+ .../cyber-monday/cyber-monday-day-of.html          |   66 +-
+ .../2019-12-01_cyber-monday-early-access.html      |    9 +-
+ 7 files changed, 1918 insertions(+), 930 deletions(-)
+
+Fri Nov 22 16:51:35 2019 -0800 - [Josh] c7849f9fb04284abe01cc7ff5c6231acc86ca13a
+ .../19-blackFriday-dayof-PLP-topblock.html         |  15 +++---
+ .../19-blackFriday-preview-PLP-topblock.html       |  10 ++--
+ .../clearance-PLP/skuList.txt                      |   0
+ .../cm_products_script.html                        |   0
+ .../cyber-monday/cyber-monday-day-of.html          |  51 ++++++++++-----------
+ .../2019-12-01_cyber-monday-early-access.html      |   0
+ .../early-access/countown.js                       |   0
+ .../img/1201-cm-preview-lp-diningset-250750.jpg    | Bin
+ .../img/1201-cm-preview-lp-financing.jpg           | Bin
+ .../img/1201-cm-preview-lp-hero.jpg                | Bin
+ .../1201-cm-preview-lp-mobile-diningset-250750.jpg | Bin
+ .../img/1201-cm-preview-lp-mobile-financing.jpg    | Bin
+ .../img/1201-cm-preview-lp-mobile-hero.jpg         | Bin
+ .../img/1201-cm-preview-lp-mobile-sofa-223508.jpg  | Bin
+ .../img/1201-cm-preview-lp-sectional-223418.jpg    | Bin
+ .../img/1201-cm-preview-lp-sofa-223508.jpg         | Bin
+ 16 files changed, 37 insertions(+), 39 deletions(-)
+
+Fri Nov 22 15:38:39 2019 -0800 - [Josh] 82f072ab2789f48dd42fcdc9561f9286dc290e88
+ .../2019-11-13_black-friday-preview.html           |  6 ++---
+ .../19-blackFriday-dayof-PLP-bottomblock.html      |  6 ++---
+ .../19-blackFriday-dayof-PLP-topblock.html         | 31 +++++++++++++---------
+ .../19-blackFriday-preview-PLP-topblock.html       | 17 +++++++-----
+ 4 files changed, 35 insertions(+), 25 deletions(-)
+
+Fri Nov 22 10:46:11 2019 -0800 - [Josh] 9d84a802a5e70c7067250aff0872e6f58c199253
+ .../cyber-monday/cyber-monday-day-of.html          | 41 +++++++++++-----------
+ 1 file changed, 21 insertions(+), 20 deletions(-)
+
+Fri Nov 22 10:30:06 2019 -0800 - [Josh] 6432e88a25de5aab845060c16ceaee9752d5a0db
+ .../2019-11-13_black-friday-doorbuster.html        |  14 +-
+ .../2019-11-13_black-friday-extended.html          |  25 +-
+ .../2019-11-13_black-friday-preview.html           |  12 +-
+ .../2019-11-13_black-friday-weekend.html           |  21 +-
+ .../19-blackFriday-dayof-PLP-topblock.html         |   6 +-
+ .../19-blackFriday-preview-PLP-topblock.html       |   6 +-
+ .../cyber-monday/cyber-monday-day-of.html          | 552 +++++++++++++++++++++
+ .../cyber-monday/cyber-monday.html                 | 342 -------------
+ Scripts/jpegoptim.sh                               |   1 +
+ 9 files changed, 612 insertions(+), 367 deletions(-)
+
+Thu Nov 21 15:59:14 2019 -0800 - [Josh] 70da920e6d05c597801809797b98b0a84bc0e95d
+ .../2019-11-13_black-friday-doorbuster.html        |   0
+ .../2019-11-13_black-friday-extended.html          |   0
+ .../extended_productScript.html                    |   0
+ .../2019-11-13_black-friday-preview.html           |   0
+ .../img/BF-landing-page-preview.gif                | Bin
+ .../img/black-friday-LP-preview-mobile.jpg         | Bin
+ .../black-friday-preview/img/preview-hero.jpg      | Bin
+ .../black-friday-preview/img/rugs.jpg              | Bin
+ .../black-friday-preview/img/sofa.jpg              | Bin
+ .../preview_productScript.html                     |   0
+ .../2019-11-13_black-friday-weekend.html           |   0
+ .../weekend_productScript.html                     |   0
+ .../master_product_script.html                     |   0
+ .../misc/pdp-header.html                           |   0
+ .../product-data/DEPRECATEDProductJSON.html        |   0
+ .../product-data/ProductData.csv                   |   0
+ .../product-data/ProductData.xlsx                  | Bin
+ .../product-data/output.json                       |   0
+ .../product-data/productDataCSVtoJSON.js           |   0
+ .../product-images/102945.jpg                      | Bin
+ .../product-images/105885.jpg                      | Bin
+ .../product-images/107883.jpg                      | Bin
+ .../product-images/107887.jpg                      | Bin
+ .../product-images/107889.jpg                      | Bin
+ .../product-images/108022.jpg                      | Bin
+ .../product-images/108028.jpg                      | Bin
+ .../product-images/111515.jpg                      | Bin
+ .../product-images/201770.jpg                      | Bin
+ .../product-images/206465.jpg                      | Bin
+ .../product-images/206466.jpg                      | Bin
+ .../product-images/206467.jpg                      | Bin
+ .../product-images/207076.jpg                      | Bin
+ .../product-images/207147.jpg                      | Bin
+ .../product-images/207156.jpg                      | Bin
+ .../product-images/207811.jpg                      | Bin
+ .../product-images/225986.jpg                      | Bin
+ .../product-images/233030.jpg                      | Bin
+ .../product-images/233031.jpg                      | Bin
+ .../product-images/233033.jpg                      | Bin
+ .../product-images/235702.jpg                      | Bin
+ .../product-images/236257.jpg                      | Bin
+ .../product-images/236258.jpg                      | Bin
+ .../product-images/236260.jpg                      | Bin
+ .../product-images/236262.jpg                      | Bin
+ .../product-images/236265.jpg                      | Bin
+ .../product-images/236268.jpg                      | Bin
+ .../product-images/236271.jpg                      | Bin
+ .../product-images/236275.jpg                      | Bin
+ .../product-images/236279.jpg                      | Bin
+ .../product-images/236283.jpg                      | Bin
+ .../product-images/236286.jpg                      | Bin
+ .../product-images/236288.jpg                      | Bin
+ .../product-images/236290.jpg                      | Bin
+ .../product-images/236291.jpg                      | Bin
+ .../product-images/236293.jpg                      | Bin
+ .../product-images/236295.jpg                      | Bin
+ .../product-images/236296.jpg                      | Bin
+ .../product-images/236297.jpg                      | Bin
+ .../product-images/236298.jpg                      | Bin
+ .../product-images/236299.jpg                      | Bin
+ .../product-images/236300.jpg                      | Bin
+ .../product-images/236301.jpg                      | Bin
+ .../product-images/236302.jpg                      | Bin
+ .../product-images/236303.jpg                      | Bin
+ .../product-images/236304.jpg                      | Bin
+ .../product-images/236305.jpg                      | Bin
+ .../product-images/236306.jpg                      | Bin
+ .../product-images/236307.jpg                      | Bin
+ .../product-images/236309.jpg                      | Bin
+ .../product-images/236312.jpg                      | Bin
+ .../product-images/244100.jpg                      | Bin
+ .../product-images/244114.jpg                      | Bin
+ .../product-images/244126.jpg                      | Bin
+ .../product-images/244490.jpg                      | Bin
+ .../product-images/244491.jpg                      | Bin
+ .../product-images/244492.jpg                      | Bin
+ .../product-images/245363.jpg                      | Bin
+ .../product-images/245368.jpg                      | Bin
+ .../product-images/245369.jpg                      | Bin
+ .../product-images/245370.jpg                      | Bin
+ .../product-images/248533.jpg                      | Bin
+ .../product-images/248535.jpg                      | Bin
+ .../product-images/248581.jpg                      | Bin
+ .../product-images/248584.jpg                      | Bin
+ .../product-images/249837.jpg                      | Bin
+ .../product-images/250580.jpg                      | Bin
+ .../product-images/250581.jpg                      | Bin
+ .../product-images/250582.jpg                      | Bin
+ .../product-images/250583.jpg                      | Bin
+ .../product-images/250584.jpg                      | Bin
+ .../product-images/250585.jpg                      | Bin
+ .../product-images/250586.jpg                      | Bin
+ .../product-images/250587.jpg                      | Bin
+ .../product-images/250588.jpg                      | Bin
+ .../product-images/250589.jpg                      | Bin
+ .../product-images/250590.jpg                      | Bin
+ .../product-images/250591.jpg                      | Bin
+ .../product-images/250592.jpg                      | Bin
+ .../product-images/250593.jpg                      | Bin
+ .../product-images/250594.jpg                      | Bin
+ .../product-images/250595.jpg                      | Bin
+ .../product-images/250596.jpg                      | Bin
+ .../product-images/250597.jpg                      | Bin
+ .../product-images/250598.jpg                      | Bin
+ .../product-images/250599.jpg                      | Bin
+ .../product-images/250600.jpg                      | Bin
+ .../product-images/250637.jpg                      | Bin
+ .../product-images/250664.jpg                      | Bin
+ .../product-images/250665.jpg                      | Bin
+ .../product-images/250884.jpg                      | Bin
+ .../product-images/250885.jpg                      | Bin
+ .../product-images/250886.jpg                      | Bin
+ .../product-images/250887.jpg                      | Bin
+ .../product-images/251254.jpg                      | Bin
+ .../product-images/251575.jpg                      | Bin
+ .../product-images/251577.jpg                      | Bin
+ .../product-images/251817.jpg                      | Bin
+ .../product-images/251818.jpg                      | Bin
+ .../product-images/251819.jpg                      | Bin
+ .../product-images/251820.jpg                      | Bin
+ .../product-images/251821.jpg                      | Bin
+ .../product-images/251822.jpg                      | Bin
+ .../product-images/251823.jpg                      | Bin
+ .../product-images/251824.jpg                      | Bin
+ .../product-images/251825.jpg                      | Bin
+ .../product-images/251826.jpg                      | Bin
+ .../product-images/252470.jpg                      | Bin
+ .../product-images/252471.jpg                      | Bin
+ .../product-images/253012.jpg                      | Bin
+ .../product-images/253022.jpg                      | Bin
+ .../product-images/253178.jpg                      | Bin
+ .../product-images/253180.jpg                      | Bin
+ .../product-images/253272.jpg                      | Bin
+ .../product-images/253274.jpg                      | Bin
+ .../product-images/253276.jpg                      | Bin
+ .../product-images/253277.jpg                      | Bin
+ .../product-images/253278.jpg                      | Bin
+ .../product-images/253279.jpg                      | Bin
+ .../product-images/253280.jpg                      | Bin
+ .../product-images/253282.jpg                      | Bin
+ .../product-images/253283.jpg                      | Bin
+ .../product-images/253284.jpg                      | Bin
+ .../product-images/253285.jpg                      | Bin
+ .../product-images/253286.jpg                      | Bin
+ .../product-images/253287.jpg                      | Bin
+ .../product-images/253295.jpg                      | Bin
+ .../product-images/253296.jpg                      | Bin
+ .../product-images/253297.jpg                      | Bin
+ .../product-images/253301.jpg                      | Bin
+ .../product-images/253302.jpg                      | Bin
+ .../product-images/253303.jpg                      | Bin
+ .../product-images/253304.jpg                      | Bin
+ .../product-images/253305.jpg                      | Bin
+ .../product-images/253309.jpg                      | Bin
+ .../product-images/253311.jpg                      | Bin
+ .../product-images/253316.jpg                      | Bin
+ .../product-images/253320.jpg                      | Bin
+ .../product-images/253321.jpg                      | Bin
+ .../product-images/253803.jpg                      | Bin
+ .../product-images/253804.jpg                      | Bin
+ .../product-images/254398.jpg                      | Bin
+ .../product-images/254399.jpg                      | Bin
+ .../product-images/254400.jpg                      | Bin
+ .../product-images/254401.jpg                      | Bin
+ .../product-images/254571.jpg                      | Bin
+ .../product-images/254572.jpg                      | Bin
+ .../product-images/254573.jpg                      | Bin
+ .../product-images/254574.jpg                      | Bin
+ .../product-images/254575.jpg                      | Bin
+ .../product-images/255207.jpg                      | Bin
+ .../product-images/255208.jpg                      | Bin
+ .../product-images/255209.jpg                      | Bin
+ .../product-images/255866.jpg                      | Bin
+ .../product-images/256109.jpg                      | Bin
+ .../product-images/256110.jpg                      | Bin
+ .../product-images/256111.jpg                      | Bin
+ .../product-images/256367.jpg                      | Bin
+ .../product-images/256369.jpg                      | Bin
+ .../product-images/256370.jpg                      | Bin
+ .../product-images/256373.jpg                      | Bin
+ .../product-images/56131.jpg                       | Bin
+ .../product-images/69702.jpg                       | Bin
+ .../product-images/76848.jpg                       | Bin
+ .../product-images/80781.jpg                       | Bin
+ .../product-images/85054.jpg                       | Bin
+ .../product-images/85055.jpg                       | Bin
+ .../product-images/88247.jpg                       | Bin
+ .../product-images/92124.jpg                       | Bin
+ .../19-blackFriday-dayof-PLP-bottomblock.html      |  37 ++++
+ .../19-blackFriday-dayof-PLP-topblock.html         | 206 +++++++++++++++++++++
+ .../19-blackFriday-preview-PLP-bottomblock.html    |  37 ++++
+ .../19-blackFriday-preview-PLP-topblock.html       | 197 ++++++++++++++++++++
+ 19-11-25_BlackFriday-PLPs/products.txt             |   1 +
+ 193 files changed, 478 insertions(+)
+
+Thu Nov 21 14:39:41 2019 -0800 - [Josh] bdf2cd902cdc3505b9f5ca72fe8cf0d9eeaf755b
+ .../2019-11-13_black-friday-doorbuster.html        |  21 +-
+ .../2019-11-13_black-friday-extended.html          |  16 +-
+ .../2019-11-13_black-friday-preview.html           |  13 +-
+ .../2019-11-13_black-friday-weekend.html           |  21 +-
+ .../clearance-PLP/skuList.txt                      |   1 +
+ .../cyber-monday.html}                             |   0
+ .../2019-12-01_cyber-monday-early-access.html      | 342 +++++++++++++++++++++
+ .../{misc => early-access}/countown.js             |   0
+ 8 files changed, 402 insertions(+), 12 deletions(-)
+
+Thu Nov 21 12:13:07 2019 -0800 - [Josh] 933ea5baa0f28e7356f8d85952fff2ab3a034dc1
+ .../2019-11-13_black-friday-doorbuster.html        |  2 +-
+ .../2019-11-13_black-friday-extended.html          |  2 +-
+ .../2019-11-13_black-friday-preview.html           |  2 +-
+ .../2019-11-13_black-friday-weekend.html           |  2 +-
+ 19-11-25_BlackFriday/master_product_script.html    | 35 ++++++++++++++++++++++
+ .../2019-12-01_cyber-monday-preview.html           | 12 +++++++-
+ 2019-12-01_cyber-monday-preview/misc/countown.js   | 23 ++++++++++++++
+ 7 files changed, 73 insertions(+), 5 deletions(-)
+
+Thu Nov 21 09:22:30 2019 -0800 - [Josh] 3879bdabd04ed4c4d0a5ef78331a06a972993085
+ .../2019-11-13_black-friday-doorbuster.html        |   6 +-
+ .../2019-11-13_black-friday-extended.html          |   4 +-
+ .../2019-11-13_black-friday-preview.html           |   4 +-
+ .../2019-11-13_black-friday-weekend.html           |   6 +-
+ 19-11-25_BlackFriday/master_product_script.html    | 871 ++++++++++++++++++++-
+ .../DEPRECATEDProductJSON.html}                    |   0
+ 6 files changed, 864 insertions(+), 27 deletions(-)
+
+Thu Nov 21 09:00:16 2019 -0800 - [Josh] 3714336ffd350a1da06c2c004a034d0efbdc01fc
+ .../2019-11-13_black-friday-doorbuster.html        | 24 +++++++++++++------
+ .../2019-11-13_black-friday-extended.html          | 28 +++++++++++++++-------
+ .../2019-11-13_black-friday-preview.html           | 21 +++++++++++-----
+ .../2019-11-13_black-friday-weekend.html           | 20 ++++++++++++----
+ .../2019-12-01_cyber-monday-preview.html           | 16 +++++++++----
+ 5 files changed, 78 insertions(+), 31 deletions(-)
+
+Wed Nov 20 11:56:21 2019 -0800 - [Josh] 79bf66ce73713eaae9b05ea823a8ad1caa8e4d90
+ .../2019-11-13_black-friday-doorbuster.html        |   6 +
+ .../2019-11-13_black-friday-extended.html          |   9 +-
+ .../2019-11-13_black-friday-preview.html           |   5 +
+ .../2019-11-13_black-friday-weekend.html           |   5 +
+ .../2019-12-01_cyber-monday-preview.html           | 157 +++-
+ .../cm_products_script.html                        | 908 +++++++++++++++++++++
+ 6 files changed, 1063 insertions(+), 27 deletions(-)
+
+Wed Nov 20 10:09:47 2019 -0800 - [Josh] 7286a8fc4489a2444ef7b34e2beb937878649ea0
+ 19-11-25_BlackFriday/ProductJSON.html              |   6 +-
+ .../2019-11-13_black-friday-doorbuster.html        |  22 ++-
+ .../2019-11-13_black-friday-extended.html          |  24 ++-
+ .../2019-11-13_black-friday-preview.html           |  24 ++-
+ .../2019-11-13_black-friday-weekend.html           |  22 ++-
+ 19-11-25_BlackFriday/misc/pdp-header.html          |   4 +
+ .../2019-12-01_cyber-monday-preview.html           | 217 +++++++++++++++++++++
+ .../img/1201-cm-preview-lp-diningset-250750.jpg    | Bin 0 -> 35987 bytes
+ .../img/1201-cm-preview-lp-financing.jpg           | Bin 0 -> 29383 bytes
+ .../img/1201-cm-preview-lp-hero.jpg                | Bin 0 -> 83918 bytes
+ .../1201-cm-preview-lp-mobile-diningset-250750.jpg | Bin 0 -> 35527 bytes
+ .../img/1201-cm-preview-lp-mobile-financing.jpg    | Bin 0 -> 58746 bytes
+ .../img/1201-cm-preview-lp-mobile-hero.jpg         | Bin 0 -> 59122 bytes
+ .../img/1201-cm-preview-lp-mobile-sofa-223508.jpg  | Bin 0 -> 21551 bytes
+ .../img/1201-cm-preview-lp-sectional-223418.jpg    | Bin 0 -> 39370 bytes
+ .../img/1201-cm-preview-lp-sofa-223508.jpg         | Bin 0 -> 21051 bytes
+ .../19-10-01_ShareLink}/19-10-01_ShareLink.html    |   0
+ .../19-10-01_ShareLink}/chairsforStudying.html     |   0
+ .../19-10-01_ShareLink}/referencePage.html         |   0
+ .../19-10-01_ShareLink}/shadesOfBlue.html          |   0
+ .../19-10-01_ShareLink}/someOtherShareLinks.html   |   0
+ .../19-10-14_SanJoseOpening}/sign-up-panel.html    |   0
+ .../19-10-21_Thanksgiving.html                     |   0
+ .../img/1021_LRDR_category_banner.png              | Bin
+ .../img/1021_diningroom_category_bartable.jpg      | Bin
+ .../img/1021_diningroom_category_diningset.jpg     | Bin
+ .../img/1021_livingroom_category_coffeetable.jpg   | Bin
+ .../img/1021_livingroom_category_sofa.jpg          | Bin
+ .../category-pages/thx-dining-room.html            |   0
+ .../category-pages/thx-living-room.html            |   0
+ .../102119_Thanksgiving_Desktop_coffee-tables.jpg  | Bin
+ .../desktop/102119_Thanksgiving_Desktop_copy.jpg   | Bin
+ ...102119_Thanksgiving_Desktop_dining-room_v02.jpg | Bin
+ .../102119_Thanksgiving_Desktop_dining-sets.jpg    | Bin
+ .../102119_Thanksgiving_Desktop_diy-blog.jpg       | Bin
+ ...2119_Thanksgiving_Desktop_host-thanksgiving.jpg | Bin
+ .../102119_Thanksgiving_Desktop_living-room.jpg    | Bin
+ .../102119_Thanksgiving_Desktop_queen-beds.jpg     | Bin
+ .../102119_Thanksgiving_Desktop_sectionals.jpg     | Bin
+ .../desktop/102119_Thanksgiving_Desktop_sofas.jpg  | Bin
+ .../102119_Thanksgiving_Desktop_tv-stands.jpg      | Bin
+ .../desktop/102119_Thanksgiving_Desktop_video.jpg  | Bin
+ .../desktop/102119_Thanksgiving_Desktop_watch.jpg  | Bin
+ .../102119_Thanksgiving_Desktop_wish-list.jpg      | Bin
+ .../102119_Thanksgiving_Mobile_coffee-tables.jpg   | Bin
+ .../102119_Thanksgiving_Mobile_dining-room.jpg     | Bin
+ .../102119_Thanksgiving_Mobile_dining-sets.jpg     | Bin
+ .../102119_Thanksgiving_Mobile_living-room.jpg     | Bin
+ .../102119_Thanksgiving_Mobile_queen-beds.jpg      | Bin
+ .../102119_Thanksgiving_Mobile_sectionals.jpg      | Bin
+ .../mobile/102119_Thanksgiving_Mobile_sofas.jpg    | Bin
+ ...19_Thanksgiving_Mobile_thanksgiving-savings.jpg | Bin
+ ...19_Thanksgiving_Mobile_thanksgiving-savings.png | Bin
+ ..._Thanksgiving_Mobile_thanksgiving-wish-list.jpg | Bin
+ ..._Thanksgiving_Mobile_thanksgiving-wish-list.png | Bin
+ .../102119_Thanksgiving_Mobile_tv-stands.jpg       | Bin
+ ...2119_Thanksgiving_Mobile_watch-thanksgiving.jpg | Bin
+ ...2119_Thanksgiving_Mobile_watch-thanksgiving.png | Bin
+ .../102119_Thanksgiving_Mobile_watch-video.jpg     | Bin
+ .../thanksgiving-landing-page-mobile_savings.png   | Bin
+ .../thanksgiving-landing-page-mobile_unfold.png    | Bin
+ .../thanksgiving-landing-page-mobile_wishlist.jpg  | Bin
+ .../19-10-21_Thanksgiving}/productlist.txt         |   0
+ .../2019-10-28_VeteransDayPLP.html                 |   0
+ .../2019-10-28_VeteransDayRevivePromo.html         |   0
+ .../img/1104revive-veterans-LP-mobile.jpg          | Bin
+ .../img/1104revive-veterans-hero-mobile.jpg        | Bin
+ .../img/1104veterans-day-revive_LP.jpg             | Bin
+ .../img/1104veterans-day-revive_promo.jpg          | Bin
+ .../19-11-04_VetsDay}/19-11-04_VetsDay.html        |   0
+ .../19-11-04_VetsDay}/SKUS.txt                     |   0
+ .../1104-veteransday-lp-carousel-price-under.jpg   | Bin
+ .../1104-veteransday-lp-diningset-250750.jpg       | Bin
+ .../1104-veteransday-lp-hero-sofa-246096.jpg       | Bin
+ .../1104-veteransday-lp-queenbed-246552.jpg        | Bin
+ .../1104-veteransday-lp-sectional-250750.jpg       | Bin
+ .../1104-veteransday-lp-veteransday-revive.jpg     | Bin
+ .../img/desktop/1104-veteransday-lp-video.jpg      | Bin
+ .../img/desktop/1104-veteransday-lp-video_v01.jpg  | Bin
+ ...eteransday_carousel_priceunder_accentchairs.jpg | Bin
+ ...eteransday_carousel_priceunder_coffeetables.jpg | Bin
+ ...04_veteransday_carousel_priceunder_tvstands.jpg | Bin
+ ...1104-veteransday-lp-hero-sofa-246096-mobile.jpg | Bin
+ ...04-veteransday-lp-veteransday-revive-mobile.jpg | Bin
+ .../1104-veteransday-lp-video-mobile_v01.jpg       | Bin
+ .../19-11-04_VetsDay}/slick-insert-code.html       |   0
+ .../19-11-04_VetsDay}/slick-insert-code.min.html   |   0
+ .../19-7-15_KingForQueenEvent}/PDPList.txt         |   0
+ .../img_optimized/0715_kingForQueenEvent_cta.png   | Bin
+ .../img_optimized/0715_kingForQueenEvent_logo.png  | Bin
+ .../0715_kingForQueenEvent_sleep-tracker.png       | Bin
+ .../0715_kingForQueenEvent_video_v2.jpg            | Bin
+ .../19-7-15_KingForQueenEvent}/img_raw/cta.png     | Bin
+ .../19-7-15_KingForQueenEvent}/img_raw/logo.png    | Bin
+ .../img_raw/sleep-tracker.png                      | Bin
+ .../19-7-15_KingForQueenEvent}/img_raw/video.jpg   | Bin
+ .../19-7-15_KingForQueenEvent}/img_raw/video.png   | Bin
+ .../19-7-15_KingForQueenEvent}/index.html          |   0
+ .../img/0729-kids-teens-beds-under-300.jpg         | Bin
+ .../img/0729-kids-teens-commercial.jpg             | Bin
+ .../img/0729-kids-teens-hero-1.jpg                 | Bin
+ .../img/0729-kids-teens-hero-2.jpg                 | Bin
+ .../img/0729-kids-teens-hero.jpg                   | Bin
+ .../originals/0729-kids-teens-beds-under-300.png   | Bin
+ .../img/originals/0729-kids-teens-commercial.png   | Bin
+ .../img/originals/0729-kids-teens-hero-1.png       | Bin
+ .../img/originals/0729-kids-teens-hero-2.png       | Bin
+ .../img/originals/0729-kids-teens-hero.png         | Bin
+ .../19-7-26_kids_Furniture}/kids-furniture.html    |   0
+ .../19-8-12_BOGO}/19-8-12_BOGO.html                |   0
+ .../0812_BOGO_fosterkids_banner1.jpg               | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta1.jpg  | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta2.jpg  | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta3.jpg  | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_hero.jpg  | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_logo1.jpg | Bin
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_logo2.jpg | Bin
+ .../0812_BOGO_fosterkids_mobile_banner1.jpg        | Bin
+ .../0812_BOGO_fosterkids_mobile_cta1.jpg           | Bin
+ .../0812_BOGO_fosterkids_mobile_cta2.jpg           | Bin
+ .../0812_BOGO_fosterkids_mobile_cta3.jpg           | Bin
+ .../0812_BOGO_fosterkids_mobile_hero.jpg           | Bin
+ .../0812_BOGO_fosterkids_mobile_logo1.jpg          | Bin
+ .../0812_BOGO_fosterkids_mobile_logo2.jpg          | Bin
+ .../img/optimized/0812_BOGO_fosterkids_banner1.jpg | Bin
+ .../img/optimized/0812_BOGO_fosterkids_cta1.jpg    | Bin
+ .../img/optimized/0812_BOGO_fosterkids_cta2.jpg    | Bin
+ .../img/optimized/0812_BOGO_fosterkids_cta3.jpg    | Bin
+ .../img/optimized/0812_BOGO_fosterkids_hero.jpg    | Bin
+ .../img/optimized/0812_BOGO_fosterkids_logo1.jpg   | Bin
+ .../img/optimized/0812_BOGO_fosterkids_logo2.jpg   | Bin
+ .../0812_BOGO_fosterkids_mobile_banner1.jpg        | Bin
+ .../optimized/0812_BOGO_fosterkids_mobile_cta1.jpg | Bin
+ .../optimized/0812_BOGO_fosterkids_mobile_cta2.jpg | Bin
+ .../optimized/0812_BOGO_fosterkids_mobile_cta3.jpg | Bin
+ .../optimized/0812_BOGO_fosterkids_mobile_hero.jpg | Bin
+ .../0812_BOGO_fosterkids_mobile_logo1.jpg          | Bin
+ .../0812_BOGO_fosterkids_mobile_logo2.jpg          | Bin
+ {19-8-12_BOGO => old/19-8-12_BOGO}/items.txt       |   0
+ .../19-8-19_LaborDayRevive.html                    |   0
+ .../desktop/0819_laborday_revive_lp_hero_01.jpg    | Bin
+ .../0819_laborday_revive_lp_hero_01_left.jpg       | Bin
+ .../desktop/0819_laborday_revive_lp_hero_02.jpg    | Bin
+ .../desktop/0819_laborday_revive_lp_revive_01.jpg  | Bin
+ .../desktop/0819_laborday_revive_lp_revive_02.jpg  | Bin
+ .../0819_laborday_revive_lp_revive_logo_02.png     | Bin
+ .../0819_laborday_revive_lp_stearnsfoster.jpg      | Bin
+ .../0819_laborday_revive_lp_tempurpedic.jpg        | Bin
+ .../img/desktop/2019-10-03 10_39_25-.jpg.png       | Bin
+ .../0819_laborday_revive_lp_mobile_hero_1.jpg      | Bin
+ .../0819_laborday_revive_lp_mobile_hero_2.jpg      | Bin
+ .../0819_laborday_revive_lp_mobile_revive_1.jpg    | Bin
+ ...9_laborday_revive_lp_mobile_stearnsfoster_1.jpg | Bin
+ ...819_laborday_revive_lp_mobile_tempurpedic_1.jpg | Bin
+ .../mobile/0819_laborday_revive_lp_mobile_hero.jpg | Bin
+ .../0819_laborday_revive_lp_mobile_revive.jpg      | Bin
+ ...819_laborday_revive_lp_mobile_stearnsfoster.jpg | Bin
+ .../0819_laborday_revive_lp_mobile_tempurpedic.jpg | Bin
+ .../19-8-19_LaborDayRevive}/skus.txt               |   0
+ .../customUpholstery.html                          |   0
+ .../img/0909-specialorder-lp-hero.jpg              | Bin
+ .../img/0909-specialorder-lp-mobile-hero.jpg       | Bin
+ .../img/0909-specialorder-lp-r-block.jpg           | Bin
+ .../img/0909-videomodal-TMP-mobile.jpg             | Bin
+ .../img/0909-videomodal-TMP.jpg                    | Bin
+ .../Promo-desktop-revive-0909.jpg                  | Bin
+ .../Promo_desktop_revive_sleeptember_mobile.jpg    | Bin
+ .../img/0909_sleeptember_revive_lp_hero_01a.jpg    | Bin
+ .../img/0909_sleeptember_revive_lp_hero_01b.jpg    | Bin
+ .../img/0909_sleeptember_revive_lp_img_02.jpg      | Bin
+ .../img/0909_sleeptember_revive_lp_img_03.jpg      | Bin
+ .../0909_sleeptember_revive_lp_mobile_hero_01a.jpg | Bin
+ .../0909_sleeptember_revive_lp_mobile_hero_01b.jpg | Bin
+ ...eeptember_revive_lp_mobile_hero_01b_updated.jpg | Bin
+ .../0909_sleeptember_revive_lp_mobile_img_02.jpg   | Bin
+ .../0909_sleeptember_revive_lp_mobile_img_03.jpg   | Bin
+ .../0909_sleeptember_lp_revive_01.jpg              | Bin
+ ..._sleeptember_revive__lp_stearns_foster_hero.jpg | Bin
+ .../0909_sleeptember_revive_holiday_lp_hero.jpg    | Bin
+ .../0909_sleeptember_revive_lp_mobile_revive_1.jpg | Bin
+ ...909_sleeptember_revive_tempur_pedic_lp_hero.jpg | Bin
+ .../19-9-9_Sleeptember}/labor_day.html             |   0
+ .../0909_sleeptember_beautyrest_lp_hero.jpg        | Bin
+ .../lp_banners/0909_sleeptember_revive_lp_hero.jpg | Bin
+ .../0909_sleeptember_tempurpedic_lp_hero.jpg       | Bin
+ .../19-9-9_Sleeptember}/lp_skus.txt                |   0
+ .../products/Sleeptember (1).xlsx                  | Bin
+ .../19-9-9_Sleeptember}/sleeptember.html           |   0
+ 188 files changed, 304 insertions(+), 15 deletions(-)
+
+Mon Nov 18 16:58:03 2019 -0800 - [Josh] f61b85f29e46e6412c361191deace399020f9057
+ .../black-friday-doorbuster/2019-11-13_black-friday-doorbuster.html   | 4 ++--
+ .../black-friday-extended/2019-11-13_black-friday-extended.html       | 2 +-
+ .../black-friday-preview/2019-11-13_black-friday-preview.html         | 2 +-
+ .../black-friday-weekend/2019-11-13_black-friday-weekend.html         | 2 +-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+Mon Nov 18 16:52:51 2019 -0800 - [Josh] 5cf3b0105dc333083e9518abe9e53aefce27945c
+ 19-11-25_BlackFriday/ProductJSON.html | 210 +++++++++++++++++-----------------
+ 1 file changed, 105 insertions(+), 105 deletions(-)
+
+Mon Nov 18 15:55:09 2019 -0800 - [Josh] 8d367ef61e9c8b2c17e3b41e7df50c925bf744af
+ 19-11-25_BlackFriday/ProductJSON.html              | 109 +++++++++++----------
+ .../2019-11-13_black-friday-doorbuster.html        |  50 +++++++++-
+ .../2019-11-13_black-friday-extended.html          |  51 ++++++++--
+ .../extended_productScript.html                    |  17 +++-
+ .../2019-11-13_black-friday-preview.html           |  54 +++++++++-
+ .../preview_productScript.html                     |  17 +++-
+ .../2019-11-13_black-friday-weekend.html           |  48 ++++++++-
+ .../weekend_productScript.html                     |  17 +++-
+ ...oductScript.html => master_product_script.html} |  12 ++-
+ 9 files changed, 291 insertions(+), 84 deletions(-)
+
+Mon Nov 18 11:26:27 2019 -0800 - [Josh] 75cf0d2b772c9032a42955057343b9ecbd4b8a12
+ 19-11-25_BlackFriday/IN-FOLDERS_productScript.html | 44 ----------------------
+ .../2019-11-13_black-friday-doorbuster.html        | 31 +++++++++++----
+ .../doorbuster_productScript.html                  | 25 ++++++++----
+ .../2019-11-13_black-friday-extended.html          | 31 +++++++++++----
+ .../extended_productScript.html                    | 24 ++++++++----
+ .../2019-11-13_black-friday-preview.html           | 31 +++++++++++----
+ .../preview_productScript.html                     | 24 ++++++++----
+ .../2019-11-13_black-friday-weekend.html           | 32 ++++++++++++----
+ .../weekend_productScript.html                     | 24 ++++++++----
+ 9 files changed, 162 insertions(+), 104 deletions(-)
+
+Mon Nov 18 10:40:44 2019 -0800 - [Josh] b130bb80d915c62c41d8696077b83b6f2ee9060f
+ 19-11-25_BlackFriday/IN-FOLDERS_productScript.html |  44 ++++++
+ 19-11-25_BlackFriday/ProductJSON.html              | 172 ++++++++++-----------
+ .../2019-11-13_black-friday-doorbuster.html        |  18 ++-
+ .../doorbuster_productScript.html                  |  46 ++++++
+ .../2019-11-13_black-friday-extended.html          |  18 ++-
+ .../extended_productScript.html                    |  46 ++++++
+ .../2019-11-13_black-friday-preview.html           |  12 +-
+ .../preview_productScript.html                     |  46 ++++++
+ .../2019-11-13_black-friday-weekend.html           |  18 ++-
+ .../weekend_productScript.html                     |  47 ++++++
+ 19-11-25_BlackFriday/productScript.html            |  34 ----
+ 11 files changed, 356 insertions(+), 145 deletions(-)
+
+Fri Nov 15 14:59:09 2019 -0800 - [Josh] 03e61f813fee919411242fc654e8caa0e5b5c214
+ 19-11-25_BlackFriday/ProductJSON.html              | 1400 ++++++++++++--------
+ 19-11-25_BlackFriday/product-data/ProductData.csv  |  105 ++
+ 19-11-25_BlackFriday/product-data/ProductData.xlsx |  Bin 0 -> 13745 bytes
+ 19-11-25_BlackFriday/product-data/output.json      |  834 ++++++++++++
+ .../product-data/productDataCSVtoJSON.js           |   23 +
+ 5 files changed, 1793 insertions(+), 569 deletions(-)
+
+Fri Nov 15 12:22:10 2019 -0800 - [jcpsimmons@gmail.com] c3432255e2616d8dba1ccde70560c6baa467c8f4
+ 19-11-25_BlackFriday/product-images/102945.jpg | Bin 0 -> 9464 bytes
+ 19-11-25_BlackFriday/product-images/105885.jpg | Bin 0 -> 14895 bytes
+ 19-11-25_BlackFriday/product-images/107883.jpg | Bin 0 -> 15737 bytes
+ 19-11-25_BlackFriday/product-images/107887.jpg | Bin 0 -> 15366 bytes
+ 19-11-25_BlackFriday/product-images/107889.jpg | Bin 0 -> 16600 bytes
+ 19-11-25_BlackFriday/product-images/108022.jpg | Bin 0 -> 17202 bytes
+ 19-11-25_BlackFriday/product-images/108028.jpg | Bin 0 -> 13531 bytes
+ 19-11-25_BlackFriday/product-images/111515.jpg | Bin 0 -> 5689 bytes
+ 19-11-25_BlackFriday/product-images/201770.jpg | Bin 0 -> 3957 bytes
+ 19-11-25_BlackFriday/product-images/206465.jpg | Bin 0 -> 15337 bytes
+ 19-11-25_BlackFriday/product-images/206466.jpg | Bin 0 -> 15216 bytes
+ 19-11-25_BlackFriday/product-images/206467.jpg | Bin 0 -> 15975 bytes
+ 19-11-25_BlackFriday/product-images/207076.jpg | Bin 0 -> 4666 bytes
+ 19-11-25_BlackFriday/product-images/207147.jpg | Bin 0 -> 4318 bytes
+ 19-11-25_BlackFriday/product-images/207156.jpg | Bin 0 -> 9762 bytes
+ 19-11-25_BlackFriday/product-images/207811.jpg | Bin 0 -> 7831 bytes
+ 19-11-25_BlackFriday/product-images/225986.jpg | Bin 0 -> 19453 bytes
+ 19-11-25_BlackFriday/product-images/233030.jpg | Bin 0 -> 15387 bytes
+ 19-11-25_BlackFriday/product-images/233031.jpg | Bin 0 -> 15066 bytes
+ 19-11-25_BlackFriday/product-images/233033.jpg | Bin 0 -> 14722 bytes
+ 19-11-25_BlackFriday/product-images/235702.jpg | Bin 0 -> 26945 bytes
+ 19-11-25_BlackFriday/product-images/236257.jpg | Bin 0 -> 13711 bytes
+ 19-11-25_BlackFriday/product-images/236258.jpg | Bin 0 -> 14858 bytes
+ 19-11-25_BlackFriday/product-images/236260.jpg | Bin 0 -> 14020 bytes
+ 19-11-25_BlackFriday/product-images/236262.jpg | Bin 0 -> 14057 bytes
+ 19-11-25_BlackFriday/product-images/236265.jpg | Bin 0 -> 13484 bytes
+ 19-11-25_BlackFriday/product-images/236268.jpg | Bin 0 -> 15698 bytes
+ 19-11-25_BlackFriday/product-images/236271.jpg | Bin 0 -> 15783 bytes
+ 19-11-25_BlackFriday/product-images/236275.jpg | Bin 0 -> 14804 bytes
+ 19-11-25_BlackFriday/product-images/236279.jpg | Bin 0 -> 14981 bytes
+ 19-11-25_BlackFriday/product-images/236283.jpg | Bin 0 -> 5795 bytes
+ 19-11-25_BlackFriday/product-images/236286.jpg | Bin 0 -> 5795 bytes
+ 19-11-25_BlackFriday/product-images/236288.jpg | Bin 0 -> 7733 bytes
+ 19-11-25_BlackFriday/product-images/236290.jpg | Bin 0 -> 7733 bytes
+ 19-11-25_BlackFriday/product-images/236291.jpg | Bin 0 -> 6566 bytes
+ 19-11-25_BlackFriday/product-images/236293.jpg | Bin 0 -> 6566 bytes
+ 19-11-25_BlackFriday/product-images/236295.jpg | Bin 0 -> 6364 bytes
+ 19-11-25_BlackFriday/product-images/236296.jpg | Bin 0 -> 6364 bytes
+ 19-11-25_BlackFriday/product-images/236297.jpg | Bin 0 -> 7836 bytes
+ 19-11-25_BlackFriday/product-images/236298.jpg | Bin 0 -> 7836 bytes
+ 19-11-25_BlackFriday/product-images/236299.jpg | Bin 0 -> 6861 bytes
+ 19-11-25_BlackFriday/product-images/236300.jpg | Bin 0 -> 6861 bytes
+ 19-11-25_BlackFriday/product-images/236301.jpg | Bin 0 -> 6570 bytes
+ 19-11-25_BlackFriday/product-images/236302.jpg | Bin 0 -> 6570 bytes
+ 19-11-25_BlackFriday/product-images/236303.jpg | Bin 0 -> 7539 bytes
+ 19-11-25_BlackFriday/product-images/236304.jpg | Bin 0 -> 7049 bytes
+ 19-11-25_BlackFriday/product-images/236305.jpg | Bin 0 -> 6237 bytes
+ 19-11-25_BlackFriday/product-images/236306.jpg | Bin 0 -> 6237 bytes
+ 19-11-25_BlackFriday/product-images/236307.jpg | Bin 0 -> 6237 bytes
+ 19-11-25_BlackFriday/product-images/236309.jpg | Bin 0 -> 6237 bytes
+ 19-11-25_BlackFriday/product-images/236312.jpg | Bin 0 -> 4463 bytes
+ 19-11-25_BlackFriday/product-images/244100.jpg | Bin 0 -> 5976 bytes
+ 19-11-25_BlackFriday/product-images/244114.jpg | Bin 0 -> 7942 bytes
+ 19-11-25_BlackFriday/product-images/244126.jpg | Bin 0 -> 10944 bytes
+ 19-11-25_BlackFriday/product-images/244490.jpg | Bin 0 -> 15590 bytes
+ 19-11-25_BlackFriday/product-images/244491.jpg | Bin 0 -> 14935 bytes
+ 19-11-25_BlackFriday/product-images/244492.jpg | Bin 0 -> 13516 bytes
+ 19-11-25_BlackFriday/product-images/245363.jpg | Bin 0 -> 11292 bytes
+ 19-11-25_BlackFriday/product-images/245368.jpg | Bin 0 -> 7137 bytes
+ 19-11-25_BlackFriday/product-images/245369.jpg | Bin 0 -> 6934 bytes
+ 19-11-25_BlackFriday/product-images/245370.jpg | Bin 0 -> 6478 bytes
+ 19-11-25_BlackFriday/product-images/248533.jpg | Bin 0 -> 16658 bytes
+ 19-11-25_BlackFriday/product-images/248535.jpg | Bin 0 -> 16695 bytes
+ 19-11-25_BlackFriday/product-images/248581.jpg | Bin 0 -> 6649 bytes
+ 19-11-25_BlackFriday/product-images/248584.jpg | Bin 0 -> 8434 bytes
+ 19-11-25_BlackFriday/product-images/249837.jpg | Bin 0 -> 10822 bytes
+ 19-11-25_BlackFriday/product-images/250580.jpg | Bin 0 -> 5245 bytes
+ 19-11-25_BlackFriday/product-images/250581.jpg | Bin 0 -> 5245 bytes
+ 19-11-25_BlackFriday/product-images/250582.jpg | Bin 0 -> 4810 bytes
+ 19-11-25_BlackFriday/product-images/250583.jpg | Bin 0 -> 4810 bytes
+ 19-11-25_BlackFriday/product-images/250584.jpg | Bin 0 -> 4810 bytes
+ 19-11-25_BlackFriday/product-images/250585.jpg | Bin 0 -> 4810 bytes
+ 19-11-25_BlackFriday/product-images/250586.jpg | Bin 0 -> 4134 bytes
+ 19-11-25_BlackFriday/product-images/250587.jpg | Bin 0 -> 5485 bytes
+ 19-11-25_BlackFriday/product-images/250588.jpg | Bin 0 -> 15460 bytes
+ 19-11-25_BlackFriday/product-images/250589.jpg | Bin 0 -> 15450 bytes
+ 19-11-25_BlackFriday/product-images/250590.jpg | Bin 0 -> 15407 bytes
+ 19-11-25_BlackFriday/product-images/250591.jpg | Bin 0 -> 15406 bytes
+ 19-11-25_BlackFriday/product-images/250592.jpg | Bin 0 -> 15372 bytes
+ 19-11-25_BlackFriday/product-images/250593.jpg | Bin 0 -> 15496 bytes
+ 19-11-25_BlackFriday/product-images/250594.jpg | Bin 0 -> 4315 bytes
+ 19-11-25_BlackFriday/product-images/250595.jpg | Bin 0 -> 4292 bytes
+ 19-11-25_BlackFriday/product-images/250596.jpg | Bin 0 -> 4282 bytes
+ 19-11-25_BlackFriday/product-images/250597.jpg | Bin 0 -> 4279 bytes
+ 19-11-25_BlackFriday/product-images/250598.jpg | Bin 0 -> 4344 bytes
+ 19-11-25_BlackFriday/product-images/250599.jpg | Bin 0 -> 4269 bytes
+ 19-11-25_BlackFriday/product-images/250600.jpg | Bin 0 -> 4266 bytes
+ 19-11-25_BlackFriday/product-images/250637.jpg | Bin 0 -> 4573 bytes
+ 19-11-25_BlackFriday/product-images/250664.jpg | Bin 0 -> 17541 bytes
+ 19-11-25_BlackFriday/product-images/250665.jpg | Bin 0 -> 14561 bytes
+ 19-11-25_BlackFriday/product-images/250884.jpg | Bin 0 -> 4686 bytes
+ 19-11-25_BlackFriday/product-images/250885.jpg | Bin 0 -> 4671 bytes
+ 19-11-25_BlackFriday/product-images/250886.jpg | Bin 0 -> 4686 bytes
+ 19-11-25_BlackFriday/product-images/250887.jpg | Bin 0 -> 4671 bytes
+ 19-11-25_BlackFriday/product-images/251254.jpg | Bin 0 -> 9026 bytes
+ 19-11-25_BlackFriday/product-images/251575.jpg | Bin 0 -> 7554 bytes
+ 19-11-25_BlackFriday/product-images/251577.jpg | Bin 0 -> 6347 bytes
+ 19-11-25_BlackFriday/product-images/251817.jpg | Bin 0 -> 4775 bytes
+ 19-11-25_BlackFriday/product-images/251818.jpg | Bin 0 -> 4932 bytes
+ 19-11-25_BlackFriday/product-images/251819.jpg | Bin 0 -> 4939 bytes
+ 19-11-25_BlackFriday/product-images/251820.jpg | Bin 0 -> 4642 bytes
+ 19-11-25_BlackFriday/product-images/251821.jpg | Bin 0 -> 4580 bytes
+ 19-11-25_BlackFriday/product-images/251822.jpg | Bin 0 -> 4373 bytes
+ 19-11-25_BlackFriday/product-images/251823.jpg | Bin 0 -> 4420 bytes
+ 19-11-25_BlackFriday/product-images/251824.jpg | Bin 0 -> 4418 bytes
+ 19-11-25_BlackFriday/product-images/251825.jpg | Bin 0 -> 4141 bytes
+ 19-11-25_BlackFriday/product-images/251826.jpg | Bin 0 -> 12606 bytes
+ 19-11-25_BlackFriday/product-images/252470.jpg | Bin 0 -> 8651 bytes
+ 19-11-25_BlackFriday/product-images/252471.jpg | Bin 0 -> 9329 bytes
+ 19-11-25_BlackFriday/product-images/253012.jpg | Bin 0 -> 10086 bytes
+ 19-11-25_BlackFriday/product-images/253022.jpg | Bin 0 -> 7619 bytes
+ 19-11-25_BlackFriday/product-images/253178.jpg | Bin 0 -> 7511 bytes
+ 19-11-25_BlackFriday/product-images/253180.jpg | Bin 0 -> 8715 bytes
+ 19-11-25_BlackFriday/product-images/253272.jpg | Bin 0 -> 41983 bytes
+ 19-11-25_BlackFriday/product-images/253274.jpg | Bin 0 -> 38723 bytes
+ 19-11-25_BlackFriday/product-images/253276.jpg | Bin 0 -> 40318 bytes
+ 19-11-25_BlackFriday/product-images/253277.jpg | Bin 0 -> 40238 bytes
+ 19-11-25_BlackFriday/product-images/253278.jpg | Bin 0 -> 40418 bytes
+ 19-11-25_BlackFriday/product-images/253279.jpg | Bin 0 -> 44096 bytes
+ 19-11-25_BlackFriday/product-images/253280.jpg | Bin 0 -> 39015 bytes
+ 19-11-25_BlackFriday/product-images/253282.jpg | Bin 0 -> 40255 bytes
+ 19-11-25_BlackFriday/product-images/253283.jpg | Bin 0 -> 40232 bytes
+ 19-11-25_BlackFriday/product-images/253284.jpg | Bin 0 -> 43311 bytes
+ 19-11-25_BlackFriday/product-images/253285.jpg | Bin 0 -> 18351 bytes
+ 19-11-25_BlackFriday/product-images/253286.jpg | Bin 0 -> 19557 bytes
+ 19-11-25_BlackFriday/product-images/253287.jpg | Bin 0 -> 18351 bytes
+ 19-11-25_BlackFriday/product-images/253295.jpg | Bin 0 -> 6339 bytes
+ 19-11-25_BlackFriday/product-images/253296.jpg | Bin 0 -> 14615 bytes
+ 19-11-25_BlackFriday/product-images/253297.jpg | Bin 0 -> 14881 bytes
+ 19-11-25_BlackFriday/product-images/253301.jpg | Bin 0 -> 14755 bytes
+ 19-11-25_BlackFriday/product-images/253302.jpg | Bin 0 -> 27268 bytes
+ 19-11-25_BlackFriday/product-images/253303.jpg | Bin 0 -> 6270 bytes
+ 19-11-25_BlackFriday/product-images/253304.jpg | Bin 0 -> 19294 bytes
+ 19-11-25_BlackFriday/product-images/253305.jpg | Bin 0 -> 19294 bytes
+ 19-11-25_BlackFriday/product-images/253309.jpg | Bin 0 -> 7023 bytes
+ 19-11-25_BlackFriday/product-images/253311.jpg | Bin 0 -> 7396 bytes
+ 19-11-25_BlackFriday/product-images/253316.jpg | Bin 0 -> 7321 bytes
+ 19-11-25_BlackFriday/product-images/253320.jpg | Bin 0 -> 7176 bytes
+ 19-11-25_BlackFriday/product-images/253321.jpg | Bin 0 -> 7155 bytes
+ 19-11-25_BlackFriday/product-images/253803.jpg | Bin 0 -> 3386 bytes
+ 19-11-25_BlackFriday/product-images/253804.jpg | Bin 0 -> 3386 bytes
+ 19-11-25_BlackFriday/product-images/254398.jpg | Bin 0 -> 22849 bytes
+ 19-11-25_BlackFriday/product-images/254399.jpg | Bin 0 -> 19624 bytes
+ 19-11-25_BlackFriday/product-images/254400.jpg | Bin 0 -> 33621 bytes
+ 19-11-25_BlackFriday/product-images/254401.jpg | Bin 0 -> 34402 bytes
+ 19-11-25_BlackFriday/product-images/254571.jpg | Bin 0 -> 5220 bytes
+ 19-11-25_BlackFriday/product-images/254572.jpg | Bin 0 -> 5697 bytes
+ 19-11-25_BlackFriday/product-images/254573.jpg | Bin 0 -> 5697 bytes
+ 19-11-25_BlackFriday/product-images/254574.jpg | Bin 0 -> 5697 bytes
+ 19-11-25_BlackFriday/product-images/254575.jpg | Bin 0 -> 5697 bytes
+ 19-11-25_BlackFriday/product-images/255207.jpg | Bin 0 -> 7438 bytes
+ 19-11-25_BlackFriday/product-images/255208.jpg | Bin 0 -> 8675 bytes
+ 19-11-25_BlackFriday/product-images/255209.jpg | Bin 0 -> 10775 bytes
+ 19-11-25_BlackFriday/product-images/255866.jpg | Bin 0 -> 13531 bytes
+ 19-11-25_BlackFriday/product-images/256109.jpg | Bin 0 -> 4962 bytes
+ 19-11-25_BlackFriday/product-images/256110.jpg | Bin 0 -> 4962 bytes
+ 19-11-25_BlackFriday/product-images/256111.jpg | Bin 0 -> 4962 bytes
+ 19-11-25_BlackFriday/product-images/256367.jpg | Bin 0 -> 9235 bytes
+ 19-11-25_BlackFriday/product-images/256369.jpg | Bin 0 -> 38359 bytes
+ 19-11-25_BlackFriday/product-images/256370.jpg | Bin 0 -> 30904 bytes
+ 19-11-25_BlackFriday/product-images/256373.jpg | Bin 0 -> 34628 bytes
+ 19-11-25_BlackFriday/product-images/56131.jpg  | Bin 0 -> 15217 bytes
+ 19-11-25_BlackFriday/product-images/69702.jpg  | Bin 0 -> 19892 bytes
+ 19-11-25_BlackFriday/product-images/76848.jpg  | Bin 0 -> 14154 bytes
+ 19-11-25_BlackFriday/product-images/80781.jpg  | Bin 0 -> 9443 bytes
+ 19-11-25_BlackFriday/product-images/85054.jpg  | Bin 0 -> 15148 bytes
+ 19-11-25_BlackFriday/product-images/85055.jpg  | Bin 0 -> 14649 bytes
+ 19-11-25_BlackFriday/product-images/88247.jpg  | Bin 0 -> 6616 bytes
+ 19-11-25_BlackFriday/product-images/92124.jpg  | Bin 0 -> 6708 bytes
+ 169 files changed, 0 insertions(+), 0 deletions(-)
+
+Thu Nov 14 15:25:17 2019 -0800 - [Josh] c4124187ffa3ddbd4f0dcb4d640d04d952145f47
+ .../black-friday-doorbuster/2019-11-13_black-friday-doorbuster.html  | 4 ++--
+ .../black-friday-extended/2019-11-13_black-friday-extended.html      | 5 ++---
+ .../black-friday-weekend/2019-11-13_black-friday-weekend.html        | 4 ++--
+ 3 files changed, 6 insertions(+), 7 deletions(-)
+
+Thu Nov 14 10:22:05 2019 -0800 - [Josh] 32131194831a41603e49751ade081115fc9489dd
+ .../2019-11-13_black-friday-extended.html                  | 14 +++++++++++---
+ .../2019-11-13_black-friday-preview.html                   |  4 ++--
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+
+Thu Nov 14 09:41:25 2019 -0800 - [Josh] 45ab03c7df7a65f526967a6e0fb1549928bc58e7
+ .../black-friday-doorbuster/2019-11-13_black-friday-doorbuster.html     | 2 +-
+ .../black-friday-extended/2019-11-13_black-friday-extended.html         | 2 +-
+ .../black-friday-preview/2019-11-13_black-friday-preview.html           | 2 +-
+ .../black-friday-weekend/2019-11-13_black-friday-weekend.html           | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+Thu Nov 14 09:06:39 2019 -0800 - [Josh] 5e53c231f9edb898bfe5533e12e4686a352eea58
+ 19-11-25_BlackFriday/ProductJSON.html              |  8 +-
+ .../2019-11-13_black-friday-doorbuster.html        | 91 ++++++++++++++++++---
+ .../2019-11-13_black-friday-extended.html          | 82 +++++++++++++++++--
+ .../2019-11-13_black-friday-preview.html           | 82 +++++++++++++++++--
+ .../2019-11-13_black-friday-weekend.html           | 93 +++++++++++++++++++---
+ 19-11-25_BlackFriday/productScript.html            |  8 +-
+ 6 files changed, 320 insertions(+), 44 deletions(-)
+
+Wed Nov 13 15:07:57 2019 -0800 - [Josh] 14013c7bbfa3b370b0e1ee17337ea40bb8ce04a6
+ 19-11-25_BlackFriday/19-11-25_BlackFriday.html     | 227 ---------------------
+ .../2019-11-13_black-friday-doorbuster.html        | 172 ++++++++++++++++
+ .../2019-11-13_black-friday-extended.html          | 174 ++++++++++++++++
+ .../2019-11-13_black-friday-preview.html           | 132 ++++++++++++
+ .../img/BF-landing-page-preview.gif                | Bin 0 -> 150695 bytes
+ .../img/black-friday-LP-preview-mobile.jpg         | Bin 0 -> 97833 bytes
+ .../black-friday-preview/img/preview-hero.jpg      | Bin 0 -> 145402 bytes
+ .../black-friday-preview/img/rugs.jpg              | Bin 0 -> 54950 bytes
+ .../black-friday-preview/img/sofa.jpg              | Bin 0 -> 198152 bytes
+ .../2019-11-13_black-friday-weekend.html           | 171 ++++++++++++++++
+ 19-11-25_BlackFriday/productScript.html            |  30 +++
+ misc/deliveryThxGivingUpdate.html                  | 115 +++++++++++
+ 12 files changed, 794 insertions(+), 227 deletions(-)
+
+Mon Nov 11 10:28:29 2019 -0800 - [Josh] 3e66ed9752f21e04fb72f1e25fdc6b182b2c1af4
+ 19-11-25_BlackFriday/19-11-25_BlackFriday.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Mon Nov 11 10:08:33 2019 -0800 - [Josh] dc73a9145b96849c58df2713a0a1417d43a924bf
+ 19-11-25_BlackFriday/19-11-25_BlackFriday.html | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+
+Mon Nov 11 09:57:52 2019 -0800 - [Josh] c601210f805c3df44efc60cf6af2c18fc56b0866
+ 19-11-25_BlackFriday/19-11-25_BlackFriday.html | 41 +++++++++++++++++++++-----
+ 1 file changed, 33 insertions(+), 8 deletions(-)
+
+Mon Nov 11 09:35:52 2019 -0800 - [Josh] 9b9328340f431078f456c0bedec9bcfafe406006
+ 19-11-25_BlackFriday/19-11-25_BlackFriday.html | 192 +++++++
+ 19-11-25_BlackFriday/ProductJSON.html          | 574 ++++++++++++++++++++
+ misc/SanJoseHoursUpdate.html                   |  13 +
+ misc/emailMakerFooter.html                     | 725 +++++++++++++++++++++++++
+ 4 files changed, 1504 insertions(+)
+
+Fri Nov 8 08:14:58 2019 -0800 - [Josh] e5372173ec6e137bdc78c94bf3f0503c2764994f
+ 19-11-04_VetsDay/19-11-04_VetsDay.html             |  75 ++++++++---
+ 19-11-04_VetsDay/SKUS.txt                          |   1 +
+ .../img/desktop/1104-veteransday-lp-video_v01.jpg  | Bin 0 -> 29707 bytes
+ .../1104-veteransday-lp-video-mobile_v01.jpg       | Bin 0 -> 89574 bytes
+ misc/shareLink.html                                | 138 +++++++++++++++++++++
+ misc/vets-revive.html                              |  60 +++++++++
+ misc/x.html                                        |  90 ++++++++++++++
+ 7 files changed, 349 insertions(+), 15 deletions(-)
+
+Thu Oct 31 10:51:01 2019 -0700 - [Josh] 985ba35fc400efa4547b6b66c98a9af86980a30a
+ misc/vetsday-counter.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+Thu Oct 31 10:05:43 2019 -0700 - [Josh] e2f4027ccfaae91073e5c9a6d40418c0e8bb792f
+ 19-11-04_VetsDay/19-11-04_VetsDay.html |  6 ++---
+ misc/vetsday-counter.html              | 46 ++++++++++++++++++++++------------
+ 2 files changed, 33 insertions(+), 19 deletions(-)
+
+Thu Oct 31 09:23:19 2019 -0700 - [Josh] 0b3f1322ef35bfe7228ef41ab208dcf4f6609432
+ 19-11-04_VetsDay/19-11-04_VetsDay.html    |  23 +-
+ Scripts/addNewOptimizely.py               |   4 +-
+ misc/{vetsbogo.html => OLD_vetsbogo.html} |   0
+ misc/vetsday-counter.html                 | 809 ++++++++++++++++++++++++++++++
+ 4 files changed, 833 insertions(+), 3 deletions(-)
+
+Tue Oct 29 11:32:32 2019 -0700 - [jcpsimmons@gmail.com] fdd092ada4bbc94bc6119b32168e32a06618de9b
+ .../2019-10-28_VeteransDayPLP.html                 |  58 ++
+ .../2019-10-28_VeteransDayRevivePromo.html         |  52 ++
+ .../img/1104revive-veterans-LP-mobile.jpg          | Bin 0 -> 107452 bytes
+ .../img/1104revive-veterans-hero-mobile.jpg        | Bin 0 -> 120345 bytes
+ .../img/1104veterans-day-revive_LP.jpg             | Bin 0 -> 84764 bytes
+ .../img/1104veterans-day-revive_promo.jpg          | Bin 0 -> 90114 bytes
+ .../img/0729-kids-teens-beds-under-300.jpg         | Bin 125078 -> 97431 bytes
+ .../img/0729-kids-teens-commercial.jpg             | Bin 123297 -> 87324 bytes
+ .../img/0729-kids-teens-hero-1.jpg                 | Bin 305160 -> 99459 bytes
+ .../img/0729-kids-teens-hero-2.jpg                 | Bin 73056 -> 37311 bytes
+ .../img/0729-kids-teens-hero.jpg                   | Bin 262788 -> 99119 bytes
+ .../img/desktop/2019-10-03 10_39_25-.jpg.png       | Bin 0 -> 247491 bytes
+ Scripts/addNewOptimizely.py                        |  40 ++
+ Scripts/batchRename.sh                             |   2 +-
+ misc/vetsbogo.html                                 | 752 +++++++++++++++++++++
+ 15 files changed, 903 insertions(+), 1 deletion(-)
+
+Wed Oct 23 11:47:18 2019 -0700 - [jcpsimmons@gmail.com] b2109d7f6e60007573613101ce4529f67c3eddde
+ 19-11-04_VetsDay/19-11-04_VetsDay.html | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+Wed Oct 23 10:40:19 2019 -0700 - [jcpsimmons@gmail.com] 59924a8f9801032b4cf44fde2154b000182639ac
+ 19-10-21_Thanksgiving/19-10-21_Thanksgiving.html   |  53 ++--
+ .../img/1021_LRDR_category_banner.png              | Bin 0 -> 8647 bytes
+ .../img/1021_diningroom_category_bartable.jpg      | Bin 0 -> 57569 bytes
+ .../img/1021_diningroom_category_diningset.jpg     | Bin 0 -> 113354 bytes
+ .../img/1021_livingroom_category_coffeetable.jpg   | Bin 0 -> 84602 bytes
+ .../img/1021_livingroom_category_sofa.jpg          | Bin 0 -> 149085 bytes
+ .../category-pages/thx-dining-room.html            |  88 ++++++
+ .../category-pages/thx-living-room.html            |  88 ++++++
+ 19-11-04_VetsDay/19-11-04_VetsDay.html             | 338 +++++++++++++++++++++
+ .../1104-veteransday-lp-carousel-price-under.jpg   | Bin 0 -> 23494 bytes
+ .../1104-veteransday-lp-diningset-250750.jpg       | Bin 0 -> 24506 bytes
+ .../1104-veteransday-lp-hero-sofa-246096.jpg       | Bin 0 -> 169803 bytes
+ .../1104-veteransday-lp-queenbed-246552.jpg        | Bin 0 -> 99073 bytes
+ .../1104-veteransday-lp-sectional-250750.jpg       | Bin 0 -> 51945 bytes
+ .../1104-veteransday-lp-veteransday-revive.jpg     | Bin 0 -> 45634 bytes
+ .../img/desktop/1104-veteransday-lp-video.jpg      | Bin 0 -> 3982 bytes
+ ...eteransday_carousel_priceunder_accentchairs.jpg | Bin 0 -> 27446 bytes
+ ...eteransday_carousel_priceunder_coffeetables.jpg | Bin 0 -> 29663 bytes
+ ...04_veteransday_carousel_priceunder_tvstands.jpg | Bin 0 -> 28832 bytes
+ ...1104-veteransday-lp-hero-sofa-246096-mobile.jpg | Bin 0 -> 120816 bytes
+ ...04-veteransday-lp-veteransday-revive-mobile.jpg | Bin 0 -> 34558 bytes
+ 19-11-04_VetsDay/slick-insert-code.html            |  18 ++
+ 19-11-04_VetsDay/slick-insert-code.min.html        |   1 +
+ 23 files changed, 558 insertions(+), 28 deletions(-)
+
+Thu Oct 17 14:44:45 2019 -0700 - [Josh] 9d8d8d3feb92f5bfe47f3b9ef29e7a051960a9d1
+ 19-10-21_Thanksgiving/19-10-21_Thanksgiving.html   |  15 +++++++++------
+ ...102119_Thanksgiving_Desktop_dining-room_v02.jpg | Bin 233689 -> 235169 bytes
+ .../102119_Thanksgiving_Mobile_dining-room.jpg     | Bin 99432 -> 136186 bytes
+ 3 files changed, 9 insertions(+), 6 deletions(-)
+
+Thu Oct 17 10:11:43 2019 -0700 - [Josh] 02192db82226503ae9a080613c36bb7b229433e4
+ 19-10-21_Thanksgiving/19-10-21_Thanksgiving.html   | 144 ++++++++++++++++-----
+ .../102119_Thanksgiving_Mobile_coffee-tables.jpg   | Bin 0 -> 18102 bytes
+ .../102119_Thanksgiving_Mobile_dining-room.jpg     | Bin 0 -> 99432 bytes
+ .../102119_Thanksgiving_Mobile_dining-sets.jpg     | Bin 0 -> 24371 bytes
+ .../102119_Thanksgiving_Mobile_living-room.jpg     | Bin 0 -> 78319 bytes
+ .../102119_Thanksgiving_Mobile_queen-beds.jpg      | Bin 0 -> 16744 bytes
+ .../102119_Thanksgiving_Mobile_sectionals.jpg      | Bin 0 -> 21822 bytes
+ .../mobile/102119_Thanksgiving_Mobile_sofas.jpg    | Bin 0 -> 18718 bytes
+ ...19_Thanksgiving_Mobile_thanksgiving-savings.jpg | Bin 0 -> 14836 bytes
+ ...19_Thanksgiving_Mobile_thanksgiving-savings.png | Bin 0 -> 9292 bytes
+ ..._Thanksgiving_Mobile_thanksgiving-wish-list.jpg | Bin 0 -> 14337 bytes
+ ..._Thanksgiving_Mobile_thanksgiving-wish-list.png | Bin 0 -> 6854 bytes
+ .../102119_Thanksgiving_Mobile_tv-stands.jpg       | Bin 0 -> 19958 bytes
+ ...2119_Thanksgiving_Mobile_watch-thanksgiving.jpg | Bin 0 -> 14960 bytes
+ ...2119_Thanksgiving_Mobile_watch-thanksgiving.png | Bin 0 -> 7405 bytes
+ .../102119_Thanksgiving_Mobile_watch-video.jpg     | Bin 0 -> 64453 bytes
+ .../thanksgiving-landing-page-mobile_savings.png   | Bin 0 -> 11374 bytes
+ .../thanksgiving-landing-page-mobile_unfold.png    | Bin 0 -> 9663 bytes
+ .../thanksgiving-landing-page-mobile_wishlist.jpg  | Bin 0 -> 20704 bytes
+ Scripts/batchRename.sh                             |   2 +-
+ 20 files changed, 116 insertions(+), 30 deletions(-)
+
+Wed Oct 16 14:06:56 2019 -0700 - [Josh] d83bc211d69949b0382ac81eea3bb3a14ab1ee1b
+ 19-10-21_Thanksgiving/19-10-21_Thanksgiving.html   |  27 +++++++++++++--------
+ .../102119_Thanksgiving_Desktop_dining-room.jpg    | Bin 173995 -> 0 bytes
+ ...102119_Thanksgiving_Desktop_dining-room_v02.jpg | Bin 0 -> 233689 bytes
+ 19-10-21_Thanksgiving/productlist.txt              |   2 +-
+ 4 files changed, 18 insertions(+), 11 deletions(-)
+
+Wed Oct 16 12:18:53 2019 -0700 - [Josh] 77ce4f2c360e96690e7f150fa1eed2b69b1afd77
+ 19-10-14_SanJoseOpening/sign-up-panel.html         | 223 +++++++++++++
+ 19-10-21_Thanksgiving/19-10-21_Thanksgiving.html   | 356 +++++++++++++++++++++
+ .../102119_Thanksgiving_Desktop_coffee-tables.jpg  | Bin 0 -> 19597 bytes
+ .../desktop/102119_Thanksgiving_Desktop_copy.jpg   | Bin 0 -> 18531 bytes
+ .../102119_Thanksgiving_Desktop_dining-room.jpg    | Bin 0 -> 173995 bytes
+ .../102119_Thanksgiving_Desktop_dining-sets.jpg    | Bin 0 -> 28426 bytes
+ .../102119_Thanksgiving_Desktop_diy-blog.jpg       | Bin 0 -> 168516 bytes
+ ...2119_Thanksgiving_Desktop_host-thanksgiving.jpg | Bin 0 -> 173334 bytes
+ .../102119_Thanksgiving_Desktop_living-room.jpg    | Bin 0 -> 160253 bytes
+ .../102119_Thanksgiving_Desktop_queen-beds.jpg     | Bin 0 -> 19077 bytes
+ .../102119_Thanksgiving_Desktop_sectionals.jpg     | Bin 0 -> 22273 bytes
+ .../desktop/102119_Thanksgiving_Desktop_sofas.jpg  | Bin 0 -> 19139 bytes
+ .../102119_Thanksgiving_Desktop_tv-stands.jpg      | Bin 0 -> 24126 bytes
+ .../desktop/102119_Thanksgiving_Desktop_video.jpg  | Bin 0 -> 177769 bytes
+ .../desktop/102119_Thanksgiving_Desktop_watch.jpg  | Bin 0 -> 17164 bytes
+ .../102119_Thanksgiving_Desktop_wish-list.jpg      | Bin 0 -> 17004 bytes
+ 19-10-21_Thanksgiving/productlist.txt              |   1 +
+ Scripts/batchRename.sh                             |   1 +
+ 18 files changed, 581 insertions(+)
+
+Tue Oct 8 16:57:03 2019 -0700 - [jcpsimmons@gmail.com] 574ac516458d5639f12ca4d652aa4bacbed1297e
+ 19-10-01_ShareLink/19-10-01_ShareLink.html  |  11 +--
+ 19-10-01_ShareLink/chairsforStudying.html   | 138 ++++++++++++++++++++++++++++
+ 19-10-01_ShareLink/shadesOfBlue.html        | 138 ++++++++++++++++++++++++++++
+ 19-10-01_ShareLink/someOtherShareLinks.html |   0
+ 4 files changed, 281 insertions(+), 6 deletions(-)
+
+Tue Oct 1 14:00:00 2019 -0700 - [Josh] 05d4a42ef78ec5228bdd75ab61bd281c220f5bdc
+ 19-10-01_ShareLink/19-10-01_ShareLink.html     | 139 +++++++++++++++
+ 19-10-01_ShareLink/referencePage.html          | 223 +++++++++++++++++++++++++
+ 19-9-30_CustomUpholstery/customUpholstery.html |  24 +--
+ 3 files changed, 374 insertions(+), 12 deletions(-)
+
+Mon Sep 30 08:32:49 2019 -0700 - [Josh] 3acea807725a63d95d1b853e98ec3a73168e313d
+ 19-9-30_CustomUpholstery/customUpholstery.html | 23 +++++++++++++++--------
+ 1 file changed, 15 insertions(+), 8 deletions(-)
+
+Fri Sep 27 11:12:27 2019 -0700 - [Josh] 7e74a39a8c3c2869aab23422d4fc9b5607d694c7
+ 19-9-30_CustomUpholstery/customUpholstery.html | 33 ++++++++++++++++++++------
+ 1 file changed, 26 insertions(+), 7 deletions(-)
+
+Thu Sep 26 14:45:03 2019 -0700 - [jcpsimmons@gmail.com] 2c38c2872d77356d544eee6117fb56f83546e30c
+ 19-9-30_CustomUpholstery/customUpholstery.html | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+
+Thu Sep 26 10:23:24 2019 -0700 - [Josh] b649a8d033d0a9b9bebb67b9a7f9d55f2a668a6e
+ 00-00-00_MASTER_TEMPLATE/TITLE.html                | 134 ++++++++++++
+ 19-9-30_CustomUpholstery/customUpholstery.html     | 234 +++++++++++++++++++++
+ .../img/0909-specialorder-lp-hero.jpg              | Bin 0 -> 244106 bytes
+ .../img/0909-specialorder-lp-mobile-hero.jpg       | Bin 0 -> 203502 bytes
+ .../img/0909-specialorder-lp-r-block.jpg           | Bin 0 -> 49823 bytes
+ .../img/0909-videomodal-TMP-mobile.jpg             | Bin 0 -> 85267 bytes
+ .../img/0909-videomodal-TMP.jpg                    | Bin 0 -> 51940 bytes
+ 7 files changed, 368 insertions(+)
+
+Fri Sep 6 14:50:58 2019 -0700 - [Josh] 6d317efeb309dc0e1fadd9ec7a0264c6ad18a4e5
+ .../0909_sleeptember_lp_revive_01.jpg              | Bin 0 -> 87129 bytes
+ ..._sleeptember_revive__lp_stearns_foster_hero.jpg | Bin 0 -> 90547 bytes
+ .../0909_sleeptember_revive_holiday_lp_hero.jpg    | Bin 0 -> 85031 bytes
+ .../0909_sleeptember_revive_lp_mobile_revive_1.jpg | Bin 0 -> 111724 bytes
+ ...909_sleeptember_revive_tempur_pedic_lp_hero.jpg | Bin 0 -> 67550 bytes
+ 19-9-9_Sleeptember/labor_day.html                  | 451 +++++++++++++++++++++
+ 19-9-9_Sleeptember/sleeptember.html                | 324 ---------------
+ 7 files changed, 451 insertions(+), 324 deletions(-)
+
+Fri Sep 6 10:39:40 2019 -0700 - [Josh] b0d68ba5d46f493e406474ce5c832a05e355592d
+ ...eeptember_revive_lp_mobile_hero_01b_updated.jpg | Bin 0 -> 75184 bytes
+ 19-9-9_Sleeptember/lp_skus.txt                     |  11 +
+ 19-9-9_Sleeptember/sleeptember.html                | 342 ++++++++++++++++++++-
+ 3 files changed, 348 insertions(+), 5 deletions(-)
+
+Fri Sep 6 09:35:16 2019 -0700 - [Josh] 96928461930df5323ad1ad5a8cb7398dd64f9f94
+ 19-9-9_Sleeptember/Promo-desktop-revive-0909.jpg   | Bin 0 -> 1886436 bytes
+ .../Promo_desktop_revive_sleeptember_mobile.jpg    | Bin 0 -> 1675298 bytes
+ .../img/0909_sleeptember_revive_lp_hero_01a.jpg    | Bin 0 -> 175302 bytes
+ .../img/0909_sleeptember_revive_lp_hero_01b.jpg    | Bin 0 -> 115061 bytes
+ .../img/0909_sleeptember_revive_lp_img_02.jpg      | Bin 0 -> 44250 bytes
+ .../img/0909_sleeptember_revive_lp_img_03.jpg      | Bin 0 -> 44190 bytes
+ .../0909_sleeptember_revive_lp_mobile_hero_01a.jpg | Bin 0 -> 40355 bytes
+ .../0909_sleeptember_revive_lp_mobile_hero_01b.jpg | Bin 0 -> 115976 bytes
+ .../0909_sleeptember_revive_lp_mobile_img_02.jpg   | Bin 0 -> 43171 bytes
+ .../0909_sleeptember_revive_lp_mobile_img_03.jpg   | Bin 0 -> 42919 bytes
+ .../0909_sleeptember_beautyrest_lp_hero.jpg        | Bin 0 -> 135486 bytes
+ .../lp_banners/0909_sleeptember_revive_lp_hero.jpg | Bin 0 -> 144978 bytes
+ .../0909_sleeptember_tempurpedic_lp_hero.jpg       | Bin 0 -> 128850 bytes
+ 19-9-9_Sleeptember/products/Sleeptember (1).xlsx   | Bin 0 -> 15756 bytes
+ 19-9-9_Sleeptember/sleeptember.html                | 279 +++++++++++++++++++++
+ 15 files changed, 279 insertions(+)
+
+Mon Aug 19 13:22:44 2019 -0700 - [Josh] 6953cdb2d70c4835f5f479394664537f410beba9
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 36 +++++++++++++---------
+ 1 file changed, 22 insertions(+), 14 deletions(-)
+
+Wed Aug 14 14:12:59 2019 -0700 - [Josh] e57d9917cf4874e15c560d87dcb6d18ef5b3b326
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 110 ++++++++++++++-------
+ .../0819_laborday_revive_lp_mobile_hero_1.jpg      | Bin 0 -> 60033 bytes
+ .../0819_laborday_revive_lp_mobile_hero_2.jpg      | Bin 0 -> 92123 bytes
+ .../0819_laborday_revive_lp_mobile_revive_1.jpg    | Bin 0 -> 116412 bytes
+ ...9_laborday_revive_lp_mobile_stearnsfoster_1.jpg | Bin 0 -> 63185 bytes
+ ...819_laborday_revive_lp_mobile_tempurpedic_1.jpg | Bin 0 -> 58215 bytes
+ 6 files changed, 73 insertions(+), 37 deletions(-)
+
+Tue Aug 13 16:27:00 2019 -0700 - [Josh] 2c2647fd09051e9aae5fe5c668192ebaa80801ee
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+Tue Aug 13 09:38:19 2019 -0700 - [Josh] 70938195fa442b3f72c920b787fa139894b36e70
+ 00-00-00_MASTER_TEMPLATE/TITLE.html                |  0
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 74 ++++++++++++++++------
+ 19-8-19_LaborDayRevive/skus.txt                    |  8 +++
+ 3 files changed, 64 insertions(+), 18 deletions(-)
+
+Mon Aug 12 12:27:50 2019 -0700 - [Josh] 87c907952ac77536bb576e8805b3f3839ebeca4c
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 204 ++++++++++++++-------
+ .../0819_laborday_revive_lp_hero_01_left.jpg       | Bin 0 -> 55472 bytes
+ 2 files changed, 139 insertions(+), 65 deletions(-)
+
+Mon Aug 12 11:24:16 2019 -0700 - [Josh] e7ff576a8965e890be1e8ac766ecde0d886b9d8e
+ 19-8-12_BOGO/19-8-12_BOGO.html                     |   4 +-
+ 19-8-19_LaborDayRevive/19-8-19_LaborDayRevive.html | 296 +++++++++++++++++++++
+ .../desktop/0819_laborday_revive_lp_hero_01.jpg    | Bin 0 -> 66936 bytes
+ .../desktop/0819_laborday_revive_lp_hero_02.jpg    | Bin 0 -> 36224 bytes
+ .../desktop/0819_laborday_revive_lp_revive_01.jpg  | Bin 0 -> 54433 bytes
+ .../desktop/0819_laborday_revive_lp_revive_02.jpg  | Bin 0 -> 27665 bytes
+ .../0819_laborday_revive_lp_revive_logo_02.png     | Bin 0 -> 8573 bytes
+ .../0819_laborday_revive_lp_stearnsfoster.jpg      | Bin 0 -> 19087 bytes
+ .../0819_laborday_revive_lp_tempurpedic.jpg        | Bin 0 -> 20246 bytes
+ .../mobile/0819_laborday_revive_lp_mobile_hero.jpg | Bin 0 -> 57315 bytes
+ .../0819_laborday_revive_lp_mobile_revive.jpg      | Bin 0 -> 41232 bytes
+ ...819_laborday_revive_lp_mobile_stearnsfoster.jpg | Bin 0 -> 35239 bytes
+ .../0819_laborday_revive_lp_mobile_tempurpedic.jpg | Bin 0 -> 30232 bytes
+ 13 files changed, 298 insertions(+), 2 deletions(-)
+
+Fri Aug 9 13:24:50 2019 -0700 - [Josh] 124606d79402617a4e4391dd615268fecb946beb
+ 19-8-12_BOGO/19-8-12_BOGO.html | 20 +++++++++-----------
+ 1 file changed, 9 insertions(+), 11 deletions(-)
+
+Fri Aug 9 11:59:19 2019 -0700 - [Josh] 806038ec544c40afc1357d0654e9b4f514fecc7b
+ 19-8-12_BOGO/19-8-12_BOGO.html | 11 +++++++----
+ 19-8-12_BOGO/items.txt         |  1 +
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+Thu Aug 8 08:52:46 2019 -0700 - [Josh] 4cbd72aafdb9ef33ed1de269b97867aa535a9fd2
+ 19-8-12_BOGO/19-8-12_BOGO.html | 102 +++++++++++++++++++++++++----------------
+ 1 file changed, 62 insertions(+), 40 deletions(-)
+
+Wed Aug 7 14:49:11 2019 -0700 - [Josh] c3845e9359b9a7c79963cf815c0cc8f3398104d5
+ 19-8-12_BOGO/19-8-12_BOGO.html | 222 ++++++++++++++++++++++++++---------------
+ 1 file changed, 143 insertions(+), 79 deletions(-)
+
+Wed Aug 7 12:53:04 2019 -0700 - [Josh] 001063e2de3f28085645d662a9d3aa5fe806d9c0
+ 19-8-12_BOGO/19-8-12_BOGO.html | 344 ++++++++++++++++++++++++++++-------------
+ 1 file changed, 236 insertions(+), 108 deletions(-)
+
+Wed Aug 7 11:48:57 2019 -0700 - [Josh] bf4ed88ce0da167e3b50bdce4d8f8d854cfe48b8
+ 19-8-12_BOGO/19-8-12_BOGO.html                     | 670 +++++++++++++++++++++
+ .../0812_BOGO_fosterkids_banner1.jpg               | Bin 0 -> 27286 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta1.jpg  | Bin 0 -> 13347 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta2.jpg  | Bin 0 -> 11851 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_cta3.jpg  | Bin 0 -> 12636 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_hero.jpg  | Bin 0 -> 112099 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_logo1.jpg | Bin 0 -> 9842 bytes
+ .../BOGO_FK_Desktop/0812_BOGO_fosterkids_logo2.jpg | Bin 0 -> 12907 bytes
+ .../0812_BOGO_fosterkids_mobile_banner1.jpg        | Bin 0 -> 32554 bytes
+ .../0812_BOGO_fosterkids_mobile_cta1.jpg           | Bin 0 -> 20527 bytes
+ .../0812_BOGO_fosterkids_mobile_cta2.jpg           | Bin 0 -> 15870 bytes
+ .../0812_BOGO_fosterkids_mobile_cta3.jpg           | Bin 0 -> 16018 bytes
+ .../0812_BOGO_fosterkids_mobile_hero.jpg           | Bin 0 -> 110175 bytes
+ .../0812_BOGO_fosterkids_mobile_logo1.jpg          | Bin 0 -> 10874 bytes
+ .../0812_BOGO_fosterkids_mobile_logo2.jpg          | Bin 0 -> 7870 bytes
+ .../img/optimized/0812_BOGO_fosterkids_banner1.jpg | Bin 0 -> 16775 bytes
+ .../img/optimized/0812_BOGO_fosterkids_cta1.jpg    | Bin 0 -> 6651 bytes
+ .../img/optimized/0812_BOGO_fosterkids_cta2.jpg    | Bin 0 -> 5403 bytes
+ .../img/optimized/0812_BOGO_fosterkids_cta3.jpg    | Bin 0 -> 6535 bytes
+ .../img/optimized/0812_BOGO_fosterkids_hero.jpg    | Bin 0 -> 86103 bytes
+ .../img/optimized/0812_BOGO_fosterkids_logo1.jpg   | Bin 0 -> 4072 bytes
+ .../img/optimized/0812_BOGO_fosterkids_logo2.jpg   | Bin 0 -> 6700 bytes
+ .../0812_BOGO_fosterkids_mobile_banner1.jpg        | Bin 0 -> 23971 bytes
+ .../optimized/0812_BOGO_fosterkids_mobile_cta1.jpg | Bin 0 -> 14953 bytes
+ .../optimized/0812_BOGO_fosterkids_mobile_cta2.jpg | Bin 0 -> 11219 bytes
+ .../optimized/0812_BOGO_fosterkids_mobile_cta3.jpg | Bin 0 -> 11732 bytes
+ .../optimized/0812_BOGO_fosterkids_mobile_hero.jpg | Bin 0 -> 85179 bytes
+ .../0812_BOGO_fosterkids_mobile_logo1.jpg          | Bin 0 -> 7194 bytes
+ .../0812_BOGO_fosterkids_mobile_logo2.jpg          | Bin 0 -> 5161 bytes
+ 29 files changed, 670 insertions(+)
+
+Wed Jul 31 09:16:14 2019 -0700 - [Josh] bdcfda33f482398db75e426c617b6109aef3f441
+ 19-7-26_kids_Furniture/kids-furniture.html | 30 +++++++++++++++++++++++++-----
+ 1 file changed, 25 insertions(+), 5 deletions(-)
+
+Fri Jul 26 12:17:24 2019 -0700 - [Josh] 036cc356fb11e03b27179b163dc62174a55390b6
+ 19-7-26_kids_Furniture/kids-furniture.html | 192 +++++++++++++++++++++++++----
+ 1 file changed, 169 insertions(+), 23 deletions(-)
+
+Fri Jul 26 10:55:02 2019 -0700 - [Josh] 548037730a18d41552358b1c6fb13a184c30bdc5
+ .../img/0729-kids-teens-beds-under-300.jpg         | Bin 0 -> 125078 bytes
+ .../img/0729-kids-teens-commercial.jpg             | Bin 0 -> 123297 bytes
+ .../img/0729-kids-teens-hero-1.jpg                 | Bin 0 -> 305160 bytes
+ .../img/0729-kids-teens-hero-2.jpg                 | Bin 0 -> 73056 bytes
+ .../img/0729-kids-teens-hero.jpg                   | Bin 0 -> 262788 bytes
+ .../originals/0729-kids-teens-beds-under-300.png   | Bin 0 -> 236861 bytes
+ .../img/originals/0729-kids-teens-commercial.png   | Bin 0 -> 232611 bytes
+ .../img/originals/0729-kids-teens-hero-1.png       | Bin 0 -> 583086 bytes
+ .../img/originals/0729-kids-teens-hero-2.png       | Bin 0 -> 166588 bytes
+ .../img/originals/0729-kids-teens-hero.png         | Bin 0 -> 761704 bytes
+ 19-7-26_kids_Furniture/kids-furniture.html         | 112 +++++++++++++++++++++
+ 11 files changed, 112 insertions(+)
+
+Thu Jul 11 16:57:34 2019 -0700 - [Josh] 0f426af3dba36e6d91c87b6ba96130484b4ee4d0
+ 19-7-15_KingForQueenEvent/index.html | 200 +++++++++++++++++++++--------------
+ 1 file changed, 122 insertions(+), 78 deletions(-)
+
+Thu Jul 11 13:35:01 2019 -0700 - [Josh] 9afc38a21ba6aaa10723ebbcd4d7013bcf47922d
+ 19-7-15_KingForQueenEvent/PDPList.txt | 1 +
+ 19-7-15_KingForQueenEvent/index.html  | 8 ++++----
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+Thu Jul 11 11:22:07 2019 -0700 - [jcpsimmons@gmail.com] f1373a5c57e17c157a7a6121d45c856fd5e97f84
+ .../img_optimized/0715_kingForQueenEvent_cta.png   | Bin 0 -> 1077 bytes
+ .../img_optimized/0715_kingForQueenEvent_logo.png  | Bin 0 -> 14345 bytes
+ .../0715_kingForQueenEvent_sleep-tracker.png       | Bin 0 -> 129900 bytes
+ .../0715_kingForQueenEvent_video_v2.jpg            | Bin 0 -> 91347 bytes
+ 19-7-15_KingForQueenEvent/img_raw/cta.png          | Bin 0 -> 2288 bytes
+ 19-7-15_KingForQueenEvent/img_raw/logo.png         | Bin 0 -> 14345 bytes
+ .../img_raw/sleep-tracker.png                      | Bin 0 -> 129900 bytes
+ 19-7-15_KingForQueenEvent/img_raw/video.jpg        | Bin 0 -> 91347 bytes
+ 19-7-15_KingForQueenEvent/img_raw/video.png        | Bin 0 -> 444560 bytes
+ 19-7-15_KingForQueenEvent/index.html               | 227 +++++
+ SummerHosting/FLEX_SummerHosting_2019.html         | 914 ++++++++++-----------
+ old/SummerHosting_2019.html                        | 780 +++++++++---------
+ 12 files changed, 1074 insertions(+), 847 deletions(-)
+
+Wed Jul 3 14:08:09 2019 -0700 - [Josh] 1816240afab5abf223ce3db99a4f8bd5911c0f30
+ SummerHosting/FLEX_SummerHosting_2019.html     | 458 +++++++++++++++++++++++++
+ {SummerHosting => old}/SummerHosting_2019.html |  18 +-
+ 2 files changed, 467 insertions(+), 9 deletions(-)
+
+Wed Jul 3 10:32:57 2019 -0700 - [Josh] 76ffc774fb0d078a96f5257325f47a140c4e707c
+ SummerHosting/SummerHosting_2019.html | 3 +++
+ 1 file changed, 3 insertions(+)
+
+Tue Jul 2 17:48:15 2019 -0700 - [Josh] 08d96607952ded011d770db2437b072ecd096a3a
+ SummerHosting/SummerHosting_2019.html | 106 ++++++++++++++++++++++------------
+ 1 file changed, 70 insertions(+), 36 deletions(-)
+
+Tue Jul 2 16:22:39 2019 -0700 - [Josh] 44cee07a38688bf61c6c0831f98c62ac100ff5de
+ SummerHosting/SummerHosting_2019.html              | 471 +++++----------------
+ .../optimized/0708-summertime-hosting-dining.jpg   | Bin 0 -> 24897 bytes
+ .../0708-summertime-hosting-food-series.jpg        | Bin 0 -> 25625 bytes
+ .../img/optimized/0708-summertime-hosting-hero.jpg | Bin 0 -> 94617 bytes
+ .../0708-summertime-hosting-mobile-dining.jpg      | Bin 0 -> 44695 bytes
+ .../0708-summertime-hosting-mobile-hero.jpg        | Bin 0 -> 116201 bytes
+ .../0708-summertime-hosting-mobile-sofa.jpg        | Bin 0 -> 48275 bytes
+ .../img/optimized/0708-summertime-hosting-sofa.jpg | Bin 0 -> 27726 bytes
+ .../0708-summertime-hosting-video-section.jpg      | Bin 0 -> 20768 bytes
+ 9 files changed, 103 insertions(+), 368 deletions(-)
+
+Tue Jul 2 15:45:43 2019 -0700 - [Josh] fe5ecb558d7de87064049c373ded6b1b9d48e261
+ SummerHosting/SummerHosting_2019.html              | 619 +++++++++++++++++++++
+ .../img/desktop/0708-summertime-hosting-dining.jpg | Bin 0 -> 74503 bytes
+ .../0708-summertime-hosting-food-series.jpg        | Bin 0 -> 69691 bytes
+ .../img/desktop/0708-summertime-hosting-hero.jpg   | Bin 0 -> 97426 bytes
+ .../img/desktop/0708-summertime-hosting-sofa.jpg   | Bin 0 -> 81832 bytes
+ .../0708-summertime-hosting-video-section.jpg      | Bin 0 -> 58819 bytes
+ .../0708-summertime-hosting-mobile-dining.jpg      | Bin 0 -> 130966 bytes
+ .../mobile/0708-summertime-hosting-mobile-hero.jpg | Bin 0 -> 216103 bytes
+ .../mobile/0708-summertime-hosting-mobile-sofa.jpg | Bin 0 -> 149473 bytes
+ 9 files changed, 619 insertions(+)

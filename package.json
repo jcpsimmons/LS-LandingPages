@@ -1,0 +1,23 @@
+{
+  "name": "LS-LandingPages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcpsimmons/LS-LandingPages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcpsimmons/LS-LandingPages/issues"
+  },
+  "homepage": "https://github.com/jcpsimmons/LS-LandingPages#readme",
+  "devDependencies": {
+    "gitsnap": "^1.0.2"
+  }
+}

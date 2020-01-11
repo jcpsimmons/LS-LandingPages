@@ -1,0 +1,327 @@
+<style>
+    .nyc .flex-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .nyc .flex-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    .nyc .flex-item {
+        margin: auto;
+    }
+
+    .nyc>div {
+        margin-bottom: 3rem;
+    }
+
+    .nyc .half-flex-l {
+        padding-right: 3rem;
+    }
+
+    .nyc .card-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%
+    }
+
+    .nyc .card-text h2,
+    .nyc .card-text h3,
+    .nyc .card-text h4.card-link {
+        color: #3a4454
+    }
+
+    .nyc .card-text h3 {
+        font-size: 2rem;
+    }
+
+    .nyc .card-text h4.card-link {
+        font-size: 1.75rem;
+    }
+
+    .nyc h2,
+    .nyc h3 {
+        margin: 0 0 1rem !important;
+    }
+
+    .nyc h4.card-link {
+        margin: 1rem 0 1rem !important;
+    }
+
+    .nyc .card-text h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    .nyc .card-text h4.card-link {
+        font-weight: bold;
+        border-bottom: 1px solid #3a4454;
+        padding: 0 .5rem .5rem;
+        white-space: nowrap;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .desktop-only {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+
+    .desktop-only-block {
+        display: block !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    .mobile-only-block {
+        display: none !important;
+    }
+
+
+    div#CardLinks {
+        margin: 0 4rem;
+    }
+
+    div#CardLinks a:hover,
+    div#CardLinks a:active,
+    div#CardLinks a:visited {
+        text-decoration: none;
+    }
+
+
+    @media(min-width:585px) and (max-width:767px) {
+        .nyc .card-text {
+            -webkit-transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    }
+
+    @media(max-width:321px) {
+        .nyc .card-text {
+            transform: translate(-50%, -50%) scale(.9);
+        }
+    }
+
+    @media(min-width: 768px) and (max-width:951px) {
+        .nyc div#CardLinks {
+            margin: 0 1rem;
+        }
+
+        .nyc .card-text {
+            transform: translate(-50%, -50%) scale(.9);
+        }
+    }
+
+    @media (max-width:767px) {
+        /* DESKTOP/MOBILE ONLY */
+
+        .desktop-only {
+            display: none !important
+        }
+
+        .desktop-only-block {
+            display: none !important
+        }
+
+        .mobile-only {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important
+        }
+
+        .mobile-only-block {
+            display: block !important
+        }
+
+        .nyc #CardLinks,
+        .nyc #DiningSetAndPillows {
+            -webkit-box-orient: vertical !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+            flex-direction: column !important;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .nyc .half-flex-l {
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+
+        .nyc .unpad-mobile {
+            margin-left: -16px;
+            margin-right: -16px;
+            margin-top: -1.4rem;
+        }
+
+        .nyc>div {
+            margin-bottom: 2rem;
+        }
+
+        .nyc .flex-col {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+
+        .nyc .card-text h3 {
+            font-size: 1.8rem;
+        }
+
+        .nyc .card-text h2 {
+
+            font-size: 2rem;
+        }
+
+        .nyc .card-text h4.card-link {
+            font-size: 1.5rem
+        }
+
+        .nyc #AccentChairThreeLink {
+            flex-direction: column-reverse;
+            margin-bottom: 0 !important
+        }
+
+        .nyc #SofaDiningSet {
+            flex-direction: column;
+        }
+
+        .nyc #ThreeLinkCTA {
+            margin-bottom: 2rem;
+        }
+    }
+</style>
+<div class="nyc">
+
+    <!-- hero-desktop -->
+    <div class="flex-row desktop-only" id="hero-row">
+        <div class="flex-item"><a href="/pdp-dean-charcoal-queen-upholstered-panel-bed-102221"><img
+                    src="/globalassets/images/lp/2020/01/winter_clearance_LP_102221.jpg" alt="Queen bed $395"
+                    class="img-responsive"></a></div>
+        <div class="flex-item"><a href="#ProductsArea"><img
+                    src="/globalassets/images/lp/2020/01/winter_clearance_lp_shop_deals.jpg" alt="Winter Savings Event - Shop Now"
+                    class="img-responsive"></a></div>
+    </div>
+
+
+    <!-- hero-mobile -->
+    <div class="flex-col mobile-only unpad-mobile">
+        <div class="flex-item"><a href="#ProductsArea"><img
+                    src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-header-1.jpg" alt="Queen bed $395"
+                    class="img-responsive"></a></div>
+        <div class="flex-item"><a href="/pdp-dean-charcoal-queen-upholstered-panel-bed-102221"><img
+                    src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-102221.jpg"
+                    alt="Winter Savings Event - Shop Now" class="img-responsive"></a></div>
+    </div>
+
+    <!-- accent chairs/3link CTA -->
+    <div class="flex-row" id="AccentChairThreeLink">
+        <div class="flex-item half-flex-l">
+            <div>
+                <a href="#ProductsArea">
+                    <img src="/globalassets/images/lp/2020/01/winter_clearance_lp_accent_chairs.jpg" alt="accent chairs $95"
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-accent-chairs.jpg"
+                        alt="accent chairs $95" class="img-responsive mobile-only"></a>
+            </div>
+        </div>
+        <div id="ThreeLinkCTA" class="flex-item" style="position:relative">
+            <div><img src="/globalassets/images/lp/2020/01/winter_clearance_lp_shop_room_bg.jpg" alt="clearance bg img"
+                    class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-shop-room-bg.jpg"
+                    alt="clearance bg img" class="img-responsive mobile-only"></div>
+            <div class="flex-col card-text">
+                <div class="flex-item" style="width:100%">
+                    <h2>SHOP BY ROOM</h2>
+                </div>
+                <div class="flex-item">
+                    <h3>Spend less and <b>save big</b> on the perfect pieces for any space.</h3>
+                </div>
+                <div class="flex-row" id="CardLinks">
+                    <div class="flex-item">
+                        <a
+                            href="/clearance/outlet?product_attribute=Living+Room+Set%2cSofa+and+Loveseat+Set%2cSectional%2cSofa%2cLoveseat%2cAccent+Chair%2cMedia+Console">
+                            <h4 class="card-link">living room</h4>
+                        </a>
+                    </div>
+                    <div class="flex-item">
+                        <a
+                            href="/clearance/outlet?product_attribute=Dining+Set%2cCounter+Height+Set%2cCounter+Height+Stool%2cDining+Chair%2cCounter+Height+Bench%2cDining+Table%2cDining+Bench">
+                            <h4 class="card-link">dining room</h4>
+                        </a>
+                    </div>
+                    <div class="flex-item">
+                        <a
+                            href="/clearance/outlet?product_attribute=Bedroom+Set%2cBed%2cDresser%2cDresser+and+Mirror+Set%2cNightstand">
+                            <h4 class="card-link">bedroom</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sofa/dining set -->
+    <div class="flex-row" id="SofaDiningSet">
+        <div class="flex-item half-flex-l">
+            <div><a href="/pdp-turdur-sofa-223508">
+                    <img src="/globalassets/images/lp/2020/01/winter_clearance_lp_223508.jpg" alt="sofa $350"
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-223508.jpg" alt="sofa $350"
+                        class="img-responsive mobile-only"></a>
+            </div>
+        </div>
+        <div class="flex-item half-flex-r">
+            <div><a href="/pdp-jameson-white-5-piece-counter-set-249837">
+                    <img src="/globalassets/images/lp/2020/01/winter_clearance_lp_249837.jpg" alt="dining set $395"
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-249837.jpg"
+                        alt="dining set $395 mobile" class="img-responsive mobile-only"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- revive link -->
+    <div id="queen-bed"><a href=" /departments/mattresses/promotions/winter-savings"><img
+                src="/globalassets/images/lp/2020/01/winter_clearance_lp_revive.jpg" alt="queen bed $395"
+                class="img-responsive desktop-only-block">
+            <img src="/globalassets/images/lp/2020/01/winter-savings-lp-mobile-revive.jpg" alt="queen bed $395"
+                class="img-responsive mobile-only-block">
+        </a>
+    </div>
+
+    <!-- Placeholder for scroll anchor -->
+    <div id="ProductsArea"></div>
+
+
+</div>
