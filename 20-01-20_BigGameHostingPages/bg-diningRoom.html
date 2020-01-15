@@ -1,0 +1,244 @@
+<style>
+    .holiday_hero_wrapper {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .holiday_hero_wrapper h1 {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+    }
+
+    .holiday_tile_wrapper {
+        width: 100%;
+    }
+
+    .holiday_box_wrapper {
+        width: 23.68%;
+        float: left;
+        overflow: hidden;
+    }
+
+    .box_br {
+        padding: 0;
+        margin-left: 0.88%;
+    }
+
+    .box_tl {
+        padding: 0;
+        margin-right: 0.88%;
+    }
+
+    .box_bl,
+    .box_tr {
+        padding: 0;
+        margin: 0 0.88%;
+    }
+
+    .animate_box {
+        overflow: hidden;
+        display: block;
+        transition: all .2s;
+        position: relative;
+    }
+
+    .animate_box:hover {
+        border-radius: 50%;
+    }
+
+    .animate_box:hover .dark_overlay {
+        visibility: visible;
+    }
+
+    .hover_effect {
+        transform: scale(1);
+        transition: transform 0.2s;
+    }
+
+    .hover_effect:hover {
+        transform: scale(0.95);
+    }
+
+    .dark_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(71, 71, 73, 0.6);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+
+    .dark_overlay_inner {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        font-size: 3rem;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+
+    .dark_overlay_inner span {
+        display: block;
+        line-height: 3.8rem;
+    }
+
+    .dark_overlay .title {
+        text-transform: uppercase;
+    }
+
+    .dark_overlay .border {
+        border-top: 0.4rem solid #ebcf4f;
+        width: 14rem;
+        margin: 0 auto;
+    }
+
+    .dark_overlay .startingPrice {
+        font-weight: bold;
+    }
+
+    .sync_banner {
+        margin: 2rem 0;
+    }
+
+    @media (max-width: 767px) {
+        .product-listing-template {
+            margin-top: -1.4rem;
+        }
+
+        .box_bl,
+        .box_tl {
+            margin: 0;
+            margin-right: 1.28%;
+        }
+
+        .box_br,
+        .box_tr {
+            margin: 0;
+            margin-left: 1.28%;
+        }
+
+        .box_tl,
+        .box_tr {
+            margin-bottom: 3.56%;
+        }
+
+        .holiday_tile_wrapper {
+            margin: 0;
+        }
+
+        .holiday_box_wrapper {
+            width: 48.1%;
+        }
+
+        .animate_box {
+            border-radius: 50%;
+        }
+
+        .dark_overlay {
+            border-radius: 50%;
+            visibility: visible;
+        }
+
+        .dark_overlay_inner {
+            font-size: 2.2rem;
+        }
+
+        .dark_overlay_inner span {
+            line-height: 3rem;
+        }
+
+        .dark_overlay .title {
+            line-height: 2.6rem;
+        }
+
+        .dark_overlay .border {
+            width: 10rem;
+            margin-bottom: .5rem;
+        }
+    }
+</style>
+
+
+<section class="row holiday_hero_wrapper">
+    <div class="col-xs-12 no-padding">
+        <a href="/pdp-rancho-grey-rectangle-6-piece-dining-set-249707">
+            <img class="img-responsive hidden-xs" alt="Counter Set $495"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_DR.jpg">
+            <img class="img-responsive visible-xs-block" alt="Counter Set $495"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0114_lp_gd_mobile_hero_diningset_2a.jpg?quality=90">
+            <h1 class="sr-only">Game Day Style</h1>
+        </a>
+    </div>
+</section>
+<section class="holiday_tile_wrapper clearfix">
+    <div class="holiday_box_wrapper box_tl">
+        <a class="animate_box"
+            href="/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas?sortby=sale_price+asc">
+            <img class="img-responsive" alt="Living Spaces Sectionals"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_LR_1_sectionals.jpg">
+            <div class="dark_overlay">
+                <div class="dark_overlay_inner">
+                    <span class="title">Sectionals</span>
+                    <span class="starting">starting at</span>
+                    <span class="startingPrice">$395</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="holiday_box_wrapper box_tr">
+        <a class="animate_box"
+            href="/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands?sortby=sale_price+asc">
+            <img class="img-responsive" alt="Living Spaces Recliners"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_LR_2_tvstands.jpg">
+            <div class="dark_overlay">
+                <div class="dark_overlay_inner">
+                    <span class="title">TV Stands</span>
+                    <span class="starting">starting at</span>
+                    <span class="startingPrice">$95</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="holiday_box_wrapper box_bl">
+        <a class="animate_box"
+            href="/departments/furniture/living-room/recliners/recliner-chairs?sortby=sale_price+asc">
+            <img class="img-responsive" alt="Living Spaces Dining Sets"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_DR_3_recliners.jpg">
+            <div class="dark_overlay">
+                <div class="dark_overlay_inner">
+                    <span class="title">Recliners</span>
+                    <span class="border"></span>
+                    <span class="starting">starting at</span>
+                    <span class="startingPrice">$195</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="holiday_box_wrapper  box_br">
+        <a class="animate_box" href="/departments/furniture/living-room/coffee-tables?sortby=sale_price+asc">
+            <img class="img-responsive" alt="Living Spaces TV Stands"
+                src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_LR_4_coffeetables.jpg">
+            <div class="dark_overlay">
+                <div class="dark_overlay_inner">
+                    <span class="title">Coffee Tables</span>
+                    <span class="starting">starting at</span>
+                    <span class="startingPrice">$65</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="sync_banner clearfix">
+    <a href="/company/financing">
+        <img class="img-responsive hidden-xs" alt="Finance banner"
+            src="/globalassets/images/lp/2020/01/BigGameHosting/0120_GBH_hp_hero_lp_Financing.jpg">
+        <img class="img-responsive visible-xs" alt="Finance banner"
+            src="/globalassets/images/lp/2020/01/BigGameHosting/financing/financing_banner_mobile.png">
+        <p class="sr-only">Want it? Finance it!. See your special financing options. Get info</p>
+    </a>
+</section>
