@@ -1,4 +1,4 @@
-<!-- Presidents Day Main -->
+<!-- Presidents Day DOORBUSTER -->
 <style>
     /* VIDEO MODAL */
     /***** Modal *****/
@@ -91,6 +91,11 @@
         width: 100%
     }
 
+    #pde .redUnderline {
+        border-bottom: 2px solid #b5544d;
+        padding-bottom: 2px;
+    }
+
     #pde #CTALinkContainer {
         display: flex;
         flex-wrap: nowrap;
@@ -121,8 +126,8 @@
 
         color: #fff !important;
         background-color: #346386;
-        width: 90%;
-        margin: .5rem auto;
+        width: 45%;
+        margin: .5rem 0;
         height: 5rem;
     }
 
@@ -143,6 +148,11 @@
     #pde .blueBoxText a:active,
     #pde .blueBoxText a:focus {
         text-decoration: none;
+    }
+
+    #pde .container .innerflex {
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     /* MOBILE/DESKTOP ONLY */
@@ -199,6 +209,15 @@
             margin: .5rem 1rem !important;
         }
 
+        #pde .container .innerflex {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        #BedDiningSet .container {
+            flex-direction: column;
+        }
+
         #pde #YoutubeFPO {
             padding-bottom: .5rem;
         }
@@ -227,7 +246,8 @@
 
         #pde .blueBoxText {
             width: 80%;
-            height: 4rem
+            height: 4rem;
+            margin: .5rem auto
         }
     }
 
@@ -252,11 +272,12 @@
 <div id="pde">
     <section id="TopBanner" class="desktop-only">
         <div class="container">
-            <div class="fitem twoup"><img src="/globalassets/images/lp/2020/02/presdients-day-LP-lockup.png" alt=""
+            <div class="fitem twoup"><img
+                    src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster-animation.gif" alt=""
                     class="img-responsive desktop-only">
             </div>
             <div class="fitem twoup"><a href="#PresidentsDayProducts"><img
-                        src="/globalassets/images/lp/2020/02/presdients-day-LP-CTA.png" alt=""
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster_CTA.png" alt=""
                         class="img-responsive desktop-only"></a>
             </div>
         </div>
@@ -264,8 +285,8 @@
 
     <section id="Hero" class="desktop-only">
         <div class="container">
-            <div class="fitem" style="margin-right:0.25rem;"><a href="/pdp-orson-graphite-queen-bed-225636"><img
-                        src="/globalassets/images/lp/2020/02/presdients-day-LP-225636.jpg" alt=""
+            <div class="fitem" style="margin-right:0.25rem;"><a href="/225756"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster-225756.jpg" alt=""
                         class="img-responsive desktop-only"></a>
             </div>
         </div>
@@ -274,14 +295,14 @@
     <section id="TopBannerMobile" class="mobile-only">
         <div class="container">
             <div class="fitem" id="PDayMobileHeader"><a href=""><img
-                        src="/globalassets/images/lp/2020/02/presidents-day-mobile_06.jpg" alt=""
+                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-animation.gif" alt=""
                         class="img-responsive"></a>
             </div>
-            <div class="fitem"><a href=""><img src="/globalassets/images/lp/2020/02/presidents-day-mobile_10.jpg" alt=""
-                        class="img-responsive"></a>
+            <div class="fitem"><a href=""><img src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-CTA.jpg"
+                        alt="" class="img-responsive"></a>
             </div>
             <div class="fitem" id="HeroImgMobile"><a href=""><img
-                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-225636.jpg" alt=""
+                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-225756.jpg" alt=""
                         class="img-responsive"></a>
             </div>
         </div>
@@ -289,39 +310,65 @@
 
     <section id='CTADiningSet'>
         <div class="container">
-            <div class="fitem twoup" style="position: relative;"><img
-                    src="/globalassets/images/lp/2020/02/presdients-day-LP-textbox.png" alt=""
+            <div class="fitem" style="position: relative;"><img
+                    src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster-textbg.png" alt=""
                     class="img-responsive desktop-only"><img
-                    src="/globalassets/images/lp/2020/02/presidents-day-mobile_14.jpg" alt=""
+                    src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-text-bg.jpg" alt=""
                     class="img-responsive mobile-only">
                 <div id="LinkOverlay">
                     <div id="CTALinkContainer">
                         <div class="blueBoxFlex">
                             <h2>Get Everything for Less</h2>
                         </div>
-                        <div class="blueBoxText">
-                            <a href="/departments/furniture/living-room/sofas-and-sectionals/sofas">
-                                <h3>Sofas starting at <b>$295 | Shop Sofas &rsaquo;</b></h3>
-                            </a>
+                        <div id='InnerFlexItems'>
+                            <div class="container innerflex">
+                                <div class="blueBoxText">
+                                    <a href="/departments/furniture/living-room/sofas-and-sectionals/sofas">
+                                        <h3>Sofas starting at <b>$295 | <span class="redUnderline">Shop Sofas
+                                                </span>&rsaquo;</b></h3>
+                                    </a>
+                                </div>
+                                <div class="blueBoxText">
+                                    <a href="/departments/furniture/dining-room/all">
+                                        <h3>Dining Sets starting at <b>$195 | <span class="redUnderline">Shop Dining
+                                                </span>&rsaquo;</b></h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="container innerflex">
+                                <div class="blueBoxText">
+                                    <a href="/departments/furniture/living-room/sofas-and-sectionals/sofas">
+                                        <h3>Beds starting at <b>$175 | <span class="redUnderline">Shop Beds
+                                                </span>&rsaquo;</b></h3>
+                                    </a>
+                                </div>
+                                <div class="blueBoxText">
+                                    <a href="/departments/furniture/dining-room/all">
+                                        <h3>Accent Chairs starting at <b>$95 | <span class="redUnderline">Shop Chairs
+                                                </span>&rsaquo;</b></h3>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blueBoxText">
-                            <a href="/departments/furniture/dining-room/all">
-                                <h3>Dining Sets starting at <b>$195 | Shop Dining &rsaquo;</b></h3>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </div>
+    </section>
 
-            <div class="fitem twoup"><a href="/pdp-kit-matias-6-piece-dining-set-245363"><img
-                        src="/globalassets/images/lp/2020/02/presdients-day-LP-245363.jpg" alt=""
+    <section id="BedDiningSet">
+        <div class="container">
+            <div class="fitem twoup"><a href="/225636"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster-225636.jpg" alt=""
                         class="img-responsive desktop-only"><img
-                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-245363.jpg" alt=""
+                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-225636.jpg" alt=""
+                        class="img-responsive mobile-only"></a></div>
+            <div class="fitem twoup"><a href="/245363"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster-245363.jpg" alt=""
+                        class="img-responsive desktop-only"><img
+                        src="/globalassets/images/lp/2020/02/presidents-day-mobile-db-245363.jpg" alt=""
                         class="img-responsive mobile-only"></a></div>
         </div>
     </section>
-
 
     <section id='YoutubeFPO'>
         <div class="container">
