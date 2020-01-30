@@ -4,6 +4,7 @@
   "description": "",
   "main": "./server/app.js",
   "scripts": {
+    "getApps": "node Scripts/getHomepageScripts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "devDependencies": {
     "gitsnap": "^1.0.2",
     "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "download": "^7.1.0"
   }
 }

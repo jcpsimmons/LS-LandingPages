@@ -184,7 +184,7 @@
                 &rsaquo;</h4>
         </div>
     </div>
-    <div><a href="/event/presidents-day"><img src="/globalassets/images/lp/2020/02/0203_presidents-day-banner.jpg"
+    <div id="BannerSwap"><a href="/event/presidents-day"><img src="/globalassets/images/lp/2020/02/0203_presidents-day-banner.jpg"
                 alt="Presidents day panel" class="img-responsive desktop-only"><img
                 src="/globalassets/images/lp/2020/02/0203_presidents-day-banner-mobile.jpg" alt="presidents day panel"
                 class="img-responsive mobile-only"></a></div>
@@ -219,7 +219,7 @@
         var startDate = new Date("February 10, 2020 0:00:00")
         var endDate = new Date("February 17, 2020 0:00:00")
         if (curDate >= startDate && curDate <= endDate) {
-            // image swap logic
+            document.getElementById('BannerSwap').innerHTML = `<a href="/event/presidents-day/doorbuster"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner.jpg" alt="Presidents day panel" class="img-responsive desktop-only"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner-mobile.jpg" alt="presidents day panel" class="img-responsive mobile-only"></a>` 
             console.log('date in range')
         }
     }
