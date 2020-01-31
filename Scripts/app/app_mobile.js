@@ -1,6 +1,6 @@
 window.addEventListener(
   "load",
-  function() {
+  function () {
     if (window.jQuery) {
       var bodyTarget = $("#hp_body");
       // Side to side Top Layer Attributes
@@ -506,11 +506,11 @@ window.addEventListener(
         let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
         let active = false;
 
-        const lazyLoad = function() {
+        const lazyLoad = function () {
           if (active === false) {
             active = true;
-            setTimeout(function() {
-              lazyImages.forEach(function(lazyImage) {
+            setTimeout(function () {
+              lazyImages.forEach(function (lazyImage) {
                 if (
                   lazyImage.getBoundingClientRect().top <= window.innerHeight &&
                   lazyImage.getBoundingClientRect().bottom >= 0 &&
@@ -519,7 +519,7 @@ window.addEventListener(
                   lazyImage.src = lazyImage.dataset.src;
                   lazyImage.classList.remove("lazy");
 
-                  lazyImages = lazyImages.filter(function(image) {
+                  lazyImages = lazyImages.filter(function (image) {
                     return image !== lazyImage;
                   });
 
@@ -549,7 +549,7 @@ window.addEventListener(
       }
       // Append Heroes and initialize Hero Slider
       $("#ls_hero_event").append(
-        '<div class="ls_hero_slider"> <a href="/event/big-game/entertainment-centers"> <picture> <source media="(min-width: 768px)" srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET_mobile.jpg?w=780"> <source media="(min-width: 576px)" srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET_mobile.jpg?w=576"> <source media="(min-width: 414px)" srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET_mobile.jpg?w=414"> <img src="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET_mobile.jpg" class="img-responsive" alt="Game Day Style - Entertainment"> </picture> <p class="sr-only">Game Day Style - Discover winning designs for your space - Shop All Entertainment. TV Stand $595</p> </a> </div>'
+        '<!-- MOBILE SECONDARY --> <div class="ls_hero_slider banner-tester-util"> <a href="/departments/mattresses/promotions"> <picture> <source media="(min-width: 768px)" srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg?w=780"> <source media="(min-width: 576px)" srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg?w=576"> <source media="(min-width: 414px)" srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg?w=414"> <img src="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg" class="img-responsive" alt="Revive Presidents Day Event"> </picture> <p class="sr-only">Revive presidents day event. Save big, sleep better. Tempur-pedic stearns and foster save up to $800 on select sets Shop our deals.</p> </a> </div> '
       );
 
       $("#ls_hero_event").slick({

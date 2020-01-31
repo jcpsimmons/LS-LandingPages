@@ -7,32 +7,75 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
 <script>
   let insertData = [
     {
-      name: "Holiday LP",
-      runtime: "November 1 to November 2",
-      imageDesktop:
-        "https://livingspaces.com/globalassets/images/home/2019/12/1209_holiday_hp_hero.jpg",
-      imageMobile:
-        "https://livingspaces.com/globalassets/images/home/2019/12/1209_holiday_hp_mobile.jpg",
-      altText: "the alt text for the image",
-      srText: "screen reader text in an h1 tag",
-      link: "/event/holiday",
-      isPrimary: true
+      'name': 'P Day wk1',
+      'runtime': '2/3-2/12',
+      'imageDesktop': '/globalassets/images/home/2020/02/0203_presidentsday_hp_hero_wk1.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0203_presidentsday_hp_hero_mobile_wk1.jpg',
+      'altText': 'President\'s Day Event',
+      'srText': 'Presidents day event. Stylish designs for less. Shop our deals.',
+      'link': '/event/presidents-day',
+      'isPrimary': true
     },
     {
-      name: "Holiday Mattress",
-      runtime: "November 1 to November 2",
-      imageDesktop:
-        "https://livingspaces.com/globalassets/images/home/2019/12/1209_holidaysleep_hp_hero.jpg",
-      imageMobile:
-        "https://livingspaces.com/globalassets/images/home/2019/12/1209_holidaysleep_hp_mobile.jpg",
-      altText: "alt text for second image",
-      srText: "screen reader text in a p tag",
-      link: "/departments/mattresses/promotions",
-      isPrimary: false
+      'name': 'P Day Revive',
+      'runtime': '2/3-2/12',
+      'imageDesktop': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg',
+      'altText': 'Revive Presidents Day Event',
+      'srText': 'Revive presidents day event. Save big, sleep better. Tempur-pedic stearns and foster save up to $800 on select sets Shop our deals.',
+      'link': '/departments/mattresses/promotions',
+      'isPrimary': false
+    },
+    {
+      'name': 'P Day dbuster',
+      'runtime': '2/12-2/17',
+      'imageDesktop': '/globalassets/images/home/2020/02/0213_presidentsday_db_hp_hero_wk2.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0213_presidentsday_db_hp_hero_mobile_wk2.jpg',
+      'altText': 'President\'s Day Doorbuster',
+      'srText': 'Presidents day doorbuster event. Stylish designs for less. Shop our deals. Queen bed $175',
+      'link': '/event/presidents-day/doorbuster',
+      'isPrimary': true
+    },
+    {
+      'name': 'P Day Revive',
+      'runtime': '2/12-2/17',
+      'imageDesktop': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg',
+      'altText': 'Revive Presidents Day Event',
+      'srText': 'Revive presidents day event. Save big, sleep better. Tempur-pedic stearns and foster save up to $800 on select sets Shop our deals.',
+      'link': '/departments/mattresses/promotions',
+      'isPrimary': false
+    },
+    {
+      'name': 'P Day wk3',
+      'runtime': '2/16-2/23',
+      'imageDesktop': '/globalassets/images/home/2020/02/0218_presidentsday_hp_hero_wk3.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0218_presidentsday_hp_hero_mobile_wk3.jpg',
+      'altText': 'President\'s Day Event',
+      'srText': 'Presidents day event. Stylish designs for less. Shop our deals. 6pc dining set $495',
+      'link': '/event/presidents-day',
+      'isPrimary': true
+    },
+    {
+      'name': 'P Day Revive',
+      'runtime': '2/16-2/23',
+      'imageDesktop': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg',
+      'imageMobile': '/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero_mobile.jpg',
+      'altText': 'Revive Presidents Day Event',
+      'srText': 'Revive presidents day event. Save big, sleep better. Tempur-pedic stearns and foster save up to $800 on select sets Shop our deals.',
+      'link': '/departments/mattresses/promotions',
+      'isPrimary': false
     }
-  ];
+  ]
 </script>
+
+
 <style>
+  .banner-tester-util {
+    margin: auto;
+    max-width: 35%
+  }
+
   .container.ls_hp_container {
     max-width: 35%;
   }
@@ -91,12 +134,7 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
   }
 </style>
 <div class="text-center">
-  <img
-    class="hero"
-    src="/globalassets/images/tools/bt.jpg"
-    alt="banner tester"
-    class="img-responsive"
-  />
+  <img class="hero" src="/globalassets/images/tools/bt.jpg" alt="banner tester" class="img-responsive" />
 </div>
 <div class="text-center" id="root"></div>
 
@@ -125,18 +163,18 @@ TO USE: Simply find the datastore in the script tag below (variable named 'inser
 
         desktopCode = `<!-- DESKTOP SECONDARY --> <a href="${obj.link}"> <div class="ls_hero_cm"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> <source srcset="${obj.imageDesktop}?w=575" media="(max-width: 575px)"> <source srcset="${obj.imageDesktop}?w=767" media="(max-width: 767px)"> <source srcset="${obj.imageDesktop}?w=991" media="(max-width: 991px)"> <source srcset="${obj.imageDesktop}?w=1199" media="(max-width: 1199px)"> <!--[if IE 9]></video><![endif]--> <img alt="${obj.altText}" class="img-responsive img_target" src="${obj.imageDesktop}"> </picture> <${srTag} class="sr-only">${obj.srText}</${srTag}> </div> </a>`;
 
-        mobileCode = `<!-- MOBILE SECONDARY --> <div class="ls_hero_slider"> <a href="${obj.link}"> <picture> <source media="(min-width: 768px)" srcset="${obj.imageMobile}?w=780"> <source media="(min-width: 576px)" srcset="${obj.imageMobile}?w=576"> <source media="(min-width: 414px)" srcset="${obj.imageMobile}?w=414"> <img src="${obj.imageMobile}" class="img-responsive" alt="${obj.altText}"> </picture> <${srTag} class="sr-only">${obj.srText}</${srTag}> </a> </div> `;
+        mobileCode = `<!-- MOBILE SECONDARY --> <div class="ls_hero_slider banner-tester-util"> <a href="${obj.link}"> <picture> <source media="(min-width: 768px)" srcset="${obj.imageMobile}?w=780"> <source media="(min-width: 576px)" srcset="${obj.imageMobile}?w=576"> <source media="(min-width: 414px)" srcset="${obj.imageMobile}?w=414"> <img src="${obj.imageMobile}" class="img-responsive" alt="${obj.altText}"> </picture> <${srTag} class="sr-only">${obj.srText}</${srTag}> </a> </div> `;
       }
 
       return `<div class='tile'><div class='${
         obj.isPrimary ? "primary" : "secondary"
-      } marker'>${obj.isPrimary ? "PRIMARY" : "SECONDARY"}</div><h1><span>${
+        } marker'>${obj.isPrimary ? "PRIMARY" : "SECONDARY"}</div><h1><span>${
         obj.name
-      }</span></h1><h2><i>${
+        }</span></h1><h2><i>${
         obj.runtime
-      }</i></h2>${desktopCode}<pre>${escapeHTML(
-        desktopCode
-      )}</pre>${mobileCode}<pre>${escapeHTML(mobileCode)}</pre></div>`;
+        }</i></h2>${desktopCode}<pre>${escapeHTML(
+          desktopCode
+        )}</pre>${mobileCode}<pre>${escapeHTML(mobileCode)}</pre></div>`;
     })
     .join("");
 

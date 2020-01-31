@@ -1,6 +1,6 @@
 window.addEventListener(
   "load",
-  function() {
+  function () {
     if (window.jQuery) {
       var bodyTarget = $("#hp_body");
 
@@ -508,7 +508,7 @@ window.addEventListener(
       init();
       // Append Heroes and initialize Hero Slider
       $("#ls_hero_event").append(
-        '<a href="/event/big-game/entertainment-centers"> <div class="ls_hero_cm"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> <source srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET.jpg?w=575" media="(max-width: 575px)"> <source srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET.jpg?w=767" media="(max-width: 767px)"> <source srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET.jpg?w=991" media="(max-width: 991px)"> <source srcset="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET.jpg?w=1199" media="(max-width: 1199px)"> <!--[if IE 9]></video><![endif]--> <img alt="Game Day Style - Entertainment" class="img-responsive img_target" src="/globalassets/images/home/2020/01/0120_GBH_hp_hero_ET.jpg"> </picture> <p class="sr-only">Game Day Style - Discover winning designs for your space - Shop All Entertainment. TV Stand $595</p> </div> </a>'
+        '<!-- DESKTOP SECONDARY --> <a href="/departments/mattresses/promotions"> <div class="ls_hero_cm"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> <source srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg?w=575" media="(max-width: 575px)"> <source srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg?w=767" media="(max-width: 767px)"> <source srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg?w=991" media="(max-width: 991px)"> <source srcset="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg?w=1199" media="(max-width: 1199px)"> <!--[if IE 9]></video><![endif]--> <img alt="Revive Presidents Day Event" class="img-responsive img_target" src="/globalassets/images/home/2020/02/0203_revive_presidentsday_hp_hero.jpg"> </picture> <p class="sr-only">Revive presidents day event. Save big, sleep better. Tempur-pedic stearns and foster save up to $800 on select sets Shop our deals.</p> </div> </a>'
       );
 
       $("#ls_hero_event").slick({
@@ -521,7 +521,7 @@ window.addEventListener(
         autoplaySpeed: 4000
       });
 
-      $("#viewMore").click(function() {
+      $("#viewMore").click(function () {
         if ($(".ls_departments_row").height() <= 0) {
           $(".ls_departments_row").animate(
             {
@@ -530,12 +530,12 @@ window.addEventListener(
             800,
             overflowFunc("visible")
           );
-          $("#viewMore").fadeOut(500, function() {
+          $("#viewMore").fadeOut(500, function () {
             $(this)
               .text("View Less -")
               .fadeIn(500);
           });
-          $(".ls_departments_showMore .ls_department_box a").each(function(
+          $(".ls_departments_showMore .ls_department_box a").each(function (
             index,
             element
           ) {
@@ -552,12 +552,12 @@ window.addEventListener(
             800,
             overflowFunc("hidden")
           );
-          $("#viewMore").fadeOut(500, function() {
+          $("#viewMore").fadeOut(500, function () {
             $(this)
               .text("View More +")
               .fadeIn(500);
           });
-          $(".ls_departments_showMore .ls_department_box a").each(function(
+          $(".ls_departments_showMore .ls_department_box a").each(function (
             index,
             element
           ) {
@@ -566,7 +566,7 @@ window.addEventListener(
         }
       });
 
-      $("#viewMore_v2").click(function() {
+      $("#viewMore_v2").click(function () {
         if ($(".ls_departments_row_v2").height() <= 0) {
           $(".ls_departments_row_v2").animate(
             {
@@ -575,12 +575,12 @@ window.addEventListener(
             800,
             overflowFunc("visible")
           );
-          $("#viewMore_v2").fadeOut(500, function() {
+          $("#viewMore_v2").fadeOut(500, function () {
             $(this)
               .text("View Less -")
               .fadeIn(500);
           });
-          $(".ls_departments_showMore .ls_department_box a").each(function(
+          $(".ls_departments_showMore .ls_department_box a").each(function (
             index,
             element
           ) {
@@ -597,12 +597,12 @@ window.addEventListener(
             800,
             overflowFunc("hidden")
           );
-          $("#viewMore_v2").fadeOut(500, function() {
+          $("#viewMore_v2").fadeOut(500, function () {
             $(this)
               .text("View More +")
               .fadeIn(500);
           });
-          $(".ls_departments_showMore .ls_department_box a").each(function(
+          $(".ls_departments_showMore .ls_department_box a").each(function (
             index,
             element
           ) {
@@ -615,10 +615,10 @@ window.addEventListener(
         $(".ls_departments_row").css("overflow", val);
       }
     }
-    $("#viewMore").keydown(function(e) {
+    $("#viewMore").keydown(function (e) {
       if (e.keyCode === 13) $(this).trigger("click");
     });
-    $("#viewMore_v2").keydown(function(e) {
+    $("#viewMore_v2").keydown(function (e) {
       if (e.keyCode === 13) $(this).trigger("click");
     });
   },
