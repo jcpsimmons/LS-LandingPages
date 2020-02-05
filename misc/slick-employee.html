@@ -1,53 +1,86 @@
-<!-- just rewrite the modal... https://www.w3schools.com/Bootstrap/bootstrap_ref_js_modal.asp -->
-
-<h1>The slider is below here</h1>
 <style>
     #EmployeePhotoModal {
         display: none;
     }
 
+    #EmployeePhotosSection h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2.5rem
+    }
+
+    #EmployeePhotosSection a {
+        font-size: inherit;
+    }
+
     .slick-slide {
-        margin-right: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+
+    #PhotoModal .modal-content {
+        background-color: transparent
+    }
+
+    #PhotoModal img {
+        margin: 0 auto;
+    }
+
+    #PhotoModal button span {
+        color: #fff
+    }
+
+    #PhotoModal .modal-content {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #PhotoModal i.fa-times {
+        position: absolute;
+        top: -30px;
+        right: 100px;
+        color: #fff
+    }
+
+
+    @media (max-width: 991px) {
+        #PhotoModal i.fa-times {
+            right: 0
+        }
+    }
+
+    @media(max-width: 768px) {
+        #PhotoModal .modal-dialog {
+            width: 100vw;
+        }
+
+        #PhotoModal .modal-content button {
+            margin-top: 1rem !important;
+            font-size: 3rem !important;
+        }
     }
 </style>
-<div id="EmployeePhotoSlider">
-    <img class="img-responsive" src="https://via.placeholder.com/200.jpg" />
-</div>
 
+<section id="EmployeePhotosSection" class='text-center'>
+    <h2><a target="_blank" href="https://www.instagram.com/teamlivingspaces/">@TEAMLIVINGSPACES
+        </a></h2>
+    <div id="EmployeePhotoSlider">
+        <img class="img-responsive"
+            src="https://cdn.brandfolder.io/XQW73PF4/as/q56vv4-bkjfnc-3nfzka/Team_LS_Photos_for_Webpage.svg?width=200&height=200"
+            style="max-height: 170px; margin: 10px auto" />
+    </div>
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                        <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                        <input type="text" class="form-control" id="psw" placeholder="Enter password">
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="" checked>Remember me</label>
-                    </div>
-                    <button type="submit" class="btn btn-default btn-success btn-block"><span
-                            class="glyphicon glyphicon-off"></span> Login</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span
-                        class="glyphicon glyphicon-remove"></span> Cancel</button>
-                <p>Not a member? <a href="#">Sign Up</a></p>
-                <p>Forgot <a href="#">Password?</a></p>
+    <!-- CODE FOR MODAL -->
+    <div class="modal fade" id="PhotoModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    onclick="window.closeModal();"><span aria-hidden="true">×</span></button>
+                <img src="https://via.placeholder.com/500.jpg" alt="" class="img-responsive">
             </div>
         </div>
     </div>
-</div>
-</div>
+    <!-- END MODAL -->
+</section>

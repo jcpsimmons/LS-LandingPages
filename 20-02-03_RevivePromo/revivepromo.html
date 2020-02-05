@@ -56,22 +56,22 @@
 
     /* VIDEO MODAL */
     /***** Modal *****/
-    .modal-backdrop.in {
+    .rws .modal-backdrop.in {
         filter: alpha(opacity=7);
         opacity: 0.7;
     }
 
-    .modal-header {
+    .rws .modal-header {
         padding: 25px 25px 15px 25px;
         text-align: right;
     }
 
-    .modal-header,
-    .modal-footer {
+    .rws .modal-header,
+    .rws .modal-footer {
         border: 0;
     }
 
-    .modal-header .close {
+    .rws .modal-header .close {
         float: none;
         text-shadow: none;
         color: #fff !important;
@@ -90,11 +90,11 @@
         height: 3rem !important;
     }
 
-    .modal-body {
+    .rws .modal-body {
         padding: 0 2.5rem 2.5rem 2.5rem;
     }
 
-    .modal-content {
+    .rws .modal-content {
         background: none;
         border: 0;
         -moz-border-radius: 0;
@@ -105,18 +105,22 @@
         box-shadow: none;
     }
 
-    .cta-span {
+    .rws .cta-span {
         font-weight: bold;
         color: #028ba2;
     }
 
-    .cta-span a {
+    .rws .cta-span a {
         color: #028ba2;
     }
 
     /* END MODAL */
 
     @media (max-width:767px) {
+        .rws {
+            padding-bottom: 0
+        }
+
         .cta-span {
             display: none
         }
@@ -160,8 +164,8 @@
 
 <div class="rws">
     <div id="Banner">
-        <img src="/globalassets/images/lp/2020/02/0203_Promo-desktop-revive-presidentsday_title_updated.jpg" alt="Revive Header"
-            class="img-responsive desktop-only">
+        <img src="/globalassets/images/lp/2020/02/0203_Promo-desktop-revive-presidentsday_title_updated.jpg"
+            alt="Revive Header" class="img-responsive desktop-only">
         <img src="/globalassets/images/lp/2020/02/0203_Promo-desktop-revive-presidentsday_title_mobile_updated.jpg"
             alt="Revive Header" class="img-responsive mobile-only">
     </div>
@@ -184,8 +188,9 @@
                 &rsaquo;</h4>
         </div>
     </div>
-    <div id="BannerSwap"><a href="/event/presidents-day"><img src="/globalassets/images/lp/2020/02/0203_presidents-day-banner.jpg"
-                alt="Presidents day panel" class="img-responsive desktop-only"><img
+    <div id="BannerSwap"><a href="/event/presidents-day"><img
+                src="/globalassets/images/lp/2020/02/0203_presidents-day-banner.jpg" alt="Presidents day panel"
+                class="img-responsive desktop-only"><img
                 src="/globalassets/images/lp/2020/02/0203_presidents-day-banner-mobile.jpg" alt="presidents day panel"
                 class="img-responsive mobile-only"></a></div>
 </div>
@@ -219,7 +224,7 @@
         var startDate = new Date("February 10, 2020 0:00:00")
         var endDate = new Date("February 17, 2020 0:00:00")
         if (curDate >= startDate && curDate <= endDate) {
-            document.getElementById('BannerSwap').innerHTML = `<a href="/event/presidents-day/doorbuster"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner.jpg" alt="Presidents day panel" class="img-responsive desktop-only"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner-mobile.jpg" alt="presidents day panel" class="img-responsive mobile-only"></a>` 
+            document.getElementById('BannerSwap').innerHTML = `<a href="/event/presidents-day/doorbuster"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner.jpg" alt="Presidents day panel" class="img-responsive desktop-only"><img src="/globalassets/images/lp/2020/02/0210_presidents-day-doorbuster-banner-mobile.jpg" alt="presidents day panel" class="img-responsive mobile-only"></a>`
             console.log('date in range')
         }
     }
