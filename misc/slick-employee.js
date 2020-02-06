@@ -2,11 +2,18 @@ const injectAndSlick = () => {
     var injectionPoint = $('#EmployeePhotoSlider')
 
     // Configure Brandfolder Links 
-    const imageLinks = ['https://cdn.brandfolder.io/XQW73PF4/as/q56vv4-bkjfnc-3nfzka/Team_LS_Photos_for_Webpage.jpg?width=200&height=200']
-
-    for (let i = 2; i < 12; i++) {
-        imageLinks.push(`${imageLinks[0]}&position=${i}`)
-    }
+    const imageLinks = ['https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_1.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_2.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_3.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_5.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_6.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_7.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_8.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_9.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_10.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_11.jpg?width=200&height=200',
+        'https://www.livingspaces.com/globalassets/images/lp/2020/02/500x500_12.jpg?width=200&height=200',
+    ]
 
     // Links to all the image - smashes to HTML. replace the data-img attr with the link to the modal image
     var images = imageLinks.map((imageLink) => {
@@ -18,18 +25,20 @@ const injectAndSlick = () => {
     if (utag_data.site_type == "mobile") {
         injectionPoint.slick({
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 4000
+            autoplaySpeed: 4000, 
+            swipeToSlide: true
         })
-     } else {
+    } else {
         injectionPoint.slick({
             infinite: true,
             slidesToShow: 6,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 4000
+            autoplaySpeed: 4000, 
+            swipeToSlide: true
         })
     }
 
