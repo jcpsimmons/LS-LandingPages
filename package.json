@@ -5,7 +5,7 @@
   "main": "./server/app.js",
   "scripts": {
     "getApps": "node Scripts/getHomepageScripts.js",
-    "server": "./node_modules/.bin/http-server -o /lstemplate.html ./build_tools/",
+    "server": "./node_modules/.bin/http-server -o /build_tools/lstemplate.html .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +24,6 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "concurrently": "^5.1.0",
     "download": "^7.1.0",
     "http-server": "^0.12.1",
     "opn": "^6.0.0"
