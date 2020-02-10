@@ -1,0 +1,139 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script type="text/javascript">
+    var anotherInterval = setInterval(() => {
+        if (typeof utag !== "undefined") {
+            clearInterval(anotherInterval);
+            var listName = getURLParam("listname");
+            var itemListString = getURLParam("pid");
+            var itemList = itemListString.split(",");
+            var name = decodeURIComponent(listName);
+            var listOfLikedItems = app.stores.likeProductsStore.items;
+
+            function socialShare() {
+                var currentURL = window.location.href;
+                $('#socialShare').append('<div class="share_wrapper"> <input class="share_url form-control" id="myUrl" type="text" value="' + currentURL + '"> <button data-clipboard-target="#myUrl" data-clipboard-action="copy" class="copyBtn btn primary-button"><i class="fa fa-files-o" aria-hidden="true"></i> Copy</button></div>');
+            }
+
+            function windowPopup(url, width, height) {
+                // Calculate the position of the popup so
+                // it’s centered on the screen.
+                var left = (screen.width / 2) - (width / 2),
+                    top = (screen.height / 2) - (height / 2);
+
+                window.open(
+                    url,
+                    "",
+                    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+                );
+            }
+
+            function getURLParam(sParam) {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) return sParameterName[1];
+                }
+                return "";
+            }
+
+            function insertMatches(product) {
+                var deviceClass = (utag.data.site_type === 'desktop') ? '<div class="product-item-container">' : '';
+                var deviceClassEnd = (utag.data.site_type === 'desktop') ? '</div>' : '';
+                var imgMobile = (utag.data.site_type === 'mobile') ? 'class="product-item-image"' : '';
+                $.getJSON("https://www.livingspaces.com/api/restfulproducts?pid=" + product, function (jsonp) {
+                    if (jsonp.numFound > 0) {
+                        $.each(jsonp.products, function (i) {
+                            var matchTiles = '';
+                            var tileImgSrc = "";
+                            var columnClass = (utag_data.site_type === 'desktop') ? 'col-xs-4' : '';
+                            tileImgSrc = this.images[0].imageUrl;
+                            matchTiles += '<div class="' + columnClass + ' product-item"><a ' + imgMobile + ' href="/' + product + ' ">' +
+                                '<img class="img-responsive" src="' + tileImgSrc + '?width=350" alt="" /></a>' +
+                                deviceClass + '<div class="product-left-section"><div class="name">' + this.title + '</div>';
+                            if (this.clearance == "Clearance") {
+                                matchTiles += '<div><span class="price">$' + Math.floor(this.price.salePrice) + '</span> was $' + Math.floor(this.price.msrp) + '</div>';
+                            } else {
+                                matchTiles += '<span class="price">$' + Math.floor(this.price.salePrice) + '</span>';
+                            }
+                            matchTiles += "<div title='" + this.reviewsAvg + "out of 5' data='" + this.reviewsAvg + "' class='ratings pull-right'>"
+                            if (parseInt(this.reviewsAvg) > 0) {
+                                for (var j = 1; j < 6; j++) {
+                                    if (this.reviewsAvg >= j) {
+                                        matchTiles += '<span aria-hidden="true" class="fa fa-star"></span>';
+                                    }
+
+                                    if (this.reviewsAvg < j) {
+                                        if (this.reviewsAvg % 1 >= .5 && parseInt(this.reviewsAvg) === (j - 1)) {
+                                            matchTiles += '<span aria-hidden="true" class="fa fa-star-half-o"></span>';
+                                        } else {
+                                            matchTiles += '<span aria-hidden="true" class="fa fa-star-o">';
+                                        }
+                                    }
+                                }
+                                matchTiles += '<span class="number">(' + this.reviewsCount + ')</span>';
+                            }
+                            matchTiles += '</div></div><a id="vue-liked-widget-container-206420" class="product-right-section">';
+
+                            if (listOfLikedItems.indexOf(product) > -1) {
+                                matchTiles += '<a data-like="' + product + '" id="' + product + '" href="javascript:void(0)" class="liked scan-like like-button"><span aria-hidden="true" class="fa fa-2x fa-heart" style="    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"></span><span class="sr-only">Liked</span></a></div>';
+                            } else {
+                                matchTiles += '<a data-like="' + product + '" id="' + product + '" href="javascript:void(0)" class="like scan-like like-button"><span aria-hidden="true" class="fa fa-2x fa-heart-o" style="    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"></span><span class="sr-only">Like</span></a></div>';
+                            }
+
+                            matchTiles += deviceClassEnd + '</a></div>';
+                            $('.load_icon').css('display', 'none');
+                            $("#matchTiles").append(matchTiles);
+                        });
+                    } else {
+                        if (product !== undefined) {
+                            $('.unavailable-item').removeClass('dont-display');
+                            $("#notAvailable").append('<div class="col-xs-6 col-sm-3 box-wrapper"> <div class="unItem_wrapper"><a href="/' + product + '"> <img class="img-responsive" alt="Product ID ' + product + ' out of stock" src="/api/image?recId=' + product + '&tn=1" > <span class="unItem">' + product + '</span> </a></div></div>');
+                        }
+                    }
+
+
+                });
+            }
+            $(document).ready(function () {
+                if (listName.length > 0) {
+                    $("#match_header").text(name);
+                }
+                if (itemList.length > 0 && itemList[0] !== "") {
+                    $("#matchTiles").html('<i class="load_icon fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
+                    for (var i = 0; i < itemList.length; i++) {
+                        insertMatches(itemList[i]);
+                    }
+                    socialShare();
+                }
+
+                var clipboard = new ClipboardJS('.btn');
+
+                clipboard.on('success', function (e) {
+                    $(".copyBtn").text('Copied!');
+                    e.clearSelection();
+                });
+
+                clipboard.on('error', function (e) {
+                    console.error('Action:', e.action);
+                    console.error('Trigger:', e.trigger);
+                });
+
+                //Like item, Toogle classs between like and liked.
+                $('body').on('click', '.scan-like', function () {
+                    var likePid = $(this).attr('data-like');
+                    if ($(this).hasClass('like')) {
+                        app.stores.likeProductsStore.likeItem(likePid);
+                        $(this).toggleClass('like liked');
+                        $(this).html('<span aria-hidden="true" class="fa fa-2x fa-heart" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"></span><span class="sr-only">Liked</span>');
+                    } else if ($(this).hasClass('liked')) {
+                        app.stores.likeProductsStore.unlikeItem(likePid);
+                        $(this).toggleClass('like liked');
+                        $(this).html('<span aria-hidden="true" class="fa fa-2x fa-heart-o" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"></span><span class="sr-only">Like</span>');
+                    }
+                });
+            })
+        }
+    }, 50);
+
+</script>

@@ -1,0 +1,905 @@
+<style>
+    .lifestyle_container {
+        margin-bottom: 8rem;
+    }
+
+    .lifestyle_title_wrapper {
+        margin-bottom: 4rem;
+    }
+
+    .lifestyle_title_wrapper p {
+        font-size: 1.8rem;
+    }
+
+    .lifestyle_container a {
+        text-decoration: none !important;
+    }
+
+    .lifestyle_container a:hover {
+        color: #fff;
+    }
+
+    /* colors */
+    .ml_bg {
+        background-color: #007d70;
+    }
+
+    .rl_bg {
+        background-color: #54412e;
+    }
+
+    .cl_bg {
+        background-color: #5f7b86;
+    }
+
+    .cls_bg {
+        background-color: #74767b;
+    }
+
+    .sl_bg {
+        background-color: #b84e48;
+    }
+
+    .lim_bg {
+        background-color: #3b4231;
+    }
+
+    .ml_font {
+        color: #007d70;
+    }
+
+    .rl_font {
+        color: #54412e;
+    }
+
+    .cl_font {
+        color: #5f7b86;
+    }
+
+    .cls_font {
+        color: #74767b;
+    }
+
+    .sl_font {
+        color: #b84e48;
+    }
+
+    .lim_font {
+        color: #3b4231;
+    }
+
+    .lifestyle_link_wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .lifestyle_link_box {
+        position: relative;
+        display: block;
+        flex-basis: 16%;
+    }
+
+    .lifestyle_link_box img {
+        width: 100%;
+    }
+
+    .text_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .text_box h3 {
+        font-size: 3rem;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .life_style_rs_wrapper {
+        padding: 4rem 1.5rem;
+        width: 100%;
+        position: relative;
+        margin-top: 6rem;
+    }
+
+    .life_style_rs_box {
+        position: relative;
+    }
+
+    .wht_box_top {
+        height: 12%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+    }
+
+    .wht_box_right {
+        width: 8%;
+        position: absolute;
+        background-color: #ffffff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .wht_box_right_w {
+        width: 25%;
+        position: absolute;
+        background-color: #ffffff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .wht_box_bottom {
+        height: 12%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+    }
+
+    .top_lef_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 35%;
+    }
+
+    .top_right_img {
+        position: absolute;
+        top: 0;
+        right: -4%;
+        z-index: 1;
+        width: 35%;
+    }
+
+    .bottom_left_img img,
+    .top_right_img img,
+    .bottom_right_img img,
+    .top_lef_img img {
+        width: 100%;
+    }
+
+
+
+    .bottom_right_img {
+        width: 80%;
+        transform: translate(30%, 15%);
+        opacity: 0;
+        display: block;
+        position: relative;
+    }
+
+    .bottom_left_img {
+        width: 80%;
+        transform: translate(2%, 16%);
+        /* opacity: 0; */
+        display: block;
+    }
+
+    .bottom_left_txt {
+        display: block;
+        width: 24%;
+        position: absolute;
+        bottom: 7%;
+        left: 0;
+        font-size: 1.8rem;
+        color: #fff;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .bottom_right_txt {
+        display: block;
+        width: 20%;
+        position: absolute;
+        bottom: 0;
+        right: -4%;
+        font-size: 1.8rem;
+        color: #333;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .life_style_rs_upper_box {
+        display: none;
+    }
+
+    .life_style_rs_upper_box_img img {
+        transform: translateY(5%);
+    }
+
+    .life_style_rs_upper_box_img {
+        flex-basis: 43%;
+    }
+
+    .life_style_rs_upper_box_txt {
+        flex-basis: 57%;
+        margin-bottom: 1rem;
+    }
+
+    .life_style_rs_upper_box_txt {
+        text-align: center;
+    }
+
+    .life_style_rs_upper_box_txt h2 {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-top: 0;
+    }
+
+    .life_style_rs_upper_box_txt p {
+        font-size: 2.4rem;
+        color: #333;
+    }
+
+    .life_style_rs_upper_box_txt a {
+        font-size: 2rem;
+        display: block;
+        margin-top: 2.6rem;
+    }
+
+    .hidden_element {
+        opacity: 0;
+        -webkit-transform: translateY(-25%);
+        transform: translateY(-25%);
+
+    }
+
+    .ls_cta_wrapper {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        padding: .5rem 1rem;
+        font-size: 2.4rem;
+        color: #fff;
+        opacity: 0;
+    }
+
+    @keyframes bottomRightToTop {
+        0% {
+            -webkit-transform: translate(40%, 25%);
+            transform: translate(40%, 25%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translate(30%, 15%);
+            transform: translate(30%, 15%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bottomLeftToTop {
+        0% {
+            -webkit-transform: translate(-25%, 25%);
+            transform: translate(-25%, 25%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translate(2%, 16%);
+            transform: translate(2%, 16%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bottomRightToTop-normal {
+        0% {
+            -webkit-transform: translate(30%, 15%);
+            transform: translate(30%, 15%);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bottomLeftToTop-normal {
+        0% {
+            -webkit-transform: translate(2%, 16%);
+            transform: translate(2%, 16%);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes topleftToBottom {
+        0% {
+            -webkit-transform: translate(-25%, -20%);
+            transform: translate(-25%, -20%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes toplRightToBottom {
+        0% {
+            -webkit-transform: translate(25%, -20%);
+            transform: translate(25%, -20%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes topleftToBottom-fade {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes topToBottom {
+        0% {
+            -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .animate_brtt {
+        -webkit-animation: bottomRightToTop 1s forwards 0.2s ease-in-out;
+        animation: bottomRightToTop 1s forwards 0.2s ease-in-out;
+    }
+
+    .animate_tltb {
+        opacity: 0;
+        -webkit-animation: topleftToBottom 1s forwards 0.2s ease-in-out;
+        animation: topleftToBottom 1s forwards 0.2s ease-in-out;
+    }
+
+    .animate_bltt {
+        opacity: 0;
+        -webkit-animation: bottomLeftToTop 1s forwards 0.2s ease-in-out;
+        animation: bottomLeftToTop 1s forwards 0.2s ease-in-out;
+    }
+
+    .animate_trtb {
+        opacity: 0;
+        -webkit-animation: toplRightToBottom 1s forwards 0.2s ease-in-out;
+        animation: toplRightToBottom 1s forwards 0.2s ease-in-out;
+    }
+
+    .reveal_animation {
+        -webkit-animation: topToBottom 1s forwards 0.2s ease-in-out;
+        animation: topToBottom 1s forwards 0.2s ease-in-out;
+    }
+
+    .cta_animation {
+        -webkit-animation: topToBottom 1s forwards 1.1s ease-in-out;
+        animation: topToBottom 1s forwards 1.1s ease-in-out;
+    }
+
+
+    @media (max-width: 767px) {
+        .lifestyle_link_wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .lifestyle_link_box {
+            flex-basis: 31%;
+            margin-bottom: 2rem;
+        }
+
+        .text_box {
+            display: block;
+            transform: translate(0, 0);
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .text_box h3 {
+            margin: 2rem 0;
+        }
+
+        .generic-html-template>.container {
+            padding: 0;
+        }
+
+        .life_style_rs_wrapper {
+            padding: 0;
+            z-index: 1;
+        }
+
+        .bottom_left_img,
+        .bottom_right_img {
+            opacity: 1;
+            width: 100%;
+        }
+
+        .animate_brtt {
+            -webkit-animation: bottomRightToTop-normal 1s forwards 0.2s ease-in-out;
+            animation: bottomRightToTop-normal 1s forwards 0.2s ease-in-out;
+        }
+
+        .animate_tltb {
+            opacity: 0;
+            -webkit-animation: topleftToBottom-fade1s forwards 0.2s ease-in-out;
+            animation: topleftToBottom-fade1s forwards 0.2s ease-in-out;
+        }
+
+        .animate_bltt {
+            opacity: 0;
+            -webkit-animation: bottomLeftToTop-normal 1s forwards 0.2s ease-in-out;
+            animation: bottomLeftToTop-normal 1s forwards 0.2s ease-in-out;
+        }
+
+        .animate_trtb {
+            opacity: 0;
+            -webkit-animation: topleftToBottom-fade1s 1s forwards 0.2s ease-in-out;
+            animation: topleftToBottom-fade1s 1s forwards 0.2s ease-in-out;
+        }
+
+        .bottom_right_txt,
+        .bottom_left_txt {
+            display: none;
+        }
+
+        .rl_bg .wht_box_top,
+        .cl_bg .wht_box_top,
+        .ml_bg .wht_box_top,
+        .cls_bg .wht_box_top,
+        .sl_bg .wht_box_top,
+        .lim_bg .wht_box_top {
+            top: -3%;
+        }
+
+        .life_style_rs_box {
+            z-index: -1;
+        }
+
+        .life_style_rs_upper_box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .animate_ttb {
+            opacity: 0;
+            -webkit-animation: topToBottom 1s forwards 0.2s ease-in-out;
+            animation: topToBottom 1s forwards 0.2s ease-in-out;
+        }
+
+        .ml_bg .wht_box_top {
+            background-color: #007d70;
+        }
+
+        .rl_bg .wht_box_top {
+            background-color: #54412e;
+        }
+
+        .cl_bg .wht_box_top {
+            background-color: #5f7b86;
+        }
+
+        .cls_bg .wht_box_top {
+            background-color: #74767b;
+        }
+
+        .sl_bg .wht_box_top {
+            background-color: #b84e48;
+        }
+
+        .lim_bg .wht_box_top {
+            background-color: #3b4231;
+        }
+
+    }
+
+    @media (max-width: 575px) {
+        .life_style_rs_upper_box_txt p {
+            margin-bottom: 0;
+        }
+
+        .life_style_rs_upper_box_txt a {
+            margin: 0;
+        }
+
+        .life_style_rs_upper_box_txt h2 {
+            margin: .5rem 0;
+        }
+
+        .lifestyle_title_wrapper {
+            padding: 1.5rem;
+        }
+
+        .lifestyle_title_wrapper p {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+
+<section class="lifestyle_container">
+    <div class="lifestyle_title_wrapper">
+        <h1 class="title">Introducing Our 6 Essential Lifestyles</h1>
+        <p>Knowing how to furnish your home starts with knowing who you are and how you want to live. Whether you prefer
+            to be surrounded by sleek, on-trend stunners; natural, rugged charmers; or timeless, traditional pieces, you
+            can find designs you love in one of our six essential lifestyles. Curated to reflect your taste, these
+            distinct categories will help you make your space your own.</p>
+    </div>
+    <div class="lifestyle_link_wrapper">
+        <a href="/inspiration/lifestyle/modern-living" class="lifestyle_link_box ml_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/modern_living_btn.jpg"
+                alt="Modern Living">
+            <span class="text_box">
+                <h3>Modern Living</h3>
+            </span>
+        </a>
+        <a href="/inspiration/lifestyle/rustic-living" class="lifestyle_link_box rl_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/rustic_living_btn.jpg"
+                alt="Rustic Living">
+            <span class="text_box">
+                <h3>Rustic Living</h3>
+            </span>
+        </a>
+        <a href="/inspiration/lifestyle/casual-living" class="lifestyle_link_box cl_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/casual_living_btn.jpg"
+                alt="Casual Living">
+            <span class="text_box">
+                <h3>Casual Living</h3>
+            </span>
+        </a>
+        <a href="/inspiration/lifestyle/classic-living" class="lifestyle_link_box cls_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/classic_living_btn.jpg"
+                alt="Classic Living">
+            <span class="text_box">
+                <h3>Classic Living</h3>
+            </span>
+        </a>
+        <a href="/inspiration/lifestyle/studio-living" class="lifestyle_link_box sl_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/studio_living_btn.jpg"
+                alt="Studio Living">
+            <span class="text_box">
+                <h3>Studio Living</h3>
+            </span>
+        </a>
+        <a href="/inspiration/lifestyle/life-in-motion" class="lifestyle_link_box lim_bg">
+            <img class="img-responsive hidden-xs" src="/globalassets/images/lp/2019/05/life_motion_btn.jpg"
+                alt="Life in Motion">
+            <span class="text_box">
+                <h3>Life in Motion</h3>
+            </span>
+        </a>
+    </div>
+
+    <div class="life_style_rs_wrapper">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_img ml_bg">
+                <a href="/inspiration/lifestyle/modern-living">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/modern_living_02.jpg"
+                        alt="Living Spaces Modern Living Furnitures">
+                </a>
+            </div>
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="ml_font">Modern Living</h2>
+                <p>minimal &nbsp;&nbsp; mid-century</p>
+                <p>scandinavian &nbsp;&nbsp; on-trend</p>
+                <p>contemporary &nbsp;&nbsp; sleek</p>
+            </div>
+        </div>
+        <div class="ml_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_right"></div>
+            <span class="top_lef_img animate_tltb">
+                <a href="/inspiration/lifestyle/modern-living">
+                    <img src="/globalassets/images/lp/2019/05/modern-living.jpg"
+                        alt="Living Spaces Modern Living Furnitures">
+                </a>
+            </span>
+            <span class="bottom_right_img animate_brtt">
+                <a href="/inspiration/lifestyle/modern-living">
+                    <img src="/globalassets/images/lp/2019/05/modern_living_01.jpg"
+                        alt="Living Spaces Modern Living Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/modern-living" class="ml_bg ls_cta_wrapper cta_animation">Shop Modern
+                    Living Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_left_txt">
+                <p>minimal &nbsp;&nbsp; mid-century</p>
+                <p>scandinavian &nbsp;&nbsp; on-trend</p>
+                <p>contemporary &nbsp;&nbsp; sleek</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="life_style_rs_wrapper">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="rl_font">Rustic Living</h2>
+                <p>natural &nbsp;&nbsp; rugged</p>
+                <p>authentic &nbsp;&nbsp; simple</p>
+                <p>charming &nbsp;&nbsp; organic</p>
+            </div>
+            <div class="life_style_rs_upper_box_img rl_bg">
+                <a href="/inspiration/lifestyle/rustic-living">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/rustic_living_02.jpg"
+                        alt="Living Spaces rustic living Furnitures">
+                </a>
+            </div>
+        </div>
+        <div class="rl_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_bottom"></div>
+            <div class="wht_box_right_w"></div>
+            <span class="top_right_img animate_trtb">
+                <a href="/inspiration/lifestyle/rustic-living">
+                    <img src="/globalassets/images/lp/2019/05/Rustic.jpg" alt="Living Spaces rustic living Furnitures">
+                </a>
+            </span>
+            <span class="bottom_left_img animate_bltt">
+                <a href="/inspiration/lifestyle/rustic-living">
+                    <img src="/globalassets/images/lp/2019/05/rustic_living_01.jpg"
+                        alt="Living Spaces rustic living Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/rustic-living" class="rl_bg ls_cta_wrapper cta_animation">Shop Rustic
+                    Living Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_right_txt">
+                <p>natural &nbsp;&nbsp; rugged</p>
+                <p>authentic &nbsp;&nbsp; simple</p>
+                <p>charming &nbsp;&nbsp; organic</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="life_style_rs_wrapper hidden_element">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_img cl_bg">
+                <a href="/inspiration/lifestyle/casual-living">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/casual_living_02.jpg"
+                        alt="Living Spaces Casual Living Furnitures">
+                </a>
+            </div>
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="cl_font">Casual Living</h2>
+                <p>family-friendly &nbsp;&nbsp; comfortable</p>
+                <p>livable &nbsp;&nbsp; durable</p>
+                <p>practical &nbsp;&nbsp; versatile</p>
+            </div>
+        </div>
+        <div class="cl_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_right"></div>
+            <span class="top_lef_img animate_tltb">
+                <a href="/inspiration/lifestyle/casual-living">
+                    <img src="/globalassets/images/lp/2019/05/Casual.jpg" alt="Living Spaces Casual Living Furnitures">
+                </a>
+            </span>
+            <span class="bottom_right_img animate_brtt">
+                <a href="/inspiration/lifestyle/casual-living">
+                    <img src="/globalassets/images/lp/2019/05/casual_living_01.jpg"
+                        alt="Living Spaces Casual Living Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/casual-living" class="cl_bg ls_cta_wrapper cta_animation">Shop Casual
+                    Living Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_left_txt">
+                <p>family-friendly &nbsp;&nbsp; comfortable</p>
+                <p>livable &nbsp;&nbsp; durable</p>
+                <p>practical &nbsp;&nbsp; versatile</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="life_style_rs_wrapper hidden_element">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="cls_font">Classic Living</h2>
+                <p>traditional &nbsp;&nbsp; timeless</p>
+                <p>heirloom &nbsp;&nbsp; antique</p>
+                <p>refined &nbsp;&nbsp; elegant</p>
+            </div>
+            <div class="life_style_rs_upper_box_img cls_bg">
+                <a href="/inspiration/lifestyle/classic-living">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/classic_living_02_m.jpg"
+                        alt="Living Spaces classic living Furnitures">
+                </a>
+            </div>
+        </div>
+        <div class="cls_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_bottom"></div>
+            <div class="wht_box_right_w"></div>
+            <span class="top_right_img animate_trtb">
+                <a href="/inspiration/lifestyle/classic-living">
+                    <img src="/globalassets/images/lp/2019/05/classic_living_02.jpg"
+                        alt="Living Spaces classic living Furnitures">
+                </a>
+            </span>
+            <span class="bottom_left_img animate_bltt">
+                <a href="/inspiration/lifestyle/classic-living">
+                    <img src="/globalassets/images/lp/2019/05/classic_living_01.jpg"
+                        alt="Living Spaces classic living Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/classic-living" class="cls_bg ls_cta_wrapper cta_animation">Shop classic
+                    Living Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_right_txt">
+                <p>traditional &nbsp;&nbsp; timeless</p>
+                <p>heirloom &nbsp;&nbsp; antique</p>
+                <p>refined &nbsp;&nbsp; elegant</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="life_style_rs_wrapper hidden_element">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_img sl_bg">
+                <a href="/inspiration/lifestyle/studio-living">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/studio_living_02_m.jpg"
+                        alt="Living Spaces studio living Furnitures">
+                </a>
+            </div>
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="sl_font">Studio Living</h2>
+                <p>multipurpose &nbsp;&nbsp; streamlined</p>
+                <p>functional &nbsp;&nbsp; affordable</p>
+                <p>small scale &nbsp;&nbsp; clean</p>
+
+            </div>
+        </div>
+        <div class="sl_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_right"></div>
+            <span class="top_lef_img animate_tltb">
+                <a href="/inspiration/lifestyle/studio-living">
+                    <img src="/globalassets/images/lp/2019/05/studio_living_02.jpg"
+                        alt="Living Spaces studio living Furnitures">
+                </a>
+            </span>
+            <span class="bottom_right_img animate_brtt">
+                <a href="/inspiration/lifestyle/studio-living">
+                    <img src="/globalassets/images/lp/2019/05/studio_living_01.jpg"
+                        alt="Living Spaces studio living Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/studio-living" class="sl_bg ls_cta_wrapper cta_animation">Shop Studio
+                    Living Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_left_txt">
+                <p>multipurpose &nbsp;&nbsp; streamlined</p>
+                <p>functional &nbsp;&nbsp; affordable</p>
+                <p>small scale &nbsp;&nbsp; clean</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="life_style_rs_wrapper hidden_element">
+        <div class="life_style_rs_upper_box animate_ttb">
+            <div class="life_style_rs_upper_box_txt">
+                <h2 class="lim_font">Life In Motion</h2>
+                <p>reclining &nbsp;&nbsp; adjustable</p>
+                <p>tech-savvy &nbsp;&nbsp; supportive</p>
+                <p>high-performance &nbsp;&nbsp; luxurious</p>
+            </div>
+            <div class="life_style_rs_upper_box_img lim_bg">
+                <a href="/inspiration/lifestyle/life-in-motion">
+                    <img class="img-responsive" src="/globalassets/images/lp/2019/05/lifeInMotion_02.jpg"
+                        alt="Living Spaces Life In Motion Furnitures">
+                </a>
+            </div>
+        </div>
+        <div class="lim_bg life_style_rs_box">
+            <div class="wht_box_top"></div>
+            <div class="wht_box_bottom"></div>
+            <div class="wht_box_right_w"></div>
+            <span class="top_right_img animate_trtb">
+                <a href="/inspiration/lifestyle/life-in-motion">
+                    <img src="/globalassets/images/lp/2019/05/Life-in-Motion.jpg"
+                        alt="Living Spaces Life In Motion Furnitures">
+                </a>
+            </span>
+            <span class="bottom_left_img animate_bltt">
+                <a href="/inspiration/lifestyle/life-in-motion">
+                    <img src="/globalassets/images/lp/2019/05/lifeInMotion_01.jpg"
+                        alt="Living Spaces Life In Motion Furnitures">
+                </a>
+                <a href="/inspiration/lifestyle/life-in-motion" class="lim_bg ls_cta_wrapper cta_animation">Shop Life in
+                    Motion
+                    Items <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </span>
+            <div class="bottom_right_txt">
+                <p>reclining &nbsp;&nbsp; adjustable</p>
+                <p>tech-savvy &nbsp;&nbsp; supportive</p>
+                <p>high-performance &nbsp;&nbsp; luxurious</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    window.addEventListener('load', function () {
+        if (window.jQuery) {
+            revealElemet();
+            $(window).scroll(function () {
+                revealElemet();
+            });
+
+            function revealElemet() {
+                $('.hidden_element').each(function (i) {
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height() + 280;
+                    if (bottom_of_window > bottom_of_object) {
+                        $(this).addClass('reveal_animation');
+                    }
+                });
+            }
+        }
+    }, false);
+</script>
+
+
+<!-- 
+Modern Living&nbsp;&nbsp;
+<p>minimal &nbsp;&nbsp; mid-century</p>
+<p>scandinavian &nbsp;&nbsp; on-trend</p>
+<p>contemporary &nbsp;&nbsp; sleek</p>
+
+Rustic Living &nbsp;&nbsp; 
+<p>natural &nbsp;&nbsp; rugged</p>
+<p>authentic &nbsp;&nbsp; simple</p>
+<p>charming &nbsp;&nbsp; organic</p>
+
+Casual Living &nbsp;&nbsp; 
+<p>family-friendly &nbsp;&nbsp; comfortable</p>
+<p>livable &nbsp;&nbsp; durable</p>
+<p>practical &nbsp;&nbsp; versatile</p>
+
+Classic Living &nbsp;&nbsp; 
+<p>traditional &nbsp;&nbsp; timeless</p>
+<p>heirloom &nbsp;&nbsp; antique</p>
+<p>refined &nbsp;&nbsp; elegant</p>
+
+Studio Living &nbsp;&nbsp; 
+<p>multipurpose &nbsp;&nbsp; streamlined</p>
+<p>functional &nbsp;&nbsp; affordable</p>
+<p>small scale &nbsp;&nbsp; clean</p>
+
+Life in Motion &nbsp;&nbsp; 
+<p>reclining &nbsp;&nbsp; adjustable</p>
+<p>tech-savvy &nbsp;&nbsp; supportive</p>
+<p>high-performance &nbsp;&nbsp; luxurious</p> -->
