@@ -1,4 +1,7 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const { uname, pwd } = require("./creds");
+
+console.log(uname);
 
 (async function example() {
   let driver = await new Builder().forBrowser("chrome").build();

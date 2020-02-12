@@ -379,6 +379,13 @@
     </div>
 </div>
 
+<script>
+    var today = new Date()
+    var videoSwitchDate = new Date('Feb 18, 2020')
+    if (today > videoSwitchDate) {
+        document.querySelector('.playVideo2').dataset.thevideo = 'https://www.youtube.com/embed/odctqa_SNJE'
+    }
+</script>
 
 <script type="text/javascript">
     //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG

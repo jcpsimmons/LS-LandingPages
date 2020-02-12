@@ -1,0 +1,41 @@
+<!--
+  
+  Hard Code of ESX096
+  Adds a blue box around the terms and conditions and place order box
+
+-->
+<style>
+  @media (min-width: 768px) {
+
+    [data-vv-scope="PaymentForm"] .form-group.marg-top-55.form-group-holder,
+    [data-vv-scope="PaymentForm"] .form-group.marg-top-40 {
+      padding: 3rem;
+      background-color: #e5f0f5;
+      width: 43vw;
+      max-width: 68%;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* T&C Container */
+    [data-vv-scope="PaymentForm"] .form-group.marg-top-55.form-group-holder {
+      padding: 3rem 3rem 0.5rem 3rem;
+      margin-bottom: 0;
+    }
+
+    [data-vv-scope="PaymentForm"] .form-group.marg-top-55.form-group-holder label span {
+      background-color: #ffffff;
+    }
+
+    /* Button Container */
+    [data-vv-scope="PaymentForm"] .form-group.marg-top-40 {
+      padding: 2rem 3rem 3rem 3rem;
+      margin-top: 0;
+      display: block;
+    }
+
+    #placeOrderBtn {
+      max-width: 95%;
+    }
+  }
+</style>

@@ -1,0 +1,6 @@
+/departments/furniture/home-office/office-chairs?features=with+Casters
+/departments/furniture/home-office/office-chairs?color_groups=grey
+/departments/furniture/home-office/office-desks?style=Contemporary
+/departments/furniture/home-office/office-desks?small_spaces=Yes
+/departments/furniture/home-office/bookcases?color_groups=black
+/departments/furniture/home-office/file-cabinets?features=with+Dovetail+Drawers
