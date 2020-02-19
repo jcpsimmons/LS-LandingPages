@@ -155,6 +155,21 @@
         flex-wrap: nowrap;
     }
 
+    #pde #ThreeAcrossPrices .fitem:first-of-type {
+        margin-right: 1.25rem
+    }
+
+
+    #pde #ThreeAcrossPrices .fitem:nth-of-type(2) {
+        margin-left: .67rem;
+        margin-right: .67rem
+    }
+
+
+    #pde #ThreeAcrossPrices .fitem:last-of-type {
+        margin-left: 1.25rem
+    }
+
     /* MOBILE/DESKTOP ONLY */
     #pde .desktop-only {
         display: block;
@@ -219,7 +234,7 @@
         }
 
         #pde #YoutubeFPO {
-            padding-bottom: .5rem;
+            padding-bottom: 0;
         }
 
         #pde #PDayMobileHeader {
@@ -253,11 +268,31 @@
             height: 4rem;
             margin: .5rem auto
         }
+
+        #pde #ThreeAcrossPrices .fitem {
+            margin: .5rem 1rem !important
+        }
+
+        #pde #ThreeAcrossPrices .container {
+            flex-direction: row;
+        }
+
+        #pde #ThreeAcrossPrices {
+            padding-bottom: .5rem;
+        }
     }
 
     @media screen and (max-width: 569px) {
         #pde #CTALinkContainer h3 {
             font-size: 1.4rem !important
+        }
+
+        #pde #ThreeAcrossPrices .container {
+            flex-direction: column;
+        }
+
+        #pde #ThreeAcrossPrices img {
+            width: 100%;
         }
     }
 
@@ -394,10 +429,25 @@
                         alt="Revive Landing Page" class="img-responsive mobile-only"></a></div>
         </div>
     </section>
+
+    <section id="ThreeAcrossPrices">
+        <div class="container">
+            <div class="fitem"> <a href="/pdp-brumbeck-sofa-223386"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster_223386.jpg" alt="sofa $395"
+                        class="img-responsive"></a></div>
+            <div class="fitem"><a href="/pdp-wade-sofa-251069"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster_251069.jpg" alt="sofa $295"
+                        class="img-responsive"></a></div>
+            <div class="fitem"> <a href="/pdp-castel-2-piece-sectional-251082"><img
+                        src="/globalassets/images/lp/2020/02/presdients-day-LP-doorbuster_251082.jpg"
+                        alt="sectional $595" class="img-responsive"></a></div>
+        </div>
+    </section>
+
     <section id="FinancingBanner">
         <div class="container">
             <a href="/company/financing">
-                <img src="/globalassets/images/lp/2020/02/PRESIDENTS-DAY-FINANCE-BANNER.png" alt="Financing Banner"
+                <img src="/globalassets/images/lp/2020/02/FINANCE-BANNER_v2.png" alt="Financing Banner"
                     class="img-responsive desktop-only">
                 <img src="/globalassets/images/lp/2020/02/presidents-day-finance-banner-mobile-v1.png"
                     alt="Financing Banner" class="img-responsive mobile-only">
@@ -437,11 +487,8 @@
 <script type="text/javascript">
     //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
     function playModal() {
-        console.log('playmodal')
         var trigger = $("body").find('#YoutubeFPO [data-toggle="modal"]');
-        console.log(trigger)
         trigger.click(function () {
-            console.log('fire click event')
             var theModal = $(this).data("target"),
                 videoSRC = $(this).attr("data-theVideo"),
                 videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
@@ -458,7 +505,6 @@
 
     var anotherInterval = setInterval(function () {
         if (window.jQuery) {
-            console.log('jquery present')
             clearInterval(anotherInterval);
             playModal();
         }
