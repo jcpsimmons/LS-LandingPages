@@ -1,0 +1,337 @@
+<style>
+    /* VIDEO MODAL */
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+    /* END MODAL */
+
+    #OL .row-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-bottom: .9rem;
+        margin: -.9rem;
+        /* margin here and flex-item padding must be the same  */
+    }
+
+    #OL .col-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    #OL .flex-item {
+        position: relative;
+        margin: 0 auto;
+        padding: .9rem;
+    }
+
+    #OL .overlay-tile-container {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+
+    #InspoAwaits {
+        padding: 1rem 1rem 2rem;
+        width: 73%;
+        pointer-events: none;
+    }
+
+    #OL .overlay-tile {
+        margin: .5rem auto;
+    }
+
+    #OL h2.rounded-type {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+    }
+
+    #OL #CTAText .flex-item h2.rounded-type.heavy {
+        font-weight: 600;
+    }
+
+    #OL #CTAText {
+        padding-bottom: 1.8rem;
+        margin: auto 8rem;
+    }
+
+    /* ANIMATION */
+    #OL a img {
+        transition: .7s;
+    }
+
+    #OL a img:hover,
+    #OL a img:active {
+        transform: scale(1.025);
+    }
+
+    #OL .desktop-only {
+        display: block
+    }
+
+    #OL .mobile-only {
+        display: none
+    }
+
+    /* Weird smaller disply spacing fix */
+    @media(min-width:768px) and (max-width:991px) {
+        #NestedCol {
+            margin-left: .8rem;
+        }
+
+        #HeroLayout {
+            margin-top: .7rem !important;
+        }
+
+        #ThreeAcross {
+            margin: -1rem !important;
+        }
+
+        #ThreeAcross .flex-item {
+            padding: 1.3rem !important;
+        }
+    }
+
+    /* end */
+
+    @media (max-width: 767px) {
+        #OL .desktop-only {
+            display: none
+        }
+
+        #OL .mobile-only {
+            display: block
+        }
+
+        #HeroLayout {
+            flex-direction: column !important;
+        }
+
+        #NestedCol {
+            flex-direction: row !important;
+        }
+
+        #OL #CTAText {
+            margin: auto 0;
+        }
+
+        #TitleBanner {
+            margin: -1.8rem -2.6rem auto !important;
+        }
+
+        #InspoAwaits {
+            width: 80%;
+            padding: .5rem;
+        }
+
+        #OL h2.rounded-type {
+            font-size: 1.4rem;
+        }
+    }
+</style>
+
+<div id="OL">
+    <section id="HeroMasonry">
+
+
+        <div class="row-container" id="TitleBanner">
+            <div class="flex-item"><img src="/globalassets/images/lp/2020/02/outdoor-living/title.png"
+                    alt="Outdoor living" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/02/outdoor-living/lockup.png" alt="Outdoor living"
+                    class="img-responsive mobile-only">
+            </div>
+        </div>
+
+
+        <div class="row-container" id="HeroLayout">
+            <div class="flex-item">
+                <a href="/departments/outdoor/furniture/lounge">
+                    <img src="/globalassets/images/lp/2020/02/outdoor-living/outdoor-lounge.jpg" alt="Outdoor lounge"
+                        class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2020/02/outdoor-living/mobile/outdoor-lounge.png"
+                        alt="Outdoor lounge" class="img-responsive mobile-only">
+                </a>
+            </div>
+
+            <div class="col-container" id="NestedCol">
+                <div class="flex-item"><img src="/globalassets/images/lp/2020/02/outdoor-living/inspiration-bg.jpg"
+                        alt="Inspiration Awaits" class="img-responsive">
+                    <div class="col-container overlay-tile-container">
+                        <div class="overlay-tile" id="InspoAwaits">
+                            <img src="/globalassets/images/lp/2020/02/outdoor-living/inspiration-awaits.png" alt=""
+                                class="img-responsive">
+                        </div>
+                        <div class="overlay-tile">
+                            <a href="#"> <img src="/globalassets/images/lp/2020/02/outdoor-living/catalog-cta.png"
+                                    alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="overlay-tile">
+                            <a href="/inspiration/ideas-advice/decor-tips/15-outdoor-party-ideas--essentials"> <img
+                                    src="/globalassets/images/lp/2020/02/outdoor-living/blog-cta.png" alt=""
+                                    class="img-responsive"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex-item">
+                    <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+                        data-theVideo="https://www.youtube.com/embed/I1UVhpR--Ys" role="button"
+                        aria-label="click to watch the video" href="" alt="Watch the 
+            outdoor furniture video">
+                        <img src="/globalassets/images/lp/2020/02/outdoor-living/video-player.jpg" alt="Video tile"
+                            class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="CTAText">
+
+
+        <div class="flex-item">
+            <h2 class="rounded-type heavy">How do you make the great outdoors even greater?</h2>
+            <h2 class="rounded-type">With fresh furniture and décor. From aluminum stunners to wicker wonders, every
+                collection is backyard perfection. Whether you’re cooling things down or heating them up, we have
+                designs that will awaken your oasis.</h2>
+        </div>
+
+    </section>
+
+
+    <section id="ThreeAcross" class="desktop-only">
+
+        <div class="row-container">
+
+            <div class="flex-item"><a href="/departments/outdoor/furniture/dining"><img
+                        src="/globalassets/images/lp/2020/02/outdoor-living/dining-cta.jpg" alt=""
+                        class="img-responsive"></a></div>
+
+            <div class="flex-item"><a href="/departments/outdoor/furniture/outdoor-firepits"><img
+                        src="/globalassets/images/lp/2020/02/outdoor-living/fire-pits.jpg" alt=""
+                        class="img-responsive"></a></div>
+
+            <div class="flex-item"><a href="/departments/outdoor/decor/all"><img
+                        src="/globalassets/images/lp/2020/02/outdoor-living/accessories.jpg" alt=""
+                        class="img-responsive"></a></div>
+
+        </div>
+
+    </section>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('#OL [data-toggle="modal"]');
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+
+    function closeListener() {
+        $(document).keyup(function (e) {
+            if (e.key === "Escape") { // escape key maps to keycode `27`
+                $('#modal-video').modal('hide')
+            }
+        });
+    }
+
+    var anotherInterval = setInterval(function () {
+        if (window.jQuery) {
+            clearInterval(anotherInterval);
+            playModal();
+            closeListener();
+        }
+    }, 50)
+</script>

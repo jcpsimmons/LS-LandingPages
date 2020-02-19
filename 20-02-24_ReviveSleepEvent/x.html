@@ -15,15 +15,36 @@
     <link rel="stylesheet" href="">
 
     <style>
-        .spherical {
+        body {
+            overflow: hidden;
+        }
+
+        #HomePage .spherical {
             background-color: black;
             height: 50px;
             width: 50px;
             border-radius: 100%;
             position: absolute;
+            box-shadow: 2px 4px 6px black;
         }
 
-        .eyeWhites {
+        #HomePage .spherical h2 {
+            position: absolute;
+            top: 70%;
+            left: -50%;
+            transform: rotate(-2deg);
+            opacity: .4;
+            transition: 5s;
+            filter: blur(10px);
+        }
+
+        #HomePage .spherical:hover h2 {
+            opacity: 1;
+            filter: blur(0);
+            transition: .5s;
+        }
+
+        #HomePage .eyeWhites {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -32,24 +53,32 @@
             height: 20px;
             width: 20px;
             border-radius: 100%;
+            filter: blur(1px)
         }
 
-        #OGBoi {
+        #HomePage #OGBoi {
             height: 100px;
             width: 100px
         }
 
-        svg {
+        #HomePage svg {
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
             stroke-width: 4;
             transition: 1.5s;
+            filter: drop-shadow(2px 4px 6px black);
         }
 
-        svg line {
+        #HomePage svg line {
             transition: 1.5s
+        }
+
+        @media (max-width: 767px) {
+            #HomePage .spherical h2 {
+                opacity: 1
+            }
         }
     </style>
 </head>
@@ -59,17 +88,25 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div id="OGBoi" class="spherical" style="top:10px;left:10px;"></div>
-    <div class="spherical" style="top:100px;left:400px;">
-        <div class="eyeWhites"></div>
-    </div>
-    <div class="spherical" style="top:133px;left:200px;">
-        <div class="eyeWhites"></div>
-    </div>
-    <div class="spherical" style="top:300px;left:23px;">
-        <div class="eyeWhites"></div>
-    </div>
-    <div id="SVGs"></div>
+    <section id="HomePage">
+        <div id="OGBoi" class="spherical" style="top:10px;left:10px;"></div>
+        <div id="About" class="spherical" style="top:100px;left:400px;">
+
+            <h2>Text here</h2>
+        </div>
+
+        <div id="Work" class="spherical" style="top:133px;left:200px;">
+
+            <h2>Text here</h2>
+        </div>
+
+        <div id="R" class="spherical" style="top:300px;left:23px;">
+
+            <h2>Text here</h2>
+        </div>
+
+        <div id="SVGs"></div>
+    </section>
 
     <!-- <svg width="500" height="500">
         <line x1="50" y1="50" x2="350" y2="350" stroke="black" /></svg> -->
@@ -77,41 +114,64 @@
     <script src="" async defer></script>
 
     <script>
-        // Draw Lines
-        const getCoords = (el) => {
-            var rect = el.getBoundingClientRect();
-            return [rect.right - rect.left, rect.bottom - rect.top]
+        // Perform random text rotations
+        const randomTextRota = () => {
+            document.querySelectorAll('.spherical h2').forEach((textEl) => {
+                textEl.style.transform = `rotate(${(Math.random() * 16) - 8}deg)`
+            })
         }
 
-        parentSphere = document.getElementById('OGBoi')
-        spheres = document.querySelectorAll('.spherical:not(:first-child)')
-        insertHtml = ''
+        const drawLines = () => {
+            // Draw Lines
+            const getCoords = (el) => {
+                var rect = el.getBoundingClientRect();
+                return [rect.left + (rect.width / 2), rect.top + (rect.height / 2)]
+            }
 
-        spheres.forEach(s => {
-            let pRect = parentSphere.getBoundingClientRect()
-            let sRect = s.getBoundingClientRect()
+            parentSphere = document.getElementById('OGBoi')
+            spheres = document.querySelectorAll('.spherical:not(:first-child)')
+            insertHtml = ''
 
-            x1 = pRect.left + (pRect.width / 2)
-            y1 = pRect.top + (pRect.height / 2)
+            spheres.forEach(s => {
+                let pRect = parentSphere.getBoundingClientRect()
+                let sRect = s.getBoundingClientRect()
 
-            x2 = sRect.left + (sRect.width / 2)
-            y2 = sRect.top + (sRect.height / 2)
+                let [x1, y1] = getCoords(parentSphere)
 
-            insertHtml += `<svg width="${window.innerWidth}" height="${window.innerHeight}">
+                let [x2, y2] = getCoords(s)
+
+                insertHtml += `<svg width="${window.innerWidth}" height="${window.innerHeight}">
         <line x1=${x1} y1=${y1} x2=${x2} y2=${y2} stroke="black" /></svg>`
-        })
+            })
 
-        document.getElementById('SVGs').innerHTML += insertHtml
+            document.getElementById('SVGs').innerHTML += insertHtml
 
+            // Change line width
+            setInterval(() => {
+                document.querySelectorAll('#SVGs line').forEach((line) => {
+                    line.setAttribute('stroke-width', Math.random() * 5 + .2)
+                }
+                )
+            }, 1501)
+        }
 
-        // Change line width
-        setInterval(() => {
-            document.querySelectorAll('#SVGs line').forEach((line) => {
-                line.setAttribute('stroke-width', Math.random() * 4)
+        const linkClickHandlers = () => {
+            document.querySelectorAll('.spherical:not(:first-child)').forEach((el) => {
+                el.addEventListener('click', event => {
+                    let t = event.target;
+                    console.log(t.id)
+                })
             }
             )
-        }, 1501)
 
+
+        }
+
+
+
+        randomTextRota()
+        drawLines()
+        linkClickHandlers()
     </script>
 
 </body>
