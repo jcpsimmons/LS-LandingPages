@@ -30,6 +30,8 @@
 
         svg {
             position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
@@ -61,11 +63,16 @@
         insertHtml = ''
 
         spheres.forEach(s => {
-            x1 = parentSphere.getBoundingClientRect().left
-            y1 = parentSphere.getBoundingClientRect().top
-            x2 = s.getBoundingClientRect().left
-            y2 = s.getBoundingClientRect().top
-            insertHtml += `<svg width="500" height="500">
+            let pRect = parentSphere.getBoundingClientRect()
+            let sRect = s.getBoundingClientRect()
+
+            x1 = pRect.left + (pRect.width / 2)
+            y1 = pRect.top + (pRect.height / 2)
+
+            x2 = sRect.left + (sRect.width / 2)
+            y2 = sRect.top + (sRect.height / 2)
+
+            insertHtml += `<svg width="${window.innerWidth}" height="${window.innerHeight}">
         <line x1=${x1} y1=${y1} x2=${x2} y2=${y2} stroke="black" /></svg>`
         })
 
