@@ -1,0 +1,1164 @@
+<!-- Cocoen image comparison slider css -->
+<link rel="stylesheet" href="https://www.livingspaces.com/_content/scripts/3d-room-designer-slider/css/cocoen.min.css">
+<style type="text/css">
+    .nj_banner {
+        margin-bottom: 4rem;
+    }
+
+    .nj_banner a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    @media (max-width: 767px) {
+        .nj_banner a {
+            flex-wrap: wrap;
+        }
+
+        .nj_center_box,
+        .nj_left_box {
+            flex-basis: 100%;
+        }
+
+        .nj_center_box img,
+        .nj_left_box img {
+            width: 100%;
+        }
+    }
+
+    /* OLAPIC STYLING */
+
+    .viewall {
+        position: absolute;
+        bottom: 1.1rem;
+        right: 0;
+        float: right;
+        color: black;
+        font-size: 2rem;
+    }
+
+    /* 
+    .olapic-nav-button {
+        visibility: hidden
+    } */
+
+    .olapic #olapic-slider-widget.olapic-slider-widget {
+        margin: 0 auto 30px
+    }
+
+    #olapic-slider-widget:hover .olapic-nav-button {
+        visibility: visible
+    }
+
+    #olapic_wrapper {
+        max-width: 1600px;
+        width: 100%
+    }
+
+    .olapic #olapic-slider-widget .olapic-slider-body,
+    .olapic #olapic-slider-widget.olapic-slider-widget {
+        max-width: 1600px !important
+    }
+
+    #olapic_wrapper .olapic #olapic-slider-widget.olapic-slider-widget {
+        margin: 30px auto 0
+    }
+
+    #olapic_wrapper .olapic-slider-wrapper {
+        max-width: 100%
+    }
+
+    #olapic_wrapper .olapic #olapic-slider-widget .olapic-slider-footer {
+        margin: 0;
+        margin-left: auto
+    }
+
+    #olapic_wrapper .olapic #olapic-slider-widget .olapic-carousel li {
+        width: 135px !important;
+        height: 135px !important
+    }
+
+    #olapic_wrapper .olapic #olapic-slider-widget .olapic-nav-button {
+        top: -10% !important
+    }
+
+    #olapic_wrapper .subtitle {
+        text-align: center;
+        font-size: 3.6rem;
+        margin: 0;
+        margin-top: 2rem
+    }
+
+    .olapic-footer-buttons {
+        display: none
+    }
+
+    /* BEGIN STYLING FOR SIDE BY SIDE IMAGE */
+    .designer_inspiration img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sideToside_banner_link {
+        overflow: hidden;
+        position: relative
+    }
+
+    .sideToside_banner_cta {
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        bottom: 0;
+        right: 0;
+        left: 2rem;
+        padding-bottom: 3%;
+        background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+    }
+
+    .mobile-only {
+        display: none
+    }
+
+    .desktop-only {
+        display: block
+    }
+
+    @media (max-width: 1199px) {
+        .sideToSide_banner_img {
+            background-position: top right;
+        }
+    }
+
+    .sideToSide_banner_img {
+        background-size: cover;
+        background-position: top;
+        transform: scale(.99);
+        transition: transform .5s
+    }
+
+    .sideToSide_banner_img:hover {
+        transform: scale(1);
+    }
+
+    /* END SIDE BY SIDE */
+
+    .insp-container {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .insp-container h1 {
+        margin-bottom: 3rem;
+    }
+
+    .sub-title-blog span {
+        position: relative;
+        box-sizing: border-box;
+        border-bottom: .3rem solid #d9d9d9;
+    }
+
+    .sub-title-blog a {
+        display: block;
+        position: absolute;
+        bottom: 1rem;
+        right: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .sub-title span {
+        font-size: 3rem;
+        display: block;
+    }
+
+    .sub-title {
+        text-align: center;
+        color: #00699a;
+    }
+
+    .title-link {
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 6rem;
+    }
+
+    .catalog-banner {
+        margin-bottom: 6rem;
+        padding: 0;
+    }
+
+    .lifeStyle-box {
+        padding: 0 5rem;
+    }
+
+    .lifeStyle-wrapper {
+        padding: 0;
+        border: .2rem solid #dcdcdc;
+        margin-bottom: 6rem;
+    }
+
+    .lifeStyle-wrapper span {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    .lifeStyle-wrapper p,
+    .lifeStyle-wrapper a {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .design-banner {
+        margin-bottom: 7rem;
+    }
+
+    .design-txt {
+        font-size: 1.8rem;
+        display: block;
+        margin-top: 1rem;
+        color: #333;
+    }
+
+    .design-wrapper {
+        margin-bottom: 6rem;
+    }
+
+    .design-img {
+        width: 36.3rem;
+        height: 24.3rem;
+    }
+
+    .img-blk-1 {
+        margin-bottom: 6rem;
+    }
+
+    .lifeStyle-img {
+        padding: 0;
+    }
+
+    #rd_960shots_wrap {
+        width: 100%;
+        max-width: 96rem;
+        margin: 0 auto;
+    }
+
+    .rd-960-slider {
+        width: 100%;
+        margin-bottom: 6rem;
+        overflow: hidden;
+    }
+
+    .twentytwenty-overlay {
+        display: none !important;
+    }
+
+    .threeD-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .threeD-title span {
+        font-weight: 600;
+    }
+
+    .threeD-wrapper a,
+    .threeD-wrapper p {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+
+    .threeD-wrapper a {
+        padding: 1rem 2rem;
+    }
+
+    .insp-title {
+        margin-bottom: 3rem;
+    }
+
+    .fall-catalog {
+        position: relative;
+        display: block;
+    }
+
+    .fall-catalog span {
+        font-size: 3rem;
+        position: absolute;
+        bottom: 47.7%;
+        left: 69.5%;
+        color: #ffffff;
+    }
+
+    .fall-catalog p {
+        position: absolute;
+        font-size: 1.8rem;
+        left: 74.5%;
+        color: #ffffff;
+        bottom: 36.7%;
+    }
+
+    .iaTitle {
+        position: relative;
+        display: block;
+        margin-bottom: 3.7rem !important;
+    }
+
+    .iaTitle div {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+    }
+
+    .iaTitle:hover {
+        text-decoration: none;
+    }
+
+    .iaTitle span {
+        font-size: 3.6rem;
+        color: #00699a;
+        line-height: 2.8rem;
+    }
+
+    .iaTitle p {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .sub-title_2_underline {
+        border-top: solid 0.7rem #00699a;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .sub_title_2_wrapper h2 {
+        font-weight: 600;
+    }
+
+    .sub_title_2_wrapper {
+        display: inline-block;
+    }
+
+    .sub-title_2 {
+        text-align: center;
+    }
+
+    /* Large devices (desktops, less than 1200px) */
+    @media (max-width: 1199px) {}
+
+    /* Medium devices (tablets, less than 992px) */
+    @media (max-width: 991px) {
+        .lifeStyle-wrapper span {
+            margin-top: 2rem;
+        }
+
+        .fall-catalog p {
+            bottom: 20%;
+        }
+
+        .iaTitle div {
+            text-align: center;
+            margin: 1rem 0 3rem;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .noBorder {
+            border: 0 !important;
+        }
+    }
+
+
+    /* Small devices (landscape phones, less than 768px) */
+    @media (max-width: 767px) {
+
+        .mobile-only {
+            display: block
+        }
+
+        .desktop-only {
+            display: none
+        }
+
+        #Olapic.sub-title {
+            font-size: 3rem;
+        }
+
+        .viewall {
+            display: none;
+        }
+
+        .fall-catalog span,
+        .fall-catalog p {
+            left: 63%;
+        }
+
+        .iaTitle div {
+            text-align: center;
+            margin: 1rem 0 3rem;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    /* Extra small devices (portrait phones, less than 576px) */
+    @media (max-width: 575px) {
+        .fall-catalog span {
+            left: 65%;
+            font-size: 1.8rem;
+            bottom: 42%;
+            font-weight: 600;
+        }
+
+        .fall-catalog p {
+            display: none;
+        }
+
+        .lifeStyle-box {
+            margin-bottom: 3rem;
+        }
+
+        .mobile-display {
+            display: none;
+        }
+
+        .design-banner {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-wrapper {
+            position: relative;
+            padding: 0;
+        }
+
+        .sub-title span {
+            margin-bottom: 1rem;
+        }
+
+        .blog-post-thumb .design-txt {
+            position: absolute;
+            width: 100%;
+            background: rgba(0, 0, 0, .8);
+            bottom: 0;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .design-img {
+            width: 100%;
+        }
+
+        .blog-post-thumb {
+            display: block;
+        }
+
+        .title-link {
+            font-size: 2rem;
+        }
+
+        .insp-container {
+            margin-top: 0;
+        }
+
+        .insp-container h1 {
+            margin: 1rem 0;
+        }
+
+        .iaTitle div {
+            text-align: center;
+            margin: 1rem 0 3rem;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .sub-title-blog span {
+            border-bottom: 0px;
+        }
+    }
+
+    .nj_banner {
+        margin-bottom: 6rem;
+    }
+
+    .nj_banner a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    @media (max-width: 767px) {
+        .nj_banner a {
+            flex-wrap: wrap;
+        }
+
+        .nj_center_box,
+        .nj_left_box {
+            flex-basis: 100%;
+        }
+
+        .nj_center_box img,
+        .nj_left_box img {
+            width: 100%;
+        }
+    }
+
+    .lifeStyle_slider_container {
+        margin-bottom: 6rem;
+    }
+
+    .lifeStyle_slider_title {
+        margin-bottom: 5rem;
+    }
+
+    .lifeStyle_slider_title h2 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .lifeStyle_slider_title p {
+        font-size: 2rem;
+    }
+
+    .lifeStyle_slider_title p span {
+        font-weight: 600;
+    }
+
+    .lifeStyle_slider_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .life_style_left_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .life_style_media_box {
+        margin-left: 5rem;
+    }
+
+    .life_style_cta_txt {
+        font-size: 2.4rem;
+        border: .1rem solid #a6a6a6;
+        color: #686868;
+        min-width: 22rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .life_style_cta_wrapper {
+        cursor: pointer;
+    }
+
+    @-webkit-keyframes toTopLeft {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate(-5%, -15%);
+            transform: translate(-5%, -15%);
+        }
+    }
+
+    @keyframes toTopLeft {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate(-5%, -15%);
+            transform: translate(-5%, -15%);
+        }
+    }
+
+    .active .animate_cta {
+        -webkit-animation: toTopLeft 0.7s forwards 0.2s ease-in-out;
+        animation: toTopLeft 0.7s forwards 0.2s ease-in-out;
+    }
+
+    .border_target {
+        display: inline-block;
+        border: .1rem solid #333333;
+    }
+
+    @-webkit-keyframes toTopRight {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate(-2%, -3%);
+            transform: translate(-2%, -3%);
+        }
+    }
+
+    @keyframes toTopRight {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate(-2%, -3%);
+            transform: translate(-2%, -3%);
+        }
+    }
+
+    .animate_img_box {
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        opacity: 0;
+        display: none;
+    }
+
+    .active_image {
+        opacity: 1;
+        display: inline-block;
+    }
+
+    .animate_img_box {
+        -webkit-animation: toTopRight 0.7s forwards 0.2s ease-in-out;
+        animation: toTopRight 0.7s forwards 0.2s ease-in-out;
+    }
+
+    @-webkit-keyframes topToBottom {
+        0% {
+            -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes topToBottom {
+        0% {
+            -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .cta_animation {
+        -webkit-animation: topToBottom 0.7s forwards 0.8s ease-in-out;
+        animation: topToBottom 0.7s forwards 0.8s ease-in-out;
+    }
+
+    /* colors */
+
+    .ml_bg_cta {
+        background-color: #007d70;
+    }
+
+    .rl_bg_cta {
+        background-color: #54412e;
+    }
+
+    .cl_bg_cta {
+        background-color: #5f7b86;
+    }
+
+    .cls_bg_cta {
+        background-color: #74767b;
+    }
+
+    .sl_bg_cta {
+        background-color: #b84e48;
+    }
+
+    .lim_bg_cta {
+        background-color: #3b4231;
+    }
+
+
+
+    .active.ml_bg {
+        background-color: rgba(0, 125, 112, 0.1);
+    }
+
+    .active.rl_bg {
+        background-color: rgba(84, 65, 46, 0.1);
+    }
+
+    .active.cl_bg {
+        background-color: rgba(95, 123, 134, 0.1);
+    }
+
+    .active.cls_bg {
+        background-color: rgba(116, 118, 123, 0.1);
+    }
+
+    .active.sl_bg {
+        background-color: rgba(184, 78, 72, 0.1);
+    }
+
+    .active.lim_bg {
+        background-color: rgba(59, 66, 49, 0.1);
+    }
+
+    .active .ml_font {
+        color: #007d70;
+        border-color: #007d70;
+    }
+
+    .active .rl_font {
+        color: #54412e;
+        border-color: #54412e;
+    }
+
+    .active .cl_font {
+        color: #5f7b86;
+        border-color: #5f7b86;
+    }
+
+    .active .cls_font {
+        color: #74767b;
+        border-color: #74767b;
+    }
+
+    .active .sl_font {
+        color: #b84e48;
+        border-color: #b84e48;
+    }
+
+    .active .lim_font {
+        color: #3b4231;
+        border-color: #3b4231;
+    }
+
+    .border_target a {
+        position: relative;
+    }
+
+    .ls_cta_wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: .5rem 1rem;
+        font-size: 2.4rem;
+        color: #fff;
+        opacity: 0;
+    }
+
+    @media(max-width:567px) {
+        #olapic_wrapper .olapic #olapic-slider-widget .olapic-carousel li {
+            width: 209px !important;
+            height: 209px !important;
+            overflow: hidden;
+        }
+
+        .olapic #olapic-slider-widget .olapic-nav-next {
+            background-position: -30px -160px;
+            right: 21px;
+        }
+
+        #olapic_wrapper .olapic #olapic-slider-widget .olapic-nav-button {
+            top: 39px !important
+        }
+    }
+
+    @media (max-width: 767px) {
+        .generic-html-template>.container {
+            padding: 0;
+        }
+
+        .olapic #olapic-slider-widget .olapic-slider-body {
+            margin: 2rem !important
+        }
+
+        .lifeStyle_slider_wrapper {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .life_style_right_box {
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            margin-top: 4rem;
+            padding: 0 3rem;
+        }
+
+        .life_style_left_box {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
+
+        .life_style_media_box {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            margin-left: 0;
+        }
+
+        .life_style_cta_wrapper {
+            -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
+            margin-bottom: 1.5rem;
+        }
+
+        .life_style_cta_txt {
+            min-width: auto;
+            font-size: 1.6rem;
+        }
+
+        .lifeStyle_slider_title {
+            text-align: center;
+            padding: 0 4rem;
+        }
+
+        .lifeStyle_slider_title p {
+            font-size: 1.8rem;
+        }
+
+        .ls_cta_wrapper {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+<h1 class="page-title">Inspiration</h1>
+<div class="container insp-container">
+    <div class="row noBorder">
+        <div class="col-xs-12">
+            <a href="/inspiration/ideas-advice" class="iaTitle">
+                <img class="img-responsive center-block hidden-xs"
+                    src="/globalassets/images/lp/2018/07/0709_blog_banner.jpg" role="presentation" />
+                <img class="img-responsive center-block visible-xs-block"
+                    src="/globalassets/images/lp/2018/07/0709_blog_banner_mobile.jpg" role="presentation" />
+                <div>
+                    <span>Ideas + Advice</span>
+                    <p>Design and style tips from the experts &rsaquo;</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row insp-title">
+        <div class="col-xs-12 sub-title_2">
+            <span class="sub_title_2_wrapper">
+                <h2>Find Your Inspiration</h2>
+                <div class="sub-title_2_underline"></div>
+            </span>
+
+        </div>
+    </div>
+    <div class="row insp-title">
+        <div class="col-xs-12 sub-title"> <span>By Room</span> </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/rooms/living-room-ideas"> <img
+                    class="img-responsive" alt="inspiration living room ideas"
+                    src="/globalassets/images/LP/2018/0118_living-rooms.jpg"> <span class="title-link">Living
+                    Room</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/rooms/bedroom-ideas"> <img class="img-responsive"
+                    alt="inspiration bedroom ideas" src="/globalassets/images/LP/2018/0118_bedroom-rooms.jpg"> <span
+                    class="title-link">Bedroom</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/rooms/dining-room-ideas"> <img
+                    class="img-responsive" alt="inspiration dining room ideas"
+                    src="/globalassets/images/LP/2018/0118_dining-rooms.jpg"> <span class="title-link">Dining
+                    Room</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/rooms/kids-bedroom-ideas"> <img
+                    class="img-responsive" alt="inspiration kids room ideas"
+                    src="/globalassets/images/LP/2018/0118_kids-rooms.jpg"> <span class="title-link">Kids</span> </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/rooms/patio-backyard-ideas"> <img
+                    class="img-responsive" alt="inspiration Patio + Backyard ideas"
+                    src="/globalassets/images/LP/2018/0118_patip-rooms.jpg"> <span class="title-link">Patio +
+                    Backyard</span> </a> </div>
+    </div>
+    <div class="row insp-title">
+        <div class="col-xs-12 sub-title"> <span>By Style</span> </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/modern"> <img class="img-responsive"
+                    alt="inspiration modern room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_01.png?quality=90"> <span
+                    class="title-link">Modern</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/transitional"> <img class="img-responsive"
+                    alt="inspiration transitional room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_02.png?quality=90"> <span
+                    class="title-link">Transitional</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/mid-century"> <img class="img-responsive"
+                    alt="inspiration mid century room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_03.png?quality=90"> <span
+                    class="title-link">Mid-Century</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/industrial"> <img class="img-responsive"
+                    alt="inspiration industrial room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_04.png?quality=90"> <span
+                    class="title-link">Industrial</span> </a> </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/country-rustic"> <img
+                    class="img-responsive" alt="inspiration country/rustic room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_05.png?quality=90"> <span
+                    class="title-link">Country/Rustic</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/boho"> <img class="img-responsive"
+                    alt="inspiration boho room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_06.png?quality=90"> <span
+                    class="title-link">Boho</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/coastal"> <img class="img-responsive"
+                    alt="inspiration coastal room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_07.png?quality=90"> <span
+                    class="title-link">Coastal</span> </a> </div>
+        <div class="col-xs-6 col-sm-3 col-md-3"> <a href="/inspiration/styles/traditional"> <img class="img-responsive"
+                    alt="inspiration traditional room ideas"
+                    src="/globalassets/images/lp/2018/04/0403_inspiration_desktop_08.png?quality=90"> <span
+                    class="title-link">Traditional</span> </a> </div>
+    </div>
+
+    <!-- TK - NATE AND J WERE HERE -->
+
+    <section class="nj_banner">
+        <a href="/inspiration/catalogs/nate-and-jeremiah">
+            <div class="nj_left_box">
+                <img class="img-responsive center-block hidden-xs"
+                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_01.jpg"
+                    alt="Nate and Jeremiah For Living Spaces">
+                <img class="img-responsive center-block visible-xs"
+                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_mobile_banner_01.jpg"
+                    alt="Nate and Jeremiah For Living Spaces">
+            </div>
+            <div class="nj_center_box">
+                <img class="img-responsive center-block hidden-xs"
+                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_02_v3.jpg" alt="Living Spaces Logo">
+                <img class="img-responsive center-block visible-xs"
+                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_mobile_banner_03.jpg"
+                    alt="Living Spaces Logo">
+                <p class="sr-only">Nate + Jeremiah for living spaces. Now Available. Spring 19 Lookbook</p>
+            </div>
+            <div class="right_box hidden-xs">
+                <img class="img-responsive center-block"
+                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_03.jpg" alt="Living spaces furniture">
+            </div>
+        </a>
+    </section>
+    <div id="OlapicInjectionSite"></div>
+    <section class="lifeStyle_slider_container col-md-12">
+        <div class="lifeStyle_slider_title">
+            <h2>Discover Your Lifestyle</h2>
+            <p>To help you discover the looks you love, we’ve curated eight Lifestyles, each unique from the other – and
+                all
+                equipped with the designs you need to bring your style story to life. <span><a
+                        href="/inspiration/lifestyle">Explore your options
+                        &rsaquo;</a> </span></p>
+        </div>
+        <div class="lifeStyle_slider_wrapper">
+            <div class="life_style_media_box life_style_right_box active">
+                <span class="border_target">
+                    <a href="/inspiration/lifestyle/modern-living" class="slide-1 active_image animate_img_box">
+                        <img class="img-responsive   show-image  "
+                            src="/globalassets/images/lp/2019/05/lifeStyle_slide_01.jpg"
+                            alt="Living Spaces. modern living  room">
+                        <span class="ml_bg_cta ls_cta_wrapper cta_animation">Shop Modern Living Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="/inspiration/lifestyle/rustic-living" class="slide-2 animate_img_box">
+                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_02.jpg"
+                            alt="Living Spaces. rustic Living  room">
+                        <span class="rl_bg_cta ls_cta_wrapper cta_animation">Shop Rustic Living Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="/inspiration/lifestyle/casual-living" class="slide-3 animate_img_box">
+                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_03.jpg"
+                            alt="Living Spaces. casual living  room">
+                        <span class="cl_bg_cta ls_cta_wrapper cta_animation">Shop Casual Living Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="/inspiration/lifestyle/classic-living" class="slide-4 animate_img_box">
+                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_04.jpg"
+                            alt="Living Spaces. classic living  room">
+                        <span class="cls_bg_cta ls_cta_wrapper cta_animation">Shop Classic Living Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="/inspiration/lifestyle/studio-living" class="slide-5 animate_img_box">
+                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_05.jpg"
+                            alt="Living Spaces. studio living  room">
+                        <span class="sl_bg_cta ls_cta_wrapper cta_animation">Shop Studio Living Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a href="/inspiration/lifestyle/life-in-motion" class="slide-6 animate_img_box">
+                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_06.jpg"
+                            alt="Living Spaces. life in motion living  room">
+                        <span class="lim_bg_cta ls_cta_wrapper cta_animation">Shop Life in Motion Items <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+
+                </span>
+            </div>
+            <div class="life_style_media_box life_style_left_box">
+                <div class="life_style_cta_wrapper ml_bg active" tabindex="0" role="button">
+                    <div class="life_style_cta_txt ml_font animate_cta" data-target=".slide-1">
+                        Modern Living
+                    </div>
+                </div>
+                <div class="life_style_cta_wrapper rl_bg" tabindex="0" role="button">
+                    <div class="life_style_cta_txt rl_font animate_cta" data-target=".slide-2">
+                        Rustic Living
+                    </div>
+                </div>
+                <div class="life_style_cta_wrapper cl_bg" tabindex="0" role="button">
+                    <div class="life_style_cta_txt cl_font animate_cta" data-target=".slide-3">
+                        Casual Living
+                    </div>
+                </div>
+                <div class="life_style_cta_wrapper cls_bg" tabindex="0" role="button">
+                    <div class="life_style_cta_txt cls_font animate_cta" data-target=".slide-4">
+                        Classic Living
+                    </div>
+                </div>
+                <div class="life_style_cta_wrapper sl_bg" tabindex="0" role="button">
+                    <div class="life_style_cta_txt sl_font animate_cta" data-target=".slide-5">
+                        Studio Living
+                    </div>
+                </div>
+                <div class="life_style_cta_wrapper lim_bg" tabindex="0" role="button">
+                    <div class="life_style_cta_txt lim_font animate_cta" data-target=".slide-6">
+                        Life in Motion
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row threeD-wrapper">
+                <div class="col-xs-12 col-sm-5 col-md-5 threeD-box">
+                    <div class="threeD-title"><span>3D</span> Room Designer</div>
+                    <p>Curious to see how your favorite items will look in your space? Now, you can create a 3D image of
+                        your vision in under 5 minutes. Our room designer tool is not only easy to use, it’s fun to
+                        experiment with.</p>
+                    <a href="/inspiration/3d-room-designer" class="btn primary-button">Start Your Room Design
+                        &rsaquo;</a>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 threeD-img">
+                    <div class="cocoen"> <img src="/globalassets/images/lp/2018/03/03_06_bedroom_3d.jpg"
+                            alt="3D Rendering" /> <img src="/globalassets/images/lp/2018/03/03_06_bedroom.jpg"
+                            alt="Actual Room" /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', function () {
+        if (window.jQuery) {
+            //Olapic Slider
+            function injectOlapic() {
+                var olapicBody =
+                    '<section id="olapic_wrapper" class="container board text-center"> <div class="row"> <div class="col-xs-12"> <h3 class="subtitle"><span class="sub-title" id="Olapic">Show off your style with @livingspaces</span><span class="viewall"><a href="https://www.livingspaces.com/inspiration/my-living-spaces">View All &rsaquo;</a></span></h3> </div> </div> <div class="row"><div id="olapic_specific_widget"></div></div> </section>';
+                $('#OlapicInjectionSite').append(olapicBody);
+            }
+
+            function initOlapic() {
+                var fileRef = document.createElement("script");
+                fileRef.setAttribute("type", "text/javascript");
+                fileRef.setAttribute("async", "");
+                fileRef.setAttribute("data-olapic", "olapic_specific_widget");
+                fileRef.setAttribute(
+                    "data-instance",
+                    "08d4ebb65a759dfda7676b43f3a56ef2"
+                );
+                fileRef.setAttribute(
+                    "data-apikey",
+                    "14cc0b534adba3a1963a1970413f08ac64593c3f11384d04732750c587dc9de3"
+                );
+                fileRef.setAttribute(
+                    "data-viewer",
+                    "//www.photorank.me/assets/livingspaces/viewer2v2.html"
+                );
+                fileRef.setAttribute(
+                    "src",
+                    "https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"
+                );
+                document.head.appendChild(fileRef);
+            }
+            injectOlapic()
+            initOlapic()
+
+            // LEGACY CODE FROM PAGE
+            var autoClick = true,
+                counter = 0;
+            slideLoop();
+            $(".life_style_cta_wrapper").click(function () {
+                autoClick = false;
+                activeSlide(this)
+            });
+
+            function slideLoop() {
+                if (autoClick) {
+                    if (counter < $('.life_style_cta_wrapper').length) {
+                        var target = $('.life_style_cta_wrapper')[counter]
+                        activeSlide(target);
+                        counter++
+                        setTimeout(slideLoop, 2000);
+                    } else {
+                        counter = 0;
+                        slideLoop();
+                    }
+                }
+            }
+
+            function activeSlide(element) {
+                $('.lifeStyle_slider_container .active').removeClass('active');
+                $(element).addClass('active');
+                var target = $(element).children('.life_style_cta_txt').attr('data-target');
+                $('.active_image').removeClass('active_image');
+                $(target).addClass('active_image');
+            }
+        }
+        $(".life_style_cta_wrapper").keydown(function (e) {
+            if (e.keyCode === 13) $('.animate_img_box.active_image img').trigger("click");
+        });
+        $(".life_style_cta_wrapper").focus(function (e) {
+            $(this).trigger("click");
+        });
+    }, false);
+</script>

@@ -15,17 +15,54 @@
     <link rel="stylesheet" href="">
 
     <style>
+        /* #0765ff and  #ff131b */
+
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Lacquer&display=swap');
+
+
         body {
             overflow: hidden;
+            transition: 1s;
+            background-color: white;
         }
 
-        #HomePage .spherical {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Lacquer', sans-serif;
+        }
+
+        p {
+            font-family: 'Crimson Text', serif;
+        }
+
+        img.img-responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        .flex-column {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            margin: 0 auto
+        }
+
+        .spherical {
             background-color: black;
             height: 50px;
             width: 50px;
             border-radius: 100%;
             position: absolute;
             box-shadow: 2px 4px 6px black;
+            transition: 3s;
         }
 
         #HomePage .spherical h2 {
@@ -75,9 +112,29 @@
             transition: 1.5s
         }
 
+        #About {
+            color: white;
+            display: none;
+        }
+
+
+        #About img {
+            border-radius: 100%
+        }
+
+        #About .flex-column {
+            margin: auto;
+            text-align: center;
+            width: 50%
+        }
+
         @media (max-width: 767px) {
             #HomePage .spherical h2 {
                 opacity: 1
+            }
+
+            #About .flex-column {
+                width: 80%
             }
         }
     </style>
@@ -90,22 +147,43 @@
 
     <section id="HomePage">
         <div id="OGBoi" class="spherical" style="top:10px;left:10px;"></div>
-        <div id="About" class="spherical" style="top:100px;left:400px;">
+        <div id="AboutLink" class="spherical" style="top:100px;left:400px;">
 
             <h2>Text here</h2>
         </div>
 
-        <div id="Work" class="spherical" style="top:133px;left:200px;">
+        <div id="WorkLink" class="spherical" style="top:133px;left:200px;">
 
             <h2>Text here</h2>
         </div>
 
-        <div id="R" class="spherical" style="top:300px;left:23px;">
-
+        <div id="RLink" class="spherical" style="top:300px;left:23px;">
             <h2>Text here</h2>
         </div>
 
         <div id="SVGs"></div>
+    </section>
+
+    <section id="About">
+        <section id="AboutContainer">
+            <div class="flex-column">
+                <div class="flex-item">
+                    <img class='img-responsive' src="https://via.placeholder.com/500" alt="">
+                </div>
+                <div class="flex-item">
+                    <h1>About</h1>
+                </div>
+                <div class="flex-item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsum. Voluptatum accusantium
+                        maiores
+                        sequi
+                        omnis mollitia facere atque quisquam molestiae consequuntur nam dolores odit perferendis in
+                        eveniet, ut
+                        unde
+                        possimus.</p>
+                </div>
+            </div>
+        </section>
     </section>
 
     <!-- <svg width="500" height="500">
@@ -114,6 +192,15 @@
     <script src="" async defer></script>
 
     <script>
+        const init = () => {
+
+            // Clears any anchors on refresh - could use this for routing eventually
+            if (window.location.href.search('#') > -1) {
+                window.location.href = window.location.href.split('#')[0]
+            }
+        }
+
+
         // Perform random text rotations
         const randomTextRota = () => {
             document.querySelectorAll('.spherical h2').forEach((textEl) => {
@@ -159,7 +246,16 @@
             document.querySelectorAll('.spherical:not(:first-child)').forEach((el) => {
                 el.addEventListener('click', event => {
                     let t = event.target;
-                    console.log(t.id)
+
+                    window.location.href += `#${t.id.split('Link')[0]}`
+
+                    t.style.transform = 'scale(100)'
+                    setTimeout(() => {
+                        document.querySelector('body').style.backgroundColor = 'black'
+                        document.getElementById('HomePage').style.display = 'none'
+                        document.getElementById('About').style.display = 'block'
+                    }, 1000)
+
                 })
             }
             )
@@ -168,7 +264,7 @@
         }
 
 
-
+        init()
         randomTextRota()
         drawLines()
         linkClickHandlers()

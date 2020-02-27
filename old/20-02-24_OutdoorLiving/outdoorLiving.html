@@ -63,6 +63,12 @@
         /* margin here and flex-item padding must be the same  */
     }
 
+    #OL h2 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        line-height: 3rem;
+    }
+
     #OL .col-container {
         display: flex;
         flex-direction: column;
@@ -99,26 +105,21 @@
         text-align: center;
         font-size: 1.8rem;
         font-weight: 400;
-        letter-spacing: .1rem;
     }
 
     #OL #CTAText .flex-item h2.rounded-type.heavy {
         font-weight: 600;
+        font-size: 2rem;
     }
 
     #OL #CTAText {
         padding-bottom: 1.8rem;
-        margin: auto 8rem;
+        margin: 3rem 8rem;
     }
 
     /* ANIMATION */
     #OL a img {
         transition: .7s;
-    }
-
-    #OL a img:hover,
-    #OL a img:active {
-        transform: scale(1.025);
     }
 
     #OL .desktop-only {
@@ -151,6 +152,7 @@
     /* end */
 
     @media (max-width: 767px) {
+
         #OL .desktop-only {
             display: none
         }
@@ -163,10 +165,6 @@
             flex-direction: column !important;
         }
 
-        #NestedCol {
-            flex-direction: row !important;
-        }
-
         #OL #CTAText {
             margin: auto 0;
         }
@@ -177,11 +175,19 @@
 
         #InspoAwaits {
             width: 80%;
-            padding: .5rem;
+            padding-bottom: 7rem;
+        }
+
+        #OL h2 {
+            line-height: 2.5rem
+        }
+
+        #OL #CTAText .flex-item h2.rounded-type.heavy {
+            font-size: 2.2rem;
         }
 
         #OL h2.rounded-type {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
         }
     }
 </style>
@@ -211,31 +217,41 @@
 
             <div class="col-container" id="NestedCol">
                 <div class="flex-item"><img src="/globalassets/images/lp/2020/02/outdoor-living/inspiration-bg.jpg"
-                        alt="Inspiration Awaits" class="img-responsive">
+                        alt="Inspiration Awaits" class="img-responsive desktop-only">
+                    <img src="/globalassets/images/lp/2020/02/outdoor-living/inspiration-bg3x.png"
+                        alt="Inspiration Awaits" class="img-responsive mobile-only">
                     <div class="col-container overlay-tile-container">
                         <div class="overlay-tile" id="InspoAwaits">
                             <img src="/globalassets/images/lp/2020/02/outdoor-living/inspiration-awaits.png" alt=""
-                                class="img-responsive">
+                                class="img-responsive desktop-only">
+                            <img src="/globalassets/images/lp/2020/02/outdoor-living/mobile/inspiration-awaits3x.png"
+                                alt="" class="img-responsive mobile-only">
                         </div>
                         <div class="overlay-tile">
-                            <a href="#"> <img src="/globalassets/images/lp/2020/02/outdoor-living/catalog-cta.png"
-                                    alt="" class="img-responsive"></a>
+                            <a href="/inspiration/catalogs"> <img src="/globalassets/images/lp/2020/02/outdoor-living/catalog-cta.png"
+                                    alt="" class="img-responsive desktop-only"><img
+                                    src="/globalassets/images/lp/2020/02/outdoor-living/mobile/catalog-cta3x.png" alt=""
+                                    class="img-responsive mobile-only"></a>
                         </div>
                         <div class="overlay-tile">
                             <a href="/inspiration/ideas-advice/decor-tips/15-outdoor-party-ideas--essentials"> <img
                                     src="/globalassets/images/lp/2020/02/outdoor-living/blog-cta.png" alt=""
-                                    class="img-responsive"></a>
+                                    class="img-responsive desktop-only">
+                                <img src="/globalassets/images/lp/2020/02/outdoor-living/mobile/blog-cta3x.png" alt=""
+                                    class="img-responsive mobile-only"></a>
                         </div>
                     </div>
 
                 </div>
                 <div class="flex-item">
                     <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
-                        data-theVideo="https://www.youtube.com/embed/I1UVhpR--Ys" role="button"
+                        data-theVideo="https://www.youtube.com/embed/1gtD39TxlN0" role="button"
                         aria-label="click to watch the video" href="" alt="Watch the 
             outdoor furniture video">
                         <img src="/globalassets/images/lp/2020/02/outdoor-living/video-player.jpg" alt="Video tile"
-                            class="img-responsive">
+                            class="img-responsive desktop-only">
+                        <img src="/globalassets/images/lp/2020/02/outdoor-living/video-player3x.png" alt="Video tile"
+                            class="img-responsive mobile-only">
                     </a>
                 </div>
             </div>

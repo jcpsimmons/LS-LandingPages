@@ -390,11 +390,8 @@
 <script type="text/javascript">
     //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
     function playModal() {
-        console.log('playmodal')
         var trigger = $("body").find('#YoutubeFPO [data-toggle="modal"]');
-        console.log(trigger)
         trigger.click(function () {
-            console.log('fire click event')
             var theModal = $(this).data("target"),
                 videoSRC = $(this).attr("data-theVideo"),
                 videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
@@ -411,7 +408,6 @@
 
     var anotherInterval = setInterval(function () {
         if (window.jQuery) {
-            console.log('jquery present')
             clearInterval(anotherInterval);
             playModal();
         }
