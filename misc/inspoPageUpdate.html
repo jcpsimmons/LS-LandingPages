@@ -11,7 +11,36 @@
         flex-wrap: nowrap;
     }
 
+    #NateAndJeremiah {
+        margin-bottom: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    @media (min-width: 768px) {
+
+        #NJ-Left {
+            padding-right: 1rem
+        }
+
+        #NJ-Right {
+            padding-left: 1rem
+        }
+
+        #NJ-Right .sideToside_banner_right_01_cta {
+            margin-left: 1rem;
+
+        }
+    }
+
     @media (max-width: 767px) {
+        #NateAndJeremiah .sideToside_banner_cta {
+            text-align: center;
+            width: 100%;
+            padding-right: 0;
+        }
+
         .nj_banner a {
             flex-wrap: wrap;
         }
@@ -24,6 +53,10 @@
         .nj_center_box img,
         .nj_left_box img {
             width: 100%;
+        }
+
+        h1.page-title {
+            padding-left: 15px;
         }
     }
 
@@ -85,7 +118,6 @@
 
     #olapic_wrapper .subtitle {
         text-align: center;
-        font-size: 3.6rem;
         margin: 0;
         margin-top: 2rem
     }
@@ -108,12 +140,14 @@
 
     .sideToside_banner_cta {
         position: absolute;
-        width: 100%;
+        width: calc(100% - 1rem);
         color: #fff;
         bottom: 0;
-        right: 0;
-        left: 2rem;
+        right: 2rem;
+        left: 0;
         padding-bottom: 3%;
+        padding-right: 3%;
+        text-align: right;
         background: linear-gradient(transparent, rgba(0, 0, 0, .7));
     }
 
@@ -792,6 +826,10 @@
     }
 
     @media (max-width: 767px) {
+        #IdeasAdviceHeader {
+            margin-top: 20px;
+        }
+
         .generic-html-template>.container {
             padding: 0;
         }
@@ -867,7 +905,7 @@
                     src="/globalassets/images/lp/2018/07/0709_blog_banner.jpg" role="presentation" />
                 <img class="img-responsive center-block visible-xs-block"
                     src="/globalassets/images/lp/2018/07/0709_blog_banner_mobile.jpg" role="presentation" />
-                <div>
+                <div id="IdeasAdviceHeader">
                     <span>Ideas + Advice</span>
                     <p>Design and style tips from the experts &rsaquo;</p>
                 </div>
@@ -949,142 +987,151 @@
                     class="title-link">Traditional</span> </a> </div>
     </div>
 
-    <!-- TK - NATE AND J WERE HERE -->
-
-    <section class="nj_banner">
-        <a href="/inspiration/catalogs/nate-and-jeremiah">
-            <div class="nj_left_box">
-                <img class="img-responsive center-block hidden-xs"
-                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_01.jpg"
-                    alt="Nate and Jeremiah For Living Spaces">
-                <img class="img-responsive center-block visible-xs"
-                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_mobile_banner_01.jpg"
-                    alt="Nate and Jeremiah For Living Spaces">
-            </div>
-            <div class="nj_center_box">
-                <img class="img-responsive center-block hidden-xs"
-                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_02_v3.jpg" alt="Living Spaces Logo">
-                <img class="img-responsive center-block visible-xs"
-                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_mobile_banner_03.jpg"
-                    alt="Living Spaces Logo">
-                <p class="sr-only">Nate + Jeremiah for living spaces. Now Available. Spring 19 Lookbook</p>
-            </div>
-            <div class="right_box hidden-xs">
-                <img class="img-responsive center-block"
-                    src="/globalassets/images/lp/2019/09/0909_nj_lookbook_banner_03.jpg" alt="Living spaces furniture">
-            </div>
+    <div class="row insp-title">
+        <div class="col-xs-12 sub-title"> <span>Designer Inspiration</span> </div>
+    </div>
+    <div id="NateAndJeremiah" class="row">
+        <div class="col-sm-6 col-xs-12 no-padding" id='NJ-Left'> <a
+                href="/inspiration/celebrity-designer/magnolia-home">
+                <img alt="Magnolia Home By Joanna Gaines" class="img-responsive"
+                    src="/globalassets/images/home/2019/09/img-tile-MH.jpg">
+                <div class="sideToside_banner_left_01_cta sideToside_banner_cta">
+                    <h3 class="ls_hp_title">Magnolia Home by Joanna Gaines</h3>
+                    <p class="ls_hp_cta">Shop Her Collection ›</p>
+                </div>
+            </a> </div>
+        <div class="col-sm-6 col-xs-12 no-padding" id='NJ-Right'> <a
+                href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture">
+                <img alt="Nate + Jeremiah For Living Spaces" class="img-responsive"
+                    src="/globalassets/images/home/2019/09/R-Block-so_v2.jpg">
+                <div class="sideToside_banner_right_01_cta sideToside_banner_cta">
+                    <h3 class="ls_hp_title">Nate + Jeremiah</h3>
+                    <p class="ls_hp_cta">Shop Their Collection ›</p>
+                </div>
+        </div>
         </a>
-    </section>
-    <div id="OlapicInjectionSite"></div>
-    <section class="lifeStyle_slider_container col-md-12">
-        <div class="lifeStyle_slider_title">
-            <h2>Discover Your Lifestyle</h2>
-            <p>To help you discover the looks you love, we’ve curated eight Lifestyles, each unique from the other – and
-                all
-                equipped with the designs you need to bring your style story to life. <span><a
-                        href="/inspiration/lifestyle">Explore your options
-                        &rsaquo;</a> </span></p>
-        </div>
-        <div class="lifeStyle_slider_wrapper">
-            <div class="life_style_media_box life_style_right_box active">
-                <span class="border_target">
-                    <a href="/inspiration/lifestyle/modern-living" class="slide-1 active_image animate_img_box">
-                        <img class="img-responsive   show-image  "
-                            src="/globalassets/images/lp/2019/05/lifeStyle_slide_01.jpg"
-                            alt="Living Spaces. modern living  room">
-                        <span class="ml_bg_cta ls_cta_wrapper cta_animation">Shop Modern Living Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
-                    <a href="/inspiration/lifestyle/rustic-living" class="slide-2 animate_img_box">
-                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_02.jpg"
-                            alt="Living Spaces. rustic Living  room">
-                        <span class="rl_bg_cta ls_cta_wrapper cta_animation">Shop Rustic Living Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
-                    <a href="/inspiration/lifestyle/casual-living" class="slide-3 animate_img_box">
-                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_03.jpg"
-                            alt="Living Spaces. casual living  room">
-                        <span class="cl_bg_cta ls_cta_wrapper cta_animation">Shop Casual Living Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
-                    <a href="/inspiration/lifestyle/classic-living" class="slide-4 animate_img_box">
-                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_04.jpg"
-                            alt="Living Spaces. classic living  room">
-                        <span class="cls_bg_cta ls_cta_wrapper cta_animation">Shop Classic Living Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
-                    <a href="/inspiration/lifestyle/studio-living" class="slide-5 animate_img_box">
-                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_05.jpg"
-                            alt="Living Spaces. studio living  room">
-                        <span class="sl_bg_cta ls_cta_wrapper cta_animation">Shop Studio Living Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
-                    <a href="/inspiration/lifestyle/life-in-motion" class="slide-6 animate_img_box">
-                        <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_06.jpg"
-                            alt="Living Spaces. life in motion living  room">
-                        <span class="lim_bg_cta ls_cta_wrapper cta_animation">Shop Life in Motion Items <i
-                                class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </a>
+    </div>
+</div>
 
-                </span>
-            </div>
-            <div class="life_style_media_box life_style_left_box">
-                <div class="life_style_cta_wrapper ml_bg active" tabindex="0" role="button">
-                    <div class="life_style_cta_txt ml_font animate_cta" data-target=".slide-1">
-                        Modern Living
-                    </div>
-                </div>
-                <div class="life_style_cta_wrapper rl_bg" tabindex="0" role="button">
-                    <div class="life_style_cta_txt rl_font animate_cta" data-target=".slide-2">
-                        Rustic Living
-                    </div>
-                </div>
-                <div class="life_style_cta_wrapper cl_bg" tabindex="0" role="button">
-                    <div class="life_style_cta_txt cl_font animate_cta" data-target=".slide-3">
-                        Casual Living
-                    </div>
-                </div>
-                <div class="life_style_cta_wrapper cls_bg" tabindex="0" role="button">
-                    <div class="life_style_cta_txt cls_font animate_cta" data-target=".slide-4">
-                        Classic Living
-                    </div>
-                </div>
-                <div class="life_style_cta_wrapper sl_bg" tabindex="0" role="button">
-                    <div class="life_style_cta_txt sl_font animate_cta" data-target=".slide-5">
-                        Studio Living
-                    </div>
-                </div>
-                <div class="life_style_cta_wrapper lim_bg" tabindex="0" role="button">
-                    <div class="life_style_cta_txt lim_font animate_cta" data-target=".slide-6">
-                        Life in Motion
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
+<section style="margin-bottom:6rem">
     <div class="row">
-        <div class="col-xs-12">
-            <div class="row threeD-wrapper">
-                <div class="col-xs-12 col-sm-5 col-md-5 threeD-box">
-                    <div class="threeD-title"><span>3D</span> Room Designer</div>
-                    <p>Curious to see how your favorite items will look in your space? Now, you can create a 3D image of
-                        your vision in under 5 minutes. Our room designer tool is not only easy to use, it’s fun to
-                        experiment with.</p>
-                    <a href="/inspiration/3d-room-designer" class="btn primary-button">Start Your Room Design
-                        &rsaquo;</a>
+        <div class="col-md-12">
+            <a href="/inspiration/catalogs"><img src="/globalassets/images/lp/2020/03/0302_catalog_banner.jpg"
+                    alt="Catalog banner" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/0302_catalog_banner_mobile_updated.jpg" alt="Catalog banner"
+                    class="img-responsive mobile-only"></a>
+        </div>
+    </div>
+</section>
+<div id="OlapicInjectionSite"></div>
+<section class="lifeStyle_slider_container col-md-12">
+    <div class="lifeStyle_slider_title">
+        <h2>How Do You Want to Live?</h2>
+        <p>With furniture for every taste and space, it’s important for us to offer a little guidance on which pieces
+            fit you best. That’s why we’ve created 6 essential lifestyles that categorize our designs based on different
+            looks, details and functions. <span><a href="/inspiration/lifestyle">Explore your options
+                    &rsaquo;</a> </span></p>
+    </div>
+    <div class="lifeStyle_slider_wrapper">
+        <div class="life_style_media_box life_style_right_box active">
+            <span class="border_target">
+                <a href="/inspiration/lifestyle/modern-living" class="slide-1 active_image animate_img_box">
+                    <img class="img-responsive   show-image  "
+                        src="/globalassets/images/lp/2019/05/lifeStyle_slide_01.jpg"
+                        alt="Living Spaces. modern living  room">
+                    <span class="ml_bg_cta ls_cta_wrapper cta_animation">Shop Modern Living Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="/inspiration/lifestyle/rustic-living" class="slide-2 animate_img_box">
+                    <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_02.jpg"
+                        alt="Living Spaces. rustic Living  room">
+                    <span class="rl_bg_cta ls_cta_wrapper cta_animation">Shop Rustic Living Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="/inspiration/lifestyle/casual-living" class="slide-3 animate_img_box">
+                    <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_03.jpg"
+                        alt="Living Spaces. casual living  room">
+                    <span class="cl_bg_cta ls_cta_wrapper cta_animation">Shop Casual Living Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="/inspiration/lifestyle/classic-living" class="slide-4 animate_img_box">
+                    <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_04.jpg"
+                        alt="Living Spaces. classic living  room">
+                    <span class="cls_bg_cta ls_cta_wrapper cta_animation">Shop Classic Living Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="/inspiration/lifestyle/studio-living" class="slide-5 animate_img_box">
+                    <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_05.jpg"
+                        alt="Living Spaces. studio living  room">
+                    <span class="sl_bg_cta ls_cta_wrapper cta_animation">Shop Studio Living Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="/inspiration/lifestyle/life-in-motion" class="slide-6 animate_img_box">
+                    <img class="img-responsive " src="/globalassets/images/lp/2019/05/lifeStyle_slide_06.jpg"
+                        alt="Living Spaces. life in motion living  room">
+                    <span class="lim_bg_cta ls_cta_wrapper cta_animation">Shop Life in Motion Items <i
+                            class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+
+            </span>
+        </div>
+        <div class="life_style_media_box life_style_left_box">
+            <div class="life_style_cta_wrapper ml_bg active" tabindex="0" role="button">
+                <div class="life_style_cta_txt ml_font animate_cta" data-target=".slide-1">
+                    Modern Living
                 </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 threeD-img">
-                    <div class="cocoen"> <img src="/globalassets/images/lp/2018/03/03_06_bedroom_3d.jpg"
-                            alt="3D Rendering" /> <img src="/globalassets/images/lp/2018/03/03_06_bedroom.jpg"
-                            alt="Actual Room" /> </div>
+            </div>
+            <div class="life_style_cta_wrapper rl_bg" tabindex="0" role="button">
+                <div class="life_style_cta_txt rl_font animate_cta" data-target=".slide-2">
+                    Rustic Living
                 </div>
+            </div>
+            <div class="life_style_cta_wrapper cl_bg" tabindex="0" role="button">
+                <div class="life_style_cta_txt cl_font animate_cta" data-target=".slide-3">
+                    Casual Living
+                </div>
+            </div>
+            <div class="life_style_cta_wrapper cls_bg" tabindex="0" role="button">
+                <div class="life_style_cta_txt cls_font animate_cta" data-target=".slide-4">
+                    Classic Living
+                </div>
+            </div>
+            <div class="life_style_cta_wrapper sl_bg" tabindex="0" role="button">
+                <div class="life_style_cta_txt sl_font animate_cta" data-target=".slide-5">
+                    Studio Living
+                </div>
+            </div>
+            <div class="life_style_cta_wrapper lim_bg" tabindex="0" role="button">
+                <div class="life_style_cta_txt lim_font animate_cta" data-target=".slide-6">
+                    Life in Motion
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row threeD-wrapper">
+            <div class="col-xs-12 col-sm-5 col-md-5 threeD-box">
+                <div class="threeD-title"><span>3D</span> Room Designer</div>
+                <p>Curious to see how your favorite items will look in your space? Now, you can create a 3D image of
+                    your vision in under 5 minutes. Our room designer tool is not only easy to use, it’s fun to
+                    experiment with.</p>
+                <a href="/inspiration/3d-room-designer" class="btn primary-button">Start Your Room Design
+                    &rsaquo;</a>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 threeD-img">
+                <div class="cocoen"> <img src="/globalassets/images/lp/2018/03/03_06_bedroom_3d.jpg"
+                        alt="3D Rendering" /> <img src="/globalassets/images/lp/2018/03/03_06_bedroom.jpg"
+                        alt="Actual Room" /> </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script>

@@ -1,0 +1,126 @@
+<script>
+    $(document).ready(function () {
+        $('#John').attr('src', '/globalassets/images/home/2019/07/bed-tile.jpg')
+    })
+</script>
+
+<style>
+    p,
+    ul {
+        font-size: 1.5rem;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        margin: 0 auto;
+    }
+
+    #Instructions {
+        margin-bottom: 5rem;
+        border: 1px solid lightblue;
+        border-radius: 10px;
+        padding: 1rem 8rem 2rem;
+        box-shadow: 3px 3px 5px 6px #ccc;
+    }
+
+    button {
+        border-radius: 10px;
+    }
+
+    #Hint {
+        color: black;
+        background-color: black;
+        user-select: none;
+        transition: 2s
+    }
+
+    #HintContainer {
+        transition: 5s;
+        filter: opacity(0);
+        display: none;
+    }
+</style>
+
+<div id="Instructions">
+    <h1>OH NO!</h1>
+    <p>John is messing with our site and we need you to implement a fix!</p>
+    <p>We've deployed the following code to try and stop him, but it's not working:</p>
+    <pre class="prettyprint">
+        $(document).ready(function () {
+            $('#John').attr('src', '/globalassets/images/home/2019/07/bed-tile.jpg')
+        })
+    </pre>
+
+    <h2>Solve in these steps:</h2>
+    <ol>
+        <li>Using only what's available to you in Chrome (without leaving this page) examine the page and try to figure
+            out what's going on.</li>
+        <li>Before trying to implement your fix, discuss your suspicions about why the page isn't working correctly
+            (It's okay if you're wrong - we want to see how you think).</li>
+        <li>Using whatever web resources you need (StackOverflow/Google/etc.) change the code so that the desired
+            behavior will occur.</li>
+    </ol>
+    <h2>The correct fix will:</h2>
+    <ul>
+        <li>Swap John's image with the source specified in the code</li>
+        <li>(Bonus Points) Stop John from shuffling the images</li>
+    </ul>
+    <div id="HintContainer">
+        <h2>A hint if you need it:</h2>
+        <p id="Hint"></p>
+        <button class="btn btn-primary" onclick="revealHint()">Reveal</button>
+    </div>
+</div>
+
+<div id="MainBrain">
+    <div id="Problem"></div>
+    <div class="flex-row" id="Deck">
+        <div id="John" class="flex-item"><img src="/globalassets/images/lp/2020/02/john.png" alt=""
+                class="img-responsive">
+        </div>
+        <div class="flex-item"><img
+                src="/globalassets/productassets/200000-299999/240000-249999/244000-244999/244000-244099/244002/244002_blue_fabric_outdoor_egg_chair_signature_1.jpg?w=650&h=440&mode=pad"
+                alt="" class="img-responsive"></div>
+        <div class="flex-item"><img
+                src="/globalassets/productassets/100000-199999/100000-109999/107000-107999/107000-107099/107068/107068_1.jpg?w=650&h=440&mode=pad"
+                alt="" class="img-responsive"></div>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById('HintContainer').style.display = "block"
+        document.getElementById('HintContainer').style.filter = "opacity(1)"
+    }, 3000)
+
+    const revealHint = () => {
+        document.getElementById('Hint').style.backgroundColor = "white"
+    }
+
+
+    document.getElementById('Hint').innerText = "?erehwemos ti gninifed uoy era ,denifednu si gnihtemos fI ?srorre yna ereht erA ?elosnoc slooTveD eht ta dekool uoy evaH".split("").reverse().join("")
+
+    const JohnMagic = setInterval(() => {
+        var container = document.getElementById("Deck");
+        var images = container.children;
+        var fragment = document.createDocumentFragment();
+
+        while (images.length) {
+            fragment.appendChild(images[Math.floor(Math.random() * images.length)]);
+        }
+
+        container.appendChild(fragment);
+    }, 200)
+
+</script>
+
+<!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Load Google script that prettifies code blocks in HTML <pre> tags -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>

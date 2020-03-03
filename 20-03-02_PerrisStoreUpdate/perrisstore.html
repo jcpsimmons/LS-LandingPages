@@ -1,0 +1,235 @@
+<style>
+    /* VIDEO MODAL */
+    /***** Modal *****/
+    .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }
+
+    .modal-header .close {
+        float: none;
+        text-shadow: none;
+        color: #fff !important;
+        opacity: 1 !important;
+        font-weight: 400 !important;
+        font-size: 3rem !important;
+        margin-top: 3.6rem !important;
+        margin-right: 3.4rem !important;
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 9 !important;
+        border-radius: 30rem !important;
+        background: #100f0f !important;
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .modal-body {
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    .modal-content {
+        background: none;
+        border: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* END MODAL */
+
+
+    #PC .headerText {
+        font-weight: bold;
+    }
+
+    #PC .calloutTextItalic {
+        font-style: italic;
+    }
+
+    #PC .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-bottom: 1.8rem;
+    }
+
+    #PC .flex-item,
+    #PC .textBlock {
+        padding: 0 .9rem
+    }
+
+    #PC .calloutText {
+        padding-bottom: .5rem;
+    }
+
+    #PC .textBlock {
+        padding-top: 2rem;
+    }
+
+    /* Desktop/Mobile only */
+    .desktop-only {
+        display: block
+    }
+
+    .mobile-only {
+        display: none
+    }
+
+    @media (max-width: 767px) {
+        .desktop-only {
+            display: none
+        }
+
+        .mobile-only {
+            display: block
+        }
+
+        #PC .container {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        #PC .flex-item {
+            padding: .6rem 0;
+        }
+
+        #PC {
+            margin: 0 -5px;
+        }
+
+        #PC #HeaderBanner {
+            margin-left: -10px;
+            margin-right: -10px
+        }
+
+        #PC .faqHeader {
+            font-size: 2.5rem;
+        }
+
+    }
+</style>
+
+
+<div id="PC">
+    <div id="HeaderBanner" class="container">
+        <div class="flex-item"><img
+                src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic-header.png"
+                alt="Save in Style" class="img-responsive desktop-only"><img
+                src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-top-banner.png"
+                alt="Save in Style" class="img-responsive mobile-only"></div>
+    </div>
+    <div class="container">
+        <div class="flex-item"><a href="/clearance/outlet"><img
+                    src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic_07.gif" alt="Sofa 395"
+                    class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-animation.gif"
+                    alt="Sofa 395" class="img-responsive mobile-only">
+            </a></div>
+        <div class="flex-item"> <a class="playVideo2" data-toggle="modal" data-target="#modal-video"
+                data-theVideo="https://www.youtube.com/embed/8dL8Eg-HHo0" role="button"
+                aria-label="click to Watch the commercial" href="" alt="Watch the 
+    revive commercial"><img src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic-09.png"
+                    alt="Shop over 100 collections (video)" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-video.png"
+                    alt="Shop over 100 collections (video)" class="img-responsive mobile-only">
+            </a></div>
+    </div>
+    <div class="container">
+        <div class="flex-item"><a href="/clearance/outlet?product_attribute=Accent+Chair%2cChair"><img
+                    src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic-accent-chairs.png"
+                    alt="Accent chairs" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-accent-chairs.png"
+                    alt="Accent chairs" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a
+                href="/clearance/outlet?product_attribute=Sectional%2cLiving+Room+Set%2cSofa%2cSectional+Loveseat%2cSleeper%2cSofa+and+Loveseat+Set"><img
+                    src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic-sofas-sectionals.png"
+                    alt="Sofas + Sectionals" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-sofas-sectionals.png"
+                    alt="Sofa/Secitonals" class="img-responsive mobile-only"></a></div>
+        <div class="flex-item"><a href="/clearance/outlet?product_attribute=End+Table%2cCoffee+Table"><img
+                    src="/globalassets/images/lp/2020/03/PerrisStore/desktop/perris-store-graphic-accent-tables.png"
+                    alt="Accent Tables" class="img-responsive desktop-only">
+                <img src="/globalassets/images/lp/2020/03/PerrisStore/mobile/perris-store-mobile-accent-tables.png"
+                    alt="Accent tables" class="img-responsive mobile-only"></a></div>
+    </div>
+    <div class="textBlock">
+        <p class="headerText faqHeader">
+            <i class="fa fa-question-circle" aria-hidden="true"></i><b>&nbsp;FAQ</b></p>
+        <p class="calloutText">When you shop at out Perris Outlet Center, you can expect to find stylish designs at
+            everyday low prices. This expansive showroom includes pieces for every space, including bedrooms, living
+            rooms, dining rooms and offices. Same-day pickup and delivery are available. Please be aware that only
+            credit cards are accepted.</p>
+        <p class="headerText">
+            <b>Q: How do I get to the outlet center?</b></p>
+        <p class="calloutText calloutTextItalic">The building is very large. We are located on the north-east corner of
+            the building off of Perry St.</p>
+        <p class="headerText">
+            <b>Q: Is there anything different with this store than other stores?</p>
+        <p class="calloutText calloutTextItalic">The outlet center sells specially priced outlet products including
+            Studio Living. It is different than our Clearance Centers, it does not sell As-Is or Floor Models.</p>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="main-Video" class="embed-responsive-item" width="1170" src="" webkitallowfullscreen
+                            mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+    function playModal() {
+        var trigger = $("body").find('#PC [data-toggle="modal"]');
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+
+            $('#modal-video').on('hidden.bs.modal', function (e) {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+
+    var anotherInterval = setInterval(function () {
+        if (window.jQuery) {
+            clearInterval(anotherInterval);
+            playModal();
+        }
+    }, 50)
+</script>
