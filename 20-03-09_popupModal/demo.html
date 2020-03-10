@@ -1,0 +1,132 @@
+<!-- testpage -->
+<style>
+    .holder {
+        text-align: center;
+    }
+
+    .modal-button {
+        margin: 5rem auto;
+        border-radius: 10px;
+        width: 50vw;
+        height: 200px;
+        line-height: 200px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        background-image: linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));
+    }
+</style>
+<div class="holder">
+    <div id="FreeStorePickup" class="modal-button">launch modal</div>
+</div>
+
+
+
+
+<style>
+    #FSPModal {
+        text-align: center;
+    }
+
+    #FSPModal .blue-text,
+    #FSPModal .blue-text a {
+        color: #00699a !important
+    }
+
+    #FSPModal h5 {
+        font-size: 1.8rem !important;
+        font-weight: 600 !important;
+    }
+
+    #FSPModal .pickup-location {
+        margin-top: 2.6rem;
+    }
+
+    #FSPModal .pickup-hours {
+        margin-top: 5rem;
+    }
+
+    #FSPModal .modal-content {
+        padding: 4rem 0;
+    }
+
+    #FSPModal .modal-dialog {
+        width: 70rem;
+    }
+
+    #FSPModal .modal-footer {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        #FSPModal .modal-dialog {
+            height: 100vh;
+            width: 100%;
+        }
+
+        #FSPModal .modal-content {
+            height: 100%;
+        }
+
+        #FSPModal .modal-footer {
+            display: block;
+            text-decoration: underline;
+            position: absolute;
+            bottom: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #FSPModal .modal-content {
+            padding: 4rem 0 0;
+        }
+    }
+</style>
+<!-- Modal -->
+<div id="FSPModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" tabindex="0" class="close" data-dismiss="modal"
+                    onclick="$('#FSPModal').modal('hide')">&times;</button>
+                <h4 class="modal-title">Same-day pickup available</h4>
+            </div>
+            <div class="modal-body">
+                <div class="pickup-location">
+                    <h5 class="blue-text"><a target="_blank" href="/stores/rialto-dc">Rialto Distribution Center</a>
+                    </h5>
+                    <p>3994 S Riverside Ave</p>
+                    <p>Colton, CA 92324</p>
+                    <p>877-266-7300</p>
+                </div>
+                <div class="pickup-location">
+                    <h5 class="blue-text"><a target="_blank" href="/stores/fremont-dc">Fremont Distribution Center</a>
+                    </h5>
+                    <p>41088 Boyce Rd</p>
+                    <p>Fremont, CA 94538</p>
+                    <p>877-266-7300</p>
+                </div>
+                <div class="pickup-hours">
+                    <h5>Customer Pick-up Hours</h5>
+                    <p>Mon-Sun 12pm - 9PM</p>
+                </div>
+            </div>
+            <div class="modal-footer"><a onclick="$('#FSPModal').modal('hide')">Close
+                </a></div>
+        </div>
+
+    </div>
+</div>
+<script>
+    // wait for jquery
+    document.querySelector('#FreeStorePickup').addEventListener('click', function () {
+        $('#FSPModal').modal('show')
+    })
+    document.addEventListener('keydown', function (e) {
+        if (e.key == "Escape" && document.getElementById('FSPModal').style.display == "block") {
+            $('#FSPModal').modal('hide')
+        }
+    })
+</script>
