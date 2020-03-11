@@ -1,0 +1,260 @@
+<style>
+    /* DIV SPACING */
+    .generic-html-template .container {
+        padding: 0
+    }
+
+    .x .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    .x .hero-img {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+
+    @media (min-width: 1199px) {
+        .x .hero-img {
+            padding: 0 1.5rem;
+        }
+    }
+
+    .x .yt-thumb,
+    .x .disclaimer {
+        flex-basis: 48%;
+    }
+
+    /* DESKTOP/MOBILE ONLY */
+    .x .desktop-only {
+        display: flex;
+    }
+
+    .x .desktop-only-block {
+        display: block;
+    }
+
+    .x .mobile-only {
+        display: none;
+    }
+
+    /* TEXT MODIFICATION */
+    .footer-text {
+        font-size: 1.9rem;
+        line-height: 1.8;
+        text-align: center
+    }
+
+    .footer-text a {
+        border-bottom: 2px solid lightgrey
+    }
+
+    .footer-text a:hover {
+        text-decoration: none;
+        border-bottom: 2px solid grey
+    }
+
+    /* MODAL */
+
+    .x .modal-backdrop.in {
+        filter: alpha(opacity=7);
+        opacity: 0.7;
+    }
+
+    .x .modal-content {
+        background: none;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .x .modal-body {
+        padding: 0 25px 25px 25px;
+    }
+
+    .x .modal-header {
+        padding: 25px 25px 15px 25px;
+        text-align: right;
+    }
+
+    .x .modal-header,
+    .x .modal-footer {
+        border: 0;
+    }
+
+    .x .modal-header .close {
+        float: none;
+        margin: 0;
+        font-size: 3.6rem;
+        color: #fff;
+        font-weight: 300;
+        text-shadow: none;
+        opacity: 1;
+        margin-right: 0 !important;
+        margin-top: -1rem !important;
+    }
+
+    .x .modal .modal-dialog .modal-content .close {
+        color: #fff !important;
+        font-size: 4rem !important;
+    }
+
+    .play-btn {
+        text-align: center;
+    }
+
+    #same_day_delivery_video {
+        border: 0.5rem solid #fff;
+    }
+
+    .x .modal .modal-dialog {
+        width: 95vw;
+    }
+
+    /* END MODAL */
+    @media (max-width: 767px) {
+        .x .desktop-only {
+            display: none;
+        }
+
+        .x .desktop-only-block {
+            display: none;
+        }
+
+        .x .mobile-only {
+            display: block;
+        }
+
+        .x .container {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .x .footer-text {
+            padding: 0 2rem;
+            font-size: 1.7rem;
+        }
+
+        .x .hero-img {
+            width: 100%;
+            padding: 0;
+        }
+
+        .product-listing-template .col-xs-12 {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    /* weird flex spacing issue fix */
+    /* @media (min-width: 1200px) {
+        .x .hero-img {
+            margin-left: -2.7rem;
+        }
+    } */
+</style>
+<div class="x">
+    <!-- HERO -->
+    <div class="container">
+        <!-- <a href="https://www.livingspaces.com/pdp-kit-utopia-3-piece-sectional-247982"> -->
+        <div class="hero-img">
+            <img src="/globalassets/images/lp/2020/03/SpecialOrderLP_Hero.jpg" alt="Customize It - 100+ Fabrics"
+                class="img-responsive desktop-only">
+            <img src="/globalassets/images/lp/2020/03/0310_specialorder_lp_mobile_hero.jpg"
+                alt="Customize It - 100+ Fabrics" class="img-responsive mobile-only">
+        </div>
+        <!-- </a> -->
+    </div>
+    <!-- SIDE-BY-SIDE -->
+    <div class="container mobile-only text-center">
+        <div class="footer-text">
+            <p><b>New!</b> <a
+                    href="https://www.livingspaces.com/inspiration/ideas-advice/shopping-basics/how-to-customize-a-special-order-online#block192851">Check
+                    out our in-store Design Studio</a>, where we can help with your
+                customizations and sectional configurations. <a
+                    href="https://www.livingspaces.com/inspiration/ideas-advice/shopping-basics/how-to-customize-a-special-order-online#block192851">Learn
+                    more&nbsp;&rsaquo;</a></p>
+        </div>
+    </div>
+    <div class="container" style="justify-content: space-between">
+        <div class="yt-thumb">
+            <div class="videoModal">
+                <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
+                    data-theVideo="https://www.youtube.com/embed/r5TWIqN7tb0">
+                    <img class='img-responsive video-thumb desktop-only'
+                        src="/globalassets/images/lp/2020/03/fabrice-options-desktop.jpg" alt="Special Order Video">
+                    <img class='img-responsive video-thumb mobile-only'
+                        src="/globalassets/images/lp/2020/03/fabrice-options-mobile.jpg" alt="Special Order Video">
+                </div>
+            </div>
+        </div>
+        <div class="disclaimer desktop-only">
+            <img src="/globalassets/images/lp/2019/09/custom-upholstery/1001-specialorder-lp-r-block_v02.jpg"
+                alt="No extra charge | Ready within 3-4 weeks | Instant rendering" class="img-responsive">
+        </div>
+    </div>
+    <!-- FOOTER TEXT -->
+    <div class="container desktop-only">
+        <div class="footer-text">
+            <p><b>New!</b> <a
+                    href="https://www.livingspaces.com/inspiration/ideas-advice/shopping-basics/how-to-customize-a-special-order-online#block192851">Check
+                    out our in-store Design Studio</a>, where we can help with your
+                customizations and sectional configurations. <a
+                    href="https://www.livingspaces.com/inspiration/ideas-advice/shopping-basics/how-to-customize-a-special-order-online#block192851"><b>Learn
+                        more</b>&nbsp;&rsaquo;</a></p>
+        </div>
+    </div>
+    <!-- MODAL POPUP WINDOW AND SCRIPT -->
+    <div class="modal fade" id="modal-video_01" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="same_day_delivery_video" class="embed-responsive-item" width="1170"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src=""
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener(
+            "load",
+            function () {
+                if (window.jQuery) {
+                    var trigger = $("#mobile_modal");
+                    trigger.click(function () {
+                        var theModal = $(this).data("target"),
+                            videoSRC = $(this).attr("data-theVideo"),
+                            videoSRCauto =
+                                videoSRC +
+                                "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+                        $(theModal + " iframe").attr("src", videoSRCauto);
+                        $(theModal + " button.close").click(function () {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                        $("#modal-video_01").on("hidden.bs.modal", function (e) {
+                            $(theModal + " iframe").attr("src", videoSRC);
+                        });
+                    });
+                }
+            },
+            false
+        );
+    </script>
+</div>
