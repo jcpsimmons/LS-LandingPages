@@ -114,8 +114,10 @@
         border: 0.5rem solid #fff;
     }
 
-    .x .modal .modal-dialog {
-        width: 95vw;
+    @media (min-width:768px) {
+        .x .modal .modal-dialog {
+            width: 60vw;
+        }
     }
 
     /* END MODAL */
@@ -187,11 +189,12 @@
         <div class="yt-thumb">
             <div class="videoModal">
                 <div id="mobile_modal" data-toggle="modal" data-target="#modal-video_01" tabindex="0"
-                    data-theVideo="https://www.youtube.com/embed/r5TWIqN7tb0">
+                    data-theVideo="https://www.youtube.com/embed/1l7mhBkWpic">
                     <img class='img-responsive video-thumb desktop-only'
-                        src="/globalassets/images/lp/2020/03/fabrice-options-desktop.jpg" alt="Special Order Video">
+                        src="/globalassets/images/lp/2020/03/fabrice-options-desktop.jpg?v=02"
+                        alt="Special Order Video">
                     <img class='img-responsive video-thumb mobile-only'
-                        src="/globalassets/images/lp/2020/03/fabrice-options-mobile.jpg" alt="Special Order Video">
+                        src="/globalassets/images/lp/2020/03/fabrice-options-mobile.jpg?v=02" alt="Special Order Video">
                 </div>
             </div>
         </div>
