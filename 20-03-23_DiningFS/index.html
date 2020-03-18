@@ -1,0 +1,226 @@
+<style>
+  /* VIDEO MODAL */
+  /***** Modal *****/
+  .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .modal-header,
+  .modal-footer {
+    border: 0;
+  }
+
+  .modal-header .close {
+    float: none;
+    text-shadow: none;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+    margin-top: 3.6rem !important;
+    margin-right: 3.4rem !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    z-index: 9 !important;
+    border-radius: 30rem !important;
+    background: #100f0f !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .modal-body {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+
+  .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* END MODAL */
+
+  #DFS .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 1rem 0.5rem;
+  }
+  #DFS .flex-item {
+    margin: auto 0.5rem;
+  }
+  #DFS .desktop-only {
+    display: block;
+  }
+  #DFS .mobile-only {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    #DFS .flex-container:first-of-type {
+      margin: -5px -15px auto;
+    }
+    #DFS .flex-container {
+      flex-direction: column;
+      margin: auto calc(-15px + 1.2rem);
+    }
+    #DFS .flex-item {
+      margin: auto;
+      padding: 0 0 1.2rem;
+    }
+    #DFS .desktop-only {
+      display: none;
+    }
+    #DFS .mobile-only {
+      display: block;
+    }
+  }
+</style>
+<div id="DFS">
+  <div class="flex-container" id="YoutubeFPO">
+    <div class="flex-item">
+      <a
+        class="playVideo2"
+        data-toggle="modal"
+        data-target="#modal-video"
+        data-theVideo="https://www.youtube.com/embed/TJq6sYDkUrg"
+        role="button"
+        aria-label="click to Watch the commercial"
+        href=""
+        alt="Watch the 
+            revive commercial"
+      >
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-desktop-hero.jpg"
+          alt=""
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-mobile-hero.jpg"
+          alt=""
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item">
+      <a
+        href="/departments/furniture/dining-room/all?f_shape=Round%2cRound+to+Oval"
+        ><img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-desktop_06.jpg"
+          alt="shop round tables"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-mobile-round-tables.jpg"
+          alt="shop round tables"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+    <div class="flex-item">
+      <a
+        href="/departments/furniture/dining-room/all?f_shape=Rectangle%2cSquare+to+Rectangle"
+      >
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-desktop-rectangle.jpg"
+          alt="shop rectangle tables"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-mobile-rectangle-tables.jpg"
+          alt="shop rectangle tables"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+    <div class="flex-item">
+      <a
+        href="/departments/furniture/dining-room/all?product_attribute=Cabinet%2cBuffet%2cCurio"
+      >
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-desktop-sideboards.jpg"
+          alt="shop sideboards + cabinets"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/dining-free-shipping/dining-event-mobile-sideboards.jpg"
+          alt="shop sideboards + cabinets"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div
+  class="modal fade"
+  id="modal-video"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-video-label"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-video">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              id="main-Video"
+              class="embed-responsive-item"
+              width="1170"
+              src=""
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function playModal() {
+    var trigger = $("body").find('#YoutubeFPO [data-toggle="modal"]');
+    trigger.click(function() {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-theVideo"),
+        videoSRCauto =
+          videoSRC +
+          "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+      $(theModal + " iframe").attr("src", videoSRCauto);
+      $(theModal + " button.close").click(function() {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+
+      $("#modal-video").on("hidden.bs.modal", function(e) {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+    });
+  }
+
+  var anotherInterval = setInterval(function() {
+    if (window.jQuery) {
+      clearInterval(anotherInterval);
+      playModal();
+    }
+  }, 50);
+</script>
