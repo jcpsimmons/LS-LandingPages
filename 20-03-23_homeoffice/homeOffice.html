@@ -1,0 +1,90 @@
+<style>
+  #DFS .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 1rem 0.5rem;
+  }
+  #DFS .flex-item {
+    margin: auto 0.5rem;
+  }
+  #DFS .desktop-only {
+    display: block;
+  }
+  #DFS .mobile-only {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    #DFS .flex-container:first-of-type {
+      margin: -5px -15px auto;
+    }
+    #DFS .flex-container {
+      flex-direction: column;
+      margin: auto calc(-15px + 1.2rem);
+    }
+    #DFS .flex-item {
+      margin: auto;
+      padding: 0 0 1.2rem;
+    }
+    #DFS .desktop-only {
+      display: none;
+    }
+    #DFS .mobile-only {
+      display: block;
+    }
+  }
+</style>
+<div id="DFS">
+  <div class="flex-container">
+    <div class="flex-item">
+      <a href="/departments/furniture/home-office/all">
+        <img
+          src="/globalassets/images/lp/2020/03/dining-event-desktop-hero.jpg"
+          alt=""
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/office-mobile-hero.jpg"
+          alt=""
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item">
+      <a href="/departments/furniture/home-office/office-desks"
+        ><img
+          src="/globalassets/images/lp/2020/03/dining-event-deskto-desks.jpg"
+          alt="shop round tables"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/office-lp-mobile-desks.jpg"
+          alt="shop round tables"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+    <div class="flex-item">
+      <a href="/departments/furniture/home-office/office-chairs">
+        <img
+          src="/globalassets/images/lp/2020/03/dining-event-desktop-storage.jpg"
+          alt="shop rectangle tables"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/office-lp-mobile-storage.jpg"
+          alt="shop rectangle tables"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+    <div class="flex-item">
+      <a href="/departments/furniture/home-office/file-cabinets">
+        <img
+          src="/globalassets/images/lp/2020/03/dining-event-desktop-chairs.jpg"
+          alt="shop sideboards + cabinets"
+          class="img-responsive desktop-only"/>
+        <img
+          src="/globalassets/images/lp/2020/03/office-lp-mobile-chairs.jpg"
+          alt="shop sideboards + cabinets"
+          class="img-responsive mobile-only"
+      /></a>
+    </div>
+  </div>
+</div>

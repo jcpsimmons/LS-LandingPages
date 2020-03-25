@@ -1,0 +1,439 @@
+<style>
+  .bold {
+    font-weight: 600;
+  }
+
+  .faq-indent {
+    margin: auto 0rem 5rem;
+  }
+
+  .faq-indent p.bold {
+    padding-top: 1rem;
+  }
+
+  #VersusChart,
+  #VersusChart td,
+  #VersusChart td span {
+    font-size: 18px !important;
+  }
+
+  #VersusChart th {
+    font-size: 20px !important;
+  }
+
+  #VersusChart td span.text-lg {
+    font-size: 30px !important;
+  }
+
+  #VersusChart td span.fa.fa-times,
+  #VersusChart td span.fa.fa-check {
+    font-size: 36px !important;
+  }
+
+  .extra-table-spacing {
+    padding: 3rem 0 !important;
+  }
+
+  .desktop-only-text {
+    display: block;
+  }
+
+  .mobile-only-text {
+    display: none;
+  }
+
+  #VersusChart .shipping-note {
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    #TableWrapper {
+      margin: auto -15px;
+    }
+
+    .desktop-only-text {
+      display: none;
+    }
+
+    .mobile-only-text {
+      display: block;
+    }
+
+    .table-caption.mobile-only-text {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    #VersusChart,
+    #VersusChart td,
+    #VersusChart td span,
+    #VersusChart th {
+      font-size: 14px !important;
+    }
+
+    #VersusChart td span.text-lg {
+      font-size: 21px !important;
+    }
+
+    #VersusChart td span.fa.fa-times,
+    #VersusChart td span.fa.fa-check {
+      font-size: 24px !important;
+    }
+  }
+
+  #FSLP .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  #FSLP .flex-row > * {
+    margin: auto;
+  }
+  #SafeAndSound .flex-row {
+    width: 85%;
+    margin: auto;
+  }
+  #SafeAndSound .flex-row .flex-item {
+    padding: 0 1.5rem;
+  }
+
+  #FSLP .cta-text {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin: auto;
+    width: 90%;
+  }
+
+  #HeroContent > *,
+  #SafeAndSound > * {
+    margin-bottom: 1.5rem;
+  }
+
+  #FSLP .check-availability-button {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.5s;
+  }
+  #FSLP .check-availability-button > div {
+    background-color: #686868;
+
+    transition: 0.5s;
+  }
+  #FSLP .check-availability-button:hover,
+  #FSLP .check-availability-button:active,
+  #FSLP .check-availability-button:focus {
+    text-decoration: none !important;
+  }
+  #FSLP .check-availability-button:hover > div,
+  #FSLP .check-availability-button:active > div,
+  #FSLP .check-availability-button:focus > div {
+    text-decoration: none !important;
+    background-color: #3d3d3d;
+  }
+  #HeroContent,
+  #SafeAndSound {
+    margin-bottom: 7rem;
+  }
+  #FSLP h3 {
+    margin-bottom: 3rem;
+  }
+  #QuestionsFooter .flex-item:nth-of-type(1) {
+    margin-right: 0;
+  }
+  #QuestionsFooter .flex-item:nth-of-type(2) {
+    margin-left: 2rem;
+  }
+</style>
+
+<div id="FSLP">
+  <section id="HeroContent" class="text-center">
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-hero1006.jpg"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/FS-LP-Copy_L1006.png"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+      <div
+        class="flex-item"
+        role="button"
+        onclick="launchModal()"
+        style="cursor: pointer;"
+      >
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/FS-LP-Copy_R1006.png"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+    </div>
+    <div>
+      <p class="cta-text">
+        We’re all spending a lot more time at home these days, and at Living
+        Spaces we’re ready to help you outfit your great indoors. We’re
+        introducing free 2-day shipping on all furniture directly to your front
+        door and with minimal contact, so you can get any design delivered
+        directly to you for free.
+      </p>
+    </div>
+    <a href="/delivery" class="check-availability-button"
+      ><div class="btn primary-button" role="button">
+        Check Availability in Your Area
+      </div></a
+    >
+  </section>
+
+  <section id="SafeAndSound" class="text-center">
+    <h3 class="bold">Our Safe + Sound Service</h3>
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/warry-free-delivery.png"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/min-contact-shipping.png"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div class="versus-options text-left" id="VersusChart">
+    <h3 class="bold text-center" style="margin-top:0">
+      Shipping versus Full Service Delivery
+    </h3>
+    <!-- <p class="shipping-note">
+      Note: Shipping option currently available in select markets in CA, AZ, TX
+      and NV.
+      <a href="/delivery"
+        >Check your zip code to determine availability in your area.</a
+      >
+    </p> -->
+    <div id="TableWrapper">
+      <table class="table table--compare">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <img
+                src="https://www.livingspaces.com/globalassets/images/lp/2020/03/delivery.png"
+                alt="Full-Service Delivery"
+              />Full-Service Delivery
+            </th>
+            <th><span class="fa fa-truck d-inline-block"></span> Shipping</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fees</td>
+            <td class="extra-table-spacing">
+              <span class="text-lg">$99**</span>
+            </td>
+            <td>
+              <span class="text-lg">FREE**</span><br />
+              on orders over $500
+            </td>
+          </tr>
+          <tr>
+            <td>Room-of-Choice delivery</td>
+            <td><span class="fa fa-check" aria-hidden="true"></span></td>
+            <td>
+              <span class="fa fa-times" aria-hidden="true"></span>
+              <p>
+                Inside first dry location of residence&nbsp;
+                <span
+                  class="fa fa-question-circle d-inline-block"
+                  aria-hidden="true"
+                  role="button"
+                  onclick="launchModal()"
+                ></span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Full assembly of all items</td>
+            <td><span class="fa fa-check" aria-hidden="true"></span></td>
+            <td>
+              <span class="fa fa-times" aria-hidden="true"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Removal of boxes and debris</td>
+            <td><span class="fa fa-check" aria-hidden="true"></span></td>
+            <td>
+              <span class="fa fa-times" aria-hidden="true"></span>
+            </td>
+          </tr>
+          <!-- <tr>
+                    <td class="v-align-top">Same Day Delivery</td>
+                    <td><span class="fa fa-check" aria-hidden="true"></span></td>
+                    <td>
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </td>
+                </tr> -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+              <span
+                class="text-md text-left desktop-only-text"
+                style="padding-left:3rem"
+                >For orders under $500, there is a shipping fee depending on
+                your ZIP Code.</span
+              >
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- DESKTOP ONLY -->
+    <div class="table-caption desktop-only-text">
+      <p class="text-md">
+        * Inside first dry location of residence&nbsp;
+        <span
+          class="fa fa-question-circle d-inline-block"
+          aria-hidden="true"
+          role="button"
+          onclick="launchModal()"
+        ></span>
+      </p>
+      <p class="text-md">
+        ** Additional charges may apply for delivery outside of regions where
+        stores are located.
+      </p>
+      <p class="text-md">
+        <a href="/delivery">Check your delivery fee by ZIP Code ›</a>
+      </p>
+    </div>
+
+    <!-- MOBILE ONLY -->
+    <div class="table-caption mobile-only-text">
+      <!-- <p class="text-md">
+            +$20 for Mondays and Fridays +$40 for Weekends and Holidays Additional
+            charges may apply for delivery outside of regions where stores are
+            located.
+        </p> -->
+      <p class="text-md">
+        <a href="/delivery">Check your delivery fee by ZIP Code ›</a>
+      </p>
+      <p class="text-md" style="padding-top:.5rem">
+        **&nbsp;For orders under $500, there is a shipping fee depending on your
+        ZIP Code
+      </p>
+    </div>
+  </div>
+
+  <section id="QuestionsFooter">
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-faq.png?v=2"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <h3>
+          Still have questions?
+          <a href="/company/shipping-faq">Check our Shipping FAQ</a> &rsaquo;
+        </h3>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- DRY LOCATION MODAL -->
+<div
+  class="modal fade in"
+  id="dryLocation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dryLocation"
+  style="display: none;"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-header">&nbsp;</div>
+      <div class="modal-body">
+        <div class="dry-location">
+          <h3 class="dry-location__heading">
+            What is "First Dry Location of Residence"?
+          </h3>
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-home " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <span class="space-lg"
+                  ><strong>For Single Family Homes</strong></span
+                >
+                Placement of items will be inside of the front door or garage
+              </p>
+            </div>
+          </div>
+
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-building " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <strong>For Apartment Buildings</strong>
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    1. Buildings with lobby
+                  </strong>
+                </span>
+                Placement of items will be in the lobby
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    2. Buildings without lobby
+                  </strong>
+                </span>
+                Placement of items will be inside apartment front door
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  function launchModal() {
+    $("#dryLocation").modal("show");
+  }
+  function launchChat() {
+    $(".messages-starticon").trigger("click");
+  }
+</script>

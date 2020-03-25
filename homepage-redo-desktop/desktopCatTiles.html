@@ -1,0 +1,242 @@
+<style>
+  #CategoryTiles {
+    text-align: center;
+    max-width: calc(1140px + 3rem);
+    margin: auto;
+  }
+  #CategoryTiles .flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+  #CategoryTiles .flex-item {
+    margin: 1.5rem 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 6px 0 #bbbbbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 16rem;
+    max-width: 160px;
+    height: 16rem;
+    max-height: 160px;
+    transition: 0.25s;
+  }
+  #CategoryTiles .flex-item p {
+    margin: 0;
+    line-height: 3rem;
+    white-space: nowrap;
+  }
+
+  #CategoryTiles .flex-item:hover,
+  #CategoryTiles .flex-item:active {
+    transform: translateY(-5px);
+  }
+
+  #CategoryTiles a:hover,
+  #CategoryTiles a:active,
+  #CategoryTiles a:visited,
+  #CategoryTiles a:focus {
+    text-decoration: none !important;
+  }
+
+  #CategoryTiles .img-fill {
+    background-size: cover;
+    background-size: 100% !important;
+  }
+
+  #CategoryTiles .outlet-image {
+    background: url("/globalassets/images/home/2020/03/outlet-320x320.png")
+      no-repeat center center;
+  }
+  #CategoryTiles .clearance-image {
+    background: url("/globalassets/images/home/2020/03/clearance-320x320.png")
+      no-repeat center center;
+  }
+  #CategoryTiles .magnolia-img {
+    background: url("/globalassets/images/home/2020/03/MH-320x320v2.jpg")
+      no-repeat center center;
+  }
+  #CategoryTiles .nj-img {
+    background: url("/globalassets/images/home/2020/03/NJ-320x320v2.jpg")
+      no-repeat center center;
+  }
+
+  #CategoryTiles h2 {
+    font-size: 3rem !important;
+  }
+
+  @media (max-width: 1199px) {
+    #CategoryTiles .flex-item {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+</style>
+<div id="CategoryTiles">
+  <h2>Shop by Department</h2>
+  <div class="flex-row">
+    <a href="/departments/furniture/living-room">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/Living320x228.jpg"
+          alt="Living Room"
+          class="img-responsive"
+        />
+        <p>Living Room</p>
+      </div>
+    </a>
+    <a href="/departments/furniture/home-office">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/Office320x228.jpg?v=1"
+          alt="Home Office"
+          class="img-responsive"
+        />
+        <p>Home Office</p>
+      </div></a
+    >
+    <a href="/departments/furniture/dining-room">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/dining320x228.jpg"
+          alt="Dining Room"
+          class="img-responsive"
+        />
+        <p>Dining Room</p>
+      </div></a
+    >
+    <a href="/departments/furniture/bedroom">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/bed320x228.jpg"
+          alt="Bedroom"
+          class="img-responsive"
+        />
+        <p>Bedroom</p>
+      </div></a
+    >
+    <a href="/departments/mattresses">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/mattress320x228.jpg"
+          alt="Mattresses"
+          class="img-responsive"
+        />
+        <p>Mattresses</p>
+      </div></a
+    >
+    <a href="/departments/outdoor">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/outdoor320x228.jpg"
+          alt="Outdoor"
+          class="img-responsive"
+        />
+        <p>Outdoor</p>
+      </div></a
+    >
+  </div>
+  <div class="flex-row">
+    <a href="/departments/kids">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/kids320x228.jpg"
+          alt="Kids and Teens"
+          class="img-responsive"
+        />
+        <p>Kids + Teens</p>
+      </div></a
+    >
+    <a href="/departments/elements">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/elements320x228.jpg"
+          alt="elements"
+          class="img-responsive"
+        />
+        <p>elements</p>
+      </div></a
+    >
+    <a href="/departments/rugs">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/rug320x228.jpg"
+          alt="Rugs"
+          class="img-responsive"
+        />
+        <p>Rugs</p>
+      </div></a
+    >
+    <a href="/departments/home-decor">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/pillows320x228.jpg"
+          alt="Decor and Pillows"
+          class="img-responsive"
+        />
+        <p>Decor + Pillows</p>
+      </div></a
+    >
+    <a href="/departments/lighting">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/lighting320x228.jpg"
+          alt="Lighting"
+          class="img-responsive"
+        />
+        <p>Lighting</p>
+      </div></a
+    >
+    <a href="/departments/wall-art">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/wallart320x228.jpg"
+          alt="Wall Art"
+          class="img-responsive"
+        />
+        <p>Wall Art</p>
+      </div></a
+    >
+  </div>
+  <div class="flex-row">
+    <a href="/inspiration/celebrity-designer/magnolia-home">
+      <div class="flex-item img-fill magnolia-img lower-third-text"></div
+    ></a>
+    <a
+      href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture"
+    >
+      <div class="flex-item img-fill nj-img lower-third-text"></div
+    ></a>
+    <a href="/departments/featured/new-arrivals">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/new320x228.jpg"
+          alt="New Items"
+          class="img-responsive"
+        />
+        <p>New Items</p>
+      </div></a
+    >
+    <a href="/departments/custom-upholstery">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/home/2020/03/SO-320x228.png"
+          alt="Custom Fabrics"
+          class="img-responsive"
+        />
+        <p>Custom Fabrics</p>
+      </div></a
+    >
+    <a href="/clearance/outlet">
+      <div class="flex-item img-fill outlet-image"></div
+    ></a>
+    <a href="/clearance">
+      <div class="flex-item img-fill clearance-image"></div
+    ></a>
+  </div>
+</div>
