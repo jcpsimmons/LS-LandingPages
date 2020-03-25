@@ -33,6 +33,13 @@
   .extra-table-spacing {
     padding: 3rem 0 !important;
   }
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
 
   .desktop-only-text {
     display: block;
@@ -49,6 +56,13 @@
   @media (max-width: 767px) {
     #TableWrapper {
       margin: auto -15px;
+    }
+    .desktop-only {
+      display: none;
+    }
+
+    .mobile-only {
+      display: block;
     }
 
     .desktop-only-text {
@@ -116,7 +130,7 @@
   }
   #FSLP .check-availability-button > div {
     background-color: #686868;
-
+    padding: 1rem 4.5rem;
     transition: 0.5s;
   }
   #FSLP .check-availability-button:hover,
@@ -150,14 +164,14 @@
     <div class="flex-row">
       <div class="flex-item">
         <img
-          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-hero1006.jpg"
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-hero202.jpg"
           alt=""
           class="img-responsive"
         />
       </div>
       <div class="flex-item">
         <img
-          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/FS-LP-Copy_L1006.png"
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-copy-l202.png"
           alt=""
           class="img-responsive"
         />
@@ -169,7 +183,7 @@
         style="cursor: pointer;"
       >
         <img
-          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/FS-LP-Copy_R1006.png"
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-copy-r202.png"
           alt=""
           class="img-responsive"
         />
@@ -231,6 +245,7 @@
               <img
                 src="https://www.livingspaces.com/globalassets/images/lp/2020/03/delivery.png"
                 alt="Full-Service Delivery"
+                style="display: inline-block;"
               />Full-Service Delivery
             </th>
             <th><span class="fa fa-truck d-inline-block"></span> Shipping</th>
@@ -304,7 +319,7 @@
 
     <!-- DESKTOP ONLY -->
     <div class="table-caption desktop-only-text">
-      <p class="text-md">
+      <p class="text-md" style="padding-left:0.9rem !important;">
         * Inside first dry location of residence&nbsp;
         <span
           class="fa fa-question-circle d-inline-block"
@@ -313,7 +328,7 @@
           onclick="launchModal()"
         ></span>
       </p>
-      <p class="text-md">
+      <p class="text-md" style="padding-left:0.3rem !important;">
         ** Additional charges may apply for delivery outside of regions where
         stores are located.
       </p>

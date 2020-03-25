@@ -1,0 +1,221 @@
+<style>
+  #FSLP {
+    text-align: center;
+  }
+  #FSLP section {
+    margin-bottom: 2rem;
+  }
+  #Hero {
+    margin: -5px -15px;
+    background-color: #e8eae7;
+  }
+  #FSLP .list {
+    padding: 1.5rem 0 0.8rem;
+    line-height: 3rem;
+  }
+  #FSLP ul {
+    text-align: left;
+    font-size: 1.8rem !important;
+  }
+  #Copy p {
+    font-size: 2rem !important;
+    line-height: 3.5rem !important;
+    margin-bottom: 4rem;
+  }
+  #SafeAndSound {
+    margin-top: 9rem;
+  }
+  #SafeAndSound .flex-item {
+    margin-bottom: 5.5rem;
+  }
+  #SafeAndSound h3 {
+    margin-bottom: 1.5rem;
+  }
+  #FSLP h3 {
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+  #FSLP .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #FSLP .flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #FSLP .flex-row > * {
+    margin: 0 1rem;
+  }
+  #FSLP .check-availability-button {
+    font-size: 20px;
+    color: #fff;
+    transition: 0.5s;
+  }
+  #FSLP .check-availability-button > div {
+    background-color: #686868;
+    padding: 1rem 4.5rem;
+    transition: 0.5s;
+  }
+</style>
+
+<div id="FSLP">
+  <section id="Hero">
+    <img
+      src="https://www.livingspaces.com/globalassets/images/lp/2020/03/free-ship-mobile/group-2.png"
+      alt="Now offering free 2 day shipping"
+      class="img-responsive"
+    />
+    <div class="list">
+      <ul>
+        <li>Orders over $500</li>
+        <li>
+          Placement of item(s) in first dry location of
+          <span style="white-space: nowrap;"
+            >residence&nbsp;<span
+              class="fa fa-question-circle d-inline-block"
+              aria-hidden="true"
+              role="button"
+              onclick="launchModal()"
+            ></span
+          ></span>
+        </li>
+        <li>Assembly not included</li>
+        <li>No removal of boxes or debris</li>
+      </ul>
+    </div>
+  </section>
+  <section id="Copy">
+    <p>
+      We’re all spending a lot more time at home these days, and at Living
+      Spaces we’re ready to help you outfit your great indoors. We’re
+      introducing free 2-day shipping on all furniture directly to your front
+      door* and with minimal contact, so you can get any design delivered
+      directly to you for free.
+    </p>
+    <a href="/delivery" class="check-availability-button"
+      ><div class="btn primary-button" role="button">
+        Check Availability in Your Area
+      </div></a
+    >
+  </section>
+  <section id="SafeAndSound">
+    <h3>Our Safe + Sound Service</h3>
+    <div class="flex-col">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/free-ship-mobile/warry-free-delivery.png"
+          alt="worry free delivery"
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/free-ship-mobile/min-contact-shipping.png"
+          alt="minimum contact shipping"
+          class="img-responsive"
+        />
+      </div>
+    </div>
+  </section>
+  <section id="Questions">
+    <h3>Still have questions?</h3>
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/03/free-ship-mobile/fs-faq.png"
+          alt=""
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <h3 style="font-weight: normal;">
+          <a href="/company/shipping-faq">Check our Shipping FAQ</a> &rsaquo;
+        </h3>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- DRY LOCATION MODAL -->
+<div
+  class="modal fade in"
+  id="dryLocation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dryLocation"
+  style="display: none;"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-header">&nbsp;</div>
+      <div class="modal-body">
+        <div class="dry-location">
+          <h3 class="dry-location__heading">
+            What is "First Dry Location of Residence"?
+          </h3>
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-home " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <span class="space-lg"
+                  ><strong>For Single Family Homes</strong></span
+                >
+                Placement of items will be inside of the front door or garage
+              </p>
+            </div>
+          </div>
+
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-building " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <strong>For Apartment Buildings</strong>
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    1. Buildings with lobby
+                  </strong>
+                </span>
+                Placement of items will be in the lobby
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    2. Buildings without lobby
+                  </strong>
+                </span>
+                Placement of items will be inside apartment front door
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  function launchModal() {
+    $("#dryLocation").modal("show");
+  }
+  function launchChat() {
+    $(".messages-starticon").trigger("click");
+  }
+</script>
