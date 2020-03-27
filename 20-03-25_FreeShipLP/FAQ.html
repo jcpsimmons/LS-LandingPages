@@ -1,0 +1,684 @@
+<style>
+  .bold {
+    font-weight: 600;
+  }
+
+  .faq-indent {
+    margin: auto 0rem 5rem;
+  }
+
+  .faq-indent p.bold {
+    padding-top: 1rem;
+  }
+
+  .faq-indent ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 3rem auto;
+  }
+
+  .faq-indent li {
+    padding: 0.2rem 0;
+  }
+
+  .faq-indent ul li:before {
+    content: "•";
+    padding-right: 0.5rem;
+    font-size: 10pt;
+  }
+
+  #VersusChart,
+  #ShippingFAQText,
+  #VersusChart td,
+  #VersusChart td span {
+    font-size: 18px !important;
+  }
+
+  #VersusChart th {
+    font-size: 20px !important;
+  }
+
+  #VersusChart td span.text-lg {
+    font-size: 30px !important;
+  }
+
+  #VersusChart td span.fa.fa-times,
+  #VersusChart td span.fa.fa-check {
+    font-size: 36px !important;
+  }
+
+  #ShippingFAQText h3 {
+    font-size: 24px !important;
+  }
+
+  #ShippingFAQText h4 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+  }
+
+  #ShippingFAQText img {
+    max-width: 4rem;
+  }
+
+  .extra-table-spacing {
+    padding: 3rem 0 !important;
+  }
+
+  .desktop-only-text {
+    display: block;
+  }
+
+  .mobile-only-text {
+    display: none;
+  }
+
+  #VersusChart .shipping-note {
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    #TableWrapper {
+      margin: auto -15px;
+    }
+
+    .desktop-only-text {
+      display: none;
+    }
+
+    .mobile-only-text {
+      display: block;
+    }
+
+    #ShippingFAQText h3 {
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    #ShippingFAQText h4 {
+      font-size: 16px;
+    }
+
+    #ShippingFAQText ul {
+      margin-top: 2rem;
+    }
+
+    .table-caption.mobile-only-text {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    #VersusChart,
+    #ShippingFAQText,
+    #VersusChart td,
+    #VersusChart td span,
+    #VersusChart th {
+      font-size: 14px !important;
+    }
+
+    #VersusChart td span.text-lg {
+      font-size: 21px !important;
+    }
+
+    #ShippingFAQText h4 {
+      font-size: 16px !important;
+    }
+
+    #VersusChart td span.fa.fa-times,
+    #VersusChart td span.fa.fa-check {
+      font-size: 24px !important;
+    }
+
+    #ShippingFAQText h3 {
+      font-size: 18px !important;
+    }
+  }
+</style>
+
+<div class="versus-options text-left" id="VersusChart">
+  <h3 class="bold" style="margin-top:0">Shipping FAQs</h3>
+  <h3 class="versus-options__heading desktop-only-text">
+    Shipping versus Full-Service Delivery
+  </h3>
+  <p class="shipping-note">
+    Note: Shipping option currently available in select markets in CA, AZ, TX
+    and NV.
+    <a href="/delivery"
+      >Check your zip code to determine availability in your area.</a
+    >
+  </p>
+  <div id="TableWrapper">
+    <table class="table table--compare">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/03/delivery.png"
+              alt="Full-Service Delivery"
+            />Full-Service Delivery
+          </th>
+          <th><span class="fa fa-truck d-inline-block"></span> Shipping</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fees</td>
+          <td class="extra-table-spacing">
+            <span class="text-lg">$99*</span>
+          </td>
+          <td>
+            <span class="text-lg">FREE*</span><br />
+            on orders over $500
+          </td>
+        </tr>
+        <tr>
+          <td>Room-of-Choice delivery</td>
+          <td><span class="fa fa-check" aria-hidden="true"></span></td>
+          <td>
+            <span class="fa fa-times" aria-hidden="true"></span>
+            <p>
+              Inside first dry location of residence&nbsp;
+              <span
+                class="fa fa-question-circle d-inline-block"
+                aria-hidden="true"
+                role="button"
+                onclick="launchModal()"
+              ></span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Full assembly of all items</td>
+          <td><span class="fa fa-check" aria-hidden="true"></span></td>
+          <td>
+            <span class="fa fa-times" aria-hidden="true"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Removal of boxes and debris</td>
+          <td><span class="fa fa-check" aria-hidden="true"></span></td>
+          <td>
+            <span class="fa fa-times" aria-hidden="true"></span>
+          </td>
+        </tr>
+        <!-- <tr>
+                    <td class="v-align-top">Same Day Delivery</td>
+                    <td><span class="fa fa-check" aria-hidden="true"></span></td>
+                    <td>
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </td>
+                </tr> -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>
+            <span
+              class="text-md text-left desktop-only-text"
+              style="padding-left:3rem"
+              >For orders under $500, there is a shipping fee depending on your
+              ZIP Code.</span
+            >
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- DESKTOP ONLY -->
+  <div class="table-caption desktop-only-text">
+    <p class="text-md">
+      * Additional charges may apply for delivery outside of regions where
+      stores are located.
+    </p>
+    <p class="text-md">
+      <a href="/delivery">Check your delivery fee by ZIP Code ›</a>
+    </p>
+  </div>
+
+  <!-- MOBILE ONLY -->
+  <div class="table-caption mobile-only-text">
+    <!-- <p class="text-md">
+            +$20 for Mondays and Fridays +$40 for Weekends and Holidays Additional
+            charges may apply for delivery outside of regions where stores are
+            located.
+        </p> -->
+    <p class="text-md">
+      <a href="/delivery">Check your delivery fee by ZIP Code ›</a>
+    </p>
+    <p class="text-md" style="padding-top:.5rem">
+      **&nbsp;For orders under $500, there is a shipping fee depending on your
+      ZIP Code
+    </p>
+  </div>
+</div>
+
+<section id="ShippingFAQText">
+  <div id="delivery">
+    <h3>
+      <img
+        src="https://www.livingspaces.com/globalassets/images/lp/2020/03/delivery.png"
+        alt="Full-Service Delivery"
+      />
+      Full-Service Delivery
+    </h3>
+    <div class="faq-indent">
+      <ul>
+        <li>Placement of item(s) in room(s) of choice</li>
+        <li>Assembly of all items</li>
+        <li>Removal of all boxes and debris</li>
+        <!-- <li>
+                    Same Day Delivery available in certain areas for purchases made before
+                    4:00pm
+                </li> -->
+      </ul>
+      <h4 class="bold">Full-Service Delivery FAQ</h4>
+      <p class="bold">
+        Does Living Spaces offer Same Day and Next Day delivery?
+      </p>
+      <p>
+        Due to recent COVID-19-related developments, Same Day and Next Day
+        delivery options are unavailable until further notice.
+      </p>
+      <!-- <p>
+        Yes, Full-Service Delivery offers Same Day and Next Day options. To
+        determine eligibility, please view your delivery options
+        <a href="/delivery">here</a>.
+      </p> -->
+      <p class="bold">
+        Is there a minimum purchase required to qualify for Full-Service
+        Delivery?
+      </p>
+      <p>
+        No minimum purchase is required, but additional fees may apply.
+      </p>
+      <p class="bold">Can I track my order?</p>
+      <p>
+        Yes. Once your order is confirmed, you will receive a delivery
+        confirmation email from Living Spaces. When you receive the delivery
+        confirmation email, please allow up to 48 hours for tracking information
+        to be updated on the delivery carrier's website. We recommend tracking
+        your order to ensure it is delivered successfully.
+      </p>
+      <p class="bold">
+        Does Living Spaces deliver to all 50 States and P.O. Boxes?
+      </p>
+      <p>
+        Living Spaces delivers to the lower 48 states but does not deliver to
+        P.O. Boxes. Same Day and Next Day options are not available in all
+        markets. To determine eligibility, please view your delivery options
+        here.
+      </p>
+      <p class="bold">
+        What are the exchange/return fees associated with Full-Service Delivery
+        items?
+      </p>
+      <p>
+        Returns on regular stock items will require a 10% restock fee plus a
+        pickup fee of $99. In compliance with COVID-19 safety measures, store
+        furniture drop-off will not be an option available to our guests.
+      </p>
+      <p>
+        Exchanges on regular stock items for greater or equal value require a 5%
+        restock fee plus an additional delivery fee. Exchanges on regular stock
+        items for lesser value require a 10% restock fee plus an additional
+        delivery fee.
+      </p>
+      <p>
+        For more information on exchanges and returns, please click
+        <a href="/company/store-policies#return_policy">here</a>.
+      </p>
+      <!-- <p>
+        Returns on regular stock items will require a 10% restock fee plus a
+        pickup fee of $99-$139 depending on day of pickup, if pickup is needed.
+      </p>
+      <p>
+        Exchanges on regular stock items for greater or equal value require a 5%
+        restock fee plus an additional delivery fee. Exchanges on regular stock
+        items for lesser value require a 10% restock fee plus an additional
+        delivery fee.
+      </p>
+      <p>
+        For more information on exchanges and returns, please click
+        <a href="/company/store-policies#return_policy">here</a>.
+      </p> -->
+      <p class="bold">Will I be notified when my Delivery is on its the way?</p>
+      <p>
+        Yes, you will receive an email before your delivery date. You may check
+        for real-time updates on the day of your delivery. Click
+        <a href="/track-delivery">here</a> to track your delivery.
+      </p>
+      <!-- <p>Yes, you will receive an email before your delivery date (excludes Same Day).  You may check for real-time updates on the day of your delivery. Click  <a href="/track-delivery">here</a> to track your delivery. </p> -->
+      <p class="bold">
+        I qualify for free shipping; may I change my delivery method from Full
+        Service to Free Shipping?
+      </p>
+      <p>
+        Yes, you may change your delivery method by clicking
+        <a href="/changedelivery">here</a>. If your delivery date is less than
+        48 hours away, then we will not be able to reschedule your delivery.
+      </p>
+    </div>
+  </div>
+  <div id="shipping">
+    <h3><span class="fa fa-truck d-inline-block"></span>&nbsp;Shipping</h3>
+    <div class="faq-indent">
+      <ul>
+        <li>
+          Placement of item(s) inside first dry location of
+          <span style="white-space: nowrap;"
+            >residence&nbsp;<span
+              aria-hidden="true"
+              class="fa fa-question-circle"
+              role="button"
+              onclick="launchModal()"
+            ></span
+          ></span>
+        </li>
+        <li>Assembly not included</li>
+        <li>No removal of boxes or debris</li>
+        <li>
+          Same Day Delivery available in certain areas for purchases made before
+          4:00pm
+        </li>
+      </ul>
+      <h4 class="bold">Shipping FAQ</h4>
+      <p class="bold">
+        What is the minimum purchase subtotal needed to qualify for Free
+        Shipping?
+      </p>
+      <p>
+        The minimum purchase subtotal needed to qualify for free shipping is
+        $500. Taxes and Care Free fees are not included in the subtotal.
+      </p>
+      <p class="bold">
+        Do Clearance or Accessories items qualify for Free Shipping?
+      </p>
+      <p>
+        Accessories and Clearance items are accounted for to meet the $500
+        minimum purchase subtotal to qualify for free shipping. All accessories
+        qualify for free parcel shipping.
+      </p>
+      <p class="bold">
+        May I purchase a Care Free Plan to reach the $500 order minimum to be
+        eligible for Free Shipping?
+      </p>
+      <p>
+        No, the $500 minimum applies to products only. It does not include the
+        Care Free cost or sales tax.
+      </p>
+      <p class="bold">
+        What is the shipping fee for orders less than the $500?
+      </p>
+      <p>
+        There is a flat shipping fee of $59 for all orders less than $500.
+        Shipping fees may vary for regions outside of our standard service
+        areas. Regions outside of our service area may also be ineligible for
+        Free Shipping.
+      </p>
+      <p class="bold">Is free shipping available for all regions?</p>
+      <p>
+        Regions outside of our service areas may be ineligible for free
+        shipping.
+        <a href="/delivery"
+          >Check our delivery options page for availability.</a
+        >
+      </p>
+      <!-- <p>
+        Shipping fees start at $59 or free with in-store pickup. Shipping fees
+        may vary for regions outside of our standard service areas. Regions
+        outside of our service area may also be ineligible for Free Shipping.
+      </p> -->
+      <p class="bold">
+        How soon can I expect my items under the Shipping plan?
+      </p>
+      <p>
+        Items sent via Free Shipping can be scheduled as early as 2 days from
+        purchase. Check your estimated delivery time
+        <a href="/delivery">here.</a>
+      </p>
+      <p class="bold">When can I expect my shipment?</p>
+      <p>
+        Due to recent COVID-19 developments, shipping deliveries are now
+        completed Tuesday-Saturday. A 3-hour window will be provided the night
+        before shipment for all standard service areas.
+      </p>
+      <!-- <p>
+        Shipping deliveries are completed Monday-Sunday. Shipments outside of
+        our standard service areas are delivered Monday-Saturday. A 3-hour
+        window will be provided the night before shipment for all standard
+        service areas.
+      </p> -->
+      <p class="bold">Must I be present during the time of delivery?</p>
+      <p>
+        Yes, a person 18 years or older is required to be home and sign to
+        accept the shipment. However, with recent COVID-19 concerns, guests may
+        have delivery staff sign for the shipment after a successful completion
+        of verification questions.
+      </p>
+      <!-- <p>
+        Yes, a person 18 years or older is required to be home and sign to
+        accept the shipment.
+      </p> -->
+      <p class="bold">
+        Where will my furniture be placed, upon delivery, under the Shipping
+        plan?
+      </p>
+      <p>
+        For single family homes, the placement of items will be inside of the
+        front door or garage.
+      </p>
+      <p>
+        For apartment buildings with a lobby, the placement of items will be in
+        the lobby.
+      </p>
+      <p>
+        For apartment building without a lobby, the placement of items will be
+        inside the apartment’s front door.
+      </p>
+      <p class="bold">
+        Does the Shipping plan include unpacking, unwrapping, assembly, or the
+        removal of packaging?
+      </p>
+      <p>No.</p>
+      <p class="bold">
+        Does the Shipping plan include pickup and removal of my old mattress?
+      </p>
+      <p>
+        No. Only mattress orders with Full Service Delivery include removal of
+        old mattress.
+      </p>
+      <p class="bold">
+        What are the exchange/return fees on items delivered via Shipping?
+      </p>
+      <p>
+        Returns on regular stock items will require a 10% restock fee plus a
+        pickup fee of $59. In compliance with COVID-19 safety measures, store
+        furniture drop-off will not be an option available to our guests.
+      </p>
+      <p>
+        Exchanges on regular stock items for greater or equal value require a 5%
+        restock fee plus an additional delivery fee. Exchanges on regular stock
+        items for lesser value require a 10% restock fee plus an additional
+        delivery fee.
+      </p>
+      <p>
+        For more information on exchanges and returns, please click
+        <a href="/company/store-policies#return_policy">here</a>.
+      </p>
+      <!-- <p>
+        Returns on regular stock items will require a 10% restock fee plus a
+        pickup fee of $59, if pickup is needed or if customer was provided free
+        shipping.
+      </p>
+      <p>
+        Exchanges on regular stock items for greater or equal value require a 5%
+        restock fee plus an additional delivery fee. Exchanges on regular stock
+        items for lesser value require a 10% restock fee plus an additional
+        delivery fee.
+      </p>
+      <p>
+        For more information on exchanges and returns, please click
+        <a href="/company/store-policies#return_policy">here</a>.
+      </p> -->
+      <!-- <p>Yes, you will receive an email before your delivery date (excludes Same Day).  You may check for real-time updates on the day of your delivery. Click <a href="/track-delivery">here to track your delivery. </p> -->
+      <p class="bold">
+        What are the customer packaging requirements for exchanges and returns?
+      </p>
+      <p>
+        Products delivered via shipping (not Full Service Delivery) are required
+        to be placed back into their original packaging for all exchanges and
+        returns. Products not returned to their original packaging will not be
+        accepted.
+      </p>
+      <p class="bold">
+        Once a delivery truck has been dispatched, will I be charged for any Not
+        at Home, Reschedule or Missed Delivery situations? If so, what amount?
+      </p>
+      <p>
+        Yes, there will be a fee if you are not present at the time of delivery
+        or do not reschedule 48 hours before your delivery date. The fee for a
+        rescheduled delivery is $59.
+      </p>
+      <p class="bold">
+        May I change my delivery method from Shipping to Full Service?
+      </p>
+      <p>
+        Yes, you may change your delivery method by clicking
+        <a href="/changedelivery">here</a>. Please note that if your delivery
+        date is less than 48 hours away, rescheduled delivery will not be
+        possible.
+      </p>
+      <p class="bold">
+        I lost my assembly instructions; can Living Spaces send me another copy?
+      </p>
+      <p>
+        Product assembly instructions are available on our Living Spaces
+        website. Select the product for which you require instructions. Within
+        the webpage for the selected product, assembly instructions can be found
+        by scrolling down to the bottom of the “Product Details” section. If the
+        product is no longer showing online, our Guest Services team will be
+        happy to send you a copy. You can quickly contact Guest Services via
+        chat by clicking here. Use JavaScript to launch chat when clicking
+        <a href="javascript:void(0);" onclick="launchChat()">here</a>.
+      </p>
+    </div>
+  </div>
+  <div id="parcel">
+    <h3>
+      <img
+        src="https://www.livingspaces.com/globalassets/images/lp/2020/03/parcel.png"
+        alt="Parcel Shipping"
+      />Parcel Shipping
+    </h3>
+    <div class="faq-indent">
+      <ul>
+        <li>
+          If you buy more than one item, there will be a separate charge per
+          item.
+        </li>
+        <li>UPS Ground shipping is available in the Continental US only.</li>
+      </ul>
+      <h4 class="bold">Parcel Shipping FAQ</h4>
+      <p class="bold">When are items delivered via Parcel Shipping?</p>
+      <p>
+        If you purchased any rugs, home décor, and/or Bed-in the-Box mattresses,
+        the items will ship via UPS (Ground or Freight). A separate tracking
+        number will be provided by UPS, but you may track your entire order
+        using the Living Spaces’ <a href="/track-delivery">tracking tool</a>.
+      </p>
+      <p class="bold">Is Parcel Shipping free?</p>
+      <p>
+        Yes. Enjoy free Parcel Shipping nationwide for all our rugs, pillows,
+        wall art, and other home accessories. No minimum amount is required.
+      </p>
+      <p class="bold">May I request Parcel Shipping?</p>
+      <p>
+        No need to request it. Items available for Parcel Shipping will
+        automatically be setup for Parcel Shipping when you checkout.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DRY LOCATION MODAL -->
+<div
+  class="modal fade in"
+  id="dryLocation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dryLocation"
+  style="display: none;"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-header">&nbsp;</div>
+      <div class="modal-body">
+        <div class="dry-location">
+          <h3 class="dry-location__heading">
+            What is "First Dry Location of Residence"?
+          </h3>
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-home " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <span class="space-lg"
+                  ><strong>For Single Family Homes</strong></span
+                >
+                Placement of items will be inside of the front door or garage
+              </p>
+            </div>
+          </div>
+
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-building " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <strong>For Apartment Buildings</strong>
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    1. Buildings with lobby
+                  </strong>
+                </span>
+                Placement of items will be in the lobby
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    2. Buildings without lobby
+                  </strong>
+                </span>
+                Placement of items will be inside apartment front door
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  function launchModal() {
+    $("#dryLocation").modal("show");
+  }
+  function launchChat() {
+    $(".messages-starticon").trigger("click");
+  }
+</script>

@@ -1,4 +1,6 @@
 <style>
+  /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
   .bold {
     font-weight: 600;
   }
@@ -96,8 +98,13 @@
   }
 
   #FSLP .flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   #FSLP .flex-row > * {
@@ -126,11 +133,15 @@
   #FSLP .check-availability-button {
     font-size: 1.8rem;
     color: #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
   #FSLP .check-availability-button > div {
     background-color: #686868;
     padding: 1rem 4.5rem;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
   #FSLP .check-availability-button:hover,
@@ -162,14 +173,14 @@
 <div id="FSLP">
   <section id="HeroContent" class="text-center">
     <div class="flex-row">
-      <div class="flex-item">
+      <div class="flex-item" style="flex-basis: 42.105%;">
         <img
           src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-hero202.jpg"
           alt=""
           class="img-responsive"
         />
       </div>
-      <div class="flex-item">
+      <div class="flex-item" style="flex-basis: 45.175%;">
         <img
           src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-copy-l202.png"
           alt=""
@@ -180,7 +191,7 @@
         class="flex-item"
         role="button"
         onclick="launchModal()"
-        style="cursor: pointer;"
+        style="cursor: pointer; flex-basis:12.719%"
       >
         <img
           src="https://www.livingspaces.com/globalassets/images/lp/2020/03/fs-lp-copy-r202.png"
@@ -208,14 +219,14 @@
   <section id="SafeAndSound" class="text-center">
     <h3 class="bold">Our Safe + Sound Service</h3>
     <div class="flex-row">
-      <div class="flex-item">
+      <div class="flex-item" style="flex-basis:48%">
         <img
           src="https://www.livingspaces.com/globalassets/images/lp/2020/03/warry-free-delivery.png"
           alt=""
           class="img-responsive"
         />
       </div>
-      <div class="flex-item">
+      <div class="flex-item" style="flex-basis:48%">
         <img
           src="https://www.livingspaces.com/globalassets/images/lp/2020/03/min-contact-shipping.png"
           alt=""
@@ -326,7 +337,8 @@
           aria-hidden="true"
           role="button"
           onclick="launchModal()"
-        ></span>
+        ></span
+        >, a person 18+ must be present to receive delivery.
       </p>
       <p class="text-md" style="padding-left:0.3rem !important;">
         ** Additional charges may apply for delivery outside of regions where
@@ -366,7 +378,7 @@
       <div class="flex-item">
         <h3>
           Still have questions?
-          <a href="/company/shipping-faq">Check our Shipping FAQ</a> &rsaquo;
+          <a href="/company/shipping-faqs">Check our Shipping FAQ</a> &rsaquo;
         </h3>
       </div>
     </div>
