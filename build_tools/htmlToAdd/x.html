@@ -11,7 +11,7 @@
     margin: 0 auto 2rem;
     border: 1px solid #d5d5d5;
     border-radius: 10px;
-    padding: 2rem 0 2rem 2rem;
+    padding: 2rem 0;
     overflow: hidden;
     flex-basis: 40%; /* Temporary until there's another item to the right */
   }
@@ -27,25 +27,30 @@
   }
   #ItemsInCartScroll {
     padding-top: 2rem;
-    overflow: scroll;
+    overflow: hidden;
   }
-  #ItemsInCartScroll > div {
-    width: 100vw;
+  #ItemsInCartScroll .slick-slide {
+    /* width: auto !important; */
+    margin: 0 1rem;
   }
-  #ItemsInCartScroll .flex-item {
-    margin: auto 1rem;
+  #ItemsInCartScroll .slick-slide a {
+    border: none;
   }
   #IICText {
+    padding: 0 2rem;
     justify-content: space-between;
   }
   #IICText .flex-item > * {
     display: inline;
   }
+  .slick-initialized .slick-slide {
+    padding: 0;
+  }
 </style>
 
 <div id="UserRelatedLayer" class="flex-row">
   <div id="ItemsInCart">
-    <div id="IICText" class="container flex-row">
+    <div id="IICText" class="flex-row">
       <div class="flex-item">
         <h3><b>In Your Cart</b> (3)</h3>
       </div>
@@ -55,8 +60,8 @@
       </div>
     </div>
     <div class="" id="ItemsInCartScroll">
-      <div class="container flex-row">
-        <div class="flex-item">
+      <div class="slick-row">
+        <div>
           <a href="/249592"
             ><img
               class="img-responsive"
@@ -64,7 +69,7 @@
             />
           </a>
         </div>
-        <div class="flex-item">
+        <div>
           <a href="/209572"
             ><img
               class="img-responsive"
@@ -72,7 +77,7 @@
             />
           </a>
         </div>
-        <div class="flex-item">
+        <div>
           <a href="/209572"
             ><img
               class="img-responsive"
@@ -80,7 +85,7 @@
             />
           </a>
         </div>
-        <div class="flex-item">
+        <div>
           <a href="/209572"
             ><img
               class="img-responsive"
@@ -94,42 +99,20 @@
 </div>
 
 <script>
-  const initializeTouchSlider = () => {
-    const slider = document.querySelector("#ItemsInCartScroll");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // make images undraggable so no ghosting
-    let images = document.querySelectorAll("#ItemsInCartScroll img");
-
-    Array.prototype.forEach.call(images, function(el, index, array) {
-      el.setAttribute("draggable", false);
-    });
-
-    slider.addEventListener("mousedown", e => {
-      isDown = true;
-      slider.classList.add("active");
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener("mouseleave", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mouseup", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mousemove", e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 3; //scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
-      // console.log(walk);
-    });
+  const customItemLayer = () => {
+    var jq = setInterval(() => {
+      if (window.jQuery) {
+        var $slider = $("#ItemsInCartScroll > div");
+        // Do image append here once script-generated
+        $slider.slick({
+          infinite: false,
+          arrows: false,
+          slidesToShow: 1.75
+        });
+        clearInterval(jq);
+      }
+    }, 50);
   };
 
-  initializeTouchSlider();
+  customItemLayer();
 </script>

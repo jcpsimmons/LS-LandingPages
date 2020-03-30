@@ -1,0 +1,235 @@
+<style>
+  .screen-reader {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 0 !important;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0 !important;
+    color: #fff;
+  }
+  /** DELIVERY OPTIONS **/
+  .d-icons {
+    display: block;
+    background: url(/globalassets/images/lp/2019/01/delivery_icons_sprite2.png)
+      no-repeat 0 0;
+    float: left;
+  }
+  ul.d-usps {
+    margin: 50px 0 40px;
+    padding: 0 30px;
+    list-style-type: none;
+  }
+  ul.d-usps li {
+    margin-bottom: 70px;
+    font-size: 40px;
+    line-height: 50px;
+    max-height: 999px;
+  }
+  ul.d-usps li p {
+    float: left;
+    width: 770px;
+  }
+  .d-icon-1 {
+    background-position: -180px 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+  .d-icon-2 {
+    background-position: -280px -0px;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+  .d-icon-3 {
+    background-position: -380px 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+  .d-icon-4 {
+    background-position: -480px 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    margin-top: 5px;
+  }
+  .pickup-message {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 300px 0 100px;
+    padding: 0 30px;
+    max-height: 999px;
+  }
+  .pickup-message > p {
+    float: left;
+    width: 770px;
+  }
+
+  .zip-check-wrap {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #464646;
+    text-align: center;
+  }
+  #zip_check_wrap .font-s16,
+  #zip_check_wrap .spacer10 {
+    display: none;
+  }
+  .zip-label {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-right: 15px;
+  }
+  #zip_pair_wrap {
+    display: inline-block;
+  }
+  .zip-input {
+    display: block;
+    float: left;
+    padding: 4px 20px;
+    line-height: 54px;
+    font-size: 54px;
+    font-weight: 400;
+    height: 100px;
+    width: 399px;
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+    border-left: 1px solid #484848;
+    border-right: none;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  a.zip-check-btn {
+    display: block;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 100px;
+    height: 100px;
+    width: 440px;
+    padding-left: 55px;
+    background: #686868
+      url(/globalassets/images/lp/2019/01/mobile_search_icon.png) no-repeat
+      370px center;
+    text-decoration: none;
+    text-align: left;
+    font-size: 40px;
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    text-decoration: none;
+  }
+  .sorry-msg {
+    text-align: center;
+    margin-top: 50px;
+    line-height: 40px;
+    font-size: 40px;
+    color: #c25719;
+  }
+  .zip-results {
+    margin: 80px 0;
+  }
+  .zip-results-title {
+    font-size: 44px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .table-header-border {
+    border-bottom: 2px solid #60604b;
+    line-height: 20px;
+    padding-bottom: 2px;
+  }
+  .table-row > span {
+    float: left;
+    font-size: 40px;
+    line-height: 70px;
+  }
+  .table-row:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  .table-row:nth-child(1) {
+    background-color: #fff;
+  }
+  .table-header-border span.table-left,
+  .table-header-border span.table-center,
+  .table-header-border span.table-right {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .table-weekday {
+    display: inline-block;
+    width: 95px;
+  }
+  .table-row span.table-left {
+    display: block;
+    width: 25%;
+    text-align: center;
+  }
+  .table-row span.table-center {
+    display: block;
+    width: 25%;
+    text-align: center;
+  }
+  .table-row span.table-right {
+    display: block;
+    width: 25%;
+    text-align: center;
+  }
+</style>
+<div id="delivery_options" class="promoBox">
+  <div class="is-cat-hero">
+    <h1>Delivery Options</h1>
+  </div>
+
+  <ul class="d-usps">
+    <li id="d_usps_1" class="clearfix">
+      <div class="d-icons d-icon-1">&nbsp;</div>
+      <p>
+        Same day delivery available in certain areas for purchases made before
+        4:00pm.
+      </p>
+    </li>
+    <li id="d_usps_2" class="clearfix">
+      <div class="d-icons d-icon-2">&nbsp;</div>
+      <p>
+        Delivery and assembly of unlimited items for one low, flat delivery fee.
+      </p>
+    </li>
+  </ul>
+  <div id="zip_check_wrap" class="zip-check-wrap">
+    <label for="cHolder1_txtZipCode" class="screen-reader">Zip Code:</label>
+    <div id="zip_pair_wrap" class="clearfix">
+      <input
+        name="txtZipCode"
+        maxlength="5"
+        id="txtZipCode"
+        type="tel"
+        placeholder="Your Zip Code"
+        class="zip-input"
+        title="Zip Code"
+      />
+      <a
+        id="btnValidateZip"
+        title="validate zip"
+        class="zip-check-btn"
+        role="button"
+        tabindex="0"
+        >Find Your Options</a
+      >
+    </div>
+  </div>
+
+  <div id="zip_results"></div>
+
+  <div
+    id="delivery_pickup_message"
+    class="pickup-message clearfix dont-display"
+  ></div>
+</div>

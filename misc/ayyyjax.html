@@ -1,0 +1,117 @@
+<script type="text/javascript">
+  var deliveryOptions_q =
+    "https://www.livingspaces.com/api/DeliveryOptionsAPI/GetDeliveryOptions";
+
+  $(document).ready(function() {
+    $("a.zip-check-btn")
+      .click(function() {
+        getDeliveryOptions();
+      })
+      .keydown(function(e) {
+        if (e.keyCode === 13) $(this).trigger("click");
+      });
+
+    $("#txtZipCode")
+      .keydown(function(e) {
+        if (e.keyCode === 13) $("a.zip-check-btn").trigger("click");
+      })
+      .keyup(function() {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]+/g, "");
+        $(this).val(value);
+      });
+  });
+
+  function getDeliveryOptions() {
+    var zipVal = $("#txtZipCode").val();
+    var zipResults = "";
+
+    //alert("the day of the week is: " + getDayOfWeek("7/1/2017"));
+    console.log(/^\d+$/.test(zipVal) && zipVal.length === 5);
+    if (/^\d+$/.test(zipVal) && zipVal.length === 5) {
+      $.ajax({
+        method: "POST",
+        url: deliveryOptions_q,
+        headers: {
+          __RequestVerificationToken: $(
+            "input[name=__RequestVerificationToken]"
+          ).val()
+        },
+        data: { ZipCode: zipVal }
+      }).done(function(data) {
+        console.log(data);
+        if (data.deliverySchedule.deliveryOptionWindows.length > 0) {
+          zipResults = '<div class="zip-results">'; //OPEN .zip-results
+          zipResults +=
+            '<div class="zip-results-title">Delivery Options for ' +
+            zipVal +
+            "</div>";
+          zipResults += '<div class="zip-table">'; //OPEN .zip-table
+          zipResults +=
+            '<div class="table-row table-header-border clearfix"><span class="table-left">DELIVERY DATE</span><span class="table-center">DELIVERY WINDOW</span><span class="table-right">FULL SERVICE DELIVERY FEE </span><span class="table-right">SHIPPING ON ORDERS $500+ </span></div>';
+
+          $.each(data.deliverySchedule.deliveryOptionWindows, function(i) {
+            zipResults +=
+              '<div class="table-row clearfix">' +
+              '<span class="table-left"><span><span class="table-weekday">' +
+              this.dayOfWeek +
+              "</span><span>" +
+              this.formattedDate +
+              "</span></span></span>" +
+              '<span class="table-center"><span>' +
+              this.window +
+              "</span></span>" +
+              '<span class="table-right"><span>' +
+              this.fullServiceFee +
+              "</span></span>" +
+              '<span class="table-right"><span>' +
+              this.basicFeeGreaterThanThreshold +
+              "</span></span>" +
+              "</div>";
+          });
+
+          zipResults += "</div>"; // CLOSE .zip-table
+          zipResults += "</div>"; // CLOSE .zip-results
+          $("#zip_results").html(zipResults);
+        } else {
+          $("#zip_results").html(
+            '<div class="sorry-msg">Sorry, no current delivery windows for ' +
+              zipVal +
+              ".</div>"
+          );
+        }
+      });
+
+      // $.getJSON(deliveryOptions_q + zipVal, function (jsonp) {
+      // 	if (jsonp.windowCount > 0) {
+      // 		zipResults = '<div class="zip-results">'; //OPEN .zip-results
+      // 		zipResults += '<div class="zip-results-title">Delivery Options for ' + zipVal + '</div>';
+      // 		zipResults += '<div class="zip-table">'; //OPEN .zip-table
+      // 		zipResults +=
+      // 			'<div class="table-row table-header-border clearfix"><span class="table-left">DELIVERY DATE</span><span class="table-center">DELIVERY WINDOW</span><span class="table-right">DELIVERY FEE </span></div>';
+
+      // 		$.each(jsonp.deliverySchedule, function (i) {
+      // 			zipResults += '<div class="table-row clearfix">' +
+      // 				'<span class="table-left"><span><span class="table-weekday">' + getDayOfWeek(this.date) +
+      // 				'</span><span>' + this.date + '</span></span></span>' +
+      // 				'<span class="table-center"><span>' + this.label + '</span></span>' +
+      // 				'<span class="table-right"><span>$' + this.fee + '</span></span>' +
+      // 				'</div>';
+      // 		});
+
+      // 		zipResults += '</div>'; // CLOSE .zip-table
+      // 		zipResults += '</div>'; // CLOSE .zip-results
+      // 		$("#zip_results").html(zipResults);
+      // 	} else {
+      // 		$("#zip_results").html('<div class="sorry-msg">Sorry, no current delivery windows for ' + zipVal + '.</div>');
+      // 	}
+
+      // });
+    } else {
+      $("#zip_results").html(
+        '<div class="sorry-msg">Please enter a valid 5 digit zip code.</div>'
+      );
+      $("#txtZipCode").focus();
+    }
+  }
+</script>
