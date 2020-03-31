@@ -1,0 +1,117 @@
+<!-- dont forget to scope these! -->
+<style id="ChatbotStyle">
+  #ChatIcon .flex-col,
+  #ChatIcon .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  #ChatIcon .flex-col {
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: white;
+    margin: 2rem;
+    padding: 1rem 0;
+  }
+  #ChatIcon .flex-row {
+    flex-direction: row-reverse;
+  }
+  #ChatIcon {
+    background-color: #ebebeb;
+    cursor: pointer;
+  }
+  #ChatIcon img {
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+  #ChatIcon .flex-item {
+    margin: auto;
+  }
+  #ChatIcon .fb-tweak {
+    flex-basis: 25%;
+    margin-right: 2rem;
+  }
+  #ChatIcon .flex-row .flex-item {
+    position: relative;
+  }
+  .green-dot {
+    background-color: #45ab4e;
+    height: auto;
+    width: auto;
+    border-radius: 100%;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+  }
+  .green-dot i {
+    font-size: 15px;
+    margin: 5px 5px;
+  }
+  /* typography */
+  #ChatIcon .label-text {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: #4c4c4c;
+    text-align: right;
+  }
+  #ChatIcon .label-text > span {
+    color: rgb(170, 170, 170);
+  }
+  #ChatIcon .main-text {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+    color: #3a3a3a;
+  }
+  #ChatIcon .xContainer {
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+</style>
+
+<div id="ChatIcon">
+  <div class="flex-row">
+    <div class="flex-item xContainer">
+      <span
+        id="RemoveRepChat"
+        style="font-size: 3rem; color: black; cursor:pointer;line-height:4rem"
+        aria-hidden="true"
+        >×</span
+      >
+    </div>
+    <div class="flex-item fb-tweak">
+      <img
+        src="https://www.livingspaces.com/globalassets/images/home/2020/03/chat-girl.jpg"
+        alt=""
+        class="img-responsive"
+      />
+      <div class="green-dot">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="flex-col">
+      <div class="flex-item label-text">Living Spaces Team Member</div>
+      <div class="flex-item main-text">
+        👋 Need help with your cart? Talk to a live expert.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const getTime = () => {
+    var time = new Date();
+    var curTime = time.toLocaleString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+    curTime = curTime.startsWith("0") ? curTime.replace("0", "") : curTime;
+    return curTime;
+  };
+  setInterval(() => {
+    document.querySelector(
+      "#ChatIcon .label-text"
+    ).innerHTML = `Living Spaces Team Member <span class="timeText">${getTime()}</span>`;
+  }, 1000);
+</script>

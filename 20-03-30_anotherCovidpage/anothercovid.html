@@ -1,0 +1,402 @@
+<style>
+  /* text */
+  #CovidUpdates h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  #CovidUpdates h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  #CovidUpdates p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  #CovidUpdates h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  #CovidUpdates h4 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  #CovidUpdates div.btn {
+    background-color: #bd5518;
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.9rem 3rem;
+  }
+  #StoreHours a {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  /* layout */
+  #DesktopShipImg {
+    display: inline-block !important;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  #StoreHours .flex-row {
+    justify-content: space-between;
+  }
+  #SafeShopping .flex-row {
+    width: 80%;
+    margin: 5rem auto 2rem;
+  }
+  #CovidUpdates .flex-item:first-of-type {
+    margin-right: 2rem;
+  }
+  #SafeShopping .flex-item:nth-of-type(2) {
+    margin-left: 2rem;
+  }
+  #CovidUpdates .storeHoursText {
+    width: 100%;
+    text-align: center;
+    background-color: #e8eae7;
+    padding: 1rem 0;
+    font-size: 2rem !important;
+  }
+  #CovidUpdates .btn-container {
+    margin-top: 3rem;
+  }
+  #StoreHours {
+    margin-top: 5rem;
+  }
+  #StoreHours .storeDetails p {
+    margin-top: 3rem;
+  }
+  #StoreHours .storeHoursText {
+    margin-bottom: 2rem;
+  }
+  #MidFooter {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  #MidFooter a:first-of-type,
+  #MidFooter img {
+    display: inline-block;
+  }
+  #MidFooter a {
+    margin-bottom: 3rem;
+  }
+  #MidFooter a.desktop-only {
+    display: inline-block !important;
+  }
+  .desktop-only {
+    display: block !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+  @media (max-width: 767px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: block !important;
+    }
+    .flex-row {
+      flex-direction: column;
+    }
+    #CovidUpdates {
+      text-align: center;
+    }
+    #SafeShopping .flex-row {
+      width: 100%;
+      margin: 4rem 0 2rem;
+    }
+    #SafeShopping .flex-item {
+      margin: 2rem -15px !important;
+    }
+    #CovidUpdates .storeHoursText {
+      margin: 4rem -15px 2rem;
+      width: 100vw;
+    }
+    #StoreHours .flex-item {
+      border-bottom: 1px solid #d8d8d8;
+      width: 100vw;
+      margin: auto -15px;
+      padding: 0 15px;
+    }
+    #StoreHours,
+    #CovidUpdates h1 {
+      text-align: left;
+    }
+    #StoreHours a > p {
+      display: inline-block;
+    }
+    #StoreHours .storeDetails {
+      float: right;
+    }
+    #StoreHours .storeDetails p {
+      margin-top: auto;
+    }
+    /* text */
+    #CovidUpdates h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    #CovidUpdates h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    #CovidUpdates p {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+    #CovidUpdates h3 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    #CovidUpdates h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    #CovidUpdates div.btn {
+      background-color: #bd5518;
+      border: none;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 0.9rem 3rem;
+    }
+    #StoreHours a {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+    #MidFooter .light-text {
+      font-weight: 400;
+      line-height: 3rem;
+    }
+    #ShipImg,
+    #MidFooter a:first-of-type {
+      display: inline-block !important;
+    }
+    #DesktopShipImg,
+    #MidFooter a.desktop-only {
+      display: none !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .mobile-break {
+      display: none;
+    }
+  }
+</style>
+
+<div id="CovidUpdates">
+  <h1>COVID-19 Updates</h1>
+  <section id="SafeShopping">
+    <h2>Safe Shopping During COVID-19</h2>
+    <p>
+      You can shop our selection of home furnishings from the safety and comfort
+      of your home. We’re taking orders online and by phone at 877-266-7300. We
+      are also offering FREE 2-day shipping on orders over $500 in select zip
+      codes (check availability below) and safe, sanitary full-service delivery.
+    </p>
+    <div class="text-center btn-container">
+      <a href="/delivery"
+        ><div class="btn btn-primary">Check Availability in Your Area</div></a
+      >
+    </div>
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/lp/2020/03/covid/min-contact-shipping.png"
+          alt="Minimal Contact Shipping"
+          class="img-responsive desktop-only"
+        />
+        <img
+          src="/globalassets/images/lp/2020/03/covid/mobile/min-contact-shipping.png"
+          alt="Minimal Contact Shipping"
+          class="img-responsive mobile-only"
+        />
+      </div>
+      <div class="flex-item">
+        <img
+          src="/globalassets/images/lp/2020/03/covid/min-contact-shipping-copy.png"
+          alt="Worry Free full service delivery"
+          class="img-responsive desktop-only"
+        />
+        <img
+          src="/globalassets/images/lp/2020/03/covid/mobile/min-contact-shipping-copy.png"
+          alt="Minimal Contact Shipping"
+          class="img-responsive mobile-only"
+        />
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/delivery/free-shipping#VersusChart"
+        ><p>Shipping versus Full-Service Delivery &rsaquo;</p></a
+      >
+      <p>
+        * Inside first dry location of residence
+        <span
+          class="fa fa-question-circle d-inline-block"
+          aria-hidden="true"
+          role="button"
+          onclick="launchModal()"
+        ></span>
+      </p>
+    </div>
+  </section>
+
+  <section id="StoreHours">
+    <h2>Our Arizona Stores Remain Open</h2>
+    <p>
+      Arizona residents can currently shop at any of the stores below. We are
+      taking every precaution to keep you and our team safe.
+    </p>
+    <h3 class="storeHoursText">Current Store Hours: Mon-Sun 10am - 7pm</h3>
+    <div class="flex-row">
+      <div class="flex-item">
+        <h4>Gilbert</h4>
+        <p>2300 SanTan Village Pkwy<br />Gibert, AZ 85295</p>
+        <a href="/store/mapredirector?storeId=15"><p>Directions &rsaquo;</p></a
+        ><a class="storeDetails" href="/stores/gilbert"
+          ><p>Store Details &rsaquo;</p></a
+        >
+      </div>
+      <div class="flex-item">
+        <h4>Glendale</h4>
+        <p>6767 W Bell Rd<br />Glendale, AZ 85308</p>
+        <a href="/store/mapredirector?storeId=17"><p>Directions &rsaquo;</p></a
+        ><a class="storeDetails" href="/stores/glendale"
+          ><p>Store Details &rsaquo;</p></a
+        >
+      </div>
+      <div class="flex-item">
+        <h4>Phoenix</h4>
+        <p>6600 W Latham St<br />Phoenix, AZ 85043</p>
+        <a href="/store/mapredirector?storeId=11"><p>Directions &rsaquo;</p></a
+        ><a class="storeDetails" href="/stores/phoenix"
+          ><p>Store Details &rsaquo;</p></a
+        >
+      </div>
+      <div class="flex-item">
+        <h4>Scottsdale</h4>
+        <p>16275 N Scottsdale Rd<br />Scottsdale, AZ 85260</p>
+        <a href="/store/mapredirector?storeId=10"><p>Directions &rsaquo;</p></a
+        ><a class="storeDetails" href="/stores/scottsdale"
+          ><p>Store Details &rsaquo;</p></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="MidFooter">
+    <h3 class="mobile-only">Still have questions?</h3>
+    <img
+      src="/globalassets/images/lp/2020/03/fs-faq.png?v=2"
+      alt="Shipping delivery footer image"
+      class="img-responsive desktop-only"
+      id="DesktopShipImg"
+    />
+    <img
+      src="/globalassets/images/lp/2020/03/covid/mobile/fs-faq.png"
+      alt="Shipping delivery footer image"
+      class="img-responsive mobile-only"
+      id="ShipImg"
+    />
+    <a class="mobile-only" href="/company/shipping-faqs"
+      ><h3 class="light-text">Check our Shipping FAQ &rsaquo;</h3></a
+    >
+    <a href="/company/shipping-faqs" class="desktop-only"
+      ><h3 class="light-text">
+        Still have questions? Check our Shipping FAQ &rsaquo;
+      </h3></a
+    >
+    <a href="/company/covid-19-response"
+      ><h3 class="light-text">
+        A message to Our Guests <br class="mobile-break" />from CEO Grover
+        Geiselman&nbsp;&rsaquo;
+      </h3></a
+    >
+  </section>
+</div>
+
+<!-- DRY LOCATION MODAL -->
+<div
+  class="modal fade in"
+  id="dryLocation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dryLocation"
+  style="display: none;"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-header">&nbsp;</div>
+      <div class="modal-body">
+        <div class="dry-location">
+          <h3 class="dry-location__heading">
+            What is "First Dry Location of Residence"?
+          </h3>
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-home " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <span class="space-lg"
+                  ><strong>For Single Family Homes</strong></span
+                >
+                Placement of items will be inside of the front door or garage
+              </p>
+            </div>
+          </div>
+
+          <div class="dry-location__row">
+            <div class="dry-location__icon">
+              <span class="fa fa-building " aria-hidden="true"></span>
+            </div>
+            <div class="dry-location__text">
+              <p>
+                <strong>For Apartment Buildings</strong>
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    1. Buildings with lobby
+                  </strong>
+                </span>
+                Placement of items will be in the lobby
+              </p>
+              <p>
+                <span>
+                  <strong>
+                    2. Buildings without lobby
+                  </strong>
+                </span>
+                Placement of items will be inside apartment front door
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  function launchModal() {
+    $("#dryLocation").modal("show");
+  }
+  function launchChat() {
+    $(".messages-starticon").trigger("click");
+  }
+</script>
