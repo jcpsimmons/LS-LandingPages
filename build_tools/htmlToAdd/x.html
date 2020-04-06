@@ -1,53 +1,280 @@
-<style id="ChatbotStyle">
-  #ChatIcon {
-    position: absolute;
-    background-color: #fff;
-    z-index: 99;
-    right: 10px;
+<style>
+  #UserRelatedLayer {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
   }
-  #ChatIcon .green-dot {
-    background-color: #47ab50;
-    border-radius: 100%;
-    border: 2px solid white;
+  #UserRelatedLayer h3 {
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  #UserRelatedLayer p {
+    font-size: 1.6rem;
+  }
+  #UserRelatedLayer h3 b {
+    font-weight: 700;
+  }
+  #UserRelatedLayer h3,
+  #UserRelatedLayer p {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+  #UserRelatedLayer > * {
+    max-width: 1140px;
+    margin: 0 auto;
+    border: 1px solid #d5d5d5;
+    padding: 1.4rem 0 1.5rem;
+    overflow: hidden;
+    height: 18.2rem;
+  }
+  #ItemsInCart {
+    flex-basis: 27%;
+  }
+
+  #HP4U {
+    flex-basis: 73%;
+  }
+
+  #UserRelatedLayer .flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #UserRelatedLayer .flex-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #ItemsInCartScroll,
+  #HP4UScroll {
+    padding-top: 2rem;
+    /* overflow: hidden; */
+    /* display: block; */
+  }
+  /* #ItemsInCartScroll > div {
+    display: block;
+  } */
+
+  #HP4UScroll {
+    overflow: hidden;
+    width: 1000px;
+  }
+  #UserRelatedLayer .slick-row > div {
+    visibility: hidden;
+  }
+  #UserRelatedLayer .slick-slide {
+    width: auto !important;
+    padding-left: 2rem !important;
+  }
+  #UserRelatedLayer .slick-slide a {
+    border: none;
+  }
+  #UserRelatedLayer .slick-slide a img {
+    width: 16rem;
+  }
+  #UserRelatedLayer .IICText {
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+  #UserRelatedLayer .IICText .flex-item > * {
+    display: inline;
+  }
+  #UserRelatedLayer .slick-initialized .slick-slide {
+    padding: 0;
+  }
+  #HP4U {
+    margin-left: 2rem;
+  }
+  #UserRelatedLayer .prevArrow,
+  #UserRelatedLayer .nextArrow {
+    cursor: pointer;
     position: absolute;
-    bottom: -7px;
-    right: -2px;
-    transform: scale(0.6);
+    z-index: 1;
+    top: 50%;
+    transition: 0.25s;
+    opacity: 0;
   }
-  #ChatIcon .green-dot i {
-    color: white;
-    margin: 5px;
+  #ItemsInCart:hover .prevArrow,
+  #ItemsInCart:hover .nextArrow,
+  #HP4U:hover .prevArrow,
+  #HP4U:hover .nextArrow {
+    opacity: 1;
   }
-  #ChatIcon .text-tag {
-    background-color: #333333;
-    color: #fff;
-    font-size: 14px;
-    padding: 7px 40px 7px 7px;
+  #UserRelatedLayer .prevArrow {
+    transform: translateY(-50%) scaleX(-1);
+    left: 2.5rem;
   }
-  #ChatIcon .staffPhoto {
-    margin-left: -30px;
+  #UserRelatedLayer .nextArrow {
+    transform: translateY(-50%);
   }
-  #ChatIcon img {
-    border-radius: 100%;
-    height: 44px;
-    width: 44px;
-    border: 2px solid white;
-    position: relative;
+
+  @media (max-width: 1199px) {
+    #UserRelatedLayer h3 {
+      font-size: 1.5rem;
+    }
+    #UserRelatedLayer p {
+      font-size: 1.3rem;
+    }
   }
 </style>
-<div id="ChatIcon">
-  <div class="text-tag">
-    Chat with a live expert
+
+<div id="UserRelatedLayer" class="flex-row">
+  <!-- Items in cart -->
+  <div id="ItemsInCart">
+    <div class="IICText flex-row">
+      <div class="flex-item">
+        <h3><b>In Your Cart</b> (3)</h3>
+      </div>
+      <div class="flex-item">
+        <p>Subtotal:</p>
+        <h3><b>$595</b></h3>
+      </div>
+    </div>
+    <div class="" id="ItemsInCartScroll">
+      <div class="slick-row">
+        <div>
+          <a href="/shopping-cart"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/240000-249999/249000-249999/249500-249599/249592/249592_natural_wood_dining_table_signature_01.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/shopping-cart"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/shopping-cart"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/shopping-cart"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="staffPhoto">
-    <img
-      src="https://www.livingspaces.com/globalassets/images/home/2020/03/chat-girl.jpg"
-      alt=""
-    />
-    <div class="green-dot">
-      <i class="fa fa-check" aria-hidden="true"></i>
+  <!-- HP4U -->
+  <div id="HP4U">
+    <div class="IICText flex-row">
+      <div class="flex-item">
+        <h3><b>Hand Picked for YOU</b></h3>
+      </div>
+    </div>
+    <div class="" id="HP4UScroll">
+      <div class="slick-row">
+        <div>
+          <a href="/249592"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/240000-249999/249000-249999/249500-249599/249592/249592_natural_wood_dining_table_signature_01.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/209572"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/209572"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/209572"
+            ><img
+              class="img-responsive"
+              src="https://www.livingspaces.com/globalassets/productassets/200000-299999/200000-209999/209000-209999/209500-209599/209572/209572_0.jpg?w=160"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  const customItemLayer = () => {
+    var jq = setInterval(() => {
+      if (window.jQuery) {
+        var $sliderOne = $("#ItemsInCartScroll > div");
+        // Do image append here once script-generated
+        $sliderOne.slick({
+          // slidesToShow: 1.75,
+          infinte: false,
+          arrows: true,
+          variableWidth: true,
+          nextArrow:
+            '<img src="https://www.livingspaces.com/globalassets/images/LP/2020/04/slick-arrow.png" alt="" class="img-responsive nextArrow">',
+          prevArrow:
+            '<img src="https://www.livingspaces.com/globalassets/images/LP/2020/04/slick-arrow.png" alt="" class="img-responsive prevArrow">',
+        });
+
+        var $sliderTwo = $("#HP4UScroll > div");
+        // Do image append here once script-generated
+        $sliderTwo.slick({
+          arrows: false,
+          // slidesToShow: 1.75,
+          infinte: false,
+          variableWidth: true,
+          arrows: true,
+          nextArrow:
+            '<img src="https://www.livingspaces.com/globalassets/images/LP/2020/04/slick-arrow.png" alt="" class="img-responsive nextArrow">',
+          prevArrow:
+            '<img src="https://www.livingspaces.com/globalassets/images/LP/2020/04/slick-arrow.png" alt="" class="img-responsive prevArrow">',
+        });
+
+        // calculate next arrow positions
+        let iicWidth = document.getElementById("ItemsInCart").offsetWidth;
+        let hp4uWidth = document.getElementById("HP4U").offsetWidth;
+        document.querySelector("#ItemsInCart .nextArrow").style.right = "2rem";
+        document.querySelector(
+          "#HP4U .nextArrow"
+        ).style.left = `calc(${hp4uWidth}px - 6rem)`;
+
+        // fade in slides
+        setTimeout(function () {
+          $(".slick-slide").hide().css("visibility", "visible").fadeIn("slow");
+        }, 200);
+        // reset height
+        $("#UserRelatedLayer > *").css("height", "auto");
+
+        clearInterval(jq);
+      }
+    }, 50);
+  };
+  customItemLayer();
+</script>
+
+<!-- 
+left arrow
+      position: absolute;
+    left: 3rem;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+right arrow - need to get offset width of the thing then calc(offWidth - 3rem) off that for 'right' param
+ -->

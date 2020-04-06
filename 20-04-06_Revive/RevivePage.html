@@ -1,0 +1,42 @@
+<style>
+  #HeroArea {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .desktop-only {
+    display: block !important;
+    margin: 1rem auto !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+  @media (max-width: 767px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: block !important;
+      margin: 0 auto 2rem auto !important;
+    }
+    #HeroArea {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+</style>
+<div class="row">
+  <div id="HeroArea" class="col-sm-12">
+    <img
+      src="/globalassets/images/lp/2020/04/revive/0406_kingforqueen_lp_revive_hero.jpg"
+      alt=""
+      class="img-responsive desktop-only"
+    />
+    <img
+      src="/globalassets/images/lp/2020/04/revive/0406_kingforqueen_lp_revive_mobile.jpg"
+      alt=""
+      class="img-responsive mobile-only"
+    />
+  </div>
+</div>

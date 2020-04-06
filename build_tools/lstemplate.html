@@ -8,17 +8,7 @@
     <title>page-mock</title>
     <meta name="keywords" />
     <meta name="description" />
-    <meta
-      name="google-site-verification"
-      content="IpXZYfZ2YuZYYExldTvy0eAb1aTM7YbbSnxdTY98Sdo"
-    />
-    <meta name="msvalidate.01" content="B2117FD6529B5C79E06B8B045FD8EB6D" />
 
-    <script
-      type="text/javascript"
-      src="https://www.livingspaces.com/ruxitagentjs_ICA27SVfhjqrux_10181191119154660.js"
-      data-dtconfig="rid=RID_-1573657225|rpid=-728360048|domain=livingspaces.com|reportUrl=/rb_bf09634kxu|app=ade8439b5f0752b2|featureHash=ICA27SVfhjqrux|rdnt=1|uxrgce=1|bp=2|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|md=1=butag_data.customer_email,2=butag_data.customer_id,3=butag.data.unique_id|lastModification=1578531079555|dtVersion=10181191119154660|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA27SVfhjqrux_10181191119154660.js"
-    ></script>
     <link rel="canonical" href="lstemplate.html" />
 
     <script type="text/javascript">
@@ -66,16 +56,11 @@
         display: none;
       }
     </style>
-    <link
-      href="https://www.livingspaces.com/bundles/css?v=dyal-kzkKYBhBiaTLvt258KVRQ1LGdl2PqC11AdQO9I1"
-      rel="stylesheet"
-    />
+    <link href="./localresource/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- <script async src="https://cdn.optimizely.com/js/8788531144.js"></script> -->
-    <!--<script async src="/_content/scripts/optimizely/ls.min.js?v=20191205_02"></script>-->
   </head>
 
   <body>
@@ -3827,143 +3812,11 @@
       </a>
     </script>
 
-    <script language="javascript">
-      var BottyMcBotface = {};
-      BottyMcBotface.BotId = "st-c0e5be2f-e225-57a2-a4f4-8e1434bd2f5b";
-      BottyMcBotface.BotName = "LS EComm Bot";
-      BottyMcBotface.ClientId = "cs-a6a84dd3-5ffb-58ce-8f44-a1276c36fb01";
-      BottyMcBotface.DisplayName = "Living Spaces Chatbot";
-      BottyMcBotface.Jwt =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDg1NTQ3NTM0MTM4OTdCOUYyNDExMEU0NjI4NkRCMyIsInVsaSI6IkZhbHNlIiwibmJmIjoxNTc5MzA4OTA0LCJleHAiOjE1NzkzMzA1MDQsImlhdCI6MTU3OTMwODkwNCwiaXNzIjoiY3MtYTZhODRkZDMtNWZmYi01OGNlLThmNDQtYTEyNzZjMzZmYjAxIiwiYXVkIjoiaHR0cHM6Ly9pZHByb3h5LmtvcmUuY29tL2F1dGhvcml6ZSJ9.Ut25ChaZmXKNDC89ujXlBAPJb1QZoJsCLuiu0K8_gHE";
-    </script>
-    <div id="chatContainer">
-      <div class="openChatWindow">
-        <div class="minimized-starticon kore-chat-fixed_pos">
-          <span
-            class="messages-starticon"
-            tabindex="0"
-            role="button"
-            aria-label="Start a chat"
-          ></span>
-        </div>
-      </div>
-    </div>
-
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
 
     <script src="https://www.livingspaces.com/bundles/vendor?v=Otha3wV6Mtj767kBLfXEHjKzpQ5hY0kyDVHxhW9iSJA1"></script>
-
-    <script>
-      window.onload = getGeolocation();
-
-      function getGeolocation() {
-        var geolocationCookie = getCookie("is-html-geolocation");
-        if (!geolocationCookie) {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-              htmlGeolocation,
-              defaultGeolocation
-            );
-          } else {
-            defaultGeolocation();
-          }
-        }
-      }
-
-      function htmlGeolocation(position) {
-        EventBus.$emit("acceptedGeolocation");
-        deleteGeolocationCookies();
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-        $.ajax({
-          type: "POST",
-          url: "/UserGeolocation/SetHtmlGeolocationCookies",
-          contentType: "application/json; charset=utf-8",
-          data: JSON.stringify({ latitude: latitude, longitude: longitude }),
-          success: function() {
-            reverseGeocodeLocationIq(latitude, longitude);
-            var storeId = getCookie("lsf-my-store-id");
-            EventBus.$emit("update-geolocation", { storeId: storeId });
-            setCookie("is-html-geolocation", true, 360);
-          },
-          error: deleteGeolocationCookies()
-        });
-      }
-
-      function defaultGeolocation() {
-        deleteGeolocationCookies();
-        $.ajax({
-          type: "POST",
-          url: "/UserGeolocation/SetDefaultGeolocationCookies",
-          contentType: "application/json; charset=utf-8",
-          success: function() {
-            var storeId = getCookie("lsf-my-store-id");
-            EventBus.$emit("update-geolocation", { storeId: storeId });
-            setCookie("is-html-geolocation", false, 360);
-          },
-          error: deleteGeolocationCookies()
-        });
-      }
-
-      function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = document.cookie;
-        try {
-          decodedCookie = decodeURIComponent(document.cookie);
-        } catch (err) {}
-        var ca = decodedCookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) === " ") {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-
-      function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
-
-      function deleteGeolocationCookies() {
-        deleteCookie("lsf-my-store-id");
-        deleteCookie("lsf-autodetected-zip-code");
-      }
-
-      function deleteCookie(name) {
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-      }
-      function reverseGeocodeLocationIq(lat, lng) {
-        $.get(apiReverseUrl.replace("{0}", lat).replace("{1}", lng))
-          .done(function(response, status) {
-            if (status === "success") {
-              if (response.address) {
-                var searchAddressComponents = response.address,
-                  searchPostalCode = "";
-                if (searchAddressComponents.postcode) {
-                  searchPostalCode = searchAddressComponents.postcode;
-                }
-                setCookie("lsf-autodetected-zip-code", searchPostalCode, 720);
-              } else {
-                defaultGeolocation();
-              }
-            } else {
-              defaultGeolocation();
-            }
-          })
-          .fail(function() {
-            defaultGeolocation();
-          });
-      }
-    </script>
 
     <script type="text/javascript">
       var apiReverseUrl = decodeHtmlAmpersand(
@@ -3978,28 +3831,9 @@
 
     <script src="https://www.livingspaces.com/bundles/main?v=6ScBsFj3DUgbfLMwj-knoy_TBllP4Pou9mQFmqLnhdY1"></script>
 
-    <!-- LOAD LOCALFILE SCRIPT -->
-    <script>
-      $("#root").load("../20-02-03_PresidentsDayMain/presidentsdaymain.html");
-      // just get all image startswith and prepend livingspaces site
-      setTimeout(() => {
-        let images = document.querySelectorAll("img");
-        images.forEach(image => {
-          try {
-            if (image.src.startsWith("http://127")) {
-              image.src = `https://livingspaces.com${
-                image.src.split(":8080")[1]
-              }?${new Date().getTime()}`;
-            }
-          } catch (error) {
-            console.error("image error:", error);
-          }
-        });
-      }, 2000);
-    </script>
-
     <div style="display:none"></div>
 
+    <!-- Loader script (mine) -->
     <script src="./htmlToAdd/x.js"></script>
   </body>
 </html>
