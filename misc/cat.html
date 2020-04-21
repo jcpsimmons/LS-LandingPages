@@ -1,4 +1,229 @@
 
+<style type="text/css">
+	.publitas_wrap {
+		border: .1rem solid #363636;
+		margin-bottom: 5rem;
+	}
+	.catalog-container h1 {font-size:3rem}
+	.cat-title {
+		margin-bottom: 2rem;
+	}
+	.cat-header {
+		margin-bottom: 3rem;
+                padding:0;
+	}
+	.cat-header p {
+		font-size: 1.8rem;
+	}
+	.calg-list {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.calg-wrapper {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	.calg-wrapper img {
+		width: 100%;
+	}
+	.calg-wrapper a div span {
+		font-weight: 400;
+	}
+	.cat-img h2 {
+		margin-bottom: 2rem;
+	}
+	.cat-img {
+		position: relative;
+                padding: 0;
+	}
+	.cat-form {
+		padding: 0;
+	}
+	.cat-form p {
+		font-size: 1.8rem;
+	}
+
+	cat-form-grp {
+		margin-bottom: 2rem;
+	}
+
+	.cat-dl h3 {
+		display: inline-block;
+		padding: .2rem;
+		margin: 0;
+	}
+
+	.cat-dl {
+		font-size: 1.8rem;
+		display: inline-block;
+	}
+
+	.dl-col h2 {
+		text-align: left;
+	}
+
+	.cat-dl a {
+		padding: .8rem;
+	}
+
+	.dl-col {
+		text-align: left;
+	}
+
+	.cat-form .cat-form-grp input {
+		display: inline-block;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+		font-size: 1.8rem;
+		padding: .3rem 0 .3rem 1.5rem;
+		color: #393939;
+		border: 1px solid #d5d5d5;
+		border-radius: 0;
+		width: 38rem;
+		background-color: #fff;
+	}
+
+	.cat-form .cat-form-grp select {
+		display: inline-block;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+		font-size: 1.8rem;
+		padding: .3rem 0 .3rem 1.5rem;
+		color: #393939;
+		border: 1px solid #d5d5d5;
+		border-radius: 0;
+		width: 35rem;
+		background-color: #fff;
+	}
+	.calg-wrapper div button {
+		display: none;
+	}
+	.catalog-container {
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+	}
+	.catalog-container .form-group {
+		margin-top: 3.3rem;
+		margin-bottom: 3.3rem;
+	}
+	.dont-display {
+		display: none !important;
+	}
+	#toggle {
+		cursor: pointer;
+		font-size: 1.8rem;
+		padding-left: 1rem;
+		position: absolute;
+		bottom: 0;
+		right: 5%;
+	} 
+	.download-catalog {
+		margin-top: 2rem;
+                padding:0;
+	}
+	.thx-modal {
+			text-align: center;
+		}
+		.thx-modal h1 {
+			padding: 3rem;
+		}
+		.thx-modal button {
+			margin: 5rem 0 2rem;
+		}
+	.disabled-input {
+		
+	}
+        .marginLeft {margin-left:2rem;}
+	/*// Large devices (desktops, less than 1200px)*/
+
+	@media (max-width: 1199px) {
+		.publitas_wrap iframe {
+			width: 100%;
+			height: 50rem;
+		}
+
+	}
+
+	/*    Medium devices (tablets, less than 992px)*/
+
+	@media (max-width: 991px) {
+		.cat-form .cat-form-grp input {
+			padding: 0;
+			width: 100%;
+		}
+		.cat-form .cat-form-grp select {
+			width: 100%;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+	}
+
+	/*// Small devices (landscape phones, less than 768px)*/
+
+	@media (max-width: 767px) {
+                .marginLeft {margin-left:0;}
+		 .calg-wrapper {
+			position: relative;
+			text-align: unset;
+		}
+		.calg-wrapper img {
+			width: 30%;
+		}
+		.calg-wrapper div {
+			width: 40%;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			font-size: 2.2rem;
+			font-weight: 400;
+		}
+		.calg-wrapper div button,
+		.cat-form button{
+			display: unset;
+			padding: .4rem 1.8rem !important;
+			min-width: auto;
+			font-weight: 600;
+			border-radius: 4px;
+			font-size: 2.2rem !important;
+			margin-top: 2rem;
+			
+		}
+		.calg-wrapper div span {
+			display: block;
+		}
+		.calg-list {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+        .cat-img h2,
+        .cat-title,
+        .cat-header p,
+		.cat-form {
+			padding: 0 2rem;
+		}
+		
+	}
+
+	/*// Extra small devices (portrait phones, less than 576px)*/
+
+	@media (max-width: 575px) {
+		.dl-col {
+			text-align: left;
+		}
+		.cat-form .cat-form-grp select {
+			width: 100%;
+
+		}
+		.calg-wrapper div { 
+			width: 50%;
+		}
+		.calg-wrapper img {
+			width: 40%;
+		}
+	}
+</style>
 <div class="row">
     <div class="col-xs-12 cat-img">
         <h2>Browse Online Catalogs</h2>
@@ -54,59 +279,8 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12 cat-img">
-        <h2>Style + Design Catalogs</h2>
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 calg-list">
-                <div class="calg-wrapper">
-                    <a href="https://www.livingspaces.com/departments/home-decor/catalog">
-                        <img role="presentation" alt="202002" src="/globalassets/images/lp/2020/04/accessories-catalog-thumb.jpg">
-                        <div><span>Home Decor</span><button class="btn primary-button">View Now</button></div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2 calg-list">
-                    <div class="calg-wrapper">
-                        <a href="https://www.livingspaces.com/inspiration/styles/modern/catalog">
-                            <img role="presentation" alt="201908" src="/globalassets/images/lp/2020/04/modern-home-thumb.jpg">
-                            <div><span>Modern Homes</span><button class="btn primary-button">View Now</button></div>
-                        </a>
-                    </div>
-                </div>
-            <div class="col-xs-12 col-sm-4 col-md-2 calg-list">
-                <div class="calg-wrapper">
-                    <a href="https://www.livingspaces.com/departments/furniture/living-room/tv-stands-and-entertainment-centers/tv-stands/catalog">
-                        <img role="presentation" alt="201705" src="/globalassets/images/lp/2020/04/tv-stands-catalog.jpg">
-                        <div><span>TV Stands</span><button class="btn primary-button">View Now</button></div>
-    
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2 calg-list">
-                <div class="calg-wrapper">
-                    <a href="https://www.livingspaces.com/departments/furniture/living-room/recliners/lookbook">
-                        <img role="presentation" alt="201803" src="/globalassets/images/lp/2020/04/recliner-lookbook-thumb.jpg">
-                        <div><span>Recliners</span><button class="btn primary-button">View Now</button></div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2 calg-list">
-                <div class="calg-wrapper">
-                    <a href="https://www.livingspaces.com/departments/furniture/living-room/sofas-and-sectionals/sectional-sofas/catalog">
-                        <img role="presentation" alt="201803" src="/globalassets/images/lp/2020/04/sectional-catalog.jpg">
-                        <div><span>Sectionals</span><button class="btn primary-button">View Now</button></div>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 </div>
-
 <div class="row">
     <div class="col-md-12 dl-col download-catalog">
         <h2>Download Catalogs</h2>
@@ -136,8 +310,6 @@
         </div>
     </div>
 </div>
-
-
 </div>
 <div class="modal fade" id="thankyou-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
