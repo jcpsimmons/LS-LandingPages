@@ -1,0 +1,19 @@
+<script>
+  $(document).ready(function () {
+    var baseZip = 85001;
+    var numNeeded = 86556 - baseZip + 1;
+    var zips = Array.from(Array(numNeeded).keys()).map(function (i) {
+      return (i + baseZip).toString();
+    });
+    var usrZip = JSON.parse($.cookie("lsf-show-threshold-shipping")).zip;
+
+    if (zips.indexOf(usrZip) > -1) {
+      if (utag_data == "mobile") {
+      } else {
+        $("#ls_hero_event").html(
+          '<!-- desktop --> <style> .hero-flex { display: flex; } .hero-flex > .hfitem { flex-basis: 50%; text-align: center; position: relative; } #AZHero h3 { font-size: 2.2rem !important; } #AZHero .cta-button { color: #fff; background-color: #6d755d; width: 30rem; margin: auto; font-size: 1.8rem; text-transform: uppercase; padding: 1rem 0; } #AZHero .hfitem:first-of-type:after { content: ""; width: 3px; height: 80%; background: #cfcfcf; position: absolute; bottom: 10%; right: 0; } #AZHero a:hover, #AZHero a:focus, #AZHero a:active { text-decoration: none !important; } </style> <div id="AZHero"> <div class="hero-image"> <img class="img-responsive" src="https://via.placeholder.com/2280x450" alt="" /> </div> <div class="hero-flex"> <div class="hfitem"> <h3><b>Free shipping</b> on furniture with minimal contact</h3> <a href="#"> <div class="cta-button" role="button"> Check your availability &rsaquo; </div></a > </div> <div class="hfitem"> <h3>Now offering safe, private <b>showroom appointments</b></h3> <a href="#" ><div class="cta-button" role="button">Book now &rsaquo;</div></a > </div> </div> </div>'
+        );
+      }
+    }
+  });
+</script>
