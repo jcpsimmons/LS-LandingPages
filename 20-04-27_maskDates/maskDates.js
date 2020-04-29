@@ -33,28 +33,28 @@ const maskPdpStockMessage = () => {
       "December",
     ];
 
-    const date = new Date("May 3 2020");
+    const date = new Date();
 
     if (date.getDay() == 5 || date.getDay() == 6) {
-      date.setDate(date.getDate() + (7 - date.getDay()));
+      date.setDate(date.getDate() + (8 - date.getDay()));
       //   return the text string
       return `<span id="face_mask_ships">&nbsp;Ships Monday <b>${
         monthNames[date.getMonth()]
       } ${addOrdinal(date.getDate())}</b>.</span>`;
     }
 
-    date.setDate(date.getDate() + 2);
-    return `<span id="face_mask_ships">&nbsp;Ships ${
-      weekdays[date.getDay()]
-    } <b>${monthNames[date.getMonth()]} ${addOrdinal(
-      date.getDate()
-    )}</b></span>`;
+    date.setDate(date.getDate() + 1);
+    return `<span id="face_mask_ships">&nbsp;Ships Tomorrow <b>${
+      monthNames[date.getMonth()]
+    } ${addOrdinal(date.getDate())}</b>.</span>`;
   };
 
   let el;
+  let insertText = createText();
 
   if (document.querySelector(".qtyLeft.stock-info")) {
     //   3,2,1 left
+    insertText = `.${insertText}`;
     el = document.querySelector(".qtyLeft.stock-info");
   } else if (document.querySelector(".instock.stock-info")) {
     //   normal in-stock
@@ -64,10 +64,15 @@ const maskPdpStockMessage = () => {
     return;
   }
 
-  el.insertAdjacentHTML("beforeend", createText());
+  el.insertAdjacentHTML("beforeend", insertText);
 };
 
-maskPdpStockMessage();
-
-// `ships monday may 4th`;
-// <span id="face_mask_ships">&nbsp;Ships Monday <b>May 4th</b>.</span>
+// launch on doc ready
+if (
+  document.readyState === "complete" ||
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  maskPdpStockMessage();
+} else {
+  document.addEventListener("DOMContentLoaded", maskPdpStockMessage);
+}
