@@ -1,3 +1,7 @@
-/inspiration/styles/modern/modern-bachelor-pad-with-jacoby-gunmetal-sofa
-/inspiration/styles/transitional/transitional-bachelor-pad-with-greer-stone-leather-4-piece-sectional
-
+/inspiration/styles/modern/modern-small-apartment-living-room-with-emerson-ii-sofa
+/inspiration/styles/mid-century/mid-century-small-apartment-living-room-with-emerson-ii-sofa
+/inspiration/styles/boho/boho-small-apartment-living-room-with-emerson-ii-sofa
+/inspiration/styles/modern/modern-small-apartment-dining-room-with-helms-round-dining-table
+/inspiration/styles/traditional/traditional-small-apartment-living-room-with-briella-sofa
+/inspiration/styles/transitional/transitional-small-apartment-dining-room-with-rogers-round-dining-table
+/inspiration/styles/mid-century/mid-century-small-apartment-living-room-with-fairfax-steel-grey-velvet-sofa

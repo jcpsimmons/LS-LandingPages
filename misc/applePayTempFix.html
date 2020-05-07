@@ -1,0 +1,38 @@
+<script>
+  console.debug("inject script");
+  function hideApplePay() {
+    console.debug("hideApplePay");
+    var hideStyling =
+      '<style id="ApplePayTempFix"> .apple-pay-container .col-xs-6:nth-child(2) { display: none; } .apple-pay-container .col-xs-6:first-child { width: 100% !important; padding: 0 !important; } </style>';
+
+    var applePayInterval = setInterval(function () {
+      // count how many masks are in cart if any
+      var numFaceMasks = Array.from(
+        document.querySelectorAll(".item p")
+      ).filter(function (e) {
+        return e.textContent.toLowerCase().search("face mask") > -1;
+      }).length;
+
+      // if there are facemasks and the style hasn't been injected, inject it
+      if (numFaceMasks && !document.getElementById("ApplePayTempFix")) {
+        document
+          .querySelector("head")
+          .insertAdjacentHTML("beforeend", hideStyling);
+        //   if there are no facemasks and the style exists, remove it
+      } else if (!numFaceMasks && document.getElementById("ApplePayTempFix")) {
+        var el = document.getElementById("ApplePayTempFix");
+        el.parentElement.removeChild(el);
+      }
+    }, 50);
+  }
+
+  // launch code on page load
+  if (
+    document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+  ) {
+    hideApplePay();
+  } else {
+    document.addEventListener("DOMContentLoaded", hideApplePay);
+  }
+</script>
