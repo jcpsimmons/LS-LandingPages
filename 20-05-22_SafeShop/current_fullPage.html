@@ -1,0 +1,780 @@
+<style>
+  /* text */
+  #CovidUpdates h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  #CovidUpdates h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  #CovidUpdates p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  #CovidUpdates h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  #CovidUpdates h4 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  #CovidUpdates div.btn {
+    background-color: #bd5518;
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.9rem 3rem;
+  }
+  #StoreHours a {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  /* layout */
+  #DesktopShipImg {
+    display: inline-block !important;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  #StoreHours .flex-row {
+    justify-content: space-between;
+  }
+  #SafeShopping .flex-row {
+    width: 80%;
+    margin: 5rem auto 2rem;
+  }
+  #CovidUpdates .flex-item:first-of-type {
+    margin-right: 2rem;
+  }
+  #SafeShopping .flex-item:nth-of-type(2) {
+    margin-left: 2rem;
+  }
+  #CovidUpdates .storeHoursText {
+    width: 100%;
+    text-align: center;
+    background-color: #e8eae7;
+    padding: 1rem 0;
+    font-size: 2rem !important;
+  }
+  #CovidUpdates .btn-container {
+    margin-top: 3rem;
+  }
+  #StoreHours {
+    margin-top: 5rem;
+  }
+  #StoreHours a:hover,
+  #StoreHours a:focus,
+  #StoreHours a:active {
+    text-decoration: none !important;
+  }
+  #StoreHours .storeDetails p {
+    margin-top: 3rem;
+  }
+  #StoreHours .storeHoursText {
+    margin-bottom: 2rem;
+  }
+  #MidFooter {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  #MidFooter a:first-of-type,
+  #MidFooter img {
+    display: inline-block;
+  }
+  #MidFooter a {
+    margin-bottom: 3rem;
+  }
+  #MidFooter a.desktop-only {
+    display: inline-block !important;
+  }
+  .desktop-only {
+    display: block !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+  @media (max-width: 767px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: block !important;
+    }
+    .flex-row {
+      flex-direction: column;
+    }
+    #CovidUpdates {
+      text-align: center;
+    }
+    #SafeShopping .flex-row {
+      width: 100%;
+      margin: 4rem 0 2rem;
+    }
+    #SafeShopping .flex-item {
+      margin: 2rem -15px !important;
+    }
+    #CovidUpdates .storeHoursText {
+      margin: 4rem -15px 2rem;
+      width: 100vw;
+    }
+    #StoreHours .flex-item {
+      border-bottom: 1px solid #d8d8d8;
+      width: 100vw;
+      margin: auto -15px;
+      padding: 0 15px;
+    }
+    #StoreHours,
+    #CovidUpdates h1 {
+      text-align: left;
+    }
+    #StoreHours a > p {
+      display: inline-block;
+    }
+    #StoreHours .storeDetails {
+      float: right;
+    }
+    #StoreHours .storeDetails p {
+      margin-top: auto;
+    }
+    /* text */
+    #CovidUpdates h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    #CovidUpdates h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    #CovidUpdates p {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+    #CovidUpdates h3 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    #CovidUpdates h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    #CovidUpdates div.btn {
+      background-color: #bd5518;
+      border: none;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 0.9rem 3rem;
+    }
+    #StoreHours a {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+    #MidFooter .light-text {
+      font-weight: 400;
+      line-height: 3rem;
+    }
+    #ShipImg,
+    #MidFooter a:first-of-type {
+      display: inline-block !important;
+    }
+    #DesktopShipImg,
+    #MidFooter a.desktop-only {
+      display: none !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .mobile-break {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .booking-link {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  /* VIDEO MODAL */
+  /***** Modal *****/
+  .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .modal-header,
+  .modal-footer {
+    border: 0;
+  }
+
+  .modal-header .close {
+    float: none;
+    text-shadow: none;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+    margin-top: 3.6rem !important;
+    margin-right: 3.4rem !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    z-index: 9 !important;
+    border-radius: 30rem !important;
+    background: #100f0f !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .modal-body {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+
+  .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* END MODAL */
+</style>
+
+<div id="CovidUpdates">
+  <style>
+    #BulletText .bullet-item {
+      display: flex;
+    }
+    #BulletText .bullet-text {
+      margin-left: 1rem;
+    }
+    #BulletText .bullet-copy,
+    #BulletText .bullet-copy li {
+      font-size: 1.8rem;
+    }
+    #BulletText ul {
+      padding-left: 2rem;
+    }
+    #BulletText .bullet-header {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .list-header {
+      font-weight: bold;
+    }
+    #Video {
+      margin: 4rem auto 6rem;
+    }
+    #Video .container {
+      display: flex;
+      justify-items: center;
+    }
+    #Video .video-holder {
+      margin: auto;
+      flex-basis: 30%;
+      display: flex;
+    }
+    .list-header {
+      font-size: 2.4rem;
+    }
+    #BulletText .bullet-header {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+    }
+    @media (max-width: 767px) {
+      #Video .video-holder {
+        flex-basis: 87%;
+        display: flex;
+      }
+      #CovidLP p,
+      .list-header {
+        text-align: left;
+      }
+      #BulletText .bullet-header {
+        font-size: 1.8rem;
+      }
+      #BulletText .bullet-item {
+        margin-bottom: 2rem;
+      }
+      #BulletText .bullet-copy,
+      #BulletText .bullet-copy li {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+      #CovidLP .main-header {
+        margin-bottom: 1.8rem;
+      }
+      #BulletText img {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+      #BulletText li {
+        margin-bottom: 0.7rem;
+      }
+      #BulletText ul {
+        text-align: left;
+      }
+      #BulletText .col-sm-6,
+      #BulletText .col-sm-12 {
+        padding-left: 0;
+      }
+    }
+  </style>
+  <div id="CovidLP">
+    <div class="container">
+      <h1 class="main-header">Safe Shopping During COVID-19</h1>
+      <p>
+        The health and wellbeing of our guests and employees is our top
+        priority, and maintaining your trust is a responsibility we take
+        seriously. Here are the steps we’re taking to create a safer shopping
+        experience. To maintain social distancing, we are limiting the number of
+        guests shopping at a time.
+      </p>
+    </div>
+    <div class="container" id="BulletText">
+      <div class="col-sm-12 text-center" style="margin-bottom: 4rem;">
+        <h2 class="list-header">What You Can Expect at Our Stores</h2>
+      </div>
+      <div class="col-sm-6">
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-7.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Face masks required</p>
+            <p class="bullet-copy">
+              All guests are required to bring and wear their own face masks.
+            </p>
+          </div>
+        </div>
+
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-8.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Temperature checks</p>
+            <p class="bullet-copy">
+              Guests will undergo temperature checks prior to entering the
+              showroom.
+            </p>
+          </div>
+        </div>
+
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-9.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">
+              Cash or checks NOT accepted at this time
+            </p>
+            <p class="bullet-copy">Apple Pay or Google Pay is preferred.</p>
+          </div>
+        </div>
+
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-10.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Social distancing</p>
+            <p class="bullet-copy">
+              We ask that guests keep a minimum of six feet apart inside our
+              stores.
+            </p>
+          </div>
+        </div>
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-11.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Supervised Kids’ Room closed</p>
+            <p class="bullet-copy">
+              Our Kids’ Fun Room will remain closed at this time.
+            </p>
+          </div>
+        </div>
+
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-12.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">No returns or exchanges</p>
+            <p class="bullet-copy">
+              Returns or exchanges will not be accepted at this time.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-13.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Thorough safety measures</p>
+            <ul class="bullet-copy">
+              <li>
+                Increased sanitization protocols Increased sanitization
+                protocols with all surfaces wiped down multiple times each day
+              </li>
+              <li>Stylus pens for no contact transactions</li>
+              <li>Protective sheets available</li>
+              <li>Hand sanitizer available</li>
+            </ul>
+          </div>
+        </div>
+        <!--  -->
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/group-14.png"
+              alt="Bullet icon"
+              class=""
+            />
+          </div>
+          <div class="bullet-text">
+            <p class="bullet-header">Customer Pickup</p>
+            <ul class="bullet-copy">
+              <li>
+                Currently offered on Tuesday, Thursday and Saturday
+              </li>
+              <ul>
+                <li>
+                  Enter the store for a safety check and to provide Sales Order
+                  #
+                </li>
+                <li>
+                  You will be directed to marked spaces near designated Customer
+                  Pickup area
+                </li>
+                <li>
+                  Wait in vehicle, have ID ready and we will bring product out
+                  and place by your vehicle
+                </li>
+                <ul>
+                  <li>
+                    <b
+                      >Please be advised customer is responsible for loading
+                      product into their own vehicle</b
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+    </div>
+    <!-- <div class="text-center btn-container">
+    <a href="/appointments"
+      ><div class="btn btn-primary">Book Your Appointment Now</div></a
+    >
+  </div> -->
+
+    <section id="Video">
+      <div class="container">
+        <div class="video-holder">
+          <a
+            class="playVideo2"
+            data-toggle="modal"
+            data-target="#modal-video"
+            data-thevideo="https://www.youtube.com/embed/3Fpms21Dn7o"
+            role="button"
+            aria-label="Click to watch our reopening video"
+            href=""
+            alt="Click to watch our reopening video"
+            ><img
+              src="https://www.livingspaces.com/globalassets/images/lp/2020/05/covid-page-updates/video.png"
+              alt="Video"
+              class="img-responsive"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <section id="SafeShopping" style="max-width: 1140px; margin: auto;">
+      <div class="container">
+        <h2>Free Shipping with Minimal Contact</h2>
+        <p class="margin-fix">
+          You can shop our selection of home furnishings from the safety and
+          comfort of your home. We’re taking orders online and by phone at
+          877-266-7300. We are also offering FREE 2-day shipping on orders over
+          $500 in select zip codes (check availability below) and safe, sanitary
+          full-service delivery.
+        </p>
+        <div class="text-center btn-container">
+          <a href="/delivery"
+            ><div class="btn btn-primary">
+              Check Availability in Your Area
+            </div></a
+          >
+        </div>
+        <div class="flex-row">
+          <div class="flex-item">
+            <img
+              src="/globalassets/images/lp/2020/03/covid/min-contact-shipping.png"
+              alt="Minimal Contact Shipping"
+              class="img-responsive desktop-only"
+            />
+            <img
+              src="/globalassets/images/lp/2020/03/covid/mobile/min-contact-shipping.png"
+              alt="Minimal Contact Shipping"
+              class="img-responsive mobile-only"
+            />
+          </div>
+          <div class="flex-item">
+            <img
+              src="/globalassets/images/lp/2020/03/covid/min-contact-shipping-copy.png"
+              alt="Worry Free full service delivery"
+              class="img-responsive desktop-only"
+            />
+            <img
+              src="/globalassets/images/lp/2020/03/covid/mobile/min-contact-shipping-copy.png"
+              alt="Minimal Contact Shipping"
+              class="img-responsive mobile-only"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="/delivery/free-shipping#VersusChart"
+            ><p>Shipping versus Full-Service Delivery ›</p></a
+          >
+          <p>
+            * Inside first dry location of residence
+            <span
+              class="fa fa-question-circle d-inline-block"
+              aria-hidden="true"
+              role="button"
+              onclick="launchModal()"
+            ></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="MidFooter">
+      <h3 class="mobile-only">Still have questions?</h3>
+      <img
+        src="/globalassets/images/lp/2020/03/fs-faq.png?v=2"
+        alt="Shipping delivery footer image"
+        class="img-responsive desktop-only"
+        id="DesktopShipImg"
+      />
+      <img
+        src="/globalassets/images/lp/2020/03/covid/mobile/fs-faq.png"
+        alt="Shipping delivery footer image"
+        class="img-responsive mobile-only"
+        id="ShipImg"
+      />
+      <a class="mobile-only" href="/company/shipping-faqs"
+        ><h3 class="light-text">Check our Shipping FAQ ›</h3></a
+      >
+      <a href="/company/shipping-faqs" class="desktop-only"
+        ><h3 class="light-text">
+          Still have questions? Check our Shipping FAQ ›
+        </h3></a
+      >
+      <a href="/company/covid-19-response"
+        ><h3 class="light-text">
+          A message to Our Guests <br class="mobile-break" />from CEO Grover
+          Geiselman&nbsp;›
+        </h3></a
+      >
+    </section>
+  </div>
+
+  <!-- DRY LOCATION MODAL -->
+  <div
+    class="modal fade in"
+    id="dryLocation"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="dryLocation"
+    style="display: none;"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content text-center">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="modal-header">&nbsp;</div>
+        <div class="modal-body">
+          <div class="dry-location">
+            <h3 class="dry-location__heading">
+              What is "First Dry Location of Residence"?
+            </h3>
+            <div class="dry-location__row">
+              <div class="dry-location__icon">
+                <span class="fa fa-home" aria-hidden="true"></span>
+              </div>
+              <div class="dry-location__text">
+                <p>
+                  <span class="space-lg"
+                    ><strong>For Single Family Homes</strong></span
+                  >
+                  Placement of items will be inside of the front door or garage
+                </p>
+              </div>
+            </div>
+
+            <div class="dry-location__row">
+              <div class="dry-location__icon">
+                <span class="fa fa-building" aria-hidden="true"></span>
+              </div>
+              <div class="dry-location__text">
+                <p>
+                  <strong>For Apartment Buildings</strong>
+                </p>
+                <p>
+                  <span>
+                    <strong>
+                      1. Buildings with lobby
+                    </strong>
+                  </span>
+                  Placement of items will be in the lobby
+                </p>
+                <p>
+                  <span>
+                    <strong>
+                      2. Buildings without lobby
+                    </strong>
+                  </span>
+                  Placement of items will be inside apartment front door
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL -->
+<div
+  class="modal fade"
+  id="modal-video"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-video-label"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-video">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              id="main-Video"
+              class="embed-responsive-item"
+              width="1170"
+              src=""
+              webkitallowfullscreen=""
+              mozallowfullscreen=""
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  function launchModal() {
+    $("#dryLocation").modal("show");
+  }
+  function launchChat() {
+    $(".messages-starticon").trigger("click");
+  }
+
+  //   for video modal
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function launchModal() {
+    var trigger = $("body").find("#Video [data-toggle='modal']");
+    trigger.click(function () {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-theVideo"),
+        videoSRCauto =
+          videoSRC +
+          "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+      $(theModal + " iframe").attr("src", videoSRCauto);
+      $(theModal + " button.close").click(function () {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+
+      $("#modal-video").on("hidden.bs.modal", function (e) {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+    });
+  }
+
+  var anotherInterval = setInterval(function () {
+    if (window.jQuery) {
+      launchModal();
+      clearInterval(anotherInterval);
+    }
+  }, 50);
+</script>

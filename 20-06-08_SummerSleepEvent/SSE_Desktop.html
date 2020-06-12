@@ -1,0 +1,90 @@
+<style>
+  .generic-html-template .container {
+    padding: 0;
+  }
+
+  #SummerSleepEvent .flex-col,
+  #SummerSleepEvent .flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  #SummerSleepEvent .flex-col {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #SummerSleepEvent .flex-row {
+    margin: auto -1rem;
+  }
+
+  #SummerSleepEvent .flex-row > .flex-item {
+    padding: 0 1rem;
+  }
+
+  #SummerSleepEvent .deals-button {
+    color: #fff;
+    background-color: #268568;
+    font-size: 1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  #SummerSleepEvent .deals-button:hover,
+  #SummerSleepEvent .deals-button:active,
+  #SummerSleepEvent .deals-button:focus,
+  #SummerSleepEvent a:hover,
+  #SummerSleepEvent a:active,
+  #SummerSleepEvent a:focus {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  /* IE only rules */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #SummerSleepEvent .flex-hero {
+      flex-basis: 59.32%;
+    }
+    #SummerSleepEvent .flex-col {
+      flex-basis: 34.8%;
+      justify-content: flex-start;
+    }
+    #SummerSleepEvent .flex-col .flex-item {
+      flex-basis: calc(50% - 0.5rem);
+    }
+  }
+</style>
+<div id="SummerSleepEvent">
+  <div class="flex-row">
+    <div class="flex-item flex-hero">
+      <a href="/departments/mattresses/promotions/summer-sleep-event">
+        <img
+          src="/globalassets/images/lp/2020/06/summer-sleep-event/desktop/200604_SUMMER_SLEEP_hero.jpg"
+          alt="Summer Sleep Event. Queen hybrid mattress. Save $500. $495 was $1000"
+          class="img-responsive"
+      /></a>
+    </div>
+
+    <div class="flex-col">
+      <div class="flex-item">
+        <a href="/departments/mattresses/foundations/adjustable-bases/revive">
+          <img
+            src="/globalassets/images/lp/2020/06/summer-sleep-event/desktop/200604_SUMMER_SLEEP_adjustable_base.jpg"
+            alt="Add on! Queen adjustable bases starting at $375 Shop Now"
+            class="img-responsive"
+        /></a>
+      </div>
+      <div class="flex-item">
+        <a href="/event/buy-one-give-one/supporting-foster-kids">
+          <img
+            src="/globalassets/images/lp/2020/06/summer-sleep-event/desktop/200604_SUMMER_SLEEP_buyone_giveone.jpg"
+            alt="Buy one give one. Learn more"
+            class="img-responsive"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
