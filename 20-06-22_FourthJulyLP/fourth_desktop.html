@@ -1,0 +1,298 @@
+<style>
+  #Hero {
+    position: relative;
+  }
+  #HeroSidebar {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    width: 40%;
+  }
+  #Fourth > div {
+    margin-bottom: 2rem;
+  }
+  #Fourth .middle-gutter .flex-component__box {
+    flex-basis: calc(50% - 1rem);
+  }
+</style>
+<!-- VIDEO MODAL -->
+<style>
+  #modal-video .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  #modal-video .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  #modal-video .modal-header,
+  #modal-video .modal-footer {
+    border: 0;
+  }
+
+  #modal-video .modal-header .close {
+    float: none;
+    text-shadow: none;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+    margin-top: 3.6rem !important;
+    margin-right: 3.4rem !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    z-index: 9 !important;
+    border-radius: 30rem !important;
+    background: #100f0f !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  #modal-video .modal-body {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+
+  #modal-video .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+</style>
+<!-- extra aspect ratios -->
+<style>
+  .aspect-ratio-1140x150::after {
+    padding-bottom: 13.16%;
+  }
+
+  .aspect-ratio-1140x140::after {
+    padding-bottom: 12.28%;
+  }
+
+  .aspect-ratio-1140x100::after {
+    padding-bottom: 8.77%;
+  }
+
+  .aspect-ratio-1140x50::after {
+    padding-bottom: 4.39%;
+  }
+
+  .aspect-ratio-780x250::after {
+    padding-bottom: 32.05%;
+  }
+
+  .aspect-ratio-780x200::after {
+    padding-bottom: 25.64%;
+  }
+
+  .aspect-ratio-780x150::after {
+    padding-bottom: 19.23%;
+  }
+
+  .aspect-ratio-780x100::after {
+    padding-bottom: 12.82%;
+  }
+
+  .aspect-ratio-780x50::after {
+    padding-bottom: 6.41%;
+  }
+</style>
+<div id="Fourth">
+  <!-- Hero -->
+  <div class="aspect-ratio-box aspect-ratio-1140x500">
+    <div class="ls-hero-slide" id="Hero">
+      <a href="/pdp-jarrod-grey-5-piece-counter-set-243507">
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source
+            srcset="
+              /globalassets/images/lp/2020/06/fourth-of-july/d/0617_hero.jpg?w=575
+            "
+            media="(max-width: 575px)"
+          />
+          <source
+            srcset="
+              /globalassets/images/lp/2020/06/fourth-of-july/d/0617_hero.jpg?w=767
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              /globalassets/images/lp/2020/06/fourth-of-july/d/0617_hero.jpg?w=991
+            "
+            media="(max-width: 991px)"
+          />
+          <source
+            srcset="
+              /globalassets/images/lp/2020/06/fourth-of-july/d/0617_hero.jpg?w=1199
+            "
+            media="(max-width: 1199px)"
+          />
+          <!--[if IE 9]></video><![endif]-->
+        </picture>
+        <p class="sr-only">Fourth of July Event. 5 piece dining set $395</p>
+
+        <img
+          src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_hero.jpg"
+          class="img-responsive"
+          alt="Fourth of July Event. 5 piece dining set $395"
+          role="presentation"
+        />
+      </a>
+      <a href="#Products">
+        <img
+          id="HeroSidebar"
+          class="img-responsive"
+          src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_sidebar.jpg"
+          alt="4th of July event. Celebrate deals. Shop the best for less this season and fill your home with fresh new looks. Start shopping"
+        />
+      </a>
+    </div>
+  </div>
+  <!-- sofa and bed -->
+  <div class="aspect-ratio-box aspect-ratio-1140x350 middle-gutter">
+    <div class="ls-hero-slide">
+      <div class="flex-component">
+        <div class="flex-component__box">
+          <a href="/pdp-eames-sofa-with-reversible-chaise-259390">
+            <img
+              class="img-responsive"
+              src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_living-room.jpg"
+              alt="sofa with chaise $395"
+          /></a>
+        </div>
+        <div class="flex-component__box">
+          <a href="/pdp-kit-larkin-white-queen-panel-bed-246501">
+            <img
+              class="img-responsive"
+              src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_bedroom.jpg"
+              alt="queen panel bed $295"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- video and revive -->
+  <div class="aspect-ratio-box aspect-ratio-1140x350 middle-gutter">
+    <div class="ls-hero-slide">
+      <div class="flex-component">
+        <div class="flex-component__box">
+          <a
+            class="playVideo"
+            data-toggle="modal"
+            data-target="#modal-video"
+            data-theVideo="https://www.youtube.com/embed/I1UVhpR--Ys"
+            role="button"
+            aria-label="click to Watch the commercial"
+            href=""
+            alt="Watch the 4th of july commercial"
+          >
+            <img
+              class="img-responsive"
+              src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_video.jpg"
+              alt="watch the 4th of july commercial"
+          /></a>
+        </div>
+        <div class="flex-component__box">
+          <a href="/departments/mattresses/promotions"
+            ><img
+              class="img-responsive"
+              src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_revive.jpg"
+              alt="revive 4th of july event. Treat yourself to quality sleep and savings. Save up to $700. Start shopping."
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- financing banner -->
+  <div class="aspect-ratio-box aspect-ratio-1140x140">
+    <div class="ls-hero-slide">
+      <div class="flex-component__box">
+        <a href="/company/financing">
+          <img
+            class="img-responsive"
+            src="/globalassets/images/lp/2020/06/fourth-of-july/d/0617_offer.jpg"
+            alt="Limited time offer. Pay no interest for 24 months on purchases of $2000 or more. Learn more."
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Products"></div>
+
+<!-- VIDEO MODAL -->
+<div
+  class="modal fade"
+  id="modal-video"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-video-label"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-video">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              id="main-Video"
+              class="embed-responsive-item"
+              width="1170"
+              src=""
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add modal event listener -->
+<script>
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function playModal() {
+    var trigger = $("body").find('#Fourth [data-toggle="modal"].playVideo');
+    trigger.click(function () {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-theVideo"),
+        videoSRCauto =
+          videoSRC +
+          "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0";
+      $(theModal + " iframe").attr("src", videoSRCauto);
+      $(theModal + " button.close").click(function () {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+
+      $("#modal-video").on("hidden.bs.modal", function (e) {
+        $(theModal + " iframe").attr("src", videoSRC);
+      });
+    });
+  }
+
+  var anotherInterval = setInterval(function () {
+    if (window.jQuery) {
+      clearInterval(anotherInterval);
+      playModal();
+    }
+  }, 50);
+</script>
