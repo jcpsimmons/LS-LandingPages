@@ -1,0 +1,1224 @@
+<style>
+  .ls-t-desktop #free-shipping-header-vue-container .alert-dismissible {
+    margin-bottom: 1.1rem;
+  }
+  .ls-t-desktop .page-content {
+    margin-top: -1.1rem;
+  }
+  .ls-t-mobile #free-shipping-header-vue-container .alert-dismissible {
+    margin-bottom: 0;
+  }
+
+  section.no-padding.board.container {
+    display: none;
+  }
+
+  .career_container {
+    font-size: 1.8rem;
+  }
+
+  .overlay_logo {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .overlay_logo h1 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .overlay_logo span {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .career_header .carousel-indicators {
+    bottom: 0rem;
+  }
+
+  .career_box,
+  .intro-box {
+    text-align: center;
+  }
+
+  .intro-box > div p {
+    padding: 0 3rem;
+    margin: 1.5rem 0;
+  }
+
+  .intro-box h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefit-box {
+    margin-top: 2rem;
+    padding-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .career_link {
+    text-align: center;
+  }
+
+  #hero .search_btn,
+  .career_link .search_btn,
+  .intro-box .search_btn {
+    border-radius: 0.4rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00699a;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+  }
+  #hero .search_btn:hover,
+  .career_link .search_btn:hover,
+  .intro-box .search_btn:hover {
+    background-color: #013e5a;
+  }
+  .career_link .search_box_b {
+    margin-top: 5rem;
+  }
+
+  .search_box {
+    width: 100%;
+    padding: 3rem 0;
+    border-bottom: 0.1rem solid #d8d8d8;
+    top: 0 !important;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 99;
+  }
+
+  .benefit-box .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .benefit-box .box span {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 0 2rem;
+  }
+
+  .benefit-box p {
+    padding-right: 2rem;
+  }
+
+  .career_box p {
+    margin-bottom: 5rem;
+  }
+
+  .career_box h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+
+  .ls_people_box {
+    text-align: center;
+    background-color: #f1f1f1;
+    position: relative;
+    padding: 6rem 2.5rem;
+    font-size: 2rem;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  }
+  /* .ls_people_box:hover {
+              -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+              } */
+
+  .ls_people_title {
+    text-align: center;
+    margin: 8rem 0;
+  }
+
+  .ls_people_title h2 {
+    font-weight: 600;
+  }
+  .ls_name {
+    font-size: 2.5rem;
+  }
+  .ls_name,
+  .ls_position {
+    display: block;
+  }
+
+  .ls_position {
+    margin-bottom: 3rem;
+  }
+
+  .ls_people_btn {
+    color: #00699a;
+    text-decoration: underline;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .ls_people_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  #career-carousel img {
+    width: 100%;
+  }
+  .career-hero-wrap {
+    position: relative;
+  }
+  /* 5/22 CSS for topbar and hiring banner */
+  /* for top bar */
+  #topbar a:active,
+  #topbar a:hover,
+  #topbar a:visited {
+    text-decoration: none;
+  }
+  #topbar div {
+    background: #00699a;
+    color: #fff;
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  #topbar .desktop-only {
+    display: inline;
+  }
+  #topbar .mobile-only {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    #topbar div {
+      font-size: 1.4rem;
+      padding-top: 1rem;
+    }
+    #topbar .desktop-only {
+      display: none;
+    }
+    #topbar .mobile-only {
+      display: inline;
+    }
+  }
+  /* for image banner */
+  #NowHiring {
+    margin: 7rem auto 0;
+  }
+  #NowHiring .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #NowHiring .flex-item {
+    margin: auto;
+    flex-basis: 50%;
+  }
+  @media (max-width: 767px) {
+    #NowHiring {
+      margin: 7rem -15px 0;
+      padding: 0 15px;
+      background-color: #f1f1f1;
+    }
+    #NowHiring .flex-row {
+      flex-direction: column;
+    }
+    #NowHiring .flex-item {
+      flex: 1 1 auto;
+    }
+  }
+  /* END 5/22 CSS */
+
+  /*testing BG*/
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(1, 1);
+    }
+
+    to {
+      -webkit-transform: scale(1.5, 1.5);
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(1, 1);
+    }
+
+    to {
+      transform: scale(1.3, 1.3);
+    }
+  }
+
+  #MobileHero {
+    display: none;
+  }
+  #DesktopHero {
+    display: block;
+  }
+
+  /***** Modal *****/
+
+  .career_container .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .career_container .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .career_container .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .career_container .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .career_container .modal-header,
+  .career_container .modal-footer {
+    border: 0;
+  }
+
+  .career_container .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+
+  .career_container .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+
+  .play-btn {
+    text-align: center;
+  }
+
+  #fRelief-video {
+    border: 0.5rem solid #fff;
+    background-color: #000;
+  }
+
+  .career_container .modal .modal-dialog {
+    width: 85rem;
+  }
+
+  .ls_testimonials_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 6rem;
+  }
+  .ls_testimonials_box {
+    flex-basis: 30%;
+  }
+  .read_more_hidden {
+    display: none;
+  }
+  .read_less_btn,
+  .read_more_btn {
+    display: block;
+    color: #00699a;
+    cursor: pointer;
+  }
+  /*// Large devices (desktops, less than 1200px)*/
+
+  @media (max-width: 1199px) {
+  }
+
+  /*    Medium devices (tablets, less than 992px)*/
+
+  @media (max-width: 991px) {
+    .ls_people_title {
+      margin: 8rem 0 13rem;
+    }
+
+    .overlay_logo h1 {
+      margin-top: 1rem;
+    }
+
+    .career_header .carousel-indicators {
+      bottom: -1rem;
+    }
+
+    .ls_people_img {
+      width: 40%;
+    }
+
+    .ls_people_box {
+      padding: 9rem 2.5rem 6rem;
+    }
+  }
+
+  /*// Small devices (landscape phones, less than 768px)*/
+
+  @media (max-width: 767px) {
+    #MobileHero {
+      display: block;
+    }
+    #DesktopHero {
+      display: none;
+    }
+
+    .container {
+      padding-top: 0;
+    }
+    .intro-box h3 {
+      font-size: 2.5rem;
+    }
+
+    .intro-box > div p {
+      padding: 0;
+    }
+
+    .benefit-box [class*="col-"] {
+      margin-bottom: 3rem;
+    }
+
+    .ls_people [class*="col-"] {
+      margin-bottom: 15rem;
+    }
+
+    .ls_people_img {
+      width: 13%;
+    }
+    .career_container .modal .modal-dialog {
+      width: 40rem;
+    }
+    .career_container .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 2rem !important;
+      margin-right: 8px !important;
+      margin-top: 2rem !important;
+    }
+    .ls_testimonials_box {
+      flex-basis: 100%;
+      margin-bottom: 10rem;
+    }
+    .ls_testimonials_wrapper {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 575px) {
+    .ls_people_img {
+      width: 30%;
+    }
+  }
+</style>
+<!--
+<section id="topbar">
+  <a class="career-scroll" href="#NowHiring">
+    <div role="alert" class="alert">
+      <span class="desktop-only">
+        NOW HIRING for our newest locations in Frisco & Ft. Worth, TX and
+        Roseville & Sacramento, CA | Learn More &rsaquo;</span
+      >
+      <span class="mobile-only">
+        NOW HIRING for our newest locations | Learn More &rsaquo;</span
+      >
+    </div>
+  </a>
+</section>
+
+<section class="career_header">
+  <div id="career-carousel" class="career-hero-wrap">
+    <div class="overlay_logo carousel-caption hidden-xs">
+      <h1>Furnish Your Future</h1>
+      <span>#MakeSpaceforGreatness</span>
+    </div>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active bg_1">
+        <img
+          id="DesktopHero"
+          class="img-responsive center-block"
+          alt="Living Spaces Careers"
+          src="/globalassets/images/lp/2018/07/Test3.jpg"
+        />
+        <img
+          id="MobileHero"
+          class="img-responsive center-block"
+          alt="Living Spaces Careers"
+          src="/globalassets/images/lp/2020/02/careerspage_mobile.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- 7/02 hero area -->
+<style>
+  #hero .title h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  #hero h2 {
+    font-size: 3rem;
+    color: #333;
+    font-weight: normal;
+    border-bottom: solid 3px #333;
+    padding-bottom: 0.5rem;
+  }
+  #hero h3 {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+  }
+  #hero .white-bg-text {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  #hero span {
+    font-size: 2rem;
+    color: #333;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+  }
+  #hero li {
+    font-size: 2rem;
+    color: #333;
+  }
+  #hero .rborder {
+    position: relative;
+  }
+  #hero .rborder:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    right: 0;
+    top: 0;
+    border-right: 1px solid #cacaca;
+    height: 58%;
+    transform: translateY(25%);
+  }
+  #hero .flex-col,
+  #hero .flex-row {
+    display: flex;
+  }
+  #hero .flex-row {
+    justify-content: space-around;
+  }
+  #hero .flex-col {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero .inner-flex {
+    display: flex;
+    justify-content: center;
+  }
+  #hero .full-width-row {
+    width: 100%;
+  }
+  #hero .full-width-row > .flex-item {
+    flex-basis: 50%;
+  }
+  #hero .grey-bg {
+    background: #f0f0f0;
+  }
+  #hero .search_box {
+    background-color: inherit !important;
+    font-size: 1.8rem;
+    border-bottom: none !important;
+  }
+  #hero .nudge-cta {
+    margin-top: -6rem;
+  }
+  @media (max-width: 767px) {
+    /* .generic-html-template .container {
+      padding: 0;
+    } */
+    #hero {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    #hero .search_box {
+      padding-top: 1.5rem;
+    }
+    #hero .title h1 {
+      margin-left: 2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 2.3rem;
+      font-weight: normal;
+    }
+
+    #hero .flex-row {
+      flex-direction: column;
+    }
+
+    #hero .rborder {
+      padding-bottom: 1rem;
+    }
+
+    #hero .inner-flex > div {
+      width: calc(100% - 30px);
+    }
+
+    #hero ul {
+      display: inline-block;
+      margin: auto;
+    }
+
+    #hero .rborder:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      left: 0;
+      bottom: 0;
+      border-right: none;
+      border-bottom: 1px solid #8a8a8a;
+      transform: translateX(50%);
+      height: 100%;
+    }
+    #hero .nudge-cta {
+      margin-top: 0;
+    }
+    #hero h2 {
+      font-size: 2.6rem;
+      margin-top: 1rem;
+    }
+    #hero h3 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    #hero span,
+    #hero li {
+      font-size: 2rem;
+    }
+  }
+</style>
+<section id="hero">
+  <div class="title">
+    <h1>Careers at Living Spaces</h1>
+  </div>
+
+  <div class="flex-col grey-bg">
+    <div class="flex-item">
+      <h2>Currently Hiring</h2>
+    </div>
+    <div class="flex-row full-width-row">
+      <div class="flex-item rborder inner-flex">
+        <div>
+          <h3>
+            Positions in Warehouse/Distribution Center
+          </h3>
+          <div class="white-bg-text">
+            <span>Rialto + Perris, CA</span>
+          </div>
+          <ul>
+            <li>Forklift Operator/Order Picker</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-item inner-flex">
+        <div>
+          <h3>Positions in New Stores</h3>
+          <div class="white-bg-text">
+            <span>Roseville, CA | Frisco + Fort Worth, TX</span>
+          </div>
+          <ul>
+            <li>Retail Sales – Product Specialist</li>
+            <li>Retail Sales - Interior Designer</li>
+            <li>Floor Prep – Customer Pick Up</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-item nudge-cta">
+      <div class="search_box">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Apply Today &rsaquo;</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end 7/02 hero area -->
+
+<div class="career_container container">
+  <section class="row intro-box">
+    <div class="col-xs-12">
+      <h3>
+        We are here to support your talent,<br />inspire your passion and
+        advance your career.
+      </h3>
+      <p>
+        Living Spaces is a growing home furnishing brand with over 20 locations
+        and 2,000 team members. What has truly sustained our growth &mdash; from
+        a single, humble store to a widely respected lifestyle brand &mdash; are
+        the talented individuals who have taken us there.
+      </p>
+      <p>
+        With our vision of becoming the #1 home furnishings brand in the U.S.,
+        there are many opportunities for you to grow your career with Living
+        Spaces. Our ideal team member will represent our core values of
+        <b>humility & respect</b>, <b>speed & simplicity</b>,
+        <b>fanatic discipline</b>, <b>social responsibility</b>, a desire to put
+        our <b>guests first</b>, and the ambition to be <b>unique</b>,
+        <b>passionate</b>, and <b>innovative</b>.
+      </p>
+      <p>Come join the journey with us!</p>
+      <div class="search_box">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Search Current Positions &rsaquo;</a
+        >
+      </div>
+    </div>
+    <div id="scence_02"></div>
+  </section>
+
+  <!-- 5/22 addition -->
+
+  <!-- <section id="NowHiring">
+    <div class="flex-row">
+      <div class="flex-item">
+        <img
+          src="https://www.livingspaces.com/globalassets/images/lp/2020/05/newhire_banner_desktop_mobile_01.jpg"
+          alt="Living Spaces Storefront drawing"
+          class="img-responsive"
+        />
+      </div>
+      <div class="flex-item">
+        <a href="https://livingspaces.wd5.myworkdayjobs.com/ls" target="_blank">
+          <img
+            role="button"
+            src="https://www.livingspaces.com/globalassets/images/lp/2020/05/newhire_banner_desktop_mobile_02_v0617.jpg"
+            alt="New Store Hirings. New locations opening in Summer 2020! Frisco & Ft. Worth, TX and Roseville & Sacramento, CA. Positions: Retail Sales Associates and Warehouse Support. Apply Today"
+            class="img-responsive"
+        /></a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- end 5/22 addition -->
+  <section id="benefit" class="row benefit-box">
+    <div id="box_1" class="col-sm-4 col-xs-12">
+      <div class="box">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2018/07/good-vibes.jpg"
+          alt="Good Vibes"
+        />
+        <span>Good Vibes</span>
+      </div>
+      <p>
+        We are a team built on positive energy, infinite enthusiasm and constant
+        encouragement. Every department works together to make every guest
+        experience better, because we believe that if we’re having a good time,
+        our guests will too.
+      </p>
+    </div>
+    <div id="box_2" class="col-sm-4 col-xs-12">
+      <div class="box">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2018/07/great-benefits.jpg"
+          alt="Benefits"
+        />
+        <span>Great Benefits</span>
+      </div>
+      <p>
+        Every full-time Living Spaces team member has access to our competitive
+        benefits package, which includes medical, dental and vision insurance,
+        as well as a 401K program. Team members also have paid vacation and sick
+        days.
+      </p>
+    </div>
+    <div id="box_3" class="col-sm-4 col-xs-12">
+      <div class="box">
+        <img
+          class="img-responsive"
+          src="/globalassets/images/lp/2018/07/growth.jpg"
+          alt="Growth"
+        />
+        <span>Growth Opportunities </span>
+      </div>
+      <p>
+        From day one, we set in motion a plan for continued development and
+        success. As Living Spaces grows, so will you. Also, thanks to our
+        promote-from-within policies, we ensure you have every opportunity to
+        take your career to the next level.
+      </p>
+    </div>
+  </section>
+  <section class="row career_box">
+    <div id="career_1" class="col-sm-6 col-xs-12">
+      <div id="scence_03"></div>
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2019/06/retail_careers_hd.jpg"
+        alt="Retail Careers"
+      />
+      <h2>Retail Careers</h2>
+      <p>
+        Our retail team members guide and educate guests as they discover the
+        styles and designs they want to bring home. Building a relationship
+        based on trust is essential to helping our guests find the perfect
+        pieces, and we are proud to be a part of transforming and elevating
+        their living space.
+      </p>
+    </div>
+    <div id="career_2" class="col-sm-6 col-xs-12">
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2019/02/Corporate.jpg"
+        alt="Corporate Careers"
+      />
+      <h2>Corporate Careers</h2>
+      <p>
+        Our corporate team members encompass a wide variety of departments and
+        talents that are crucial to all that happens behind the scenes. From
+        merchandising, marketing and training, to IT, accounting and human
+        resources, these team members are the backbone of our business.
+      </p>
+    </div>
+    <div id="career_3" class="col-sm-6 col-xs-12">
+      <div id="scence_04"></div>
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2018/07/career_banner_2.jpg"
+        alt="Guest Services Careers"
+      />
+      <h2>Guest Services Careers</h2>
+      <p>
+        Our guest services team members work hard to address and resolve any
+        issues guests may have throughout the shopping process. Whether they
+        communicate via phone calls, web chats or emails, these team members
+        provide excellent service for every guest, during every communication,
+        every day.
+      </p>
+    </div>
+    <div id="career_4" class="col-sm-6 col-xs-12">
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2018/11/career-warehouse.jpg"
+        alt=" Distribution Center Careers"
+      />
+      <h2>Distribution Center Careers</h2>
+      <p>
+        Distribution and logistics team members support the end-to-end
+        distribution and delivery structure at Living Spaces. All departments,
+        including receiving, shipping and quality control, help ensure we
+        provide a level of service that surpasses our guests’ expectations.
+      </p>
+    </div>
+  </section>
+  <section class="row career_box">
+    <div id="career_5" class="col-sm-6 col-xs-12">
+      <div id="scence_05"></div>
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2019/02/Manufacturing.jpg"
+        alt=" Distribution Center Careers"
+      />
+      <h2>Manufacturing</h2>
+      <p>
+        Our manufacturing team members find satisfaction in creating items with
+        their hands and get to experience a sense of accomplishment with every
+        piece they create. From seamstresses, to upholsterers, to cushion
+        fillers, all team members work together to make items guests will love.
+      </p>
+    </div>
+    <div id="career_6" class="col-sm-6 col-xs-12">
+      <img
+        class="img-responsive center-block"
+        src="/globalassets/images/lp/2018/09/mission.jpg"
+        alt=" Distribution Center Careers"
+      />
+      <h2>Mission: Fast, Fun + Easy Shopping</h2>
+      <p>
+        Finding the right furniture can be overwhelming, but we make it fast,
+        fun and easy for everybody no matter what their budget. By shopping with
+        us in store or online and following our Essential Shopping Checklist,
+        guests can buy their pieces today, enjoy them tonight and celebrate
+        life's moments in a home they love.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    #EmployeePhotoModal {
+      display: none;
+    }
+
+    #EmployeePhotosSection h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+
+    #EmployeePhotosSection a {
+      font-size: inherit;
+    }
+
+    .slick-slide {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    #PhotoModal .modal-content {
+      background-color: transparent;
+    }
+
+    #PhotoModal img {
+      margin: 0 auto;
+    }
+
+    #PhotoModal button span {
+      color: #fff;
+    }
+
+    #PhotoModal .modal-content {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    #PhotoModal i.fa-times {
+      position: absolute;
+      top: -30px;
+      right: 100px;
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      #PhotoModal i.fa-times {
+        right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #PhotoModal .modal-dialog {
+        width: 100vw;
+      }
+
+      #PhotoModal .modal-content button {
+        margin-top: 1rem !important;
+        font-size: 3rem !important;
+      }
+    }
+  </style>
+
+  <section id="EmployeePhotosSection" class="text-center">
+    <h2>
+      <a target="_blank" href="https://www.instagram.com/teamlivingspaces/"
+        >@TEAMLIVINGSPACES
+      </a>
+    </h2>
+    <div id="EmployeePhotoSlider">
+      <img
+        class="img-responsive"
+        src="https://cdn.brandfolder.io/XQW73PF4/as/q56vv4-bkjfnc-3nfzka/Team_LS_Photos_for_Webpage.svg?width=200&height=200"
+        style="max-height: 170px; margin: 10px auto;"
+      />
+    </div>
+
+    <!-- CODE FOR MODAL -->
+    <div
+      class="modal fade"
+      id="PhotoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            onclick="window.closeModal();"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          <img
+            src="https://via.placeholder.com/500.jpg"
+            alt=""
+            class="img-responsive"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL -->
+  </section>
+
+  <section class="row ls_people">
+    <div id="scence_06"></div>
+    <div id="scence_07"></div>
+    <div class="ls_people_title">
+      <h2>Employee Testimonials</h2>
+    </div>
+    <div class="ls_testimonials_wrapper">
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/JacquelineBarnes.jpg"
+          />
+          <span class="ls_name">Jacqueline Barnes</span>
+          <span class="ls_position">Guest Services Representative</span>
+          <div class="p_height">
+            <p>
+              From the beginning of my journey here at Living Spaces, I have
+              strived to do my best in delivering quality service and exhibiting
+              a customer-friendly attitude. There were moments were this was a
+              challenge, but this company's mission is to provide the best
+              possible service to each guest with whom
+              <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden">
+                we come in contact. This results in customer loyalty. I have
+                enjoyed my journey with Living Spaces, and I indeed feel it is a
+                great company to work for. It is true that if you work hard and
+                apply yourself, moving up in the company is a real and
+                attainable opportunity. I was thrilled to learn that I was
+                chosen as a Volunteer with Furnishing Hope. I tell you, until
+                you have experience this rewarding opportunity, words cannot
+                express the emotions that go along with volunteering for such an
+                organization. It was exciting to furnish and decorate for this
+                young veteran. Most of all, the look on her face when she came
+                into her apartment was, as they say, "a Kodak moment." The
+                emotions that swell up inside is something I will never forget.
+                It is a thrill to work for a company that gives back and
+                provides assistance in times of disaster. Do I recommend Living
+                Spaces as a great place to work? Of course I do!!<span
+                  class="read_less_btn"
+                  >Show Less</span
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/ScottLox.jpg"
+          />
+          <span class="ls_name">Scott Lox</span>
+          <span class="ls_position">Regional Asset Protection Manager</span>
+          <div class="p_height">
+            <p>
+              I can’t say enough about how great it has been working for Living
+              Spaces. I have grown so much personally and professionally.
+              Everyone here works together and is open to listening to all
+              ideas. I have been extremely pleased with the opportunities I have
+              had to make a positive impact in our
+              <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden">
+                company as we continue to grow. I am also proud to work for a
+                company that continues to give back to communities. It was a
+                very rewarding experience as I took part in one of our programs.
+                I was able to help refurnish a veteran’s home. I look forward to
+                getting involved in more events like these and I am so glad I
+                decided to come aboard the Living Spaces team!<span
+                  class="read_less_btn"
+                  >Show Less</span
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/MarcelloBaeza.jpg"
+          />
+          <span class="ls_name">Marcello Baeza</span>
+          <span class="ls_position">Director of Brand</span>
+          <div class="p_height">
+            <p>
+              Living Spaces has placed greater weight on one’s personal
+              attributes than on one’s specific background, practical skills,
+              specialized knowledge or work experience. Here at Living Spaces
+              our biggest competitive advantage is the people we work with. We
+              strive on building <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden">
+                and maintaining a great family culture that supports the overall
+                vision. I have been very blessed to experience this great
+                practice first hand over the past 15 years. Growing my career
+                from an hourly warehouse clerk to overseeing our retail
+                merchandise as the Director of Brand. This has been the kind of
+                journey that Living Spaces offers to all our employees as we
+                continue to grow our Brand and become the number one Home
+                Furnishing Company.<span class="read_less_btn"
+                  >Show Less</span
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ls_testimonials_wrapper">
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/BrendaGuadron.jpg"
+          />
+          <span class="ls_name">Brenda Guadron</span>
+          <span class="ls_position">Operations Lead</span>
+          <div class="p_height">
+            <p>
+              Living Spaces is an impressive company to work for! As one big
+              team, we have made it our mission to stand out with our unique
+              brand story. Our loyal guests keep coming back to the best
+              experience furniture shopping can offer. My personal journey with
+              Living Spaces has been rewarding as I promoted to my
+              <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden">
+                current position and became more involved in both company and
+                community events. My most memorable participation was
+                volunteering with Furnishing Hope, where Living Spaces helped
+                create a beautiful home for a wounded Veteran right in our
+                community! I am grateful to be a part of this great company and
+                continue to grow with Living Spaces!<span class="read_less_btn"
+                  >Show Less</span
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/ClaudiaDye.jpg"
+          />
+          <span class="ls_name">Claudia Dye</span>
+          <span class="ls_position">Accounts Receivable Clerk</span>
+          <div class="p_height">
+            <p>
+              When I joined the Living Spaces family, we had only two stores. We
+              all worked together to get the job done: answering phones,
+              scheduling deliveries, making survey calls Monday through Friday.
+              Weekends working on the sales floor, writing up orders or filling
+              in as a cashier to get those orders processed. I thought nothing
+              <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden"
+                >of it to look up and see the owner, controller or risk
+                management across the way doing the same as me. Today, 12 years
+                later, we have 22 stores and several distribution centers and
+                warehouses, as well as competitive pay and benefits. With this
+                company, I have even had the opportunity to volunteer and give
+                back to our community. Living Spaces is truly a great place to
+                work.<span class="read_less_btn">Show Less</span></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="ls_testimonials_box">
+        <div class="ls_people_box">
+          <img
+            class="ls_people_img img-responsive"
+            src="/globalassets/images/lp/2019/10/JoeMatthews.jpg"
+          />
+          <span class="ls_name">Joe Matthews</span>
+          <span class="ls_position">Director of Sales & Operations</span>
+          <div class="p_height">
+            <p>
+              Living Spaces is an extraordinary organization! Some of what I
+              value most is that we possess a passion for giving back to the
+              communities we serve, we honor the uniqueness of individuals while
+              fostering a “one team” environment, and we ensure every strategy
+              we execute creates guest loyalty and brand ambassadorship. We work
+              <span class="read_more_dot">...</span
+              ><span class="read_more_btn">Read More</span
+              ><span class="read_more_hidden">
+                hard to achieve our mission but we respect the need for our team
+                members to be whole personally and professionally. I am proud to
+                be a member of the Living Spaces family!<span
+                  class="read_less_btn"
+                  >Show Less</span
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script
+    src="//www.themuse.com/profiles/livingspaces/modules/9683/embed"
+    async
+  ></script>
+
+  <section class="row career_link">
+    <div class="col-xs-12">
+      <div class="search_box_b">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Search Current Positions &rsaquo;</a
+        >
+      </div>
+    </div>
+  </section>
+</div>
