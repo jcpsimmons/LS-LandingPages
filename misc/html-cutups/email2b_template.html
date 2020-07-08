@@ -442,7 +442,7 @@
                 <td>
                   <div>
                     <strong>Order Number:</strong>
-                    <span>{{ORDER_NUMBER}}</span>
+                    <span>{{DYNAMIC_ORDER_NUMBER}}</span>
                   </div>
                 </td>
               </tr>
@@ -461,12 +461,12 @@
                 <td>
                   <div>
                     <strong style="font-size: 20px; color: #00669a;"
-                      >Special Order Update:</strong
+                      >Order Update:</strong
                     >
                     <br />
                     <strong
                       style="font-size: 20px; color: #333333; display: block;"
-                      >Production is Complete!</strong
+                      >Ready to Pick Up!</strong
                     >
                   </div>
                 </td>
@@ -483,29 +483,27 @@
                 <td>
                   <span>
                     <p>
-                      We are excited to let you know that production is complete
-                      on your Special Order item(s). We will contact you to
-                      schedule delivery once your entire order is received at
-                      our warehouse.
+                      We are excited to let you know that your item(s) is ready
+                      to pick up at our La Mirada store. You can schedule your
+                      pickup date with a Customer Service representative at
+                      <strong>1-877-266-7300</strong>.
                     </p>
                     <p>
-                      You can also opt-in for text message updates on your order
-                      below.
+                      Also, be sure to ask whether you qualify for free
+                      shipping.
                     </p>
-                    <!-- Get Text Updates Button -->
                     <table>
                       <tr>
                         <td
                           style="border-radius: 2px; line-height: 14px;"
                           bgcolor="#00699a"
                         >
-                          <a class="button" href="#" target="_blank">
-                            Get Text Updates &rsaquo;
+                          <a class="button" href="{DYNAMIC}" target="_blank">
+                            Select Delivery Option &rsaquo;
                           </a>
                         </td>
                       </tr>
                     </table>
-                    <!-- End Text Updates Button -->
                   </span>
                 </td>
               </tr>
@@ -513,16 +511,16 @@
 
             <div style="line-height: 25px;">&nbsp;</div>
 
-            <!-- Special Order Items Header -->
+            <!-- SPECIAL ORDER ITEMS SECTION -->
             <table width="100%" align="center" class="deliveryHeader">
               <tr class="shipment-header">
                 <td>
-                  <span><strong>Your Special Order Item(s)</strong></span>
+                  <span><strong>Your Item(s)</strong></span>
                 </td>
               </tr>
             </table>
 
-            <!-- SO Item 1 -->
+            <!-- DYNAMIC - Special Order Item -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
@@ -538,7 +536,6 @@
                 </td>
               </tr>
             </table>
-            <!-- Details for SO Item 1 -->
             <table width="85%" align="center" class="deliveryBlock itemDetails">
               <tr>
                 <td>
@@ -546,18 +543,25 @@
                 </td>
               </tr>
             </table>
+            <!-- END - Special Order Item -->
+            <!-- DYNAMIC - Item Spacer Line - Include for multiple items -->
+            <table width="100%" align="center" class="itemSpacer"></table>
+            <!-- END - Item Spacer Line -->
 
             <div style="line-height: 25px;">&nbsp;</div>
 
-            <!-- Additional Shipment Items Header -->
+            <!-- ADDITIONAL SHIPMENT ITEMS SECTION -->
+            <!-- DYNAMIC - Additional Shipment Items Header -->
             <table width="100%" align="center" class="deliveryHeader">
               <tr class="shipment-header">
                 <td>
-                  <span> <strong>Additional Shipment Item(s)</strong></span>
+                  <span> <strong>Additional Pickup Item(s)</strong></span>
                 </td>
               </tr>
             </table>
-            <!-- Additional Shipment Items Item 1 -->
+            <!-- END - Additional Shipment Items Header -->
+
+            <!-- DYNAMIC - Additional Order Item -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
@@ -571,11 +575,13 @@
                 </td>
               </tr>
             </table>
+            <!-- END - Additional Order Item -->
 
-            <!-- Item spacer line -->
+            <!-- DYNAMIC - Item Spacer Line Include for multiple items -->
             <table width="100%" align="center" class="itemSpacer"></table>
+            <!-- END - Item Spacer Line -->
 
-            <!-- Additional Shipment Items Item 2 -->
+            <!-- DYNAMIC - Additional Order Item (second example) -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
@@ -589,6 +595,7 @@
                 </td>
               </tr>
             </table>
+            <!-- END - Additional Order Item (second example) -->
 
             <div style="line-height: 25px;">&nbsp;</div>
 
