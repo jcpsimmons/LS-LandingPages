@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <!--<![endif]-->
     <meta content="width=device-width" name="viewport" />
-    <title>Your Special Order Has Been Made!</title>
+    <title>Pick Up Your Special Order!</title>
 
     <style type="text/css">
       a[x-apple-data-detectors] {
@@ -306,8 +306,8 @@
       .textRight {
         text-align: right !important;
       }
-
-      .textCenter {
+      .skuContainer {
+        white-space: nowrap !important;
         text-align: center !important;
       }
 
@@ -377,7 +377,7 @@
                 font-family: sans-serif;
               "
             >
-              We are making progress on your piece!
+              Schedule your Special Order pickup!
             </div>
             <!-- Visually Hidden Preheader Text : END -->
           </div>
@@ -484,26 +484,15 @@
                   <span>
                     <p>
                       We are excited to let you know that your item(s) is ready
-                      to pick up at our La Mirada store. You can schedule your
-                      pickup date with a Customer Service representative at
+                      to pick up at our {{DYNAMIC_STORE_NAME}} store. You can
+                      schedule your pickup date with a Customer Service
+                      representative at
                       <strong>1-877-266-7300</strong>.
                     </p>
                     <p>
                       Also, be sure to ask whether you qualify for free
                       shipping.
                     </p>
-                    <table>
-                      <tr>
-                        <td
-                          style="border-radius: 2px; line-height: 14px;"
-                          bgcolor="#00699a"
-                        >
-                          <a class="button" href="{DYNAMIC}" target="_blank">
-                            Select Delivery Option &rsaquo;
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
                   </span>
                 </td>
               </tr>
@@ -528,8 +517,8 @@
                     ><strong>Ethan III Memory Foam Full Sleeper</strong></span
                   >
                 </td>
-                <td>
-                  <span class="textCenter">#528355</span>
+                <td width="60">
+                  <span class="skuContainer">#528355</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$795</strong></span>
@@ -545,7 +534,7 @@
             </table>
             <!-- END - Special Order Item -->
             <!-- DYNAMIC - Item Spacer Line - Include for multiple items -->
-            <table width="100%" align="center" class="itemSpacer"></table>
+            <!-- <table width="100%" align="center" class="itemSpacer"></table> -->
             <!-- END - Item Spacer Line -->
 
             <div style="line-height: 25px;">&nbsp;</div>
@@ -567,8 +556,8 @@
                 <td class="productName" colspan="3">
                   <span><strong>Banks 3 Piece Living Room Set</strong></span>
                 </td>
-                <td>
-                  <span class="textCenter">#23233</span>
+                <td width="60">
+                  <span class="skuContainer">#23233</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$1315</strong></span>
@@ -587,8 +576,8 @@
                 <td class="productName" colspan="3">
                   <span><strong>Langston Sofa</strong></span>
                 </td>
-                <td>
-                  <span class="textCenter">#43422</span>
+                <td width="60">
+                  <span class="skuContainer">#43422</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$795</strong></span>
