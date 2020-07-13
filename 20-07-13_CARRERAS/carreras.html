@@ -1,0 +1,676 @@
+<style>
+  .ls-t-desktop #free-shipping-header-vue-container .alert-dismissible {
+    margin-bottom: 1.1rem;
+  }
+  .ls-t-desktop .page-content {
+    margin-top: -1.1rem;
+  }
+  .ls-t-mobile #free-shipping-header-vue-container .alert-dismissible {
+    margin-bottom: 0;
+  }
+
+  section.no-padding.board.container {
+    display: none;
+  }
+
+  .career_container {
+    font-size: 1.8rem;
+  }
+
+  .overlay_logo {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .overlay_logo h1 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .overlay_logo span {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .career_header .carousel-indicators {
+    bottom: 0rem;
+  }
+
+  .career_box,
+  .intro-box {
+    text-align: center;
+  }
+
+  .intro-box > div p {
+    padding: 0 3rem;
+    margin: 1.5rem 0;
+  }
+
+  .intro-box h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefit-box {
+    margin-top: 2rem;
+    padding-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .career_link {
+    text-align: center;
+  }
+
+  #hero .search_btn,
+  .career_link .search_btn,
+  .intro-box .search_btn {
+    border-radius: 0.4rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00699a;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+  }
+  #hero .search_btn:hover,
+  .career_link .search_btn:hover,
+  .intro-box .search_btn:hover {
+    background-color: #013e5a;
+  }
+  .career_link .search_box_b {
+    margin-top: 5rem;
+  }
+
+  .search_box {
+    width: 100%;
+    padding: 3rem 0;
+    top: 0 !important;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 99;
+  }
+
+  .benefit-box .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .benefit-box .box span {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 0 2rem;
+  }
+
+  .benefit-box p {
+    padding-right: 2rem;
+  }
+
+  .career_box p {
+    margin-bottom: 5rem;
+  }
+
+  .career_box h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+
+  .ls_people_box {
+    text-align: center;
+    background-color: #f1f1f1;
+    position: relative;
+    padding: 6rem 2.5rem;
+    font-size: 2rem;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  }
+  /* .ls_people_box:hover {
+                -webkit-transform: scale(0.95);
+                transform: scale(0.95);
+                } */
+
+  .ls_people_title {
+    text-align: center;
+    margin: 8rem 0;
+  }
+
+  .ls_people_title h2 {
+    font-weight: 600;
+  }
+  .ls_name {
+    font-size: 2.5rem;
+  }
+  .ls_name,
+  .ls_position {
+    display: block;
+  }
+
+  .ls_position {
+    margin-bottom: 3rem;
+  }
+
+  .ls_people_btn {
+    color: #00699a;
+    text-decoration: underline;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .ls_people_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  #career-carousel img {
+    width: 100%;
+  }
+  .career-hero-wrap {
+    position: relative;
+  }
+  /* 5/22 CSS for topbar and hiring banner */
+  /* for top bar */
+  #topbar a:active,
+  #topbar a:hover,
+  #topbar a:visited {
+    text-decoration: none;
+  }
+  #topbar div {
+    background: #00699a;
+    color: #fff;
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+  #topbar .desktop-only {
+    display: inline;
+  }
+  #topbar .mobile-only {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    #topbar div {
+      font-size: 1.4rem;
+      padding-top: 1rem;
+    }
+    #topbar .desktop-only {
+      display: none;
+    }
+    #topbar .mobile-only {
+      display: inline;
+    }
+  }
+  /* for image banner */
+  #NowHiring {
+    margin: 7rem auto 0;
+  }
+  #NowHiring .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #NowHiring .flex-item {
+    margin: auto;
+    flex-basis: 50%;
+  }
+  @media (max-width: 767px) {
+    #NowHiring {
+      margin: 7rem -15px 0;
+      padding: 0 15px;
+      background-color: #f1f1f1;
+    }
+    #NowHiring .flex-row {
+      flex-direction: column;
+    }
+    #NowHiring .flex-item {
+      flex: 1 1 auto;
+    }
+  }
+  /* END 5/22 CSS */
+
+  /*testing BG*/
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(1, 1);
+    }
+
+    to {
+      -webkit-transform: scale(1.5, 1.5);
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(1, 1);
+    }
+
+    to {
+      transform: scale(1.3, 1.3);
+    }
+  }
+
+  #MobileHero {
+    display: none;
+  }
+  #DesktopHero {
+    display: block;
+  }
+
+  /***** Modal *****/
+
+  .career_container .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .career_container .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .career_container .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .career_container .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .career_container .modal-header,
+  .career_container .modal-footer {
+    border: 0;
+  }
+
+  .career_container .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+
+  .career_container .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+
+  .play-btn {
+    text-align: center;
+  }
+
+  #fRelief-video {
+    border: 0.5rem solid #fff;
+    background-color: #000;
+  }
+
+  .career_container .modal .modal-dialog {
+    width: 85rem;
+  }
+
+  .ls_testimonials_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 6rem;
+  }
+  .ls_testimonials_box {
+    flex-basis: 30%;
+  }
+  .read_more_hidden {
+    display: none;
+  }
+  .read_less_btn,
+  .read_more_btn {
+    display: block;
+    color: #00699a;
+    cursor: pointer;
+  }
+  /*// Large devices (desktops, less than 1200px)*/
+
+  @media (max-width: 1199px) {
+  }
+
+  /*    Medium devices (tablets, less than 992px)*/
+
+  @media (max-width: 991px) {
+    .ls_people_title {
+      margin: 8rem 0 13rem;
+    }
+
+    .overlay_logo h1 {
+      margin-top: 1rem;
+    }
+
+    .career_header .carousel-indicators {
+      bottom: -1rem;
+    }
+
+    .ls_people_img {
+      width: 40%;
+    }
+
+    .ls_people_box {
+      padding: 9rem 2.5rem 6rem;
+    }
+  }
+
+  /*// Small devices (landscape phones, less than 768px)*/
+
+  @media (max-width: 767px) {
+    #MobileHero {
+      display: block;
+    }
+    #DesktopHero {
+      display: none;
+    }
+
+    .container {
+      padding-top: 0;
+    }
+    .intro-box h3 {
+      font-size: 2.5rem;
+    }
+
+    .intro-box > div p {
+      padding: 0;
+    }
+
+    .benefit-box [class*="col-"] {
+      margin-bottom: 3rem;
+    }
+
+    .ls_people [class*="col-"] {
+      margin-bottom: 15rem;
+    }
+
+    .ls_people_img {
+      width: 13%;
+    }
+    .career_container .modal .modal-dialog {
+      width: 40rem;
+    }
+    .career_container .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 2rem !important;
+      margin-right: 8px !important;
+      margin-top: 2rem !important;
+    }
+    .ls_testimonials_box {
+      flex-basis: 100%;
+      margin-bottom: 10rem;
+    }
+    .ls_testimonials_wrapper {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 575px) {
+    .ls_people_img {
+      width: 30%;
+    }
+  }
+  #hero .title h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  #hero h2 {
+    font-size: 3rem;
+    color: #333;
+    font-weight: normal;
+    border-bottom: solid 3px #333;
+    padding-bottom: 0.5rem;
+  }
+  #hero h3 {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+  }
+  #hero .white-bg-text {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  #hero span {
+    font-size: 2rem;
+    color: #333;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+  }
+  #hero li {
+    font-size: 2rem;
+    color: #333;
+  }
+  #hero .rborder {
+    position: relative;
+  }
+  #hero .rborder:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    right: 0;
+    top: 0;
+    border-right: 1px solid #cacaca;
+    height: 58%;
+    transform: translateY(25%);
+  }
+  #hero .flex-col,
+  #hero .flex-row {
+    display: flex;
+  }
+  #hero .flex-row {
+    justify-content: space-around;
+  }
+  #hero .flex-col {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero .inner-flex {
+    display: flex;
+    justify-content: center;
+  }
+  #hero .full-width-row {
+    width: 100%;
+  }
+  #hero .full-width-row > .flex-item {
+    flex-basis: 50%;
+  }
+  #hero .grey-bg {
+    background: #f0f0f0;
+  }
+  #hero .search_box {
+    background-color: inherit !important;
+    font-size: 1.8rem;
+    border-bottom: none !important;
+  }
+  #hero .nudge-cta {
+    margin-top: -6rem;
+  }
+  @media (max-width: 767px) {
+    /* .generic-html-template .container {
+        padding: 0;
+      } */
+    #hero {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    #hero .search_box {
+      padding-top: 1.5rem;
+    }
+    #hero .title h1 {
+      margin-left: 2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 2.3rem;
+      font-weight: normal;
+    }
+
+    #hero .flex-row {
+      flex-direction: column;
+    }
+
+    #hero .rborder {
+      padding-bottom: 1rem;
+    }
+
+    #hero .inner-flex > div {
+      width: calc(100% - 30px);
+    }
+
+    #hero ul {
+      display: inline-block;
+      margin: auto;
+    }
+
+    #hero .rborder:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      left: 0;
+      bottom: 0;
+      border-right: none;
+      border-bottom: 1px solid #8a8a8a;
+      transform: translateX(50%);
+      height: 100%;
+    }
+    #hero .nudge-cta {
+      margin-top: 0;
+    }
+    #hero h2 {
+      font-size: 2.6rem;
+      margin-top: 1rem;
+    }
+    #hero h3 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    #hero span,
+    #hero li {
+      font-size: 2rem;
+    }
+  }
+</style>
+<section id="hero">
+  <div class="title">
+    <h1>Carrera profesional en Living Spaces</h1>
+  </div>
+
+  <div class="flex-col grey-bg">
+    <div class="flex-item">
+      <h2>Actualmente contratando</h2>
+    </div>
+    <div class="flex-row full-width-row">
+      <div class="flex-item inner-flex">
+        <div>
+          <h3>
+            Posiciones en Bodega / Centro de Distribución
+          </h3>
+          <div class="white-bg-text">
+            <span>Rialto + Perris, CA</span>
+          </div>
+          <ul>
+            <li>Operador de carretilla elevadora / Recogedor de ordines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-item inner-flex">
+        <div>
+          <h3>Posiciones en fabricación</h3>
+          <div class="white-bg-text">
+            <span>La Mirada, CA</span>
+          </div>
+          <ul>
+            <li>Costureras</li>
+            <li>Tapiceros</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-item">
+      <div class="search_box">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Aplica Hoy &rsaquo;</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end 7/02 hero area -->
+
+<div class="career_container container">
+  <section class="row intro-box">
+    <div class="col-xs-12">
+      <h3>
+        Estamos aquí para apoyar tu talento,<br />inspirar tu pasión y avanzar
+        en tu carrera.
+      </h3>
+      <p>
+        Living Spaces es una marca de muebles para el hogar con más de 20
+        ubicaciones y 2,000 miembros del equipo que continúa creciendo. Lo que
+        realmente ha sostenido nuestro crecimiento, desde una sola tienda
+        humilde hasta una marca de estilo de vida ampliamente respetada, son las
+        personas talentosas que nos han llevado allí. Con nuestra visión de
+        convertirnos en la marca de muebles para el hogar n.° 1 en los EE. UU.,
+        Hay muchas oportunidades para que crezca su carrera con Living Spaces.
+        Nuestro miembro del equipo ideal representará nuestros valores centrales
+        de humildad y respeto, velocidad y simplicidad, disciplina fanática,
+        responsabilidad social, el deseo de poner a nuestros invitados primero y
+        la ambición de ser únicos, apasionados e innovadores. ¡Únete al viaje
+        con nosotros!
+      </p>
+      <div class="search_box">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Buscar Puestos Actuales &rsaquo;</a
+        >
+      </div>
+    </div>
+    <div id="scence_02"></div>
+  </section>
+</div>
