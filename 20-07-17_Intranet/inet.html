@@ -1,0 +1,286 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  #links {
+    font-family: "Montserrat", sans-serif;
+  }
+  #links .flex-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  #links .flex-row > .flex-item:nth-of-type(1) {
+    margin-right: 0.5rem;
+  }
+  #links .flex-row > .flex-item:nth-of-type(2) {
+    margin-left: 0.5rem;
+  }
+  #links .flex-item {
+    flex-basis: 50%;
+    max-width: 500px;
+    border-radius: 5px;
+  }
+  #links .image {
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 17rem;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: 120% auto;
+    transition: 0.4s;
+  }
+  #links .image:hover {
+    background-size: 123% auto;
+  }
+  #links .flex-item > a > div {
+    position: relative;
+  }
+  #links .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 13, 45);
+    background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 30%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #links .tiles span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: white;
+  }
+  .topText {
+    background-color: #000;
+    color: #fff !important;
+    border-radius: 3px;
+    margin: 1rem auto 1rem;
+    text-align: center;
+    padding: 1rem;
+    background-image: url("https://cdn.brandfolder.io/XQW73PF4/as/qds09k-2eivsw-43sh9q/blue-bg.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    background-size: 120% auto;
+    transition: 0.4s;
+  }
+  .topText a {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+  .topText h1 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.5rem !important;
+    color: #fff !important;
+  }
+  .topText h3 {
+    color: #fff !important;
+  }
+  .topText span {
+    display: block;
+  }
+  @media (max-width: 767px) {
+    .topText {
+      width: 90%;
+    }
+    #links .flex-row {
+      flex-direction: column;
+    }
+    #links .flex-item {
+      max-width: none;
+    }
+    #links .flex-row > .flex-item:nth-of-type(1) {
+      margin-right: 0;
+    }
+    #links .flex-row > .flex-item:nth-of-type(2) {
+      margin-left: 0;
+    }
+    .topText {
+      background-size: 200% auto;
+    }
+  }
+</style>
+
+<section id="links">
+  <div class="ctr topText">
+    <h1><b>Features + Benefits</b></h1>
+    <span class="name">David Borgelt</span>
+    <span class="title">Associate Product Manager</span>
+
+    <h3>
+      <b>
+        Explore + discover product knowledge by selecting the categories
+        below.</b
+      >
+    </h3>
+    <p>
+      Learn about the Top 4 features + benefits, so you can sell with
+      confidence!
+    </p>
+    <p>
+      Each Category Button will automatically download a comprehensive
+      PowerPoint document.
+    </p>
+    <p>
+      Not finding what you're looking for or have ideas or suggestions for
+      information? See the
+      <a
+        href="https://livingspaces.sharepoint.com/sites/MerchandisingNews2/HelpDesk"
+        >HELP DESK</a
+      >
+    </p>
+  </div>
+  <div class="ctr tiles">
+    <div class="flex-row">
+      <!-- Upholstery -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/as/qc6ogz-4j3dlk-b9p9ub/Upholstery_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-aiw4cg/upholstery.jpg?width=500');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Upholstery</span>
+          </div>
+        </a>
+      </div>
+      <!-- Bedroom -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/as/qc6ogz-4j3dlk-9dt1dj/Bedroom_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-cwa1a7/bedroom.jpg?width=500');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Bedroom</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-row">
+      <!-- Dining -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/as/qc6ogz-4j3dlk-88lkkw/Dining_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-11enwb/dining.jpg?width=500&height=499');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Dining</span>
+          </div>
+        </a>
+      </div>
+      <!-- Outdoor -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/as/qc6ogz-4j3dlk-fhe5j0/Outdoor_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-3k1qro/outdoor.jpg?width=500&height=291');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Outdoor</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-row">
+      <!-- Designer -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/as/qc6ogz-4j3dlk-fhrs7n/Designer_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-gh79dj/designer.png?width=500&height=425');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Designer</span>
+          </div>
+        </a>
+      </div>
+      <!-- Home Office -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/at/qd9k6p-5c1g9c-axjs9w/Home_Office_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-4bumn/homeoffice.jpg?width=500&height=333');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Home Office</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-row">
+      <!-- Entertainment -->
+      <div class="flex-item">
+        <a
+          href="https://cdn.brandfolder.io/7F9OUORP/at/qd9kda-116vug-c9mi57/Entertainment_Collections_Features_and_Benefits.pptx"
+        >
+          <div
+            class="image"
+            style="
+              background-image: url('https://cdn.brandfolder.io/XQW73PF4/as/qdmyg8-3gtb9c-g7o63t/entertainment.jpg?width=500&height=342');
+            "
+          >
+            <div class="overlay"></div>
+          </div>
+          <div>
+            <span>Entertainment</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

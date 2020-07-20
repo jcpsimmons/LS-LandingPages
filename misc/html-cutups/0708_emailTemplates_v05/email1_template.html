@@ -307,7 +307,8 @@
         text-align: right !important;
       }
 
-      .textCenter {
+      .skuContainer {
+        white-space: nowrap !important;
         text-align: center !important;
       }
 
@@ -442,7 +443,7 @@
                 <td>
                   <div>
                     <strong>Order Number:</strong>
-                    <span>{{ORDER_NUMBER}}</span>
+                    <span>{{DYNAMIC_ORDER_NUMBER}}</span>
                   </div>
                 </td>
               </tr>
@@ -488,24 +489,38 @@
                       schedule delivery once your entire order is received at
                       our warehouse.
                     </p>
+                    <!-- DYNAMIC - Text Update CTA - This section is only for customers NOT opt-in -->
                     <p>
                       You can also opt-in for text message updates on your order
                       below.
                     </p>
-                    <!-- Get Text Updates Button -->
+                    <!--[if (gte mso 9)|(IE)]>
+                      <div
+                        style="line-height: 25px; background-color: #ffffff;"
+                      >
+                        &nbsp;
+                      </div>
+                    <![endif]-->
                     <table>
                       <tr>
                         <td
                           style="border-radius: 2px; line-height: 14px;"
                           bgcolor="#00699a"
                         >
-                          <a class="button" href="#" target="_blank">
+                          <a class="button" href="{DYNAMIC}" target="_blank">
                             Get Text Updates &rsaquo;
                           </a>
                         </td>
                       </tr>
                     </table>
-                    <!-- End Text Updates Button -->
+                    <!--[if (gte mso 9)|(IE)]>
+                      <div
+                        style="line-height: 25px; background-color: #ffffff;"
+                      >
+                        &nbsp;
+                      </div>
+                    <![endif]-->
+                    <!-- END - Text Update CTA -->
                   </span>
                 </td>
               </tr>
@@ -513,7 +528,7 @@
 
             <div style="line-height: 25px;">&nbsp;</div>
 
-            <!-- Special Order Items Header -->
+            <!-- SPECIAL ORDER ITEMS SECTION -->
             <table width="100%" align="center" class="deliveryHeader">
               <tr class="shipment-header">
                 <td>
@@ -522,7 +537,7 @@
               </tr>
             </table>
 
-            <!-- SO Item 1 -->
+            <!-- DYNAMIC - Special Order Item -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
@@ -530,15 +545,14 @@
                     ><strong>Ethan III Memory Foam Full Sleeper</strong></span
                   >
                 </td>
-                <td>
-                  <span class="textCenter">#528355</span>
+                <td width="60">
+                  <span class="skuContainer">#528355</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$795</strong></span>
                 </td>
               </tr>
             </table>
-            <!-- Details for SO Item 1 -->
             <table width="85%" align="center" class="deliveryBlock itemDetails">
               <tr>
                 <td>
@@ -546,10 +560,15 @@
                 </td>
               </tr>
             </table>
+            <!-- END - Special Order Item -->
+            <!-- DYNAMIC - Item Spacer Line - Include for multiple items -->
+            <!-- <table width="100%" align="center" class="itemSpacer"></table> -->
+            <!-- END - Item Spacer Line -->
 
             <div style="line-height: 25px;">&nbsp;</div>
 
-            <!-- Additional Shipment Items Header -->
+            <!-- ADDITIONAL SHIPMENT ITEMS SECTION -->
+            <!-- DYNAMIC - Additional Shipment Items Header -->
             <table width="100%" align="center" class="deliveryHeader">
               <tr class="shipment-header">
                 <td>
@@ -557,38 +576,43 @@
                 </td>
               </tr>
             </table>
-            <!-- Additional Shipment Items Item 1 -->
+            <!-- END - Additional Shipment Items Header -->
+
+            <!-- DYNAMIC - Additional Order Item -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
                   <span><strong>Banks 3 Piece Living Room Set</strong></span>
                 </td>
-                <td>
-                  <span class="textCenter">#23233</span>
+                <td width="60">
+                  <span class="skuContainer">#23233</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$1315</strong></span>
                 </td>
               </tr>
             </table>
+            <!-- END - Additional Order Item -->
 
-            <!-- Item spacer line -->
+            <!-- DYNAMIC - Item Spacer Line Include for multiple items -->
             <table width="100%" align="center" class="itemSpacer"></table>
+            <!-- END - Item Spacer Line -->
 
-            <!-- Additional Shipment Items Item 2 -->
+            <!-- DYNAMIC - Additional Order Item (second example) -->
             <table width="85%" align="center" class="deliveryBlock">
               <tr>
                 <td class="productName" colspan="3">
                   <span><strong>Langston Sofa</strong></span>
                 </td>
-                <td>
-                  <span class="textCenter">#43422</span>
+                <td width="60">
+                  <span class="skuContainer">#43422</span>
                 </td>
                 <td width="60">
                   <span class="textRight"><strong>$795</strong></span>
                 </td>
               </tr>
             </table>
+            <!-- END - Additional Order Item (second example) -->
 
             <div style="line-height: 25px;">&nbsp;</div>
 

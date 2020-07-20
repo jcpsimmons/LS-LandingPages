@@ -1,0 +1,674 @@
+<script>
+  var baseUrl = "//www.livingspaces.com/api/restfulproducts?pid=";
+  var currentUrl = window.location.href.toLowerCase();
+  if (currentUrl.indexOf("pid=") > 0) {
+    var productSKU = getParam("pid", currentUrl),
+      searchURL = baseUrl + productSKU;
+    getProductInfo(searchURL);
+  }
+  $("#search_product_btn").on("click", function () {
+    var searchInput = $("#pa_search_input").val().trim(),
+      searchInputURL = baseUrl + $("#pa_search_input").val().trim();
+    $(".pa_product_tile").fadeOut("fast");
+    $(".loader").fadeIn();
+    /*setTimeout(function () {
+              $(".loader").slideUp(getProductInfo(searchInputURL, searchInput));
+          }, 500);*/
+    getProductInfo(searchInputURL, searchInput);
+    $("#pa_search_input").val("");
+  });
+  function getProductInfo(searchInputURL, searchInput) {
+    var productTile = "";
+    $.ajax({
+      url: searchInputURL,
+      type: "GET",
+      success: function (data) {
+        var productData = data.products;
+
+        for (var i = 0; i < productData.length; i++) {
+          var productImage =
+            productData[i].images.length > 0
+              ? productData[i].images[0].imageUrl
+              : "";
+
+          productTile +=
+            '<div class="row pa_product_wrapper"> <div class="col-xs-10"> <h2 class="title">' +
+            productData[i].title +
+            ' </h2> <a target="_blank" class="header_url" href="' +
+            productData[i].url +
+            '">URL:' +
+            productData[i].url +
+            "</a>" +
+            getInstructions(
+              productData[i].assemblyInstructions,
+              "Assembly Instructions"
+            ) +
+            getInstructions(productData[i].tearSheets, "Tear Sheets") +
+            getInstructions(productData[i].partsList, "Part List") +
+            getInstructions(productData[i].userManuals, "User Manuals") +
+            '</div> <div class="col-xs-2 text-right"> <a target="_blank" href="' +
+            productImage +
+            '" class="thumbnail main_img"> <img src="' +
+            productImage +
+            '?w=104&h=70&mode=pad" alt="' +
+            productImage +
+            '"></a> </div><div class="col-xs-12 pa_img_wrapper"> <table class="table table-striped"> <tr> <td><strong>Product Status:</strong></td> <td> ' +
+            productData[i].productStatus +
+            '</td> </tr> <tr id="product_sku"> <td><strong>SKU#:</strong></td> <td> ' +
+            productData[i].pid +
+            "</td> </tr> <tr> <td><strong>in Stock: </strong></td> <td> " +
+            productData[i].inStock +
+            "</td> </tr> <tr> <td><strong>Store Where Displayed:</strong></td> <td> " +
+            getStores(productData[i].storeList) +
+            "</td> </tr> <tr> <td><strong>DC's with Sellable Inventory: </strong></td> <td> " +
+            getStores(productData[i].dcList) +
+            "</td> </tr> <tr> <td><strong>Warehouse Qty Available for Purchase Online: </strong></td> <td> " +
+            productData[i].defaultWarehouseQty +
+            "</td> </tr> <tr> <td><strong>Pending Purchase Order(s): </strong></td> <td> " +
+            getPendingPurchaseOrder(productData[i].pendingPurchaseOrders) +
+            "</td> </tr> <tr> <td><strong>Sellable Online: </strong></td> <td> " +
+            flipNoWebOrder(productData[i].noWebOrder) +
+            "</td> </tr> <tr> <td><strong>LSF Parcel Shippable: </strong></td> <td> " +
+            productData[i].lsfParcelShippable +
+            "</td> </tr> <tr> <td><strong>Dropship: </strong></td> <td> " +
+            productData[i].dropship +
+            "</td> </tr> <tr> <td><strong>Dropship QTY: </strong></td> <td> " +
+            getDropshipQty(
+              productData[i].dropship,
+              productData[i].dropshipQty
+            ) +
+            "</td> </tr> <tr> <td><strong>Available for Special Order: </strong></td> <td> " +
+            productData[i].soConfigure +
+            "</td> </tr> <tr> <td><strong>Level 1 Product Type: </strong></td> <td> " +
+            productData[i].productType_level1 +
+            "</td> </tr> <tr> <td><strong>Level 2 LS Category: </strong></td> <td> " +
+            productData[i].lsCategory_level2 +
+            "</td> </tr> <tr> <td><strong>Level 3 Group: </strong></td> <td> " +
+            productData[i].group_level3 +
+            "</td> </tr> <tr> <td><strong>Level 4 Product: </strong></td> <td> " +
+            productData[i].product_level4 +
+            "</td> </tr> <tr> <td><strong>Current Price:</strong></td> <td> " +
+            productData[i].price.salePrice +
+            "</td> </tr> <tr> <td><strong>Original Price:</strong></td> <td> " +
+            productData[i].price.msrp +
+            '</td> </tr> <tr id="dimensions"> <td><strong>Dimensions:</strong></td> <td> ' +
+            productData[i].width +
+            '"W x ' +
+            productData[i].depth +
+            '"D x ' +
+            productData[i].height +
+            '"H</td> </tr> <tr> <td><strong>Weight (lbs): </strong></td> <td> ' +
+            productData[i].weight +
+            '"H</td> </tr> <tr> <td><strong>Volume: </strong></td> <td> ' +
+            productData[i].volume +
+            "</td> </tr> <tr> <td><strong>Oversized Furniture: </strong></td> <td> " +
+            productData[i].oversizedFurniture +
+            "</td> </tr> <tr> <td><strong>Assembly Time: </strong></td> <td> " +
+            productData[i].assemblyTime +
+            "</td> </tr> <tr> <td><strong>Delivery Considerations: </strong></td> <td> " +
+            productData[i].deliveryConsiderations +
+            "</td> </tr> <tr> <td><strong>Hard Kit Component: </strong></td> <td> " +
+            productData[i].hardKitComponent +
+            "</td> </tr> <tr> <td><strong>Clearance:</strong></td> <td> " +
+            productData[i].clearance +
+            "</td> </tr> <tr> <td><strong>Best Seller:</strong></td> <td> " +
+            productData[i].bestSeller +
+            "</td> </tr> <tr> <td><strong>CA Prop 65: </strong></td> <td> " +
+            productData[i].caProp65 +
+            "</td> </tr> <tr> <td><strong>Buyer: </strong></td> <td> " +
+            productData[i].buyer +
+            "</td> </tr> <tr> <td><strong>Buyer Ranking: </strong></td> <td> " +
+            productData[i].buyerRanking +
+            "</td> </tr> <tr> <td><strong>LS Collection Name </strong></td> <td> " +
+            productData[i].lsCollectionName +
+            "</td> </tr> <tr> <td><strong>Life Style: </strong></td> <td> " +
+            productData[i].lifestyle +
+            "</td> </tr> <tr> <td><strong>Style: </strong></td> <td> " +
+            productData[i].style +
+            "</td> </tr> <tr> <td><strong>Secondary Style: </strong></td> <td> " +
+            productData[i].secondaryStyle +
+            "</td> </tr> <tr> <td><strong>Color Family: </strong></td> <td> " +
+            productData[i].colorFamily +
+            "</td> </tr><tr> <td><strong>Secondary WebSearch Color: </strong></td> <td> " +
+            productData[i].secondaryWebSearchColor +
+            "</td> </tr> <tr> <td><strong>Upholstery Type: </strong></td> <td> " +
+            productData[i].material +
+            "</td> </tr><tr> <td><strong>Secondary Upholstery: </strong></td> <td> " +
+            productData[i].secondaryMaterial +
+            "</td> </tr><tr> <td><strong>Material: </strong></td> <td> " +
+            productData[i].baseMaterial +
+            "</td> </tr><tr> <td><strong>Secondary Material Type: </strong></td> <td> " +
+            productData[i].secondaryBaseClothType +
+            "</td> </tr> <tr> <td><strong>Romance Copy:</strong></td> <td> " +
+            productData[i].romanceCopy +
+            "</td> </tr> <tr> <td><strong>Size: </strong></td> <td> " +
+            productData[i].sizes +
+            "</td> </tr>" +
+            injectNotBlank("Mattress Brand", productData[i].mattressBrand) +
+            injectNotBlank("Mattress Type", productData[i].mattressType) +
+            injectNotBlank("Comfort Level", productData[i].comfortLevel) +
+            "<tr> <td><strong>No Web Order: </strong></td> <td> " +
+            productData[i].noWebOrder +
+            "<tr> <td><strong>Web Team Blocked: </strong></td> <td> " +
+            productData[i].webTeamBlocked +
+            "</td> </tr> <tr> <td><strong>Search Key Words: </strong></td> <td> " +
+            productData[i].searchKeywords +
+            "</td> </tr> <tr> <td><strong>Average Rating:</strong></td> <td> " +
+            productData[i].reviewsAvg +
+            "</td> </tr> <tr> <td><strong>Review Count:</strong></td> <td> " +
+            productData[i].reviewsCount +
+            "</td> </tr> <tr> <td><strong>Breadcrumb ID: </strong></td> <td> " +
+            productData[i].breadcrumbParentID +
+            "</td> </tr><tr> <td><strong>Country of Origin: </strong></td> <td> " +
+            productData[i].countryOrigin +
+            "</td> </tr> <tr> <td><strong>Import/Domestic: </strong></td> <td> " +
+            productData[i].importDomestic +
+            "</td> </tr> <tr> <td><strong>Sectional Brackets Included: </strong></td> <td> " +
+            productData[i].sectionalBracketsIncluded +
+            "</td> </tr><tr> <td><strong>Where Are Legs Packaged: </strong></td> <td> " +
+            productData[i].whereLegsPackaged +
+            "</td> </tr> <tr> <td><strong>Which carton are slats packaged in: </strong></td> <td> " +
+            productData[i].cartonSlatsPackaged +
+            "</td> </tr><tr> <td><strong>Assembly Hardware Included in Carton: </strong></td> <td> " +
+            productData[i].cartonHardwareIncluded +
+            "</td> </tr> <tr> <td><strong>Assembly Hardware Location in Carton: </strong></td> <td> " +
+            productData[i].cartonHardwareLocated +
+            "</td> </tr> <tr> <td><strong>Assembly Hardware Package Description: </strong></td> <td> " +
+            productData[i].hardwarePackageDescription +
+            "</td> </tr> <tr> <td><strong>Features: </strong></td> <td> " +
+            productData[i].features +
+            "</td> </tr> <tr> <td><strong>Features + Benefits: </strong></td> <td> " +
+            productData[i].featuresAndBenefits +
+            "</td> </tr> <tr> <td><strong>Complimentary Products: </strong></td> <td> " +
+            getComplimentaryProds(productData[i].complimentaryProducts) +
+            "</td> </tr> <tr> <td><strong>Featured Articles Id: </strong></td> <td> " +
+            productData[i].featuredArticles +
+            "</td> </tr> <tr> <td><strong>Mattress Gift Card: </strong></td> <td> " +
+            productData[i].mattressGiftCard +
+            "</td> </tr> <tr> <td><strong> Invest Marketing: </strong></td> <td> " +
+            productData[i].investMarketing +
+            "</td> </tr> <tr> <td><strong> Fashion Vs Core: </strong></td> <td> " +
+            productData[i].fashionVsCore +
+            "</td> </tr> <tr> <td><strong> Supplementary Sku: </strong></td> <td> " +
+            (productData[i].supplementarySku == "Yes"
+              ? productData[i].supplementarySku
+              : "") +
+            "</td> </tr> <tr> <td><strong> Web Sub Items: </strong></td> <td> " +
+            webSubItems(productData[i].webSubItems) +
+            "</td> </tr> <tr> <td><strong> Parent SKUs: </strong></td> <td> " +
+            formatParentSkus(productData[i].parentSkus) +
+            "</td> </tr> </table>" +
+            ' <p><strong>Images: </strong></p> <div id="pa_slider_' +
+            i +
+            '" class="row">' +
+            getImages(productData[i].images) +
+            '</div> <p><strong>PDP- ICONS: </strong></p> <div id="pdpIcon_slider_' +
+            i +
+            '" class="row" style="margin: 2rem 0;">' +
+            createModal(productData[i].pdpIcons) +
+            "</div>" +
+            getRelatedCat(
+              productData[i].relatedCategoryPairs,
+              "Related Category Pairs"
+            ) +
+            "</div> </div>";
+        }
+        $(".pa_product_tile").html(productTile);
+        $(".pa_product_tile").slideDown();
+      },
+      error: function (data) {
+        var errorMessage =
+          searchInput.length > 0
+            ? '<p style="text-align:center">No item with SKU# <strong>' +
+              searchInput +
+              "</strong></p>"
+            : '<p style="text-align:center">No search Item with that SKU#</p>';
+        $(".pa_product_tile").html(errorMessage);
+        $(".pa_product_tile").slideDown();
+      },
+    });
+  }
+  function getStores(storeList) {
+    var strObj = {
+      "01": {
+        name: "La Mirada",
+        address: "14501 Artesia Blvd<br> La Mirada, CA 90638",
+        link: "/store/MapRedirector?storeId=01",
+        cord: [33.8734, -118.02169],
+      },
+      "03": {
+        name: "Van Nuys",
+        address: "14400 Arminta St<br> Panorama City, CA 91402",
+        link: "/store/MapRedirector?storeId=03",
+        cord: [34.21226, -118.44665],
+      },
+      "04": {
+        name: "Irvine",
+        address: "101 Technology Dr<br> Irvine, CA 92618",
+        link: "/store/MapRedirector?storeId=04",
+        cord: [33.65767, -117.74235],
+      },
+      "05": {
+        name: "Monrovia",
+        address: "407 W Huntington Dr<br> Monrovia, CA 91016",
+        link: "/store/MapRedirector?storeId=05",
+        cord: [34.14115, -118.00767],
+      },
+      "06": {
+        name: "Redondo Beach",
+        address: "1519 Hawthorne Blvd<br> Redondo Beach, CA 90278",
+        link: "/store/MapRedirector?storeId=06",
+        cord: [33.86846, -118.35565],
+      },
+      "07": {
+        name: "Menifee",
+        address: "30251 Antelope Rd<br> Menifee, CA 92584",
+        link: "/store/MapRedirector?storeId=07",
+        cord: [33.681759, -117.169319],
+      },
+      "08": {
+        name: "Vista",
+        address: "1900 University Dr<br> Vista, CA 92083",
+        link: "/store/MapRedirector?storeId=08",
+        cord: [33.17137, -117.21879],
+      },
+      "09": {
+        name: "Mission Valley",
+        address: "8730 Rio San Diego<br> San Diego, CA 92108",
+        link: "/store/MapRedirector?storeId=09",
+        cord: [32.77623, -117.14286],
+      },
+      "10": {
+        name: "Scottsdale",
+        address: "16275 N Scottsdale Rd<br> Scottsdale, AZ 85260",
+        link: "/store/MapRedirector?storeId=10",
+        cord: [33.63324, -111.88978],
+      },
+      "11": {
+        name: "Phoenix",
+        address: "6600 W. Latham<br> Phoenix, AZ 85043",
+        link: "/store/MapRedirector?storeId=11",
+        cord: [33.46084, -112.15122],
+      },
+      "12": {
+        name: "Huntington Beach",
+        address: "6912 Edinger Ave<br> Huntington Beach, CA 92647",
+        link: "/store/MapRedirector?storeId=12",
+        cord: [33.72842, -118.00798],
+      },
+      "13": {
+        name: "Mid City Los Angeles",
+        address: "4801 Venice Blvd<br> Los Angeles, CA 90019",
+        link: "/store/mapredirector?storeId=13",
+        cord: [34.04669, -118.34202],
+      },
+      "14": {
+        name: "Fremont",
+        address: "49088 Fremont Blvd<br> Fremont, CA 94537",
+        link: "/store/MapRedirector?storeId=14",
+        cord: [37.45681, -121.92517],
+      },
+      "15": {
+        name: "Gilbert",
+        address: "2300 Santan Village Pkwy<br> Gilbert, AZ 85297",
+        link: "/store/MapRedirector?storeId=15",
+        cord: [33.3086, -111.74706],
+      },
+      "16": {
+        name: "San Leandro",
+        address: "250 Floresta Blvd<br> San Leandro, CA 94578",
+        link: "/store/MapRedirector?storeId=16",
+        cord: [37.70077, -122.14157],
+      },
+      "17": {
+        name: "Glendale",
+        address: "6767 W. Bell Road<br> Glendale, AZ 85308",
+        link: "/store/MapRedirector?storeId=17",
+        cord: [33.6364, -112.20401],
+      },
+      "18": {
+        name: "Summerlin",
+        address: "700 S. Rampart Blvd<br> Las Vegas, NV 89145",
+        link: "/store/MapRedirector?storeId=18",
+        cord: [36.16295, -115.28714],
+      },
+      "19": {
+        name: "Millbrae",
+        address: "855 Broadway<br> Millbrae, CA 94030",
+        link: "/store/MapRedirector?storeId=19",
+        cord: [37.60403, -122.39613],
+      },
+      "20": {
+        name: "Pflugerville",
+        address: "19024 N. Heatherwilde<br> Pflugerville, TX 78660",
+        link: "/store/MapRedirector?storeId=20",
+        cord: [30.48126, -97.61514],
+      },
+      "21": {
+        name: "San Antonio",
+        address: "4239 N Loop 1604 W.<br> San Antonio, TX 78249",
+        link: "/store/MapRedirector?storeId=21",
+        cord: [29.589896, -98.602126],
+      },
+      "22": {
+        name: "Grand Prairie",
+        address: "1514 Arkansas Ln<br> Grand Prairie, TX 75051",
+        link: "/store/MapRedirector?storeId=22",
+        cord: [32.706561, -97.027073],
+      },
+      "24": {
+        name: "Roseville",
+        address: "1851 Freedom Way<br> Roseville, CA 95678",
+        link: "/store/mapredirector?storeId=24",
+        cord: [38.7918, -121.2973],
+      },
+      "26": {
+        name: "Frisco",
+        address: "10900 St Hwy 121<br> Frisco, TX 75035",
+        link: "/store/mapredirector?storeId=26",
+        cord: [33.107, -96.7866],
+      },
+      "27": {
+        name: "Fort Worth",
+        address: "8460 Tehama Ridge Pkwy<br> Fort Worth, TX 76177",
+        link: "/store/mapredirector?storeId=26",
+        cord: [32.8959, -97.3235],
+      },
+      "23": {
+        name: "San Jose",
+        address: "5540 Winfield Blvd<br> San Jose, CA 95123",
+        link: "/store/MapRedirector?storeId=23",
+        cord: [37.2524991, -121.86597],
+      },
+      "28": {
+        name: "Perris Outlet",
+        address: "18810 Harvill Ave<br> Perris, CA 92570",
+        link: "/store/MapRedirector?storeId=28",
+        cord: [33.8469641, -117.2576937],
+      },
+      "88": {
+        name: "Rancho Cucamonga",
+        address: "12649 Foothill Blvd<br> Rancho Cucamonga, CA 91739",
+        link: "/store/MapRedirector?storeId=88",
+        cord: [34.10402, -117.5292],
+      },
+      "80": {
+        name: "Grand Prairie DC",
+        address: "1514 Arkansas Ln<br> Grand Prairie, TX 75051",
+        link: "/store/MapRedirector?storeId=80",
+        cord: [32.7066334, -97.0294506],
+      },
+      "81": {
+        name: "Perris DC",
+        address: "18810 Harvill Ave<br> Perris, CA 92570",
+        link: "/store/MapRedirector?storeId=81",
+        cord: [33.8469641, -117.2576937],
+      },
+      "94": {
+        name: "Fremont DC",
+        address: "41088 Boyce Rd<br> Fremont, CA 94538",
+        link: "/store/MapRedirector?storeId=94",
+        cord: [37.512052, -121.9920647],
+      },
+      "97": {
+        name: "Phoenix DC",
+        address: "6600 W Latham<br> Phoenix, AZ 85043",
+        link: "/store/MapRedirector?storeId=97",
+        cord: [33.4613254, -112.2014702],
+      },
+      "99": {
+        name: "Rialto DC",
+        address: "3994 S Riverside Ave<br> Colton, CA 92324",
+        link: "/store/MapRedirector?storeId=99",
+        cord: [34.0281458, -117.3705067],
+      },
+    };
+
+    if (storeList != "") {
+      var storesText = "";
+      var storesArr = storeList.split(",");
+      for (var i = 0; i < storesArr.length; i++) {
+        try {
+          if (storesText != "") {
+            storesText += ", ";
+          }
+          storesText += strObj[storesArr[i]].name + " (" + storesArr[i] + ")";
+        } catch (e) {}
+      }
+
+      return storesText;
+    } else {
+      return "None";
+    }
+  }
+
+  function flipNoWebOrder(noWeb) {
+    if (noWeb === "Yes") {
+      return "No";
+    } else {
+      return "Yes";
+    }
+  }
+
+  function getDropshipQty(isDropship, dropshipQty) {
+    if (isDropship === "Yes") {
+      return dropshipQty;
+    } else {
+      return "N/A";
+    }
+  }
+
+  function injectNotBlank(title, value) {
+    if (value != "") {
+      return (
+        "<tr> <td><strong>" +
+        title +
+        ": </strong></td> <td> " +
+        value +
+        "</td> </tr>"
+      );
+    } else {
+      return "";
+    }
+  }
+
+  function getImages(array) {
+    var ImageLinks = "";
+    if (array.length > 0) {
+      for (var i = 0; i < array.length; i++) {
+        ImageLinks +=
+          '<div class="col-xs-3"> <a target="_blank" href="' +
+          array[i].imageUrl +
+          '" class="thumbnail"> <img src="' +
+          array[i].imageUrl +
+          '?w=245&h=165&mode=pad" alt="' +
+          array[i].imageGroup +
+          '"><p>' +
+          array[i].imageGroup +
+          "</p> </a> </div>";
+      }
+      return ImageLinks;
+    } else {
+      return "";
+    }
+  }
+  function initiateSlider() {
+    $(".pa_slider").slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+    });
+  }
+  function getInstructions(array, name) {
+    if (array.length > 0) {
+      var instructionLinks =
+        '<div class="link-list-wrap"><p><i class="fa fa-wrench" aria-hidden="true"></i> <strong>' +
+        name +
+        ":</strong></p><ul>";
+      for (var i = 0; i < array.length; i++) {
+        instructionLinks +=
+          ' <li><a target="blank_" href="' +
+          array[i].pdfUrl +
+          '" id="pa_instruction">' +
+          array[i].pdfName +
+          "</a></li>";
+      }
+      instructionLinks += "</ul></div>";
+      return instructionLinks;
+    } else {
+      return "";
+    }
+  }
+  function getRelatedCat(array, name) {
+    if (array != null) {
+      if (array.length > 0) {
+        var instructionLinks =
+          '<div class="link-list-wrap"><p><i class="fa fa-link" aria-hidden="true"></i><strong> ' +
+          name +
+          ":</strong></p><ul>";
+        for (var i = 0; i < array.length; i++) {
+          instructionLinks +=
+            ' <li><a target="blank_" href="' +
+            array[i].url +
+            '" id="pa_instruction">' +
+            array[i].title +
+            "</a></li>";
+        }
+        instructionLinks += "</ul></div>";
+        return instructionLinks;
+      } else {
+        return "";
+      }
+    } else {
+      return "";
+    }
+  }
+  function getComplimentaryProds(prods) {
+    // If there are no complimentary products, return nothing for the html
+    if (!prods.length) {
+      return "";
+    }
+
+    var html = prods
+      .map(function (prod) {
+        var skus = prod.complimentaryProductIDs
+          .split(",")
+          .map(function (sku) {
+            return '<a href="/'
+              .concat(sku, '" target="_blank">')
+              .concat(sku, "</a>");
+          })
+          .join(", ");
+        return "<li><i>"
+          .concat(prod.complimentaryType, ": </i>")
+          .concat(skus, "</li>");
+      })
+      .join("");
+    html = "<ul>".concat(html, "</ul>");
+    return html;
+  }
+
+  function getPendingPurchaseOrder(arr) {
+    if (!arr) return "<p>None</p>";
+
+    var output = arr
+      .map(function (i) {
+        var quantity = i.quantityOnPO.toString();
+
+        return (
+          "<p>" +
+          i.inboundDC +
+          " expects <b>" +
+          i.quantityOnPO +
+          "</b> on " +
+          i.expectedReceiptDate +
+          "</p>"
+        );
+      })
+      .join("");
+
+    return output;
+  }
+
+  function formatParentSkus(parentSkus) {
+    if (parentSkus.length > 0) {
+      var linkHtml = parentSkus
+        .split(",")
+        .map(function (sku) {
+          return (
+            "<a href='https://livingspaces.com/" +
+            sku +
+            "' target='_blank'>" +
+            sku +
+            "</a>"
+          );
+        })
+        .join(", ");
+
+      return (
+        linkHtml +
+        ' <span>(<a href="/tools/product-api?pid=' +
+        parentSkus +
+        '" target="_blank">archive details</a>)</span>'
+      );
+    } else {
+      return "";
+    }
+  }
+
+  function getParam(sParam, sPageURL) {
+    var sURLVariables = sPageURL.split("?")[1].split("&");
+    for (var i = 0; i < sURLVariables.length; i++) {
+      var sParameterName = sURLVariables[i].split("=");
+      if (sParameterName[0] == sParam) return sParameterName[1];
+    }
+    return "";
+  }
+
+  function webSubItems(productList) {
+    var productArr = productList.split(",");
+    var htmlCode = "";
+    productArr.forEach(function (sku) {
+      htmlCode +=
+        '<a class="subItems_link" target="_blank" href="/' +
+        sku +
+        '">' +
+        sku +
+        "</a>";
+    });
+    return htmlCode;
+  }
+
+  function createModal(array) {
+    var pdpIcons = "";
+    if (array.length > 0) {
+      for (var i = 0; i < array.length; i++) {
+        pdpIcons +=
+          '<div class="col-xs-3" style="text-align: center; cursor:pointer;" type="button" data-toggle="modal" data-target="#' +
+          array[i].iconTitle.replace(" ", "-") +
+          '"> <img src="' +
+          array[i].iconImage +
+          '?w=245&h=165&mode=pad" alt="' +
+          array[i].iconTitle +
+          '"><p>' +
+          array[i].iconTitle +
+          '</p></div><div class="modal fade" id="' +
+          array[i].iconTitle.replace(" ", "-") +
+          '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> <div class="modal-dialog" role="document"> <div class="modal-content"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <div class="modal-body"> ' +
+          array[i].htmlFieldDesktop +
+          "</div> </div> </div> </div>";
+      }
+      return pdpIcons;
+    } else {
+      return "";
+    }
+  }
+
+  $("#pa_search_input, #search_product_btn").keyup(function (event) {
+    if (event.keyCode == "13") {
+      $("#search_product_btn").trigger("click");
+    }
+  });
+</script>

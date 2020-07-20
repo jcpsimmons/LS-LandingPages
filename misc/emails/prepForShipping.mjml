@@ -107,7 +107,7 @@
       }
 
       .fsd-box img {
-      margin-top: -33px
+      margin-top: 20px
       }
 
       .fsd-box p,
@@ -333,23 +333,12 @@
           <p class="sku">#245660</p>
           <img class="oversized" src="https://cdn.brandfolder.io/XQW73PF4/as/qdj2zi-7dq0jk-fe530i/200715measure.png" />
           <p class="indent oversized">This Item is <b>Oversized</b>—Read <a href="https://www.livingspaces.com/delivery/guide" style="color: #00699a">Fit Guide</a></p>
-
         </mj-text>
-        <mj-table cellspacing="0" cellpadding="0" css-class="package-dim-table semibold">
-          <tr>
-            <td style=""><b>Package Dimensions:</b></td>
-            <td class="nudge-right">Box1 — 90"W x 38"D x 30"H</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="nudge-right">Box2 — 90"W x 38"D x 30"H</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="nudge-right">Box3 — 90"W x 38"D x 30"H</td>
-          </tr>
-        </mj-table>
         <mj-text css-class="semibold">
+          <p class="indent"><b>Package Dimensions:</b></p>
+          <p class="double-indent">Box1 — 90"W x 38"D x 30"H</p>
+          <p class="double-indent">Box2 — 90"W x 38"D x 30"H</p>
+          <p class="double-indent">Box3 — 90"W x 38"D x 30"H</p>
           <p class="indent"><b>Weight for All Boxes:</b> 510 lbs</p>
           <p class="indent"><b>Assembly Time:</b> 30 mins</p>
           <p class="indent"><a href="#"><b>Assembly Instructions (PDF)</b></a></p>
