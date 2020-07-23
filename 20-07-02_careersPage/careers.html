@@ -493,9 +493,13 @@
 
 <!-- 7/02 hero area -->
 <style>
+  #hero .title {
+    display: flex;
+    align-items: baseline;
+  }
   #hero .title h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 0;
   }
   #hero h2 {
     font-size: 3rem;
@@ -547,7 +551,6 @@
   }
   #hero .flex-col {
     flex-direction: column;
-    align-items: center;
   }
   #hero .inner-flex {
     display: flex;
@@ -582,11 +585,15 @@
     #hero .search_box {
       padding-top: 1.5rem;
     }
+    #hero .title {
+      flex-direction: column;
+
+    }
     #hero .title h1 {
       margin-left: 2rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
-      font-size: 2.3rem;
+      font-size: 3rem;
       font-weight: normal;
     }
 
@@ -639,11 +646,29 @@
 <section id="hero">
   <div class="title">
     <h1>Careers at Living Spaces</h1>
+
+    <div
+      class="search_box"
+      style="background-color: #bd5518; width: auto; display: inline-block;"
+    >
+      <a
+        class="search_btn"
+        href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+        target="_blank"
+        style="
+          font-weight: 600;
+          font-size: 2rem;
+          background-color: #bd5518;
+          margin-left: 2rem;
+        "
+        >Currently hiring at all locations</a
+      >
+    </div>
   </div>
 
   <div class="flex-col grey-bg">
-    <div class="flex-item">
-      <h2>Currently Hiring</h2>
+    <div style="display: flex; margin: auto;" class="flex-item">
+      <h2>Featured Hirings</h2>
     </div>
     <div class="flex-row full-width-row">
       <div class="flex-item rborder inner-flex">
@@ -652,7 +677,7 @@
             Positions in Warehouse/Distribution Center
           </h3>
           <div class="white-bg-text">
-            <span>Rialto + Perris, CA</span>
+            <span>Rialto + Perris, CA + Phoeniz, AZ</span>
           </div>
           <ul>
             <li>Forklift Operator/Order Picker</li>
@@ -673,7 +698,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-item nudge-cta">
+    <div class="flex-item nudge-cta" style="display:flex; margin: auto;">
       <div class="search_box">
         <a
           class="search_btn"
@@ -690,13 +715,21 @@
 <div class="career_container container">
   <section class="row intro-box">
     <div class="col-xs-12">
+      <div class="search_box">
+        <a
+          class="search_btn"
+          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
+          target="_blank"
+          >Search All Current Positions &rsaquo;</a
+        >
+      </div>
       <h3>
         We are here to support your talent,<br />inspire your passion and
         advance your career.
       </h3>
       <p>
-        Living Spaces is a growing home furnishing brand with over 20 locations
-        and 2,000 team members. What has truly sustained our growth &mdash; from
+        Living Spaces is a growing home furnishing brand with over 30 locations
+        and 3,000 team members. What has truly sustained our growth &mdash; from
         a single, humble store to a widely respected lifestyle brand &mdash; are
         the talented individuals who have taken us there.
       </p>
@@ -710,14 +743,6 @@
         <b>passionate</b>, and <b>innovative</b>.
       </p>
       <p>Come join the journey with us!</p>
-      <div class="search_box">
-        <a
-          class="search_btn"
-          href="https://livingspaces.wd5.myworkdayjobs.com/ls"
-          target="_blank"
-          >Search Current Positions &rsaquo;</a
-        >
-      </div>
     </div>
     <div id="scence_02"></div>
   </section>
@@ -1216,7 +1241,7 @@
           class="search_btn"
           href="https://livingspaces.wd5.myworkdayjobs.com/ls"
           target="_blank"
-          >Search Current Positions &rsaquo;</a
+          >Search All Current Positions &rsaquo;</a
         >
       </div>
     </div>

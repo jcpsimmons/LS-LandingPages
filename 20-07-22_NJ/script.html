@@ -1,0 +1,117 @@
+<script>
+  // if (utag_data.site_type == "desktop") {
+  //   $("#hero_slider").append(
+  //     '<img src="/globalassets/images/lp/2019/08/0909_nj_homepage_hero_2.jpg" alt="Nate + Jeremiah For Living Spaces signature living room collection" class="img-responsive" /><img src="/globalassets/images/lp/2019/08/0909_nj_homepage_hero_3.jpg" alt="Nate + Jeremiah For Living Spaces signature dining room collection" class="img-responsive" /><img src="/globalassets/images/lp/2019/08/0909_nj_homepage_hero_4.jpg" alt="Nate + Jeremiah For Living Spaces signature bedroom collection" class="img-responsive" />'
+  //   );
+  // } else {
+  //   $("#hero_slider").append(
+  //     '<img src="/globalassets/images/lp/2019/08/0909_nj_mobile_lp_catalog_hero2.jpg" alt="Nate + Jeremiah For Living Spaces living room" class="img-responsive" /><img src="/globalassets/images/lp/2019/08/0909_nj_mobile_lp_catalog_hero3.jpg" alt="Nate + Jeremiah For Living Spaces dining room" class="img-responsive" /><img src="/globalassets/images/lp/2019/08/0909_nj_mobile_lp_catalog_hero4.jpg" alt="Nate + Jeremiah For Living Spaces bedroom" class="img-responsive" />'
+  //   );
+  // }
+
+  var productList = [
+    255769,
+    255765,
+    255766,
+    255768,
+    255770,
+    255917,
+    255916,
+    255926,
+    255927,
+    255928,
+    255929,
+    255933,
+    255932,
+    255939,
+    255941,
+    255938,
+    255940,
+    257975,
+    257968,
+    257970,
+  ];
+  var productListHtml = "";
+  for (var i = 0; i < productList.length; i++) {
+    var linkUrl = "/" + productList[i];
+    var imgUrl =
+      "https://www.livingspaces.com/api/image?recId=" +
+      productList[i] +
+      "&width=230";
+    productListHtml +=
+      '<div class="col-xs-3"> <a href="' +
+      linkUrl +
+      '" class="product-linked-image" tabindex="-1"> <img src="' +
+      imgUrl +
+      '" alt="product sku ' +
+      productList[i] +
+      '" class="img-responsive"> </a> </div>';
+  }
+
+  if (utag_data.site_type == "desktop") {
+    var slickConf = {
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: true,
+      dots: true,
+      arrows: true,
+    };
+    $("#njcollectionCarousel").append(productListHtml);
+    $("#njcollectionCarousel").slick(slickConf);
+  } else {
+    var slickConf = {
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      dots: false,
+      arrows: false,
+      autoplay: false,
+    };
+    $("#njcollectionCarousel_mobile").append(productListHtml);
+    $("#njcollectionCarousel_mobile").slick("unslick");
+    $("#njcollectionCarousel_mobile").slick(slickConf);
+  }
+
+  var trigger = $("#step2_modal");
+  trigger.click(function () {
+    var theModal = $(this).data("target"),
+      videoSRC = $(this).attr("data-theVideo"),
+      videoSRCauto =
+        videoSRC +
+        "?rel=0&vq=1080&controls=1&autoplay=1&modestbranding=1&showinfo=0&showinfo=1";
+    $(theModal + " iframe").attr("src", videoSRCauto);
+    $(theModal + " button.close").click(function () {
+      $(theModal + " iframe").attr("src", videoSRC);
+    });
+    $("#modal-video_02").on("hidden.bs.modal", function (e) {
+      $(theModal + " iframe").attr("src", videoSRC);
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#hero_link").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+
+    //scroll to product section on the page
+    $("#njCollection").click(function (e) {
+      $("html,body").animate({
+        scrollTop: $("#productListingContainer").offset().top,
+      });
+    });
+  });
+</script>

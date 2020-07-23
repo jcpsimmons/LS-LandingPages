@@ -1,0 +1,512 @@
+<style>
+  .njIntro p {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    display: none;
+  }
+  #plpServerSide {
+    display: none;
+  }
+  .product-list-component .title {
+    color: #7d5340;
+  }
+  .sbr_link {
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+  }
+  .book_icon {
+    display: inline-block !important;
+    margin-right: 1rem !important;
+  }
+  .breadcrumbs-component {
+    display: none;
+  }
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .nj_container .slick-dots li.slick-active button:before {
+    color: #7d5340;
+  }
+
+  .nj_container {
+    margin-bottom: 5rem;
+  }
+
+  .nj_container a:hover {
+    text-decoration: none !important;
+  }
+
+  .nj_body {
+    position: relative;
+  }
+
+  .nj_container .slick-dotted.slick-slider {
+    margin-bottom: 8rem;
+  }
+
+  .border_Box1 {
+    position: absolute;
+    width: 92%;
+    border: 0.1rem solid #939393;
+    height: 91%;
+    margin-left: -45%;
+    left: 50%;
+    top: 5%;
+    z-index: -1;
+  }
+
+  .nj_container .nj_subTitle {
+    background-color: #f0efea;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding: 4rem 0rem 2rem;
+    margin: 0 auto 5rem;
+    width: 90%;
+  }
+
+  .nj_subTitle p {
+    padding: 0 10rem;
+  }
+
+  .nj_subTitle h2 {
+    position: absolute;
+    color: #7d5340;
+    font-size: 3rem;
+    top: -30%;
+    display: block;
+    width: 100%;
+  }
+
+  .move_right {
+    margin-left: auto;
+  }
+
+  .link_box {
+    padding: 1.5rem 0;
+    display: block;
+    position: relative;
+  }
+
+  .padding-left {
+    padding: 0;
+    padding-left: 1.5rem;
+  }
+
+  .left_box,
+  .right_box {
+    padding: 0;
+  }
+
+  .right_box {
+    padding-left: 1.5rem;
+  }
+
+  .inner_box {
+    position: absolute;
+    top: 10%;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.9);
+    left: 50%;
+    transform: translate(-50%, -0%);
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  }
+
+  .inner_box p {
+    margin: 0;
+  }
+
+  .nj_color {
+    color: #7d5340;
+    font-weight: 600;
+  }
+
+  .nj_container .nj_body .hover_effect {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  }
+
+  .nj_container .nj_body .hover_effect:hover {
+    transform: scale(0.95);
+  }
+
+  .nj_container .nj_body .hover_effect:hover .inner_box {
+    opacity: 1;
+  }
+
+  /***** Modal *****/
+
+  .nj_container .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.7;
+  }
+
+  .nj_container .modal-content {
+    background: none;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .nj_container .modal-body {
+    padding: 0 25px 25px 25px;
+  }
+
+  .nj_container .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+  }
+
+  .nj_container .modal-header,
+  .nj_container .modal-footer {
+    border: 0;
+  }
+
+  .nj_container .modal-header .close {
+    float: none;
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: none;
+    opacity: 1;
+    margin-right: 0 !important;
+    margin-top: -1rem !important;
+  }
+
+  .nj_container .modal .modal-dialog .modal-content .close {
+    color: #fff !important;
+    font-size: 4rem !important;
+  }
+
+  .play-btn {
+    text-align: center;
+  }
+
+  #fRelief-video {
+    border: 0.5rem solid #fff;
+  }
+
+  .nj_container .modal .modal-dialog {
+    width: 85rem;
+  }
+
+  .nj_link {
+    font-weight: 600;
+    border-bottom: solid 0.1rem #979797;
+  }
+
+  .a_link {
+    font-weight: 600;
+  }
+  .so_box {
+    display: table;
+    margin-top: 2rem;
+  }
+  .so_box img {
+    display: table-cell;
+  }
+  .so_box p {
+    display: table-cell;
+    width: 80%;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+    vertical-align: bottom;
+  }
+
+  @media (max-width: 1199px) {
+  }
+
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991px) {
+    .logo_wrap {
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+    }
+    .nj_subTitle h2 {
+      margin-top: 0;
+    }
+    .nj_subTitle h2 {
+      position: relative;
+      top: auto;
+    }
+    .a_link {
+      font-weight: 600;
+      display: block;
+    }
+    .shopCatg {
+      margin-bottom: 3rem;
+    }
+    .njIntro {
+      margin: 4rem 0;
+      text-align: center;
+    }
+    .njIntro h3 {
+      font-size: 3rem;
+      font-weight: 600;
+      background: #fff;
+      width: 21rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    /* hide lookbook for now */
+    .njIntro p {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      display: none;
+    }
+    .njIntro p:before {
+      content: url("/globalassets/images/lp/2019/08/0409_open_book.jpg");
+      position: absolute;
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+    .njIntro span {
+      display: inline-block;
+      margin-left: 6rem;
+      margin-top: 1rem;
+    }
+    .njIntro .hLine {
+      background: #d9d9d9;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      margin-top: -12px;
+    }
+  }
+
+  /* Small devices (landscape phones, less than 768px) */
+
+  @media (max-width: 767px) {
+    .nj_container .modal .modal-dialog {
+      width: 40rem;
+    }
+    .nj_container .modal .modal-dialog .modal-content .close {
+      color: #fff !important;
+      font-size: 2rem !important;
+      margin-right: 8px !important;
+      margin-top: 2rem !important;
+    }
+    .nj_subTitle p {
+      padding: 0;
+    }
+    .nj_subTitle h2 {
+      position: relative;
+      font-weight: 2.7rem;
+      margin-top: 0;
+    }
+    .nj_container {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+    .nj_container .nj_subTitle {
+      width: 100%;
+      margin-bottom: 0;
+      padding: 3rem 0 2rem;
+    }
+    .so_box {
+      display: block;
+    }
+    .so_box p,
+    .so_box img {
+      display: block;
+    }
+    .so_box p {
+      width: 100%;
+      padding: 0 3rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .product-listing-template > .col-xs-12 {
+      padding: 0;
+    }
+    .so_wrapper,
+    .nj_body {
+      margin: 0;
+    }
+    .mob_nopad {
+      padding: 0;
+    }
+    .logo_wrap img {
+      width: 50%;
+      padding: 2rem 0;
+    }
+    .link_box {
+      padding: 0;
+    }
+    .nj_container .slick-dotted.slick-slider {
+      margin-bottom: 6rem;
+    }
+  }
+
+  /* Extra small devices (portrait phones, less than 576px) */
+
+  @media (max-width: 575px) {
+    .logo_wrap {
+      margin-bottom: 0rem;
+    }
+  }
+</style>
+
+<div class="container nj_container">
+  <a href="/inspiration/catalogs/nate-and-jeremiah">
+    <section id="hero_slider" class="hero_slider">
+      <img
+        src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_hero_main_mobile_v02.jpg"
+        alt="Nate + Jeremiah For Living Spaces"
+        class="img-responsive"
+      />
+    </section>
+  </a>
+  <section class="row nj_subTitle">
+    <a
+      href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/all"
+    >
+      <h2>N+J 2020 Collection</h2></a
+    >
+    <div class="col-xs-12">
+      <p>
+        From refined lines and classic silhouettes, to luxurious materials and
+        captivating textures, the
+        <a
+          style="border-bottom: solid 0.1rem #979797;"
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/all"
+          >new furniture and accessories</a
+        >
+        line from
+        <a
+          class="nj_link"
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent"
+          >Nate Berkus & Jeremiah Brent</a
+        >
+        will truly elevate your space.
+      </p>
+    </div>
+  </section>
+  <section class="njIntro">
+    <h3>Shop By Room</h3>
+    <div class="hLine"></div>
+    <p><span>Get Inspired! See the lookbook &rsaquo;</span></p>
+  </section>
+  <div class="nj_slider">
+    <section class="board">
+      <a
+        role="button"
+        data-toggle="collapse"
+        href="#njcollection"
+        aria-expanded="true"
+        aria-controls="njcollection"
+        class="collapse-link"
+      >
+        New Arrivals from N+J<span
+          aria-hidden="true"
+          class="fa fa-angle-down"
+        ></span
+      ></a>
+      <div id="njcollection" class="collapse in">
+        <div
+          id="njcollectionCarousel_mobile"
+          class="mobile-carousel-component"
+        ></div>
+      </div>
+    </section>
+  </div>
+  <section class="nj_body">
+    <a class="sbr_link" href="/inspiration/catalogs/nate-and-jeremiah">
+      <img
+        src="/globalassets/images/lp/2019/09/icon.png"
+        alt="Book Icon"
+        class="img-responsive book_icon"
+      />
+      Ideas and inspiration for your home ›</a
+    >
+    <div class="row">
+      <div class="col-xs-12 shopCatg">
+        <a
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/living-room"
+          ><img
+            src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_living_room_main_mobile.jpg"
+            alt="shop Nate & Jeremiah's signature living room collection"
+            class="img-responsive center-block"
+        /></a>
+      </div>
+      <div class="col-xs-12 shopCatg">
+        <a
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/bedroom"
+          ><img
+            src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_bedroom_main_mobile.jpg"
+            alt="shop Nate & Jeremiah's signature bedroom collection"
+            class="img-responsive center-block"
+        /></a>
+      </div>
+      <div class="col-xs-12 shopCatg">
+        <a
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/rugs"
+          ><img
+            src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_rugs_main_mobile.jpg"
+            alt="shop Nate & Jeremiah's signature rug collection"
+            class="img-responsive center-block"
+        /></a>
+      </div>
+      <div class="col-xs-12 shopCatg">
+        <a
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/dining-room"
+          ><img
+            src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_dining_room_main_mobile.jpg"
+            alt="shop Nate & Jeremiah's signature dining room collection"
+            class="img-responsive center-block"
+        /></a>
+      </div>
+      <div class="col-xs-12">
+        <a
+          href="/inspiration/celebrity-designer/nate-berkus-and-jeremiah-brent/furniture/pillows"
+          ><img
+            src="/globalassets/images/lp/2020/07/nj_main/m/0727_nj_pillows_main_mobile.jpg"
+            alt="shop Nate & Jeremiah's signature pillows collection"
+            class="img-responsive center-block"
+        /></a>
+      </div>
+    </div>
+
+    <div class="border_Box1 hidden-xs"></div>
+  </section>
+  <section class="row so_wrapper">
+    <div class="col-xs-12">
+      <span class="so_box">
+        <img
+          src="/globalassets/images/lp/2018/09/customize_logo.png"
+          alt="customize logo"
+          class="center-block img-responsive"
+        />
+        <p>
+          All of the pieces in Nate + Jeremiah’s seating collection are
+          available for Special Order, so you can choose from their hand-curated
+          fabrics and customize any of their designs for your home.
+          <a
+            href="/inspiration/ideas-advice/shopping-basics/how-to-customize-a-special-order-online#block192851"
+            ><u>Learn more about the program in store</u></a
+          >.
+        </p>
+      </span>
+    </div>
+  </section>
+</div>
